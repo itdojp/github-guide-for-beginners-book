@@ -12,6 +12,22 @@
     <div class="toc">
         <h3 class="toc-title">目次</h3>
         
+        <!-- Introduction -->
+        {% if site.data.navigation.introduction %}
+        <div class="toc-section">
+            <h4 class="toc-section-title">はじめに</h4>
+            <ul class="toc-list">
+                {% for item in site.data.navigation.introduction %}
+                <li class="toc-item">
+                    <a href="{{ item.url | relative_url }}" class="toc-link {% if page.url == item.url %}active{% endif %}">
+                        {{ item.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
         <!-- Chapters -->
         <div class="toc-section">
             <h4 class="toc-section-title">本編</h4>
@@ -19,7 +35,8 @@
                 {% for chapter in site.data.navigation.chapters %}
                 <li class="toc-item toc-chapter">
                     <a href="{{ chapter.url | relative_url }}" class="toc-link {% if page.url == chapter.url %}active{% endif %}">
-                        {{ chapter.title }}
+                        <span class="chapter-number">{{ chapter.number }}</span>
+                        <span class="chapter-title">{{ chapter.title }}</span>
                     </a>
                 </li>
                 {% endfor %}
@@ -33,7 +50,8 @@
                 {% for appendix in site.data.navigation.appendices %}
                 <li class="toc-item">
                     <a href="{{ appendix.url | relative_url }}" class="toc-link {% if page.url == appendix.url %}active{% endif %}">
-                        {{ appendix.title }}
+                        <span class="appendix-label">{{ appendix.number }}</span>
+                        <span class="appendix-title">{{ appendix.title }}</span>
                     </a>
                 </li>
                 {% endfor %}
