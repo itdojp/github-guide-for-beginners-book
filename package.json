@@ -1,0 +1,30 @@
+{
+  "name": "github初心者ガイド-バージョン管理の基礎から実践まで",
+  "version": "1.0.0",
+  "description": "Gitとgithubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド",
+  "main": "index.md",
+  "scripts": {
+    "start": "jekyll serve --livereload",
+    "build": "jekyll build",
+    "test": "npm run lint && npm run check-links",
+    "lint": "markdownlint src/**/*.md",
+    "check-links": "markdown-link-check src/**/*.md",
+    "deploy": "gh-pages -d _site"
+  },
+  "keywords": [
+    "book",
+    "documentation",
+    "ja"
+  ],
+  "author": "ITDO Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli": "^0.37.0",
+    "markdown-link-check": "^3.11.2",
+    "gh-pages": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itdojp/github-guide-for-beginners-book.git"
+  }
+}

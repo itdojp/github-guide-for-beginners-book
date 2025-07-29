@@ -1,0 +1,84 @@
+{
+  "title": "GitHub初心者ガイド - バージョン管理の基礎から実践まで",
+  "description": "Gitとgithubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド",
+  "author": "ITDO Inc.",
+  "version": "1.0.0",
+  "structure": {
+    "chapters": [
+      {
+        "id": "introduction",
+        "title": "はじめに - なぜGitHubを学ぶのか",
+        "description": "バージョン管理の重要性とGitHubが開発現場で果たす役割"
+      },
+      {
+        "id": "git-basics",
+        "title": "Git基礎 - バージョン管理の仕組み",
+        "description": "Gitの基本概念とローカルでのバージョン管理方法"
+      },
+      {
+        "id": "github-account-setup",
+        "title": "GitHubアカウント作成と初期設定",
+        "description": "GitHubアカウントの作成から開発環境の準備まで"
+      },
+      {
+        "id": "basic-operations",
+        "title": "基本操作 - push、pull、clone",
+        "description": "GitHubとの基本的な連携操作をマスターする"
+      },
+      {
+        "id": "repository-management",
+        "title": "リポジトリ管理の実践",
+        "description": "効果的なリポジトリ構成と管理方法"
+      },
+      {
+        "id": "collaboration-basics",
+        "title": "チーム開発入門 - ブランチとマージ",
+        "description": "複数人での開発を効率的に進める方法"
+      },
+      {
+        "id": "pull-requests",
+        "title": "プルリクエストによるコードレビュー",
+        "description": "品質向上のためのプルリクエスト活用法"
+      },
+      {
+        "id": "issue-management",
+        "title": "Issues活用による課題管理",
+        "description": "プロジェクト管理とコミュニケーションツールとしてのIssues"
+      },
+      {
+        "id": "github-actions",
+        "title": "GitHub Actions入門 - 自動化の基礎",
+        "description": "CI/CDとワークフロー自動化の実践"
+      },
+      {
+        "id": "security-best-practices",
+        "title": "セキュリティのベストプラクティス",
+        "description": "安全なコード管理と機密情報の保護"
+      },
+      {
+        "id": "advanced-features",
+        "title": "実践的な活用法",
+        "description": "GitHub Pages、Wikis、Project management機能の活用"
+      },
+      {
+        "id": "troubleshooting",
+        "title": "よくある問題と解決方法",
+        "description": "トラブルシューティングとベストプラクティス"
+      }
+    ],
+    "appendices": [
+      {
+        "id": "git-commands-reference",
+        "title": "Gitコマンドリファレンス"
+      },
+      {
+        "id": "github-shortcuts",
+        "title": "GitHubショートカット集"
+      },
+      {
+        "id": "resources",
+        "title": "学習リソースと参考文献"
+      }
+    ]
+  }
+}
