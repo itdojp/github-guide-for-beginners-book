@@ -1,0 +1,81 @@
+---
+title: "GitHub初心者ガイド - バージョン管理の基礎から実践まで"
+layout: book
+---
+
+# GitHub初心者ガイド
+## バージョン管理の基礎から実践まで
+
+## 📚 本書について
+
+このガイドは、GitとGitHubを初めて学ぶ方を対象に、基本概念から実践的な活用法まで体系的に学習できる実用書です。
+
+### 🎯 対象読者
+
+- **プログラミング初心者** - バージョン管理の必要性を理解したい方
+- **学生・研究者** - チーム開発のスキルを身につけたい方  
+- **非エンジニア** - GitHubを使った文書管理・プロジェクト管理を学びたい方
+- **企業研修担当者** - チーム全体のスキルアップを検討している方
+
+### ✨ 本書の特徴
+
+- **段階的学習** - 基礎から応用まで無理なく進められる構成
+- **実践重視** - 実際に手を動かして学べる豊富な実習
+- **視覚的理解** - 複雑な概念を図解で分かりやすく説明
+- **現場対応** - 実際のチーム開発で使える実用的なスキル
+
+## 📖 目次
+
+### 第1部: 基礎編
+
+1. **[はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
+2. **[Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
+3. **[GitHubアカウント作成と初期設定]({{ '/src/chapter-github-account/' | relative_url }})**
+4. **[基本操作 - push、pull、clone]({{ '/src/chapter-basic-operations/' | relative_url }})**
+
+### 第2部: 実践編
+
+5. **[リポジトリ管理の実践]({{ '/src/chapter-repository-management/' | relative_url }})**
+6. **[チーム開発入門 - ブランチとマージ]({{ '/src/chapter-team-development/' | relative_url }})**
+7. **[プルリクエストによるコードレビュー]({{ '/src/chapter-pull-requests/' | relative_url }})**
+8. **[Issues活用による課題管理]({{ '/src/chapter-issue-management/' | relative_url }})**
+
+### 第3部: 自動化・高度活用編
+
+9. **[GitHub Actions入門 - 自動化の基礎]({{ '/src/chapter-github-actions/' | relative_url }})**
+10. **[セキュリティのベストプラクティス]({{ '/src/chapter-security-best-practices/' | relative_url }})**
+11. **[実践的な活用法]({{ '/src/chapter-advanced-features/' | relative_url }})**
+12. **[よくある問題と解決方法]({{ '/src/chapter-troubleshooting/' | relative_url }})**
+
+### 付録
+
+- **[Gitコマンドリファレンス]({{ '/src/appendix-git-commands-reference/' | relative_url }})**
+- **[GitHubショートカット集]({{ '/src/appendix-github-shortcuts/' | relative_url }})**
+- **[学習リソースと参考文献]({{ '/src/appendix-resources/' | relative_url }})**
+
+## 🛠️ 実習環境
+
+### 前提条件
+
+- コンピュータ（Windows、macOS、Linux）
+- インターネット接続
+- テキストエディタ（VS Code推奨）
+
+### 準備するもの
+
+- GitHubアカウント（無料）
+- Git ソフトウェア
+- GitHub CLI（推奨）
+
+## 🚀 学習の進め方
+
+1. **順番に読み進める** - 各章は前章の内容を前提に構成されています
+2. **実際に手を動かす** - サンプルコードは必ず実行してみましょう
+3. **実習を活用する** - [examples/]({{ '/examples/' | relative_url }}) フォルダの実習用コードで練習
+4. **コミュニティに参加** - 分からないことは積極的に質問しましょう
+
+---
+
+**🎉 GitとGitHubの学習を始めましょう！**
+
+[第1章「はじめに」から学習を開始 →]({{ '/src/chapter-introduction/' | relative_url }})

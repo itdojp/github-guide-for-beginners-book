@@ -1,0 +1,61 @@
+chapters:
+  - title: "はじめに"
+    url: "/src/chapter-introduction/"
+    id: "introduction"
+  
+  - title: "第1章 Git基礎"
+    url: "/src/chapter-git-basics/"
+    id: "git-basics"
+  
+  - title: "第2章 GitHubアカウント"
+    url: "/src/chapter-github-account/"
+    id: "github-account"
+  
+  - title: "第3章 基本操作"
+    url: "/src/chapter-basic-operations/"
+    id: "basic-operations"
+  
+  - title: "第4章 リポジトリ管理"
+    url: "/src/chapter-repository-management/"
+    id: "repository-management"
+  
+  - title: "第5章 チーム開発"
+    url: "/src/chapter-team-development/"
+    id: "team-development"
+  
+  - title: "第6章 プルリクエスト"
+    url: "/src/chapter-pull-requests/"
+    id: "pull-requests"
+  
+  - title: "第7章 Issue管理"
+    url: "/src/chapter-issue-management/"
+    id: "issue-management"
+  
+  - title: "第8章 GitHub Actions"
+    url: "/src/chapter-github-actions/"
+    id: "github-actions"
+  
+  - title: "第9章 セキュリティ"
+    url: "/src/chapter-security-best-practices/"
+    id: "security-best-practices"
+  
+  - title: "第10章 高度な活用法"
+    url: "/src/chapter-advanced-features/"
+    id: "advanced-features"
+  
+  - title: "第11章 トラブルシューティング"
+    url: "/src/chapter-troubleshooting/"
+    id: "troubleshooting"
+
+appendices:
+  - title: "付録A Gitコマンドリファレンス"
+    url: "/src/appendix-git-commands-reference/"
+    id: "git-commands-reference"
+  
+  - title: "付録B GitHubショートカット集"
+    url: "/src/appendix-github-shortcuts/"
+    id: "github-shortcuts"
+  
+  - title: "付録C 学習リソース"
+    url: "/src/appendix-resources/"
+    id: "resources"

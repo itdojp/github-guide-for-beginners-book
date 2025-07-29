@@ -1,0 +1,49 @@
+title: "GitHub初心者ガイド - バージョン管理の基礎から実践まで"
+description: "Gitとgithubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド"
+author: "ITDO Inc."
+version: "1.0.0"
+lang: "ja"
+
+# GitHub Pages settings
+baseurl: "/github-guide-for-beginners-book"
+url: "https://itdojp.github.io"
+repository: "itdojp/github-guide-for-beginners-book"
+
+# Jekyll設定
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# プラグイン
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 除外ファイル
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - tests/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - book-config.json
+  - BOOK-PROPOSAL.md
+  - tech-book-writing-6phases.md
+
+# デフォルトレイアウト
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "book"
+
+# 日本語対応
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
