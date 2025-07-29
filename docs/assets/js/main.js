@@ -40,8 +40,9 @@
                 const text = heading.textContent.trim();
                 const id = text
                     .toLowerCase()
-                    .replace(/[^a-z0-9\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+/g, '-')
-                    .replace(/^-+|-+$/g, '');
+                    .replace(/[^\w\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]+/g, '-')
+                    .replace(/^-+|-+$/g, '')
+                    .substring(0, 50);
                 
                 // Ensure unique ID
                 let uniqueId = id;
@@ -345,10 +346,14 @@
     function init() {
         addStyles();
         initSmoothScrolling();
-        addHeadingIds();
-        generateTOC();
-        handleExternalLinks();
-        enhanceImages();
+        
+        // Delay heavy processing to prevent browser hanging
+        setTimeout(() => {
+            addHeadingIds();
+            generateTOC();
+            handleExternalLinks();
+            enhanceImages();
+        }, 100);
     }
     
     // Initialize when DOM is ready

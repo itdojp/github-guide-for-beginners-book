@@ -164,14 +164,18 @@
         
         if (!searchInput || !searchResults) return;
         
-        // Build initial search index
-        buildSearchIndex();
+        // Delay building search index to prevent blocking
+        setTimeout(() => {
+            buildSearchIndex();
+        }, 500);
         
         // Search input handler
         searchInput.addEventListener('input', (e) => {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
-                performSearch(e.target.value.trim());
+                if (searchIndex.length > 0) {
+                    performSearch(e.target.value.trim());
+                }
             }, 300);
         });
         
