@@ -53,6 +53,42 @@
     --svg-neutral: #64748b;
 }
 
+/* SVG Diagram Styles - Direct fallback for reliability */
+svg .bg { 
+    fill: var(--svg-bg, #ffffff); 
+}
+svg .bg-alt { 
+    fill: var(--svg-bg-alt, #f8fafc); 
+}
+svg .text { 
+    fill: var(--svg-text, #1e293b); 
+    font-family: system-ui, sans-serif; 
+}
+svg .border { 
+    stroke: var(--svg-border, #e2e8f0); 
+    fill: none; 
+    stroke-width: 1; 
+}
+svg .primary { 
+    fill: var(--svg-primary, #2563eb); 
+}
+svg .primary-stroke { 
+    stroke: var(--svg-primary, #2563eb); 
+    stroke-width: 2; 
+}
+svg .success { 
+    fill: var(--svg-success, #10b981); 
+}
+svg .warning { 
+    fill: var(--svg-warning, #f59e0b); 
+}
+svg .error { 
+    fill: var(--svg-error, #ef4444); 
+}
+svg .neutral { 
+    fill: var(--svg-neutral, #64748b); 
+}
+
 /* Dark Theme */
 [data-theme="dark"] {
     --primary-color: #3b82f6;
@@ -84,6 +120,29 @@
     --svg-warning: #f59e0b;
     --svg-error: #ef4444;
     --svg-neutral: #94a3b8;
+}
+
+/* Dark Theme SVG Overrides */
+[data-theme="dark"] svg .bg { 
+    fill: var(--svg-bg, #0f172a); 
+}
+[data-theme="dark"] svg .bg-alt { 
+    fill: var(--svg-bg-alt, #1e293b); 
+}
+[data-theme="dark"] svg .text { 
+    fill: var(--svg-text, #f1f5f9); 
+}
+[data-theme="dark"] svg .border { 
+    stroke: var(--svg-border, #334155); 
+}
+[data-theme="dark"] svg .primary { 
+    fill: var(--svg-primary, #3b82f6); 
+}
+[data-theme="dark"] svg .primary-stroke { 
+    stroke: var(--svg-primary, #3b82f6); 
+}
+[data-theme="dark"] svg .neutral { 
+    fill: var(--svg-neutral, #94a3b8); 
 }
 
 /* Base Styles */
