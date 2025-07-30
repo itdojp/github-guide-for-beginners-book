@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>インターフェース・レイアウト</title>
+  <desc>GitHub Desktopのメイン画面構成要素と各エリアの機能</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">インターフェース・レイアウト</text>
+  
+  <!-- メイン画面の構成 -->
+  <g class="main-interface">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">GitHub Desktop メイン画面構成</text>
+    
+    <!-- 画面枠 -->
+    <rect x="100" y="95" width="600" height="400" rx="8" class="border" stroke-width="2"/>
+    
+    <!-- 1. メニューバー -->
+    <g class="menu-bar">
+      <rect x="100" y="95" width="600" height="30" rx="8" class="primary" opacity="0.1"/>
+      <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 メニューバー</text>
+      
+      <!-- メニュー項目 -->
+      <text x="120" y="115" class="text text-sm">File</text>
+      <text x="150" y="115" class="text text-sm">Edit</text>
+      <text x="180" y="115" class="text text-sm">View</text>
+      <text x="210" y="115" class="text text-sm">Repository</text>
+      <text x="280" y="115" class="text text-sm">Branch</text>
+      <text x="320" y="115" class="text text-sm">Help</text>
+    </g>
+    
+    <!-- 2. ツールバー -->
+    <g class="toolbar">
+      <rect x="100" y="125" width="600" height="40" rx="4" class="success" opacity="0.1"/>
+      <text x="120" y="150" class="text text-sm" style="font-weight: 600;">🔧 ツールバー</text>
+      
+      <!-- リポジトリ選択 -->
+      <rect x="250" y="135" width="150" height="20" rx="2" class="border"/>
+      <text x="325" y="148" text-anchor="middle" class="text text-sm">Current Repository</text>
+      
+      <!-- ブランチ選択 -->
+      <rect x="420" y="135" width="100" height="20" rx="2" class="border"/>
+      <text x="470" y="148" text-anchor="middle" class="text text-sm">main</text>
+      
+      <!-- 同期ボタン -->
+      <rect x="540" y="135" width="60" height="20" rx="2" class="primary border"/>
+      <text x="570" y="148" text-anchor="middle" class="text text-sm">Fetch</text>
+    </g>
+    
+    <!-- 3. サイドバー -->
+    <g class="sidebar">
+      <rect x="100" y="165" width="150" height="330" rx="4" class="warning" opacity="0.1"/>
+      <text x="175" y="185" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 サイドバー</text>
+      
+      <!-- タブ -->
+      <rect x="110" y="195" width="60" height="25" rx="2" class="border"/>
+      <text x="140" y="210" text-anchor="middle" class="text text-sm">Changes</text>
+      
+      <rect x="180" y="195" width="60" height="25" rx="2" class="border"/>
+      <text x="210" y="210" text-anchor="middle" class="text text-sm">History</text>
+      
+      <!-- ファイルリスト -->
+      <text x="110" y="240" class="text text-sm">📄 file1.js</text>
+      <text x="110" y="255" class="text text-sm">📄 file2.css</text>
+      <text x="110" y="270" class="text text-sm">📄 README.md</text>
+      
+      <!-- コミット欄 -->
+      <rect x="110" y="400" width="130" height="80" rx="4" class="bg-alt border"/>
+      <text x="175" y="420" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミット欄</text>
+      <text x="120" y="440" class="text text-sm">Summary</text>
+      <text x="120" y="460" class="text text-sm">Description</text>
+      <rect x="120" y="470" width="110" height="15" rx="2" class="primary border"/>
+      <text x="175" y="482" text-anchor="middle" class="text text-sm">Commit</text>
+    </g>
+    
+    <!-- 4. メインビュー -->
+    <g class="main-view">
+      <rect x="250" y="165" width="450" height="330" rx="4" class="neutral" opacity="0.1"/>
+      <text x="475" y="185" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 メインビュー</text>
+      
+      <!-- Diff表示エリア -->
+      <rect x="270" y="200" width="410" height="200" rx="4" class="bg-alt border"/>
+      <text x="475" y="220" text-anchor="middle" class="text text-sm" style="font-weight: 600;">差分表示エリア</text>
+      
+      <!-- コード例 -->
+      <text x="280" y="250" class="text text-sm" style="font-family: monospace;">- const oldValue = 'old';</text>
+      <text x="280" y="270" class="text text-sm" style="font-family: monospace;">+ const newValue = 'new';</text>
+      <text x="280" y="290" class="text text-sm" style="font-family: monospace;">  function example() {</text>
+      <text x="280" y="310" class="text text-sm" style="font-family: monospace;">    return 'sample';</text>
+      <text x="280" y="330" class="text text-sm" style="font-family: monospace;">  }</text>
+      
+      <!-- 統計情報 -->
+      <rect x="270" y="420" width="410" height="60" rx="4" class="success border" opacity="0.1"/>
+      <text x="475" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 変更統計</text>
+      <text x="280" y="460" class="text text-sm">+15 -8 changes</text>
+      <text x="400" y="460" class="text text-sm">3 files modified</text>
+    </g>
+  </g>
+  
+  <!-- UI要素の説明 -->
+  <g class="ui-elements-explanation">
+    <text x="400" y="525" text-anchor="middle" class="text text-md">主要UI要素の機能</text>
+    
+    <rect x="50" y="540" width="700" height="50" rx="8" class="bg-alt border"/>
+    
+    <!-- 機能説明 -->
+    <text x="70" y="560" class="text text-sm" style="font-weight: 600;">🎯 Changes:</text>
+    <text x="140" y="560" class="text text-sm">未コミット変更</text>
+    
+    <text x="250" y="560" class="text text-sm" style="font-weight: 600;">📜 History:</text>
+    <text x="310" y="560" class="text text-sm">コミット履歴</text>
+    
+    <text x="400" y="560" class="text text-sm" style="font-weight: 600;">🔄 Fetch:</text>
+    <text x="450" y="560" class="text text-sm">リモート同期</text>
+    
+    <text x="70" y="580" class="text text-sm" style="font-weight: 600;">📊 Diff:</text>
+    <text x="120" y="580" class="text text-sm">変更内容の詳細表示</text>
+    
+    <text x="280" y="580" class="text text-sm" style="font-weight: 600;">💾 Commit:</text>
+    <text x="340" y="580" class="text text-sm">変更の確定</text>
+    
+    <text x="450" y="580" class="text text-sm" style="font-weight: 600;">🔗 Repository:</text>
+    <text x="530" y="580" class="text text-sm">プロジェクト切り替え</text>
+  </g>
+</svg>

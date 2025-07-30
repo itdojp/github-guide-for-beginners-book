@@ -1,0 +1,187 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>キーボードショートカット</title>
+  <desc>GitHub Desktopの効率的な操作のためのキーボードショートカット集</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">キーボードショートカット</text>
+  
+  <!-- 基本操作のショートカット -->
+  <g class="basic-shortcuts">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">基本操作</text>
+    
+    <!-- 一般操作 -->
+    <g class="general-operations">
+      <rect x="80" y="95" width="160" height="140" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 一般操作</text>
+      
+      <g class="shortcut-list">
+        <text x="90" y="140" class="text text-sm" style="font-weight: 600;">Ctrl + ,</text>
+        <text x="140" y="140" class="text text-sm">設定を開く</text>
+        
+        <text x="90" y="155" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + ?</text>
+        <text x="170" y="155" class="text text-sm">ショートカット</text>
+        <text x="170" y="167" class="text text-sm">ヘルプ表示</text>
+        
+        <text x="90" y="185" class="text text-sm" style="font-weight: 600;">Ctrl + Q</text>
+        <text x="140" y="185" class="text text-sm">アプリ終了</text>
+        
+        <text x="90" y="200" class="text text-sm" style="font-weight: 600;">Ctrl + W</text>
+        <text x="140" y="200" class="text text-sm">ウィンドウ閉じる</text>
+        
+        <text x="90" y="215" class="text text-sm" style="font-weight: 600;">F5</text>
+        <text x="120" y="215" class="text text-sm">リフレッシュ</text>
+      </g>
+    </g>
+    
+    <!-- ナビゲーション -->
+    <g class="navigation">
+      <rect x="260" y="95" width="160" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧭 ナビゲーション</text>
+      
+      <g class="nav-shortcuts">
+        <text x="270" y="140" class="text text-sm" style="font-weight: 600;">Ctrl + 1</text>
+        <text x="320" y="140" class="text text-sm">Changes タブ</text>
+        
+        <text x="270" y="155" class="text text-sm" style="font-weight: 600;">Ctrl + 2</text>
+        <text x="320" y="155" class="text text-sm">History タブ</text>
+        
+        <text x="270" y="170" class="text text-sm" style="font-weight: 600;">Ctrl + T</text>
+        <text x="320" y="170" class="text text-sm">リポジトリ</text>
+        <text x="320" y="182" class="text text-sm">切り替え</text>
+        
+        <text x="270" y="200" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + O</text>
+        <text x="370" y="200" class="text text-sm">Finder/</text>
+        <text x="370" y="212" class="text text-sm">Explorer</text>
+        <text x="370" y="224" class="text text-sm">で開く</text>
+      </g>
+    </g>
+    
+    <!-- ファイル操作 -->
+    <g class="file-operations">
+      <rect x="440" y="95" width="160" height="140" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 ファイル操作</text>
+      
+      <g class="file-shortcuts">
+        <text x="450" y="140" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + F</text>
+        <text x="540" y="140" class="text text-sm">Finder/</text>
+        <text x="540" y="152" class="text text-sm">Explorer</text>
+        
+        <text x="450" y="170" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + A</text>
+        <text x="540" y="170" class="text text-sm">外部エディタ</text>
+        <text x="540" y="182" class="text text-sm">で開く</text>
+        
+        <text x="450" y="200" class="text text-sm" style="font-weight: 600;">Ctrl + `</text>
+        <text x="500" y="200" class="text text-sm">ターミナル</text>
+        <text x="500" y="212" class="text text-sm">で開く</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Git操作のショートカット -->
+  <g class="git-shortcuts">
+    <text x="400" y="270" text-anchor="middle" class="text text-md">Git操作</text>
+    
+    <!-- コミット操作 -->
+    <g class="commit-operations">
+      <rect x="80" y="290" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💾 コミット操作</text>
+      
+      <g class="commit-shortcuts">
+        <text x="90" y="335" class="text text-sm" style="font-weight: 600;">Ctrl + Enter</text>
+        <text x="160" y="335" class="text text-sm">コミット</text>
+        <text x="160" y="347" class="text text-sm">実行</text>
+        
+        <text x="90" y="365" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + K</text>
+        <text x="180" y="365" class="text text-sm">GitHub</text>
+        <text x="180" y="377" class="text text-sm">で表示</text>
+        
+        <text x="90" y="395" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + U</text>
+        <text x="180" y="395" class="text text-sm">コミット</text>
+        <text x="180" y="407" class="text text-sm">取り消し</text>
+      </g>
+    </g>
+    
+    <!-- ブランチ操作 -->
+    <g class="branch-operations">
+      <rect x="260" y="290" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ操作</text>
+      
+      <g class="branch-shortcuts">
+        <text x="270" y="335" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + N</text>
+        <text x="370" y="335" class="text text-sm">新しい</text>
+        <text x="370" y="347" class="text text-sm">ブランチ</text>
+        
+        <text x="270" y="365" class="text text-sm" style="font-weight: 600;">Ctrl + B</text>
+        <text x="320" y="365" class="text text-sm">ブランチ</text>
+        <text x="320" y="377" class="text text-sm">切り替え</text>
+        
+        <text x="270" y="395" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + B</text>
+        <text x="370" y="395" class="text text-sm">ブランチ</text>
+        <text x="370" y="407" class="text text-sm">比較</text>
+      </g>
+    </g>
+    
+    <!-- 同期操作 -->
+    <g class="sync-operations">
+      <rect x="440" y="290" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 同期操作</text>
+      
+      <g class="sync-shortcuts">
+        <text x="450" y="335" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + P</text>
+        <text x="540" y="335" class="text text-sm">Push</text>
+        
+        <text x="450" y="350" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + L</text>
+        <text x="540" y="350" class="text text-sm">Pull</text>
+        
+        <text x="450" y="365" class="text text-sm" style="font-weight: 600;">Ctrl + R</text>
+        <text x="500" y="365" class="text text-sm">Fetch</text>
+        
+        <text x="450" y="380" class="text text-sm" style="font-weight: 600;">Ctrl + Shift + S</text>
+        <text x="540" y="380" class="text text-sm">Stash all</text>
+        <text x="540" y="392" class="text text-sm">changes</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- macOS 固有のショートカット -->
+  <g class="macos-shortcuts">
+    <text x="400" y="445" text-anchor="middle" class="text text-md">macOS 固有ショートカット</text>
+    
+    <rect x="150" y="465" width="500" height="60" rx="8" class="neutral border" opacity="0.1"/>
+    
+    <text x="170" y="485" class="text text-sm" style="font-weight: 600;">🍎 macOS では Ctrl の代わりに Cmd を使用:</text>
+    
+    <g class="macos-examples">
+      <text x="170" y="505" class="text text-sm">Cmd + , (設定) | Cmd + T (リポジトリ切り替え)</text>
+      <text x="170" y="520" class="text text-sm">Cmd + Enter (コミット) | Cmd + Shift + N (新ブランチ)</text>
+    </g>
+  </g>
+  
+  <!-- ショートカット活용のコツ -->
+  <g class="shortcut-tips">
+    <text x="400" y="555" text-anchor="middle" class="text text-md">効率的な活用のコツ</text>
+    
+    <rect x="50" y="570" width="700" height="25" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="590" class="text text-sm" style="font-weight: 600;">💡 コツ:</text>
+    <text x="110" y="590" class="text text-sm">よく使う操作から覚える | メニューでショートカット確認 | Ctrl+Shift+? でヘルプ表示 | 慣れるまで併用</text>
+  </g>
+</svg>

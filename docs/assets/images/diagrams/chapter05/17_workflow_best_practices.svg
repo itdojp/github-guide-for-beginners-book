@@ -1,0 +1,148 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ワークフロー・ベストプラクティス</title>
+  <desc>GitHub Desktopを使った効率的な開発ワークフローとベストプラクティス</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ワークフロー・ベストプラクティス</text>
+  
+  <!-- 理想的な開発フロー -->
+  <g class="ideal-workflow">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">理想的な開発フロー</text>
+    
+    <!-- ステップ1: 最新取得 -->
+    <g class="step-1">
+      <rect x="80" y="95" width="120" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="140" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 最新取得</text>
+      <text x="140" y="135" text-anchor="middle" class="text text-sm">main を Pull</text>
+      <text x="140" y="150" text-anchor="middle" class="text text-sm">最新状態に</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="200" y1="125" x2="220" y2="125" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: ブランチ作成 -->
+    <g class="step-2">
+      <rect x="240" y="95" width="120" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="300" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ ブランチ作成</text>
+      <text x="300" y="135" text-anchor="middle" class="text text-sm">feature/○○</text>
+      <text x="300" y="150" text-anchor="middle" class="text text-sm">機能別に分離</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="360" y1="125" x2="380" y2="125" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: 開発・コミット -->
+    <g class="step-3">
+      <rect x="400" y="95" width="120" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="460" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 開発</text>
+      <text x="460" y="135" text-anchor="middle" class="text text-sm">小さなコミット</text>
+      <text x="460" y="150" text-anchor="middle" class="text text-sm">を積み重ね</text>
+    </g>
+    
+    <!-- ステップ4: PR作成 -->
+    <g class="step-4">
+      <rect x="560" y="95" width="120" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="620" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ PR作成</text>
+      <text x="620" y="135" text-anchor="middle" class="text text-sm">Push & PR</text>
+      <text x="620" y="150" text-anchor="middle" class="text text-sm">レビュー依頼</text>
+    </g>
+    
+    <!-- 矢印（戻り） -->
+    <line x1="520" y1="125" x2="540" y2="125" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- 下への矢印 -->
+    <line x1="620" y1="155" x2="620" y2="180" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ5: マージ・クリーンアップ -->
+    <g class="step-5">
+      <rect x="480" y="190" width="280" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="620" y="210" text-anchor="middle" class="text text-sm" style="font-weight: 600;">5️⃣ マージ・クリーンアップ</text>
+      <text x="620" y="225" text-anchor="middle" class="text text-sm">PR承認後 → main にマージ → feature ブランチ削除</text>
+    </g>
+  </g>
+  
+  <!-- コミットのベストプラクティス -->
+  <g class="commit-best-practices">
+    <text x="400" y="270" text-anchor="middle" class="text text-md">コミットのベストプラクティス</text>
+    
+    <!-- 良いコミット -->
+    <g class="good-commits">
+      <rect x="100" y="290" width="280" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="240" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 良いコミット</text>
+      
+      <text x="120" y="335" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="120" y="350" class="text text-sm">• 1つの機能・修正に集中</text>
+      <text x="120" y="365" class="text text-sm">• 明確なコミットメッセージ</text>
+      <text x="120" y="380" class="text text-sm">• テスト可能な状態</text>
+    </g>
+    
+    <!-- 悪いコミット -->
+    <g class="bad-commits">
+      <rect x="420" y="290" width="280" height="100" rx="8" class="error border" opacity="0.1"/>
+      <text x="560" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❌ 避けるべきコミット</text>
+      
+      <text x="440" y="335" class="text text-sm" style="font-weight: 600;">問題:</text>
+      <text x="440" y="350" class="text text-sm">• 複数機能を一度に</text>
+      <text x="440" y="365" class="text text-sm">• 曖昧なメッセージ</text>
+      <text x="440" y="380" class="text text-sm">• 動作しない状態</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ管理戦略 -->
+  <g class="branch-strategy">
+    <text x="400" y="425" text-anchor="middle" class="text text-md">ブランチ管理戦略</text>
+    
+    <rect x="100" y="445" width="600" height="80" rx="8" class="bg-alt border"/>
+    
+    <!-- 命名規則 -->
+    <g class="naming-convention">
+      <text x="120" y="465" class="text text-sm" style="font-weight: 600;">📝 命名規則</text>
+      
+      <text x="120" y="485" class="text text-sm">• feature/user-authentication</text>
+      <text x="350" y="485" class="text text-sm">• bugfix/header-layout</text>
+      <text x="550" y="485" class="text text-sm">• hotfix/security-patch</text>
+      
+      <text x="120" y="500" class="text text-sm">• docs/api-documentation</text>
+      <text x="350" y="500" class="text text-sm">• refactor/database-layer</text>
+      <text x="550" y="500" class="text text-sm">• experiment/new-ui</text>
+    </g>
+    
+    <!-- ライフサイクル -->
+    <g class="branch-lifecycle">
+      <text x="120" y="520" class="text text-sm" style="font-weight: 600;">🔄 ライフサイクル: 作成 → 開発 → PR → レビュー → マージ → 削除</text>
+    </g>
+  </g>
+  
+  <!-- チーム開発での注意点 -->
+  <g class="team-development">
+    <text x="400" y="555" text-anchor="middle" class="text text-md">チーム開発での注意点</text>
+    
+    <rect x="50" y="570" width="700" height="25" rx="4" class="warning border" opacity="0.1"/>
+    <text x="60" y="587" class="text text-sm" style="font-weight: 600;">🤝 チーム協調:</text>
+    <text x="150" y="587" class="text text-sm">定期的な Pull | コンフリクト早期解決 | コミットメッセージ統一 | コードレビュー活用</text>
+  </g>
+</svg>

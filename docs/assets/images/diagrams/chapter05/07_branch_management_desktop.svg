@@ -1,0 +1,164 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ブランチ管理（Desktop）</title>
+  <desc>GitHub Desktopでのブランチ作成、切り替え、マージの操作方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ブランチ管理（Desktop）</text>
+  
+  <!-- ブランチ操作UI -->
+  <g class="branch-ui">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">ブランチ操作UI</text>
+    
+    <!-- 現在のブランチ表示 -->
+    <g class="current-branch">
+      <rect x="150" y="95" width="200" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="180" y="115" class="text text-sm" style="font-weight: 600;">Current Branch:</text>
+      
+      <!-- ブランチドロップダウン -->
+      <rect x="160" y="120" width="150" height="25" rx="4" class="primary border"/>
+      <text x="170" y="138" class="text text-sm">🌿 main</text>
+      <text x="295" y="138" class="text text-sm">▼</text>
+    </g>
+    
+    <!-- ブランチ作成ボタン -->
+    <g class="create-branch-button">
+      <rect x="380" y="105" width="120" height="30" rx="4" class="success border"/>
+      <text x="440" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">+ New Branch</text>
+    </g>
+    
+    <!-- ブランチリスト -->
+    <g class="branch-list">
+      <rect x="520" y="95" width="180" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="610" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 Branch List</text>
+      
+      <text x="530" y="135" class="text text-sm">🌿 main (current)</text>
+      <text x="530" y="150" class="text text-sm">🌿 feature/login</text>
+      <text x="530" y="165" class="text text-sm">🌿 bugfix/header</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ作成プロセス -->
+  <g class="branch-creation-process">
+    <text x="400" y="210" text-anchor="middle" class="text text-md">ブランチ作成プロセス</text>
+    
+    <rect x="100" y="230" width="600" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: ブランチ名入力 -->
+    <g class="step-1-name">
+      <rect x="120" y="250" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="190" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ ブランチ名入力</text>
+      
+      <!-- 入力フィールド -->
+      <rect x="130" y="285" width="120" height="20" rx="2" class="border"/>
+      <text x="135" y="299" class="text text-sm" style="font-family: monospace;">feature/user-auth</text>
+      
+      <text x="190" y="320" text-anchor="middle" class="text text-sm">意味のある名前</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="260" y1="290" x2="280" y2="290" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: 基点選択 -->
+    <g class="step-2-base">
+      <rect x="290" y="250" width="140" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="360" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 基点選択</text>
+      
+      <!-- 基点選択 -->
+      <rect x="300" y="285" width="120" height="20" rx="2" class="border"/>
+      <text x="305" y="299" class="text text-sm">Based on: main</text>
+      
+      <text x="360" y="320" text-anchor="middle" class="text text-sm">分岐元ブランチ</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="430" y1="290" x2="450" y2="290" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: ブランチ作成 -->
+    <g class="step-3-create">
+      <rect x="460" y="250" width="140" height="80" rx="4" class="warning border" opacity="0.1"/>
+      <text x="530" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ ブランチ作成</text>
+      
+      <!-- 作成ボタン -->
+      <rect x="480" y="285" width="100" height="25" rx="4" class="primary border"/>
+      <text x="530" y="302" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Create Branch</text>
+      
+      <text x="530" y="320" text-anchor="middle" class="text text-sm">自動切り替え</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ切り替え -->
+  <g class="branch-switching">
+    <text x="400" y="385" text-anchor="middle" class="text text-md">ブランチ切り替えと管理</text>
+    
+    <!-- 切り替え方法 -->
+    <g class="switching-methods">
+      <rect x="80" y="405" width="160" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 ブランチ切り替え</text>
+      <text x="160" y="450" text-anchor="middle" class="text text-sm">ドロップダウンから</text>
+      <text x="160" y="465" text-anchor="middle" class="text text-sm">選択してクリック</text>
+      <text x="160" y="480" text-anchor="middle" class="text text-sm">即座に切り替え</text>
+    </g>
+    
+    <!-- マージ -->
+    <g class="merge-branch">
+      <rect x="260" y="405" width="160" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 ブランチマージ</text>
+      <text x="340" y="450" text-anchor="middle" class="text text-sm">Branch → Merge</text>
+      <text x="340" y="465" text-anchor="middle" class="text text-sm">into Current Branch</text>
+      <text x="340" y="480" text-anchor="middle" class="text text-sm">メニューから実行</text>
+    </g>
+    
+    <!-- 削除 -->
+    <g class="delete-branch">
+      <rect x="440" y="405" width="160" height="80" rx="8" class="error border" opacity="0.1"/>
+      <text x="520" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🗑️ ブランチ削除</text>
+      <text x="520" y="450" text-anchor="middle" class="text text-sm">マージ後に</text>
+      <text x="520" y="465" text-anchor="middle" class="text text-sm">不要ブランチ削除</text>
+      <text x="520" y="480" text-anchor="middle" class="text text-sm">右クリックメニュー</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ戦略 -->
+  <g class="branch-strategy">
+    <text x="400" y="515" text-anchor="middle" class="text text-md">推奨ブランチ戦略</text>
+    
+    <rect x="50" y="530" width="700" height="60" rx="8" class="bg-alt border"/>
+    
+    <!-- 戦略の説明 -->
+    <text x="70" y="550" class="text text-sm" style="font-weight: 600;">🎯 主要ブランチ:</text>
+    <text x="170" y="550" class="text text-sm">main（安定版）</text>
+    
+    <text x="280" y="550" class="text text-sm" style="font-weight: 600;">🚀 機能ブランチ:</text>
+    <text x="380" y="550" class="text text-sm">feature/機能名</text>
+    
+    <text x="480" y="550" class="text text-sm" style="font-weight: 600;">🐛 修正ブランチ:</text>
+    <text x="580" y="550" class="text text-sm">bugfix/問題名</text>
+    
+    <text x="70" y="570" class="text text-sm" style="font-weight: 600;">💡 運用:</text>
+    <text x="120" y="570" class="text text-sm">機能完成後にmainにマージ → 機能ブランチ削除 → 新機能は新ブランチで開発</text>
+  </g>
+</svg>

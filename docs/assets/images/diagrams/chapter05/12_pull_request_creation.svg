@@ -1,0 +1,153 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Pull Request作成</title>
+  <desc>GitHub DesktopからのPull Request作成とワークフロー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Pull Request作成</text>
+  
+  <!-- PR作成の前提条件 -->
+  <g class="pr-prerequisites">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">Pull Request作成の前提条件</text>
+    
+    <!-- ステップ1: ブランチ作成 -->
+    <g class="step-1-branch">
+      <rect x="80" y="95" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ ブランチ作成</text>
+      <text x="150" y="140" text-anchor="middle" class="text text-sm">feature/new-function</text>
+      <text x="150" y="155" text-anchor="middle" class="text text-sm">など機能別に分離</text>
+      <text x="150" y="170" text-anchor="middle" class="text text-sm">main から分岐</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="220" y1="135" x2="260" y2="135" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: 変更・コミット -->
+    <g class="step-2-commit">
+      <rect x="280" y="95" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="350" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 変更・コミット</text>
+      <text x="350" y="140" text-anchor="middle" class="text text-sm">機能実装</text>
+      <text x="350" y="155" text-anchor="middle" class="text text-sm">複数コミット可</text>
+      <text x="350" y="170" text-anchor="middle" class="text text-sm">意味のある単位</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="420" y1="135" x2="460" y2="135" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: Push -->
+    <g class="step-3-push">
+      <rect x="480" y="95" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="550" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ Push</text>
+      <text x="550" y="140" text-anchor="middle" class="text text-sm">リモートに送信</text>
+      <text x="550" y="155" text-anchor="middle" class="text text-sm">GitHub で表示可能</text>
+      <text x="550" y="170" text-anchor="middle" class="text text-sm">PR作成準備完了</text>
+    </g>
+  </g>
+  
+  <!-- GitHub Desktop での PR 作成 -->
+  <g class="desktop-pr-creation">
+    <text x="400" y="210" text-anchor="middle" class="text text-md">GitHub Desktop での PR 作成</text>
+    
+    <rect x="100" y="230" width="600" height="160" rx="8" class="bg-alt border"/>
+    
+    <!-- PR作成ボタン -->
+    <g class="create-pr-button">
+      <rect x="120" y="250" width="560" height="40" rx="4" class="primary border" opacity="0.1"/>
+      <text x="400" y="270" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 Create Pull Request</text>
+      <text x="400" y="285" text-anchor="middle" class="text text-sm">Push後に表示されるボタンをクリック</text>
+    </g>
+    
+    <!-- PR詳細フォーム -->
+    <g class="pr-form">
+      <text x="120" y="315" class="text text-sm" style="font-weight: 600;">📝 Pull Request Details</text>
+      
+      <!-- タイトル -->
+      <text x="120" y="335" class="text text-sm">Title:</text>
+      <rect x="170" y="325" width="300" height="20" rx="2" class="border"/>
+      <text x="175" y="339" class="text text-sm" style="font-family: monospace;">Add user authentication feature</text>
+      
+      <!-- 説明 -->
+      <text x="120" y="360" class="text text-sm">Description:</text>
+      <rect x="170" y="350" width="300" height="30" rx="2" class="border"/>
+      <text x="175" y="365" class="text text-sm" style="font-family: monospace;">- Implement login/logout</text>
+      <text x="175" y="378" class="text text-sm" style="font-family: monospace;">- Add password validation</text>
+      
+      <!-- ベースブランチ -->
+      <text x="500" y="335" class="text text-sm">Base:</text>
+      <rect x="540" y="325" width="80" height="20" rx="2" class="success border"/>
+      <text x="580" y="339" text-anchor="middle" class="text text-sm">main</text>
+      
+      <!-- 比較ブランチ -->
+      <text x="500" y="360" class="text text-sm">Compare:</text>
+      <rect x="560" y="350" width="100" height="20" rx="2" class="primary border"/>
+      <text x="610" y="364" text-anchor="middle" class="text text-sm">feature/auth</text>
+    </g>
+  </g>
+  
+  <!-- PR作成後の画面遷移 -->
+  <g class="post-pr-creation">
+    <text x="400" y="425" text-anchor="middle" class="text text-md">PR作成後の操作</text>
+    
+    <!-- GitHub Web画面 -->
+    <g class="github-web">
+      <rect x="150" y="445" width="200" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="250" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 GitHub Web画面</text>
+      <text x="250" y="490" text-anchor="middle" class="text text-sm">自動的にブラウザで</text>
+      <text x="250" y="505" text-anchor="middle" class="text text-sm">PR画面が開く</text>
+      <text x="250" y="520" text-anchor="middle" class="text text-sm">詳細設定可能</text>
+    </g>
+    
+    <!-- 追加設定 -->
+    <g class="additional-settings">
+      <rect x="370" y="445" width="180" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="460" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 追加設定</text>
+      <text x="460" y="490" text-anchor="middle" class="text text-sm">• レビュアー指定</text>
+      <text x="460" y="505" text-anchor="middle" class="text text-sm">• ラベル追加</text>
+      <text x="460" y="520" text-anchor="middle" class="text text-sm">• マイルストーン設定</text>
+    </g>
+    
+    <!-- Desktop での追跡 -->
+    <g class="desktop-tracking">
+      <rect x="570" y="445" width="150" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="645" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 Desktop追跡</text>
+      <text x="645" y="490" text-anchor="middle" class="text text-sm">PR作成後も</text>
+      <text x="645" y="505" text-anchor="middle" class="text text-sm">Desktop で管理</text>
+      <text x="645" y="520" text-anchor="middle" class="text text-sm">更新push可能</text>
+    </g>
+  </g>
+  
+  <!-- PR作成のベストプラクティス -->
+  <g class="pr-best-practices">
+    <text x="400" y="555" text-anchor="middle" class="text text-md">PR作成のベストプラクティス</text>
+    
+    <rect x="50" y="570" width="700" height="25" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="587" class="text text-sm" style="font-weight: 600;">📋 タイトル:</text>
+    <text x="140" y="587" class="text text-sm">明確で簡潔 | 変更内容を要約 | プレフィックス活用（feat:, fix:, docs:）</text>
+    
+    <text x="60" y="605" class="text text-sm" style="font-weight: 600;">📄 説明:</text>
+    <text x="120" y="605" class="text text-sm">変更理由 | 実装内容 | テスト方法 | 関連Issue | スクリーンショット（UI変更時）</text>
+  </g>
+</svg>

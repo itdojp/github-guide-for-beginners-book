@@ -1,0 +1,180 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リポジトリのクローンと作成</title>
+  <desc>GitHub Desktopでのリポジトリクローンと新規作成の手順</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リポジトリのクローンと作成</text>
+  
+  <!-- リポジトリ取得方法の選択 -->
+  <g class="repository-options">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">リポジトリの取得方法</text>
+    
+    <!-- クローン -->
+    <g class="clone-option">
+      <rect x="100" y="95" width="200" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="200" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📥 クローン（Clone）</text>
+      <text x="200" y="140" text-anchor="middle" class="text text-sm">既存のリモート</text>
+      <text x="200" y="155" text-anchor="middle" class="text text-sm">リポジトリを</text>
+      <text x="200" y="170" text-anchor="middle" class="text text-sm">ローカルにコピー</text>
+      
+      <rect x="120" y="185" width="160" height="20" rx="2" class="primary border"/>
+      <text x="200" y="198" text-anchor="middle" class="text text-sm">Clone a repository</text>
+    </g>
+    
+    <!-- 新規作成 -->
+    <g class="create-option">
+      <rect x="320" y="95" width="200" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="420" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✨ 新規作成（Create）</text>
+      <text x="420" y="140" text-anchor="middle" class="text text-sm">新しいローカル</text>
+      <text x="420" y="155" text-anchor="middle" class="text text-sm">リポジトリを</text>
+      <text x="420" y="170" text-anchor="middle" class="text text-sm">作成</text>
+      
+      <rect x="340" y="185" width="160" height="20" rx="2" class="success border"/>
+      <text x="420" y="198" text-anchor="middle" class="text text-sm">Create new repository</text>
+    </g>
+    
+    <!-- 追加 -->
+    <g class="add-option">
+      <rect x="540" y="95" width="200" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="640" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 追加（Add）</text>
+      <text x="640" y="140" text-anchor="middle" class="text text-sm">既存のローカル</text>
+      <text x="640" y="155" text-anchor="middle" class="text text-sm">フォルダを</text>
+      <text x="640" y="170" text-anchor="middle" class="text text-sm">リポジトリとして追加</text>
+      
+      <rect x="560" y="185" width="160" height="20" rx="2" class="warning border"/>
+      <text x="640" y="198" text-anchor="middle" class="text text-sm">Add existing repository</text>
+    </g>
+  </g>
+  
+  <!-- クローン手順詳細 -->
+  <g class="clone-process">
+    <text x="400" y="250" text-anchor="middle" class="text text-md">クローン手順</text>
+    
+    <rect x="50" y="270" width="700" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: URL入力 -->
+    <g class="clone-step-1">
+      <rect x="70" y="290" width="140" height="100" rx="4" class="primary border" opacity="0.1"/>
+      <text x="140" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ URL入力</text>
+      
+      <!-- URL入力フィールド -->
+      <rect x="80" y="325" width="120" height="15" rx="2" class="border"/>
+      <text x="90" y="337" class="text text-sm" style="font-family: monospace; font-size: 10px;">github.com/user/repo</text>
+      
+      <text x="140" y="355" text-anchor="middle" class="text text-sm">• HTTPS URL</text>
+      <text x="140" y="370" text-anchor="middle" class="text text-sm">• SSH URL</text>
+      <text x="140" y="385" text-anchor="middle" class="text text-sm">• GitHub.com 連携</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="210" y1="340" x2="240" y2="340" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: 保存先選択 -->
+    <g class="clone-step-2">
+      <rect x="250" y="290" width="140" height="100" rx="4" class="success border" opacity="0.1"/>
+      <text x="320" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 保存先選択</text>
+      
+      <!-- パス表示 -->
+      <rect x="260" y="325" width="120" height="15" rx="2" class="border"/>
+      <text x="270" y="337" class="text text-sm" style="font-family: monospace; font-size: 10px;">/Users/name/GitHub/</text>
+      
+      <text x="320" y="355" text-anchor="middle" class="text text-sm">• ローカルパス</text>
+      <text x="320" y="370" text-anchor="middle" class="text text-sm">• フォルダ名</text>
+      <text x="320" y="385" text-anchor="middle" class="text text-sm">• Browse ボタン</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="390" y1="340" x2="420" y2="340" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: クローン実行 -->
+    <g class="clone-step-3">
+      <rect x="430" y="290" width="140" height="100" rx="4" class="warning border" opacity="0.1"/>
+      <text x="500" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ クローン実行</text>
+      
+      <!-- プログレスバー -->
+      <rect x="440" y="325" width="120" height="10" rx="2" class="border"/>
+      <rect x="440" y="325" width="90" height="10" rx="2" class="warning"/>
+      
+      <text x="500" y="355" text-anchor="middle" class="text text-sm">• ダウンロード進行</text>
+      <text x="500" y="370" text-anchor="middle" class="text text-sm">• Git履歴取得</text>
+      <text x="500" y="385" text-anchor="middle" class="text text-sm">• ファイル展開</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="570" y1="340" x2="600" y2="340" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ4: 完了 -->
+    <g class="clone-step-4">
+      <rect x="610" y="290" width="120" height="100" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="670" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 完了</text>
+      
+      <text x="670" y="340" text-anchor="middle" class="text text-sm">✅ クローン完了</text>
+      <text x="670" y="355" text-anchor="middle" class="text text-sm">• リポジトリ追加</text>
+      <text x="670" y="370" text-anchor="middle" class="text text-sm">• 自動的に開く</text>
+      <text x="670" y="385" text-anchor="middle" class="text text-sm">• すぐに編集可能</text>
+    </g>
+  </g>
+  
+  <!-- 新規作成手順 -->
+  <g class="create-process">
+    <text x="400" y="445" text-anchor="middle" class="text text-md">新規リポジトリ作成手順</text>
+    
+    <!-- 作成フォーム -->
+    <rect x="150" y="465" width="500" height="100" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 新規作成フォーム</text>
+    
+    <!-- フォーム項目 -->
+    <g class="create-form">
+      <!-- 名前 -->
+      <text x="170" y="505" class="text text-sm" style="font-weight: 600;">Name:</text>
+      <rect x="220" y="495" width="150" height="15" rx="2" class="border"/>
+      <text x="225" y="507" class="text text-sm" style="font-family: monospace;">my-new-project</text>
+      
+      <!-- 説明 -->
+      <text x="170" y="525" class="text text-sm" style="font-weight: 600;">Description:</text>
+      <rect x="250" y="515" width="180" height="15" rx="2" class="border"/>
+      <text x="255" y="527" class="text text-sm" style="font-family: monospace;">Project description</text>
+      
+      <!-- パス -->
+      <text x="170" y="545" class="text text-sm" style="font-weight: 600;">Local path:</text>
+      <rect x="240" y="535" width="200" height="15" rx="2" class="border"/>
+      <text x="245" y="547" class="text text-sm" style="font-family: monospace;">/Users/name/Documents/</text>
+      
+      <!-- オプション -->
+      <text x="470" y="505" class="text text-sm">☑️ Initialize with README</text>
+      <text x="470" y="525" class="text text-sm">☑️ Git ignore template</text>
+      <text x="470" y="545" class="text text-sm">☐ License</text>
+    </g>
+  </g>
+  
+  <!-- ベストプラクティス -->
+  <g class="best-practices">
+    <rect x="50" y="580" width="700" height="15" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="592" class="text text-sm" style="font-weight: 600;">💡 ベストプラクティス:</text>
+    <text x="180" y="592" class="text text-sm">適切なフォルダ構成 | README初期化 | .gitignore設定 | 意味のある名前付け</text>
+  </g>
+</svg>
