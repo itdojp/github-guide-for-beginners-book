@@ -1,0 +1,149 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>GitHub Projects管理</title>
+  <desc>GitHub Projectsを使ったプロジェクト管理とカンバンボード</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">GitHub Projects管理</text>
+  
+  <!-- カンバンボード -->
+  <g class="kanban-board">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">カンバンボード</text>
+    
+    <!-- Backlog列 -->
+    <g class="backlog-column">
+      <rect x="80" y="100" width="140" height="300" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="150" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 Backlog</text>
+      
+      <!-- タスクカード1 -->
+      <rect x="90" y="140" width="120" height="40" rx="4" class="bg-alt border"/>
+      <text x="150" y="155" text-anchor="middle" class="text text-sm">#123 Login機能</text>
+      <text x="150" y="170" text-anchor="middle" class="text text-sm">enhancement</text>
+      
+      <!-- タスクカード2 -->
+      <rect x="90" y="190" width="120" height="40" rx="4" class="bg-alt border"/>
+      <text x="150" y="205" text-anchor="middle" class="text text-sm">#124 UIバグ修正</text>
+      <text x="150" y="220" text-anchor="middle" class="text text-sm">bug</text>
+      
+      <!-- タスクカード3 -->
+      <rect x="90" y="240" width="120" height="40" rx="4" class="bg-alt border"/>
+      <text x="150" y="255" text-anchor="middle" class="text text-sm">#125 API設計</text>
+      <text x="150" y="270" text-anchor="middle" class="text text-sm">documentation</text>
+      
+      <!-- 追加タスク表示 -->
+      <text x="150" y="320" text-anchor="middle" class="text text-sm neutral">+5 more items</text>
+    </g>
+    
+    <!-- In Progress列 -->
+    <g class="in-progress-column">
+      <rect x="240" y="100" width="140" height="300" rx="8" class="warning border" opacity="0.1"/>
+      <text x="310" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ In Progress</text>
+      
+      <!-- 作業中タスク1 -->
+      <rect x="250" y="140" width="120" height="40" rx="4" class="warning border"/>
+      <text x="310" y="155" text-anchor="middle" class="text text-sm">#121 認証機能</text>
+      <text x="310" y="170" text-anchor="middle" class="text text-sm">👤 @developer</text>
+      
+      <!-- 作業中タスク2 -->
+      <rect x="250" y="190" width="120" height="40" rx="4" class="warning border"/>
+      <text x="310" y="205" text-anchor="middle" class="text text-sm">#122 テスト追加</text>
+      <text x="310" y="220" text-anchor="middle" class="text text-sm">👤 @tester</text>
+    </g>
+    
+    <!-- Review列 -->
+    <g class="review-column">
+      <rect x="400" y="100" width="140" height="300" rx="8" class="primary border" opacity="0.1"/>
+      <text x="470" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👀 Review</text>
+      
+      <!-- レビュー中タスク -->
+      <rect x="410" y="140" width="120" height="40" rx="4" class="primary border"/>
+      <text x="470" y="155" text-anchor="middle" class="text text-sm">#120 PR #45</text>
+      <text x="470" y="170" text-anchor="middle" class="text text-sm">needs review</text>
+    </g>
+    
+    <!-- Done列 -->
+    <g class="done-column">
+      <rect x="560" y="100" width="140" height="300" rx="8" class="success border" opacity="0.1"/>
+      <text x="630" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ Done</text>
+      
+      <!-- 完了タスク1 -->
+      <rect x="570" y="140" width="120" height="40" rx="4" class="success border"/>
+      <text x="630" y="155" text-anchor="middle" class="text text-sm">#118 ホーム画面</text>
+      <text x="630" y="170" text-anchor="middle" class="text text-sm">completed</text>
+      
+      <!-- 完了タスク2 -->
+      <rect x="570" y="190" width="120" height="40" rx="4" class="success border"/>
+      <text x="630" y="205" text-anchor="middle" class="text text-sm">#119 設定機能</text>
+      <text x="630" y="220" text-anchor="middle" class="text text-sm">completed</text>
+      
+      <!-- 完了タスク3 -->
+      <rect x="570" y="240" width="120" height="40" rx="4" class="success border"/>
+      <text x="630" y="255" text-anchor="middle" class="text text-sm">#117 デプロイ</text>
+      <text x="630" y="270" text-anchor="middle" class="text text-sm">completed</text>
+    </g>
+    
+    <!-- 作業フロー矢印 -->
+    <line x1="220" y1="160" x2="240" y2="160" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="380" y1="160" x2="400" y2="160" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="540" y1="160" x2="560" y2="160" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- マイルストーン管理 -->
+  <g class="milestone-management">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">マイルストーン管理</text>
+    
+    <!-- v1.0リリース -->
+    <g class="milestone-v1">
+      <rect x="100" y="470" width="180" height="60" rx="4" class="primary border" opacity="0.1"/>
+      <text x="190" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 v1.0 Release</text>
+      <text x="190" y="505" text-anchor="middle" class="text text-sm">Due: 2024-08-31</text>
+      <text x="190" y="520" text-anchor="middle" class="text text-sm">Progress: 75% (15/20)</text>
+    </g>
+    
+    <!-- v1.1リリース -->
+    <g class="milestone-v1-1">
+      <rect x="310" y="470" width="180" height="60" rx="4" class="warning border" opacity="0.1"/>
+      <text x="400" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 v1.1 Release</text>
+      <text x="400" y="505" text-anchor="middle" class="text text-sm">Due: 2024-09-30</text>
+      <text x="400" y="520" text-anchor="middle" class="text text-sm">Progress: 30% (3/10)</text>
+    </g>
+    
+    <!-- バックログ -->
+    <g class="milestone-backlog">
+      <rect x="520" y="470" width="180" height="60" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="610" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 Backlog</text>
+      <text x="610" y="505" text-anchor="middle" class="text text-sm">Future items</text>
+      <text x="610" y="520" text-anchor="middle" class="text text-sm">25 issues</text>
+    </g>
+  </g>
+  
+  <!-- プロジェクト管理のメリット -->  
+  <g class="project-benefits">
+    <rect x="50" y="550" width="700" height="40" rx="4" class="bg-alt border"/>
+    <text x="60" y="565" class="text text-sm" style="font-weight: 600;">💡 Projects活用メリット:</text>
+    <text x="60" y="580" class="text text-sm">進捗可視化 | 作業優先度明確化 | チーム連携促進 | リリース計画管理 | 作業効率向上</text>
+  </g>
+</svg>

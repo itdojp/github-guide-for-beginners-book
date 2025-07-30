@@ -1,0 +1,148 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PR自動化ツール</title>
+  <desc>Pull Requestプロセスを効率化する自動化ツールと設定</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR自動化ツール</text>
+  
+  <!-- 概要 -->
+  <g class="automation-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">PRプロセスの自動化</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤖 効率性と品質を向上させる自動化システム</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">手作業の削減と一貫性のある品質チェック</text>
+  </g>
+  
+  <!-- 主要自動化カテゴリ -->
+  <g class="automation-categories">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">主要な自動化カテゴリ</text>
+    
+    <!-- CI/CD統合 -->
+    <g class="cicd-integration">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 CI/CD統合</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="60" y="260" class="text text-sm">• 自動テスト実行</text>
+      <text x="60" y="275" class="text text-sm">• ビルド検証</text>
+      <text x="60" y="290" class="text text-sm">• 品質ゲート</text>
+      
+      <text x="60" y="310" class="text text-sm" style="font-weight: 600;">ツール:</text>
+      <text x="60" y="325" class="text text-sm">GitHub Actions</text>
+    </g>
+    
+    <!-- コード品質チェック -->
+    <g class="code-quality">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 品質チェック</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="240" y="260" class="text text-sm">• 静的解析</text>
+      <text x="240" y="275" class="text text-sm">• カバレッジ測定</text>
+      <text x="240" y="290" class="text text-sm">• コーディング規約</text>
+      
+      <text x="240" y="310" class="text text-sm" style="font-weight: 600;">ツール:</text>
+      <text x="240" y="325" class="text text-sm">CodeClimate, SonarQube</text>
+    </g>
+    
+    <!-- セキュリティスキャン -->
+    <g class="security-scanning">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="error border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔒 セキュリティ</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="420" y="260" class="text text-sm">• 脆弱性スキャン</text>
+      <text x="420" y="275" class="text text-sm">• 依存関係チェック</text>
+      <text x="420" y="290" class="text text-sm">• シークレット検出</text>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">ツール:</text>
+      <text x="420" y="325" class="text text-sm">Dependabot, Snyk</text>
+    </g>
+    
+    <!-- 自動マージ -->
+    <g class="auto-merge">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 自動マージ</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="600" y="260" class="text text-sm">• 条件付きマージ</text>
+      <text x="600" y="275" class="text text-sm">• スケジュール実行</text>
+      <text x="600" y="290" class="text text-sm">• 依存関係更新</text>
+      
+      <text x="600" y="310" class="text text-sm" style="font-weight: 600;">ツール:</text>
+      <text x="600" y="325" class="text text-sm">Mergify, auto-merge</text>
+    </g>
+  </g>
+  
+  <!-- GitHub Actions例 -->
+  <g class="github-actions-example">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">GitHub Actions PR自動化例</text>
+    
+    <rect x="80" y="375" width="640" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- ワークフロー例 -->
+    <g class="workflow-example">
+      <text x="100" y="395" class="text text-sm" style="font-weight: 600;">🔧 典型的なPRワークフロー</text>
+      
+      <rect x="100" y="405" width="600" height="100" rx="4" class="border"/>
+      <text x="110" y="420" class="text text-sm" style="font-family: monospace;">name: PR Quality Check</text>
+      <text x="110" y="435" class="text text-sm" style="font-family: monospace;">on: pull_request</text>
+      <text x="110" y="450" class="text text-sm" style="font-family: monospace;">jobs:</text>
+      <text x="110" y="465" class="text text-sm" style="font-family: monospace;">  test: runs-on: ubuntu-latest</text>
+      <text x="110" y="480" class="text text-sm" style="font-family: monospace;">    steps: - lint - test - security-scan</text>
+      <text x="110" y="495" class="text text-sm" style="font-family: monospace;">  auto-merge: needs: test, if: author == 'dependabot'</text>
+    </g>
+  </g>
+  
+  <!-- 自動化設定のベストプラクティス -->
+  <g class="automation-best-practices">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">自動化設定のベストプラクティス</text>
+    
+    <!-- 段階的導入 -->
+    <g class="gradual-introduction">
+      <rect x="80" y="555" width="160" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 段階的導入</text>
+      <text x="160" y="590" text-anchor="middle" class="text text-sm">簡単なものから開始</text>
+    </g>
+    
+    <!-- 適切な閾値 -->
+    <g class="proper-thresholds">
+      <rect x="260" y="555" width="160" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 適切な閾値</text>
+      <text x="340" y="590" text-anchor="middle" class="text text-sm">バランスの取れた設定</text>
+    </g>
+    
+    <!-- 透明性確保 -->
+    <g class="transparency">
+      <rect x="440" y="555" width="160" height="40" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ 透明性確保</text>
+      <text x="520" y="590" text-anchor="middle" class="text text-sm">ルールの明文化</text>
+    </g>
+    
+    <!-- 継続改善 -->
+    <g class="continuous-improvement">
+      <rect x="620" y="555" width="160" height="40" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 継続改善</text>
+      <text x="700" y="590" text-anchor="middle" class="text text-sm">定期的な見直し</text>
+    </g>
+  </g>
+</svg>

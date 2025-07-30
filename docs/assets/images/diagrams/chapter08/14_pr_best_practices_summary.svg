@@ -1,0 +1,172 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PRベストプラクティス総まとめ</title>
+  <desc>Pull Request活用の総合的なベストプラクティス集</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PRベストプラクティス総まとめ</text>
+  
+  <!-- 概要 -->
+  <g class="best-practices-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPR活用のための実践指針</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏆 品質・効率・協働を最大化する統合的アプローチ</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">個人スキルからチーム運営まで包括的なベストプラクティス</text>
+  </g>
+  
+  <!-- 4つのカテゴリ -->
+  <g class="best-practices-categories">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">ベストプラクティス4分野</text>
+    
+    <!-- 作成・準備 -->
+    <g class="creation-preparation">
+      <rect x="50" y="200" width="160" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 作成・準備</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">DO:</text>
+      <text x="60" y="260" class="text text-sm">✅ 小さく分割</text>
+      <text x="60" y="275" class="text text-sm">✅ 明確な説明</text>
+      <text x="60" y="290" class="text text-sm">✅ 十分なテスト</text>
+      <text x="60" y="305" class="text text-sm">✅ 自己レビュー</text>
+      
+      <text x="60" y="325" class="text text-sm" style="font-weight: 600;">DON'T:</text>
+      <text x="60" y="340" class="text text-sm">❌ 巨大なPR</text>
+    </g>
+    
+    <!-- レビュー・議論 -->
+    <g class="review-discussion">
+      <rect x="230" y="200" width="160" height="140" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ レビュー・議論</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">DO:</text>
+      <text x="240" y="260" class="text text-sm">✅ 建設的フィードバック</text>
+      <text x="240" y="275" class="text text-sm">✅ 迅速な対応</text>
+      <text x="240" y="290" class="text text-sm">✅ 具体的な指摘</text>
+      <text x="240" y="305" class="text text-sm">✅ 学習機会創出</text>
+      
+      <text x="240" y="325" class="text text-sm" style="font-weight: 600;">DON'T:</text>
+      <text x="240" y="340" class="text text-sm">❌ 曖昧な批判</text>
+    </g>
+    
+    <!-- プロセス・管理 -->
+    <g class="process-management">
+      <rect x="410" y="200" width="160" height="140" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ プロセス・管理</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">DO:</text>
+      <text x="420" y="260" class="text text-sm">✅ 自動化活用</text>
+      <text x="420" y="275" class="text text-sm">✅ 品質ゲート設定</text>
+      <text x="420" y="290" class="text text-sm">✅ ブランチ保護</text>
+      <text x="420" y="305" class="text text-sm">✅ メトリクス測定</text>
+      
+      <text x="420" y="325" class="text text-sm" style="font-weight: 600;">DON'T:</text>
+      <text x="420" y="340" class="text text-sm">❌ 手動チェックのみ</text>
+    </g>
+    
+    <!-- チーム・文化 -->
+    <g class="team-culture">
+      <rect x="590" y="200" width="160" height="140" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 チーム・文化</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">DO:</text>
+      <text x="600" y="260" class="text text-sm">✅ 相互尊重</text>
+      <text x="600" y="275" class="text text-sm">✅ 知識共有</text>
+      <text x="600" y="290" class="text text-sm">✅ 継続改善</text>
+      <text x="600" y="305" class="text text-sm">✅ 透明性確保</text>
+      
+      <text x="600" y="325" class="text text-sm" style="font-weight: 600;">DON'T:</text>
+      <text x="600" y="340" class="text text-sm">❌ 個人攻撃</text>
+    </g>
+  </g>
+  
+  <!-- 成功要因 -->
+  <g class="success-factors">
+    <text x="400" y="370" text-anchor="middle" class="text text-md">PR活用成功の5つの要因</text>
+    
+    <rect x="80" y="390" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 要因1: 明確な目的 -->
+    <g class="clear-purpose">
+      <rect x="100" y="410" width="100" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 明確な目的</text>
+      <text x="150" y="450" text-anchor="middle" class="text text-sm">なぜ・何を</text>
+      <text x="150" y="465" text-anchor="middle" class="text text-sm">変更するか</text>
+    </g>
+    
+    <!-- 要因2: 適切なサイズ -->
+    <g class="appropriate-size">
+      <rect x="220" y="410" width="100" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="270" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📏 適切なサイズ</text>
+      <text x="270" y="450" text-anchor="middle" class="text text-sm">レビュー可能な</text>
+      <text x="270" y="465" text-anchor="middle" class="text text-sm">範囲に分割</text>
+    </g>
+    
+    <!-- 要因3: 高品質 -->
+    <g class="high-quality">
+      <rect x="340" y="410" width="100" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="390" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⭐ 高品質</text>
+      <text x="390" y="450" text-anchor="middle" class="text text-sm">テスト・ドキュメント</text>
+      <text x="390" y="465" text-anchor="middle" class="text text-sm">充実</text>
+    </g>
+    
+    <!-- 要因4: 効果的コミュニケーション -->
+    <g class="effective-communication">
+      <rect x="460" y="410" width="100" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="510" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 効果的議論</text>
+      <text x="510" y="450" text-anchor="middle" class="text text-sm">建設的・迅速な</text>
+      <text x="510" y="465" text-anchor="middle" class="text text-sm">フィードバック</text>
+    </g>
+    
+    <!-- 要因5: 継続改善 -->
+    <g class="continuous-improvement-factor">
+      <rect x="580" y="410" width="100" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="630" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 継続改善</text>
+      <text x="630" y="450" text-anchor="middle" class="text text-sm">プロセス・ツール</text>
+      <text x="630" y="465" text-anchor="middle" class="text text-sm">最適化</text>
+    </g>
+  </g>
+  
+  <!-- 実践チェックリスト -->
+  <g class="practical-checklist">
+    <text x="400" y="520" text-anchor="middle" class="text text-md">実践チェックリスト</text>
+    
+    <!-- PR作成時 -->
+    <g class="pr-creation-checklist">
+      <rect x="80" y="535" width="200" height="50" rx="8" class="success border" opacity="0.1"/>
+      <text x="100" y="555" class="text text-sm" style="font-weight: 600;">📝 PR作成時:</text>
+      <text x="100" y="570" class="text text-sm">目的明確・サイズ適切・テスト済み・説明充実</text>
+    </g>
+    
+    <!-- レビュー時 -->
+    <g class="review-checklist">
+      <rect x="300" y="535" width="200" height="50" rx="8" class="primary border" opacity="0.1"/>
+      <text x="320" y="555" class="text text-sm" style="font-weight: 600;">👁️ レビュー時:</text>
+      <text x="320" y="570" class="text text-sm">機能・設計・品質・セキュリティ確認</text>
+    </g>
+    
+    <!-- マージ時 -->
+    <g class="merge-checklist">
+      <rect x="520" y="535" width="200" height="50" rx="8" class="warning border" opacity="0.1"/>
+      <text x="540" y="555" class="text text-sm" style="font-weight: 600;">🔀 マージ時:</text>
+      <text x="540" y="570" class="text text-sm">全チェック通過・承認完了・影響確認</text>
+    </g>
+  </g>
+</svg>

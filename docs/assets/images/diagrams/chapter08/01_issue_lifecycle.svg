@@ -1,0 +1,158 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Issueライフサイクル</title>
+  <desc>GitHubのIssue管理における状態遷移とワークフロー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Issueライフサイクル</text>
+  
+  <!-- Issue作成 -->
+  <g class="issue-creation">
+    <rect x="80" y="80" width="120" height="80" rx="8" class="primary border"/>
+    <text x="140" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 Issue作成</text>
+    <text x="140" y="125" text-anchor="middle" class="text text-sm">• 問題発見</text>
+    <text x="140" y="140" text-anchor="middle" class="text text-sm">• 要望提案</text>
+    <text x="140" y="155" text-anchor="middle" class="text text-sm">• タイトル・説明</text>
+  </g>
+  
+  <!-- トリアージ -->
+  <g class="triage">
+    <rect x="240" y="80" width="120" height="80" rx="8" class="warning border"/>
+    <text x="300" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 トリアージ</text>
+    <text x="300" y="125" text-anchor="middle" class="text text-sm">• 優先度判定</text>
+    <text x="300" y="140" text-anchor="middle" class="text text-sm">• ラベル付け</text>
+    <text x="300" y="155" text-anchor="middle" class="text text-sm">• 担当者割当</text>
+  </g>
+  
+  <!-- 作業中 -->
+  <g class="in-progress">
+    <rect x="400" y="80" width="120" height="80" rx="8" class="neutral border"/>
+    <text x="460" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 作業中</text>
+    <text x="460" y="125" text-anchor="middle" class="text text-sm">• 開発・修正</text>
+    <text x="460" y="140" text-anchor="middle" class="text text-sm">• 進捗報告</text>
+    <text x="460" y="155" text-anchor="middle" class="text text-sm">• PR作成</text>
+  </g>
+  
+  <!-- 完了 -->
+  <g class="completed">
+    <rect x="560" y="80" width="120" height="80" rx="8" class="success border"/>
+    <text x="620" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 完了</text>
+    <text x="620" y="125" text-anchor="middle" class="text text-sm">• PR統合</text>
+    <text x="620" y="140" text-anchor="middle" class="text text-sm">• Issue解決</text>
+    <text x="620" y="155" text-anchor="middle" class="text text-sm">• クローズ</text>
+  </g>
+  
+  <!-- 矢印 -->
+  <line x1="200" y1="120" x2="240" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="360" y1="120" x2="400" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="520" y1="120" x2="560" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- Issue状態 -->
+  <g class="issue-states">
+    <text x="400" y="220" text-anchor="middle" class="text text-md">Issue状態管理</text>
+    
+    <!-- Open -->
+    <g class="open-state">
+      <rect x="100" y="250" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="170" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🟢 Open</text>
+      <text x="170" y="295" text-anchor="middle" class="text text-sm">• 未解決</text>
+      <text x="170" y="310" text-anchor="middle" class="text text-sm">• 作業待ち</text>
+      <text x="170" y="325" text-anchor="middle" class="text text-sm">• 作業中</text>
+    </g>
+    
+    <!-- Closed -->
+    <g class="closed-state">
+      <rect x="280" y="250" width="140" height="80" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="350" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚫ Closed</text>
+      <text x="350" y="295" text-anchor="middle" class="text text-sm">• 解決済み</text>
+      <text x="350" y="310" text-anchor="middle" class="text text-sm">• 無効判定</text>
+      <text x="350" y="325" text-anchor="middle" class="text text-sm">• 重複</text>
+    </g>
+    
+    <!-- 状態遷移矢印 -->
+    <path d="M 240 290 Q 260 240 280 290" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+    <path d="M 280 270 Q 260 220 240 270" fill="none" class="warning" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="260" y="235" text-anchor="middle" class="text text-sm">再オープン</text>
+  </g>
+  
+  <!-- ラベル管理 -->
+  <g class="label-management">
+    <text x="400" y="380" text-anchor="middle" class="text text-md">ラベル活用</text>
+    
+    <!-- バグ -->
+    <rect x="80" y="400" width="100" height="25" rx="12" class="error" opacity="0.8"/>
+    <text x="130" y="418" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">bug</text>
+    
+    <!-- 機能要望 -->
+    <rect x="200" y="400" width="100" height="25" rx="12" class="primary" opacity="0.8"/>
+    <text x="250" y="418" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">enhancement</text>
+    
+    <!-- ドキュメント -->
+    <rect x="320" y="400" width="100" height="25" rx="12" class="success" opacity="0.8"/>
+    <text x="370" y="418" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">documentation</text>
+    
+    <!-- 初心者向け -->
+    <rect x="440" y="400" width="100" height="25" rx="12" class="warning" opacity="0.8"/>
+    <text x="490" y="418" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">good first issue</text>
+    
+    <!-- ヘルプ求む -->
+    <rect x="560" y="400" width="100" height="25" rx="12" class="neutral" opacity="0.8"/>
+    <text x="610" y="418" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">help wanted</text>
+  </g>
+  
+  <!-- 優先度管理 -->
+  <g class="priority-management">
+    <text x="400" y="470" text-anchor="middle" class="text text-md">優先度管理</text>
+    
+    <!-- 高優先度 -->
+    <g class="high-priority">
+      <rect x="120" y="490" width="120" height="40" rx="4" class="error border" opacity="0.1"/>
+      <text x="180" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔥 High Priority</text>
+      <text x="180" y="525" text-anchor="middle" class="text text-sm">緊急対応が必要</text>
+    </g>
+    
+    <!-- 中優先度 -->
+    <g class="medium-priority">
+      <rect x="280" y="490" width="120" height="40" rx="4" class="warning border" opacity="0.1"/>
+      <text x="340" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ Medium Priority</text>
+      <text x="340" y="525" text-anchor="middle" class="text text-sm">計画的に取り組む</text>
+    </g>
+    
+    <!-- 低優先度 -->
+    <g class="low-priority">
+      <rect x="440" y="490" width="120" height="40" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="500" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 Low Priority</text>
+      <text x="500" y="525" text-anchor="middle" class="text text-sm">時間があるときに</text>
+    </g>
+  </g>
+  
+  <!-- ベストプラクティス -->
+  <g class="best-practices">
+    <rect x="50" y="550" width="700" height="40" rx="4" class="bg-alt border"/>
+    <text x="60" y="565" class="text text-sm" style="font-weight: 600;">💡 ベストプラクティス:</text>
+    <text x="60" y="580" class="text text-sm">明確なタイトル | 再現手順記載 | スクリーンショット添付 | 適切なラベル | 定期的な状況更新</text>
+  </g>
+</svg>
