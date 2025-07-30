@@ -40,6 +40,17 @@
     
     /* Transitions */
     --transition: all 0.2s ease;
+    
+    /* SVG Variables */
+    --svg-bg: #ffffff;
+    --svg-bg-alt: #f8fafc;
+    --svg-text: #1e293b;
+    --svg-border: #e2e8f0;
+    --svg-primary: #2563eb;
+    --svg-success: #10b981;
+    --svg-warning: #f59e0b;
+    --svg-error: #ef4444;
+    --svg-neutral: #64748b;
 }
 
 /* Dark Theme */
@@ -62,6 +73,17 @@
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    
+    /* SVG Variables for Dark Theme */
+    --svg-bg: #0f172a;
+    --svg-bg-alt: #1e293b;
+    --svg-text: #f1f5f9;
+    --svg-border: #334155;
+    --svg-primary: #3b82f6;
+    --svg-success: #10b981;
+    --svg-warning: #f59e0b;
+    --svg-error: #ef4444;
+    --svg-neutral: #94a3b8;
 }
 
 /* Base Styles */
