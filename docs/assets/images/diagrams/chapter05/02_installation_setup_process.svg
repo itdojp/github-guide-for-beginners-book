@@ -1,18 +1,18 @@
 <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
   <defs>
     <style>
-      .bg { fill: var(--svg-bg); }
-      .bg-alt { fill: var(--svg-bg-alt); }
-      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .bg { fill: #ffffff; }
+      .bg-alt { fill: #f8fafc; }
+      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
-      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
-      .primary { fill: var(--svg-primary); }
-      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
-      .success { fill: var(--svg-success); }
-      .warning { fill: var(--svg-warning); }
-      .error { fill: var(--svg-error); }
-      .neutral { fill: var(--svg-neutral); }
+      .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-stroke { stroke: #2563eb; stroke-width: 2; }
+      .success { fill: #10b981; }
+      .warning { fill: #f59e0b; }
+      .error { fill: #ef4444; }
+      .neutral { fill: #64748b; }
     </style>
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
