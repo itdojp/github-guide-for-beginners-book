@@ -14,6 +14,8 @@ layout: book
 
 ### Issue機能の目的と価値
 
+![Issueライフサイクル]({{ '/assets/images/diagrams/chapter07/01_issue_lifecycle.svg' | relative_url }})
+
 「Issue」は、プロジェクトの課題、タスク、バグ、機能要求などを記録・管理するGitHubの中核機能です。
 
 **日常生活での類推：**
@@ -29,6 +31,8 @@ layout: book
 - 家族で共有し、誰がいつ対応するかを決める
 
 ### Issueで管理できる内容
+
+![プロジェクト管理]({{ '/assets/images/diagrams/chapter07/02_project_management.svg' | relative_url }})
 
 **バグ報告**
 - 「スマートフォンでメニューが表示されない」
@@ -71,6 +75,12 @@ layout: book
 ---
 
 ## 8.2 Issueの作成と管理
+
+### オープンソースエコシステム
+
+![オープンソースエコシステム]({{ '/assets/images/diagrams/chapter07/01_open_source_ecosystem.svg' | relative_url }})
+
+GitHubのIssue機能は、オープンソースエコシステムの中核をなしています。世界中の開発者が協力してプロジェクトを改善し、知識を共有するための重要なプラットフォームです。
 
 ### 効果的なIssue作成手順
 
@@ -120,6 +130,12 @@ layout: book
 Androidでも同様の問題を確認しています。
 ```
 
+### プロジェクト発見方法
+
+![プロジェクト発見方法]({{ '/assets/images/diagrams/chapter07/02_project_discovery_methods.svg' | relative_url }})
+
+GitHub上では無数のオープンソースプロジェクトが公開されています。自分の関心や技術レベルに合ったプロジェクトを見つけることで、学習と貢献の両方を実現できます。
+
 **機能要求の場合：**
 ```markdown
 ## 機能の概要
@@ -143,6 +159,16 @@ Androidでも同様の問題を確認しています。
 - メールアドレス変更時の認証フロー
 - データベーススキーマの変更が必要
 ```
+
+### Forkワークフローの基本
+
+![Forkワークフロー基本]({{ '/assets/images/diagrams/chapter07/03_fork_workflow_basics.svg' | relative_url }})
+
+オープンソースプロジェクトへの貢献はForkワークフローで進めます。元のプロジェクトを自分のアカウントにコピーし、変更を加えた後、Pull Requestで元のプロジェクトに変更を提案します。
+
+### Issue管理システム
+
+![Issue管理システム]({{ '/assets/images/diagrams/chapter07/04_issue_management_system.svg' | relative_url }})
 
 ### ラベル機能による分類管理
 
@@ -170,6 +196,12 @@ Androidでも同様の問題を確認しています。
 - `needs review`：レビュー待ち
 - `blocked`：他の課題に依存
 
+### 貢献ガイドライン
+
+![貢献ガイドライン]({{ '/assets/images/diagrams/chapter07/05_contribution_guidelines.svg' | relative_url }})
+
+効果的なオープンソース貢献のためには、プロジェクトの貢献ガイドラインを理解し、適切な手順でアプローチすることが重要です。
+
 ### マイルストーンによる進捗管理
 
 **マイルストーンの設定例：**
@@ -192,6 +224,12 @@ Androidでも同様の問題を確認しています。
 ---
 
 ## 8.3 プロジェクトボードによる視覚的管理
+
+### Pull Request作成プロセス
+
+![Pull Request作成]({{ '/assets/images/diagrams/chapter07/06_pull_request_creation.svg' | relative_url }})
+
+オープンソースへの貢献では、Pull Requestの作成が最も重要なステップです。適切な情報と文脈を提供し、メンテナーがレビューしやすいPRを作成しましょう。
 
 ### GitHub Projects の基本機能
 
@@ -240,6 +278,12 @@ GitHub Projects は、Issueやプルリクエストを視覚的に管理でき�
 1. 既存のIssueから追加：Issue詳細画面で「Projects」を設定
 2. プロジェクトボードから追加：「Add cards」でIssueを検索・選択
 3. 新規Issue作成時に自動追加：自動化ルールを設定
+
+### コードレビュープロセス
+
+![コードレビュープロセス]({{ '/assets/images/diagrams/chapter07/07_code_review_process.svg' | relative_url }})
+
+品質の高いコードを維持するためには、体系的なコードレビュープロセスが不可欠です。IssueとPull Requestを連携させ、履歴管理と品質管理を両立させましょう。
 
 ### 効果的なプロジェクト管理の実践
 
@@ -291,6 +335,12 @@ Done:
 
 ## 8.4 チーム開発でのIssue活用
 
+### コミュニティエチケット
+
+![コミュニティエチケット]({{ '/assets/images/diagrams/chapter07/08_community_etiquette.svg' | relative_url }})
+
+オープンソースコミュニティでは、建設的で数重なコミュニケーションが重要です。適切なエチケットを理解し、遵守することで、コミュニティ全体の発展に貢献できます。
+
 ### 効果的なチームコミュニケーション
 
 **Issue での議論のベストプラクティス：**
@@ -300,6 +350,18 @@ Done:
 - 代替案の提示と比較検討
 - 決定事項の明確な記録
 - 次のアクションステップの明示
+
+### ライセンス理解
+
+![ライセンス理解]({{ '/assets/images/diagrams/chapter07/09_license_understanding.svg' | relative_url }})
+
+オープンソースプロジェクトへの貢献では、ライセンスの理解が不可欠です。適切なライセンスを選択し、遵守することで、法的リスクを回避し、健全なコミュニティの一員として活動できます。
+
+### ドキュメント貢献
+
+![ドキュメント貢献]({{ '/assets/images/diagrams/chapter07/10_documentation_contribution.svg' | relative_url }})
+
+コード以外の貢献として、ドキュメントの改善も非常に価値のある活動です。初心者にとって取り組みやすく、コミュニティ全体に大きなインパクトを与えることができます。
 
 **良いコミュニケーション例：**
 ```markdown
@@ -331,6 +393,18 @@ Done:
 @team-members の皆さんの意見をお聞かせください。
 特に、コスト面とメンテナンス性についてアドバイスいただけると助かります。
 ```
+
+### テスト貢献
+
+![テスト貢献]({{ '/assets/images/diagrams/chapter07/11_testing_contribution.svg' | relative_url }})
+
+テストの作成や改善も、プロジェクトの品質向上に大きく貢献します。バグの早期発見、リグレッション防止、コード品質の維持など、多方面でプロジェクトを支えることができます。
+
+### 長期的なエンゲージメント
+
+![長期的エンゲージメント]({{ '/assets/images/diagrams/chapter07/12_long_term_engagement.svg' | relative_url }})
+
+オープンソースコミュニティでの長期的な参加と貢献は、個人の成長とコミュニティの発展の両方に大きな価値をもたらします。持続的な参加で信頼関係を構築し、より大きな貢献をしていきましょう。
 
 ### 担当者の割り当てとコラボレーション
 

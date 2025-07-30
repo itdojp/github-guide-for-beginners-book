@@ -43,7 +43,9 @@ layout: book
 
 ### GitHub Actionsの基本概念
 
-**GitHub Actions**は、GitHubが提供するCI/CD（継続的インテグレーション/継続的デプロイメント）プラットフォームです。
+![PRブランチ保護]({{ '/assets/images/diagrams/chapter08/12_pr_branch_protection.svg' | relative_url }})
+
+**GitHub Actions**は、GitHubが提供するCI/CD（継続的インテグレーション/継続的デプロイメント）プラットフォームです。ブランチ保護ルールと連携して、コード品質を維持しながら自動化を実現できます。
 
 **主要コンポーネント：**
 
@@ -70,6 +72,12 @@ layout: book
 - ワークフローを実行する仮想環境
 - Ubuntu、Windows、macOSから選択
 - セルフホステッドランナーも利用可能
+
+### チームワークフロー管理
+
+![PRチームワークフロー]({{ '/assets/images/diagrams/chapter08/13_pr_team_workflows.svg' | relative_url }})
+
+チーム開発ではGitHub Actionsを使って、統一されたワークフローを構築することが重要です。各チームメンバーが一貫したプロセスで作業でき、品質と効率の両方を向上させることができます。
 
 ### CI/CDの基本的な流れ
 
@@ -155,6 +163,12 @@ jobs:
     - name: Build project
       run: npm run build
 ```
+
+### ベストプラクティス総括
+
+![PRベストプラクティス総括]({{ '/assets/images/diagrams/chapter08/14_pr_best_practices_summary.svg' | relative_url }})
+
+GitHub ActionsとPull Requestを組み合わせた効果的な開発フローのベストプラクティスを統合し、高品質なソフトウェア開発を実現しましょう。これらのプラクティスを遵守することで、チーム全体の生産性とコード品質を大幅に向上させることができます。
 
 ### ワークフロー構文の詳細解説
 

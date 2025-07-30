@@ -380,6 +380,14 @@ my-first-website/
 
 ---
 
+![ディレクトリ構造設計]({{ '/assets/images/diagrams/chapter04/14_directory_structure_design.svg' | relative_url }})
+
+### プロジェクトファイル構成のベストプラクティス
+
+効果的なプロジェクト構造を設計することは、将来の開発とメンテナンスに大きな影響を与えます。上記の図で示すように、用途に応じてファイルを適切に分類し、命名規則を統一することが重要です。
+
+![命名規則のベストプラクティス]({{ '/assets/images/diagrams/chapter04/15_naming_conventions_best_practices.svg' | relative_url }})
+
 ## 2.3 よくあるエラーと対処法
 
 ### リポジトリ作成時のエラー
@@ -446,6 +454,20 @@ my-first-website/
 ✅ 正しい
 ```（バッククォート3つでブロック作成）
 ```
+
+### ファイル権限とアクセス管理
+
+![ファイル権限管理]({{ '/assets/images/diagrams/chapter04/11_file_permissions_management.svg' | relative_url }})
+
+GitHubでは、リポジトリの可視性設定に加えて、個別のファイルやディレクトリに対する詳細な権限管理も可能です。チームでの開発では、適切な権限設定が重要になります。
+
+### 大容量ファイルの扱い
+
+![大容量ファイル処理]({{ '/assets/images/diagrams/chapter04/12_large_file_handling.svg' | relative_url }})
+
+GitHubには単一ファイル100MBの制限があります。動画、画像、データセットなどの大容量ファイルを扱う場合は、Git LFS（Large File Storage）の利用を検討しましょう。
+
+![バイナリファイル管理]({{ '/assets/images/diagrams/chapter04/13_binary_file_management.svg' | relative_url }})
 
 ### ファイル操作のエラー
 
@@ -572,6 +594,18 @@ Publicリポジトリを Privateに変更すると、以下の影響がありま
 4. 「Make public」を選択
 5. 警告メッセージを確認
 6. 「I understand, change repository visibility」をクリック
+
+### ブランチとマージの基本概念
+
+![ブランチファイル操作]({{ '/assets/images/diagrams/chapter04/05_branch_file_operations.svg' | relative_url }})
+
+ブランチ機能を使うことで、メインのコードに影響を与えることなく、実験的な変更や新機能の開発を安全に行えます。
+
+![マージ概念]({{ '/assets/images/diagrams/chapter04/06_merge_concept.svg' | relative_url }})
+
+マージは、異なるブランチで行った変更を統合する重要な操作です。適切なマージ戦略を選択することで、プロジェクトの履歴を整理し、管理しやすい状態を維持できます。
+
+![競合解決]({{ '/assets/images/diagrams/chapter04/07_conflict_resolution.svg' | relative_url }})
 
 ### 公開時の注意点
 

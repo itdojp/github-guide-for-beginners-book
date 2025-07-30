@@ -14,6 +14,8 @@ layout: book
 
 ### なぜGitHub Desktop を使うのか
 
+![GitHub Desktop概要]({{ '/assets/images/diagrams/chapter05/01_github_desktop_overview.svg' | relative_url }})
+
 第4章では、GitHubのWebサイト上でファイルの編集や管理を行いました。この方法でも基本的な作業は可能ですが、以下のような場面では少し不便です：
 
 **Web画面での制約**
@@ -32,6 +34,8 @@ layout: book
 GitHub Desktop は、GitHubが公式に提供している無料アプリケーションです。Web版の機能をすべて含みつつ、デスクトップならではの快適さを追加したツールです。
 
 ### ダウンロードとインストール手順
+
+![インストールセットアッププロセス]({{ '/assets/images/diagrams/chapter05/02_installation_setup_process.svg' | relative_url }})
 
 **1. 公式サイトにアクセス**
 https://desktop.github.com/ を開きます。
@@ -57,6 +61,8 @@ https://desktop.github.com/ を開きます。
 
 ### 初期設定の手順
 
+![インターフェイスレイアウト要素]({{ '/assets/images/diagrams/chapter05/03_interface_layout_elements.svg' | relative_url }})
+
 初回起動時に、以下の設定を行います：
 
 **GitHubアカウントとの連携**
@@ -77,6 +83,8 @@ GitHubがアプリ改善のために使用データを収集するかどうか�
 
 ### リポジトリの同期確認
 
+![リポジトリクローン作成]({{ '/assets/images/diagrams/chapter05/04_repository_cloning_creation.svg' | relative_url }})
+
 設定が完了すると、あなたのGitHubアカウントのリポジトリ一覧が自動的に表示されます。第2章で作成したリポジトリが表示されていることを確認してください。
 
 もし表示されていない場合は、以下を確認：
@@ -85,6 +93,8 @@ GitHubがアプリ改善のために使用データを収集するかどうか�
 - しばらく時間をおいてから再度確認
 
 ### 環境設定の詳細オプション
+
+![設定・プリファレンス]({{ '/assets/images/diagrams/chapter05/14_settings_preferences.svg' | relative_url }})
 
 より詳細な設定は、メニューの「Preferences」（設定）から行えます：
 
@@ -151,6 +161,8 @@ Clone されたリポジトリは、「Local Path」という場所に保存さ�
 
 ### ローカルでのファイル編集
 
+![ファイル変更ステージング]({{ '/assets/images/diagrams/chapter05/05_file_changes_staging.svg' | relative_url }})
+
 Clone したリポジトリのファイルは、普通のファイルと同様に編集できます：
 
 **1. ファイルの場所を開く**
@@ -163,6 +175,8 @@ GitHub Desktop で「Show in Explorer」（Windows）または「Show in Finder�
 
 **3. 変更の自動検知**
 GitHub Desktop は、ファイルの変更を自動的に検知し、「Changes」タブに表示します
+
+![コミットプロセスGUI]({{ '/assets/images/diagrams/chapter05/06_commit_process_gui.svg' | relative_url }})
 
 ### GitHub Desktop でのCommit操作
 
@@ -178,12 +192,23 @@ GitHub Desktop は、ファイルの変更を自動的に検知し、「Changes�
 - 赤色の背景：削除された行
 
 **3. Commit メッセージの入力**
+
+![コミットベストプラクティス]({{ '/assets/images/diagrams/chapter05/01_commit_best_practices.svg' | relative_url }})
+
 画面下部で：
 - **Summary**：変更内容の簡潔な要約（必須）
 - **Description**：詳細な説明（任意）
 
+効果的なコミットメッセージの作成は、プロジェクトの可読性と保守性を大幅に向上させます。上記のベストプラクティスに従って、一貫性のある明確なメッセージを作成しましょう。
+
 **4. Commit の実行**
 「Commit to main」ボタンをクリックして、変更をcommitします
+
+### ブランチ管理機能
+
+![ブランチ管理デスクトップ]({{ '/assets/images/diagrams/chapter05/07_branch_management_desktop.svg' | relative_url }})
+
+GitHub Desktopでは、ブランチの作成、切り替え、マージが簡単に行えます。複数の機能を並行して開発したり、実験的な変更を安全にテストしたりする際に非常に便利です。
 
 ### 部分的なCommit（Stage機能）
 
@@ -204,6 +229,8 @@ GitHub Desktop では、変更されたファイルの中から、commitに含�
 ## 5.4 Push、Pull、Syncの理解と実践
 
 ### Push - ローカルの変更をGitHubに送信
+
+![Push Pull同期操作]({{ '/assets/images/diagrams/chapter05/08_push_pull_sync_operations.svg' | relative_url }})
 
 **Push とは：**
 あなたのPC（ローカル）で行ったcommitを、GitHub上のリポジトリに送信することです。
@@ -247,7 +274,15 @@ Push と Pull を自動的に実行する便利機能です。
 - 「Sync」ボタンまたは「Fetch/Pull」ボタンをクリック
 - ショートカット：Ctrl+Shift+S（Windows）、Cmd+Shift+S（Mac）
 
+### 履歴タイムライン表示
+
+![履歴タイムラインビュー]({{ '/assets/images/diagrams/chapter05/09_history_timeline_view.svg' | relative_url }})
+
+GitHub Desktopでは、プロジェクトの変更履歴を美しいタイムライン形式で表示できます。各コミットの詳細、作者、日時などが一目でわかり、プロジェクトの発展を簡単に追跡できます。
+
 ### コンフリクト（競合）の基本対処
+
+![マージコンフリクト解決GUI]({{ '/assets/images/diagrams/chapter05/10_merge_conflict_resolution_gui.svg' | relative_url }})
 
 **コンフリクトとは：**
 同じファイルの同じ箇所が、複数の場所で異なる内容に変更された場合に発生する問題です。
@@ -263,6 +298,12 @@ Push と Pull を自動的に実行する便利機能です。
 3. コンフリクトマーカー（<<<<、====、>>>>）を確認
 4. 正しい内容を選択・編集してマーカーを削除
 5. ファイルを保存してcommit
+
+### StashとDiscard操作
+
+![Stash Discard操作]({{ '/assets/images/diagrams/chapter05/11_stash_discard_operations.svg' | relative_url }})
+
+作業中に一時的に変更を保存したい場合や、間違った変更を破棄したい場合に便利な機能です。Stashは変更を一時的に退避し、後で復元できる機能で、Discardは変更を完全に取り消す機能です。
 
 ---
 
@@ -289,6 +330,36 @@ Push と Pull を自動的に実行する便利機能です。
 - Push によるローカル変更の共有
 - Pull による最新情報の取得
 - Sync による自動同期
+
+### Pull Request作成機能
+
+![Pull Request作成]({{ '/assets/images/diagrams/chapter05/12_pull_request_creation.svg' | relative_url }})
+
+GitHub Desktopから直接Pull Requestを作成することも可能です。ブランチでの作業が完了したら、アプリから直接Pull Requestを作成し、チームメンバーにレビューを依頼できます。
+
+### GitHub統合機能
+
+![GitHub統合機能]({{ '/assets/images/diagrams/chapter05/13_github_integration_features.svg' | relative_url }})
+
+GitHub Desktopは、GitHub.comの様々な機能と深く統合されています。Issueの確認、Pull Requestのステータス確認、コラボレーターとの連携など、チーム開発に必要な機能が統合されています。
+
+### キーボードショートカット
+
+![キーボードショートカット]({{ '/assets/images/diagrams/chapter05/15_keyboard_shortcuts.svg' | relative_url }})
+
+効率的な作業のために、主要なキーボードショートカットを習得しましょう。頁繁なマウス操作を減らし、スムーズなワークフローで作業できるようになります。
+
+### トラブルシューティング
+
+![トラブルシューティング一般問題]({{ '/assets/images/diagrams/chapter05/16_troubleshooting_common_issues.svg' | relative_url }})
+
+GitHub Desktopでよく発生する問題とその解決方法を理解しておくことで、トラブルが発生した際に迅速に対応できます。ネットワーク接続、認証、コンフリクトなどの一般的な問題の対処法を学びましょう。
+
+### CLIとDesktopの比較
+
+![CLI vs Desktop比較]({{ '/assets/images/diagrams/chapter05/18_cli_vs_desktop_comparison.svg' | relative_url }})
+
+コマンドラインインターフェイス（CLI）とGitHub Desktopのそれぞれの特徴を理解し、状況に応じて適切なツールを選択できるようになりましょう。初心者にはGUIがメリットが大きいですが、将来的にCLIを使うことも視野に入れておきましょう。
 
 次の章では、複数人でのチーム開発に必要なブランチ機能とマージ操作について学習します。
 

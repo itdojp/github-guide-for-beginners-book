@@ -51,6 +51,8 @@ GitHubの「ブランチ」は、まさにこの「実験用のコピーを作�
 
 ### Gitにおけるブランチの仕組み
 
+![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
+
 **mainブランチ（本流）**
 - プロジェクトの「正式版」
 - 常に動作する状態を保つ
@@ -75,6 +77,8 @@ main ─────●─────●─────●───── （�
 
 ### 新しいブランチの作成手順
 
+![ブランチマージ戦略]({{ '/assets/images/diagrams/chapter06/14_branch_merge_strategies.svg' | relative_url }})
+
 **1. GitHub Desktopでリポジトリを開く**
 - 対象のリポジトリを選択
 - 現在のブランチが「main」であることを確認
@@ -96,6 +100,8 @@ main ─────●─────●─────●───── （�
 - `fix`（何を修正するか不明）
 - `new`（何が新しいか不明）
 - `branch1`（内容が全く分からない）
+
+![ブランチ履歴管理]({{ '/assets/images/diagrams/chapter06/15_branch_history_management.svg' | relative_url }})
 
 ### ブランチ間の切り替え
 
@@ -133,6 +139,12 @@ main ─────●─────●─────●───── （�
 
 ## 6.3 マージ（統合）の基本概念と実践
 
+### Pull Requestの概要
+
+![Pull Request概要]({{ '/assets/images/diagrams/chapter08/01_pull_request_overview.svg' | relative_url }})
+
+Pull Request（PR）は、ブランチでの変更をメインブランチに統合する前に、チームメンバーにレビューを依頼する機能です。コードの品質を保ち、チーム全体で知識を共有するための重要なプロセスです。
+
 ### マージとは何か
 
 「マージ」は、作業用ブランチでの変更を、mainブランチに統合することです。実験が成功した場合に、その成果を本流に取り込む作業です。
@@ -148,6 +160,12 @@ After:
 main   ─●─●─●─●───── （新機能が統合された安定版）
 ```
 
+### PRの種類とパターン
+
+![PRタイプパターン]({{ '/assets/images/diagrams/chapter08/02_pr_types_patterns.svg' | relative_url }})
+
+Pull Requestには様々な種類があります。新機能追加、バグ修正、ドキュメント更新など、目的に応じて適切なPRタイプを選択することが重要です。
+
 ### GitHub Desktopでのマージ手順
 
 **1. mainブランチに切り替え**
@@ -162,6 +180,12 @@ main   ─●─●─●─●───── （新機能が統合された安
 **3. マージ完了の確認**
 - 変更内容がmainブランチに反映されていることを確認
 - コミット履歴にマージコミットが追加される
+
+### PR作成ワークフロー
+
+![PR作成ワークフロー]({{ '/assets/images/diagrams/chapter08/03_pr_creation_workflow.svg' | relative_url }})
+
+Pull Requestの作成からマージまでの一連の流れを理解し、効率的なチーム開発を実現しましょう。
 
 ### 作業用ブランチの削除
 
@@ -180,6 +204,12 @@ main   ─●─●─●─●───── （新機能が統合された安
 ---
 
 ## 6.4 コンフリクト（競合）の理解と解決
+
+### PRテンプレートの構造
+
+![PRテンプレート構造]({{ '/assets/images/diagrams/chapter08/04_pr_template_structure.svg' | relative_url }})
+
+効果的なPull Requestのために、テンプレートを活用しましょう。一貫性のある情報提供とレビュー効率の向上が期待できます。
 
 ### コンフリクトが発生する原因
 
@@ -252,6 +282,18 @@ Welcome to Our Website (mainブランチの内容)
 - GitHub Desktopで「Mark as resolved」
 - 「Continue merge」でマージ完了
 
+### PRレビュー状態
+
+![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
+
+Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
+
+### PRディスカッション管理
+
+![PRディスカッション管理]({{ '/assets/images/diagrams/chapter08/06_pr_discussion_management.svg' | relative_url }})
+
+Pull Requestでのディスカッションを効果的に管理することで、チーム全体のコミュニケーション品質と開発効率を向上させましょう。
+
 ### コンフリクト予防のベストプラクティス
 
 **1. 頻繁なマージ**
@@ -269,6 +311,18 @@ Welcome to Our Website (mainブランチの内容)
 **4. ファイル構成の工夫**
 - 機能ごとにファイルを分離
 - 共通部分の変更は慎重に
+
+### PRマージ戦略
+
+![PRマージ戦略]({{ '/assets/images/diagrams/chapter08/07_pr_merge_strategies.svg' | relative_url }})
+
+Pull Requestをマージする際には、様々な戦略があります。プロジェクトのポリシーや履歴管理の方針に応じて、適切なマージ戦略を選択しましょう。
+
+### PR自動化ツール
+
+![PR自動化ツール]({{ '/assets/images/diagrams/chapter08/08_pr_automation_tools.svg' | relative_url }})
+
+效率的なチーム開発のために、PRプロセスの一部を自動化することができます。CI/CD、自動テスト、コード品質チェックなどのツールを活用しましょう。
 
 ![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
 
@@ -293,10 +347,26 @@ Welcome to Our Website (mainブランチの内容)
 - マージ完了後のブランチ削除
 - 変更履歴の保持
 
+### PRコンフリクト解決
+
+![PRコンフリクト解決]({{ '/assets/images/diagrams/chapter08/09_pr_conflict_resolution.svg' | relative_url }})
+
 **コンフリクト解決**
 - 競合が発生する原因の理解
 - 実践的な解決手順
 - 予防のためのベストプラクティス
+
+### PR品質ゲート
+
+![PR品質ゲート]({{ '/assets/images/diagrams/chapter08/10_pr_quality_gates.svg' | relative_url }})
+
+コード品質を維持するために、PRに品質ゲートを設定しましょう。自動テスト、コードレビュー、セキュリティチェックなどを組み合わせた包括的な品質管理が可能です。
+
+### PRメトリクス分析
+
+![PRメトリクス分析]({{ '/assets/images/diagrams/chapter08/11_pr_metrics_analysis.svg' | relative_url }})
+
+Pull Requestのメトリクスを分析することで、チームの開発効率やコード品質を継続的に改善できます。レビュー時間、マージ率、コンフリクト発生率などの指標を活用しましょう。
 
 次の章では、チーム開発に欠かせないプルリクエスト機能について詳しく学習します。
 

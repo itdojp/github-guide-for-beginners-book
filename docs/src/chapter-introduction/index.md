@@ -60,8 +60,12 @@ layout: book
 
 ## Git/GitHubの基本概念
 
+![GitHubエコシステム]({{ '/assets/images/diagrams/chapter01/02_github_ecosystem.svg' | relative_url }})
+
 ### リポジトリ（Repository）
 プロジェクトとそのバージョン履歴を格納する「箱」です。従来のプロジェクトフォルダとは異なり、すべての変更履歴が含まれています。
+
+![リポジトリの概念]({{ '/assets/images/diagrams/chapter01/04_repository_concept.svg' | relative_url }})
 
 ### コミット（Commit）
 「この時点での状態を記録する」という操作です。変更内容と変更理由を一緒に保存できます。
@@ -71,6 +75,14 @@ layout: book
 
 ### マージ（Merge）
 異なるブランチの変更を統合する操作です。複数人の作業を安全に統合できます。
+
+![GitHubエコシステムでの役割]({{ '/assets/images/diagrams/chapter01/03_github_role_ecosystem.svg' | relative_url }})
+
+### 協調開発のワークフロー
+
+GitHubは単なるコード保存場所ではありません。チーム開発を効率化する様々な機能が統合されたプラットフォームです。
+
+![協調フロー]({{ '/assets/images/diagrams/chapter01/05_collaboration_flow.svg' | relative_url }})
 
 ## この書籍での学習アプローチ
 
@@ -101,6 +113,18 @@ layout: book
 - **基本操作の習得**：約1週間（1日1時間程度）
 - **チーム開発の理解**：追加で1週間
 - **高度な活用**：必要に応じて段階的に
+
+### GitHubと他のサービスとの比較
+
+![GitHub vs 代替サービス]({{ '/assets/images/diagrams/chapter01/06_github_vs_alternatives.svg' | relative_url }})
+
+GitHubは世界最大のプログラマーコミュニティを擁し、オープンソースプロジェクトの中心地として機能しています。他にもGitLab、BitBucketなどのサービスがありますが、初心者にとってはGitHubの豊富なリソースと活発なコミュニティが学習に最適です。
+
+## 開発ワークフローの全体像
+
+![開発ワークフロー概要]({{ '/assets/images/diagrams/chapter01/08_development_workflow_overview.svg' | relative_url }})
+
+GitHubを使った一般的な開発ワークフローを理解することで、学習の全体像が見えてきます。最初は複雑に感じるかもしれませんが、一つずつ段階的に学んでいけば必ず身につきます。
 
 ## 次の章への準備
 

@@ -181,12 +181,12 @@
         }
     }
 
-    // 画像の安全な強化（最小限・最適化）
+    // SVG修正とイメージ強化（特別対応）
     function enhanceImages() {
         const images = document.querySelectorAll('img');
         
         // 処理件数制限を大幅に削減（105個のSVGがあるため）
-        const maxImages = Math.min(images.length, 15);
+        const maxImages = Math.min(images.length, 20);
         
         for (let i = 0; i < maxImages; i++) {
             const img = images[i];
@@ -196,10 +196,15 @@
                 img.setAttribute('loading', 'lazy');
             }
             
-            // SVGファイルの最適化
+            // SVGファイルの特別処理
             if (img.src && img.src.includes('.svg')) {
                 // SVGのデコードを遅延
                 img.setAttribute('decoding', 'async');
+                
+                // SVG読み込み後にスタイル修正を試行
+                img.addEventListener('load', function() {
+                    fixSVGStyles(this);
+                });
             }
             
             // エラーハンドリング
@@ -211,6 +216,58 @@
         
         if (images.length > maxImages) {
             console.warn(`[Safe JS] Processed only ${maxImages} images out of ${images.length} due to ${document.querySelectorAll('img[src*=".svg"]').length} SVG diagrams`);
+        }
+    }
+    
+    // SVGスタイル修正関数
+    function fixSVGStyles(imgElement) {
+        try {
+            // SVGを埋め込み形式に変換して直接スタイルを適用
+            fetch(imgElement.src)
+                .then(response => response.text())
+                .then(svgText => {
+                    // CSS変数を直接値に置換
+                    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                    const replacements = currentTheme === 'dark' ? {
+                        'var(--svg-bg)': '#0f172a',
+                        'var(--svg-bg-alt)': '#1e293b',
+                        'var(--svg-text)': '#f1f5f9',
+                        'var(--svg-border)': '#334155',
+                        'var(--svg-primary)': '#3b82f6',
+                        'var(--svg-success)': '#10b981',
+                        'var(--svg-warning)': '#f59e0b',
+                        'var(--svg-error)': '#ef4444',
+                        'var(--svg-neutral)': '#94a3b8'
+                    } : {
+                        'var(--svg-bg)': '#ffffff',
+                        'var(--svg-bg-alt)': '#f8fafc',
+                        'var(--svg-text)': '#1e293b',
+                        'var(--svg-border)': '#e2e8f0',
+                        'var(--svg-primary)': '#2563eb',
+                        'var(--svg-success)': '#10b981',
+                        'var(--svg-warning)': '#f59e0b',
+                        'var(--svg-error)': '#ef4444',
+                        'var(--svg-neutral)': '#64748b'
+                    };
+                    
+                    let fixedSvg = svgText;
+                    Object.entries(replacements).forEach(([variable, value]) => {
+                        fixedSvg = fixedSvg.replace(new RegExp(variable, 'g'), value);
+                    });
+                    
+                    // SVGを埋め込み形式で置換
+                    const blob = new Blob([fixedSvg], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    imgElement.src = url;
+                    
+                    // メモリリークを防ぐために古いURLを解放
+                    setTimeout(() => URL.revokeObjectURL(url), 1000);
+                })
+                .catch(error => {
+                    console.warn('[Safe JS] Failed to fix SVG:', error);
+                });
+        } catch (error) {
+            console.warn('[Safe JS] SVG fix error:', error);
         }
     }
 

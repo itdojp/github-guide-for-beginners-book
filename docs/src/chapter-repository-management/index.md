@@ -14,6 +14,8 @@ layout: book
 
 ### まずは自分のリポジトリを開こう
 
+![リポジトリ構造]({{ '/assets/images/diagrams/chapter04/02_repository_structure.svg' | relative_url }})
+
 前章で作成したリポジトリを開いてみましょう。GitHubにログインした状態で、画面右上のプロフィールアイコンをクリックし、「Your repositories」を選択すると、あなたのリポジトリ一覧が表示されます。
 
 作成したリポジトリをクリックすると、そのリポジトリの画面が開きます。README.mdファイルを作成していれば、そのファイルが1つ表示されているはずです。
@@ -21,6 +23,8 @@ layout: book
 この画面が、あなたの「作業場」になります。ここから、ファイルの追加、編集、削除といったすべての基本操作を行うことができます。
 
 ### ファイルを追加する方法
+
+![WebUI操作フロー]({{ '/assets/images/diagrams/chapter04/01_web_ui_operation_flow.svg' | relative_url }})
 
 新しいファイルを追加するには、「Add file」という緑色のボタンを探してください。このボタンをクリックすると、以下の選択肢が表示されます：
 
@@ -51,6 +55,8 @@ layout: book
 ファイルをドロップすると、アップロードの進行状況が表示されます。完了すると、「Commit changes」という画面が表示されます。これは「この変更を記録として残しますか？」という確認画面です。詳しくは4.2節で説明します。
 
 #### 方法2：新しいファイルを直接作成
+
+![ファイル作成編集画面]({{ '/assets/images/diagrams/chapter04/02_file_creation_editing_screen.svg' | relative_url }})
 
 「Create new file」を選択すると、ブラウザ上でファイルを編集できる画面が開きます：
 
@@ -90,6 +96,10 @@ MarkdownファイルやHTMLファイルの場合、「Preview」タブをクリ�
 **重要な注意点：**
 ファイルを削除しても、GitHubの履歴には残り続けます。つまり、間違って削除してしまった場合でも、後から復元することが可能です。これがGitHubの大きな安心要素の一つです。
 
+![ファイル履歴表示]({{ '/assets/images/diagrams/chapter04/04_file_history_display.svg' | relative_url }})
+
+ファイルの変更履歴を確認することで、「いつ、誰が、何を変更したか」を詳細に追跡できます。
+
 ### よくある失敗と対処法
 
 **「ファイル名を間違えた」**
@@ -110,6 +120,8 @@ MarkdownファイルやHTMLファイルの場合、「Preview」タブをクリ�
 
 ### 「保存」と「commit」の違い
 
+![Git基本操作]({{ '/assets/images/diagrams/chapter04/01_git_basic_operations.svg' | relative_url }})
+
 普通のテキストエディタやWordでは、Ctrl+Sを押すと「上書き保存」されます。新しい内容で古い内容が置き換わり、変更前の状態は失われてしまいます。
 
 GitHubの「commit」は、この「保存」とは全く異なります：
@@ -128,6 +140,8 @@ GitHubの「commit」は、この「保存」とは全く異なります：
 つまり、commitは「変更の記録を作成する」行為です。「この時点でのプロジェクトの状態を、記録として残しておこう」という意味です。
 
 ### commitを作成する実際の手順
+
+![コミット作成プロセス]({{ '/assets/images/diagrams/chapter04/03_commit_creation_process.svg' | relative_url }})
 
 ファイルを作成・編集・削除した後、画面の下部に「Commit changes」というセクションが表示されます。ここでcommitを作成します：
 
@@ -212,6 +226,14 @@ commitメッセージは、将来の自分や他の人が「この変更は何�
 - 「あああ」（意味が全く分からない）
 - 「昨日の続き」（具体的な内容が分からない）
 
+### ブランチでのファイル操作
+
+![ブランチファイル操作]({{ '/assets/images/diagrams/chapter04/05_branch_file_operations.svg' | relative_url }})
+
+ブランチ機能を使用することで、メインのコードに影響を与えることなく、安全に実験や新機能の開発を行えます。各ブランチでの変更は独立して管理され、必要に応じて統合できます。
+
+![マージ概念]({{ '/assets/images/diagrams/chapter04/06_merge_concept.svg' | relative_url }})
+
 ### 日本語でのメッセージ作成法
 
 GitHubのcommitメッセージは英語で書かれることも多いですが、日本語で書いても全く問題ありません。特に以下の場合は、日本語の方が良いでしょう：
@@ -237,6 +259,12 @@ GitHubのcommitメッセージは英語で書かれることも多いですが�
 - 「○○のデザインを変更」
 - 「○○の処理方法を変更」
 - 「○○の設定を変更」
+
+### 競合の解決方法
+
+![競合解決]({{ '/assets/images/diagrams/chapter04/07_conflict_resolution.svg' | relative_url }})
+
+複数の人が同時に同じファイルを編集すると、「競合（コンフリクト）」が発生することがあります。これはGitHubが「どちらの変更を採用すべきか」を判断できない状態です。適切な手順で解決することで、安全に変更を統合できます。
 
 **削除系**
 - 「不要な○○を削除」
