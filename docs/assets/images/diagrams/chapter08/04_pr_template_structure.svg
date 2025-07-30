@@ -1,0 +1,91 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PRテンプレート構造</title>
+  <desc>効果的なPull Requestテンプレートの設計と活用方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PRテンプレート構造</text>
+  
+  <!-- テンプレートサンプル -->
+  <g class="template-sample">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPRテンプレート</text>
+    
+    <rect x="80" y="90" width="640" height="450" rx="8" class="bg-alt border"/>
+    
+    <!-- タイトル部分 -->
+    <g class="title-section">
+      <text x="100" y="115" class="text text-sm" style="font-weight: 600;">📝 タイトル（50文字以内推奨）</text>
+      <rect x="100" y="125" width="600" height="25" rx="4" class="border"/>
+      <text x="110" y="142" class="text text-sm">[Feature] ユーザー認証システムの実装</text>
+    </g>
+    
+    <!-- 概要セクション -->
+    <g class="summary-section">
+      <text x="100" y="175" class="text text-sm" style="font-weight: 600;">📋 概要・説明</text>
+      <rect x="100" y="185" width="600" height="80" rx="4" class="border"/>
+      <text x="110" y="202" class="text text-sm">## 変更内容</text>
+      <text x="110" y="217" class="text text-sm">- JWT認証の実装</text>
+      <text x="110" y="232" class="text text-sm">- ログイン・ログアウト機能追加</text>
+      <text x="110" y="247" class="text text-sm">- セッション管理の改善</text>
+      <text x="110" y="262" class="text text-sm"></text>
+    </g>
+    
+    <!-- 背景・理由セクション -->
+    <g class="background-section">
+      <text x="100" y="285" class="text text-sm" style="font-weight: 600;">🎯 背景・理由</text>
+      <rect x="100" y="295" width="600" height="60" rx="4" class="border"/>
+      <text x="110" y="312" class="text text-sm">## 解決する問題</text>
+      <text x="110" y="327" class="text text-sm">Issue #123: セキュリティ強化が必要</text>
+      <text x="110" y="342" class="text text-sm">現在の認証方式では十分なセキュリティが確保できない</text>
+    </g>
+    
+    <!-- テスト情報 -->
+    <g class="testing-section">
+      <text x="100" y="375" class="text text-sm" style="font-weight: 600;">🧪 テスト情報</text>
+      <rect x="100" y="385" width="600" height="60" rx="4" class="border"/>
+      <text x="110" y="402" class="text text-sm">## テスト方法</text>
+      <text x="110" y="417" class="text text-sm">- 単体テスト: `npm test auth`</text>
+      <text x="110" y="432" class="text text-sm">- E2Eテスト: ログインフロー検証済み</text>
+    </g>
+    
+    <!-- チェックリスト -->
+    <g class="checklist-section">
+      <text x="100" y="465" class="text text-sm" style="font-weight: 600;">☑️ チェックリスト</text>
+      <rect x="100" y="475" width="600" height="80" rx="4" class="border"/>
+      <text x="110" y="492" class="text text-sm">- [x] テスト追加・実行済み</text>
+      <text x="110" y="507" class="text text-sm">- [x] ドキュメント更新済み</text>
+      <text x="110" y="522" class="text text-sm">- [x] 既存テスト通過確認</text>
+      <text x="110" y="537" class="text text-sm">- [x] セキュリティ考慮済み</text>
+      <text x="400" y="492" class="text text-sm">- [x] Breaking Changeなし</text>
+      <text x="400" y="507" class="text text-sm">- [x] Issue参照: #123</text>
+      <text x="400" y="522" class="text text-sm">- [ ] レビュー完了</text>
+      <text x="400" y="537" class="text text-sm">- [ ] 承認待ち</text>
+    </g>
+  </g>
+  
+  <!-- テンプレートの要素 -->
+  <g class="template-elements">
+    <text x="400" y="570" text-anchor="middle" class="text text-md">重要な要素</text>
+    
+    <rect x="50" y="580" width="700" height="15" rx="4" class="success border" opacity="0.1"/>
+    <text x="60" y="592" class="text text-sm" style="font-weight: 600;">💡 必須:</text>
+    <text x="110" y="592" class="text text-sm">明確なタイトル | 変更概要 | 背景・理由 | テスト情報 | チェックリスト | Issue参照</text>
+  </g>
+</svg>

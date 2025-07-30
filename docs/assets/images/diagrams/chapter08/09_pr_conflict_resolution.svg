@@ -1,0 +1,195 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PRコンフリクト解決</title>
+  <desc>Pull Requestでのマージコンフリクト対処と解決手順</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PRコンフリクト解決</text>
+  
+  <!-- 概要 -->
+  <g class="conflict-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">マージコンフリクトの理解と対処</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="error border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 同じ箇所への異なる変更による競合状態</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">適切な解決手順で安全かつ効率的な統合を実現</text>
+  </g>
+  
+  <!-- コンフリクト発生パターン -->
+  <g class="conflict-patterns">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">コンフリクト発生の主要パターン</text>
+    
+    <!-- 同行編集 -->
+    <g class="same-line-edit">
+      <rect x="50" y="200" width="160" height="100" rx="8" class="error border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 同行編集</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">状況:</text>
+      <text x="60" y="260" class="text text-sm">• 同じ行の異なる変更</text>
+      <text x="60" y="275" class="text text-sm">• 異なる修正方針</text>
+      
+      <text x="60" y="295" class="text text-sm" style="font-weight: 600;">解決:</text>
+      <text x="60" y="310" text-anchor="middle" class="text text-sm">手動マージ必須</text>
+    </g>
+    
+    <!-- ファイル削除・変更 -->
+    <g class="file-delete-modify">
+      <rect x="230" y="200" width="160" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🗑️ 削除vs変更</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">状況:</text>
+      <text x="240" y="260" class="text text-sm">• 片方が削除</text>
+      <text x="240" y="275" class="text text-sm">• 片方が変更</text>
+      
+      <text x="240" y="295" class="text text-sm" style="font-weight: 600;">解決:</text>
+      <text x="310" y="310" text-anchor="middle" class="text text-sm">意図確認必要</text>
+    </g>
+    
+    <!-- ファイル移動 -->
+    <g class="file-rename">
+      <rect x="410" y="200" width="160" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 ファイル移動</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">状況:</text>
+      <text x="420" y="260" class="text text-sm">• 異なるパスへ移動</text>
+      <text x="420" y="275" class="text text-sm">• 同時にファイル変更</text>
+      
+      <text x="420" y="295" class="text text-sm" style="font-weight: 600;">解決:</text>
+      <text x="490" y="310" text-anchor="middle" class="text text-sm">統合判断</text>
+    </g>
+    
+    <!-- バイナリファイル -->
+    <g class="binary-conflict">
+      <rect x="590" y="200" width="160" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💾 バイナリ</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">状況:</text>
+      <text x="600" y="260" class="text text-sm">• バイナリファイル</text>
+      <text x="600" y="275" class="text text-sm">• 自動マージ不可</text>
+      
+      <text x="600" y="295" class="text text-sm" style="font-weight: 600;">解決:</text>
+      <text x="670" y="310" text-anchor="middle" class="text text-sm">どちらか選択</text>
+    </g>
+  </g>
+  
+  <!-- 解決手順 -->
+  <g class="resolution-process">
+    <text x="400" y="335" text-anchor="middle" class="text text-md">コンフリクト解決の手順</text>
+    
+    <rect x="50" y="355" width="700" height="160" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 状況確認 -->
+    <g class="step-1-assess">
+      <rect x="80" y="375" width="120" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="140" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 状況確認</text>
+      <text x="140" y="415" text-anchor="middle" class="text text-sm">コンフリクト</text>
+      <text x="140" y="430" text-anchor="middle" class="text text-sm">範囲特定</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="200" y1="405" x2="220" y2="405" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: 最新取得 -->
+    <g class="step-2-fetch">
+      <rect x="240" y="375" width="120" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="300" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 最新取得</text>
+      <text x="300" y="415" text-anchor="middle" class="text text-sm">upstream</text>
+      <text x="300" y="430" text-anchor="middle" class="text text-sm">同期</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="360" y1="405" x2="380" y2="405" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: 解決作業 -->
+    <g class="step-3-resolve">
+      <rect x="400" y="375" width="120" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="460" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 解決作業</text>
+      <text x="460" y="415" text-anchor="middle" class="text text-sm">手動マージ</text>
+      <text x="460" y="430" text-anchor="middle" class="text text-sm">内容統合</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="520" y1="405" x2="540" y2="405" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ4: テスト -->
+    <g class="step-4-test">
+      <rect x="560" y="375" width="120" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="620" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ テスト</text>
+      <text x="620" y="415" text-anchor="middle" class="text text-sm">動作確認</text>
+      <text x="620" y="430" text-anchor="middle" class="text text-sm">品質保証</text>
+    </g>
+    
+    <!-- コマンド例 -->
+    <g class="command-examples">
+      <text x="90" y="465" class="text text-sm" style="font-weight: 600;">主要コマンド:</text>
+      
+      <rect x="90" y="475" width="150" height="15" rx="2" class="border"/>
+      <text x="95" y="487" class="text text-sm" style="font-family: monospace;">git fetch upstream</text>
+      
+      <rect x="260" y="475" width="150" height="15" rx="2" class="border"/>
+      <text x="265" y="487" class="text text-sm" style="font-family: monospace;">git merge upstream/main</text>
+      
+      <rect x="430" y="475" width="150" height="15" rx="2" class="border"/>
+      <text x="435" y="487" class="text text-sm" style="font-family: monospace;">git add resolved-file</text>
+      
+      <rect x="600" y="475" width="120" height="15" rx="2" class="border"/>
+      <text x="605" y="487" class="text text-sm" style="font-family: monospace;">git commit</text>
+    </g>
+  </g>
+  
+  <!-- 解決のコツ -->
+  <g class="resolution-tips">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">効果的な解決のコツ</text>
+    
+    <!-- 慎重な判断 -->
+    <g class="careful-judgment">
+      <rect x="80" y="555" width="160" height="40" rx="8" class="error border" opacity="0.1"/>
+      <text x="160" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ 慎重な判断</text>
+      <text x="160" y="590" text-anchor="middle" class="text text-sm">両方の意図を理解</text>
+    </g>
+    
+    <!-- チーム相談 -->
+    <g class="team-consultation">
+      <rect x="260" y="555" width="160" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="340" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 チーム相談</text>
+      <text x="340" y="590" text-anchor="middle" class="text text-sm">複雑な場合は相談</text>
+    </g>
+    
+    <!-- 段階的解決 -->
+    <g class="incremental-resolution">
+      <rect x="440" y="555" width="160" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="520" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 段階的解決</text>
+      <text x="520" y="590" text-anchor="middle" class="text text-sm">小さい単位で解決</text>
+    </g>
+    
+    <!-- 予防策 -->
+    <g class="prevention">
+      <rect x="620" y="555" width="160" height="40" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="575" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ 予防策</text>
+      <text x="700" y="590" text-anchor="middle" class="text text-sm">定期的な同期</text>
+    </g>
+  </g>
+</svg>

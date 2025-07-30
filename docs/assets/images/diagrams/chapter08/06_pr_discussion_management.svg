@@ -1,0 +1,165 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PR議論管理</title>
+  <desc>Pull Requestでの効果的な議論とコミュニケーション管理</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR議論管理</text>
+  
+  <!-- 概要 -->
+  <g class="discussion-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPR議論の進め方</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 建設的な議論で品質向上と学習を促進</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">適切なコミュニケーションでチーム協力を最大化</text>
+  </g>
+  
+  <!-- 議論の種類 -->
+  <g class="discussion-types">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">PR議論の主要カテゴリ</text>
+    
+    <!-- コードレビューコメント -->
+    <g class="code-review-comments">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 コードレビュー</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
+      <text x="60" y="260" class="text text-sm">• 具体的な指摘</text>
+      <text x="60" y="275" class="text text-sm">• 改善提案</text>
+      <text x="60" y="290" class="text text-sm">• 質問・確認</text>
+      
+      <text x="60" y="310" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="60" y="325" text-anchor="middle" class="text text-sm">行単位での議論</text>
+    </g>
+    
+    <!-- 全体的な議論 -->
+    <g class="general-discussion">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💭 全体議論</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
+      <text x="240" y="260" class="text text-sm">• アプローチ検討</text>
+      <text x="240" y="275" class="text text-sm">• 設計議論</text>
+      <text x="240" y="290" class="text text-sm">• 影響範囲確認</text>
+      
+      <text x="240" y="310" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="310" y="325" text-anchor="middle" class="text text-sm">戦略的な議論</text>
+    </g>
+    
+    <!-- 質問・説明要求 -->
+    <g class="questions-clarifications">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❓ 質問・説明</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
+      <text x="420" y="260" class="text text-sm">• 実装理由</text>
+      <text x="420" y="275" class="text text-sm">• 技術選択</text>
+      <text x="420" y="290" class="text text-sm">• 動作確認</text>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="490" y="325" text-anchor="middle" class="text text-sm">理解促進</text>
+    </g>
+    
+    <!-- 承認・却下 -->
+    <g class="approval-rejection">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 承認・判定</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
+      <text x="600" y="260" class="text text-sm">• 品質評価</text>
+      <text x="600" y="275" class="text text-sm">• 最終判断</text>
+      <text x="600" y="290" class="text text-sm">• 条件付き承認</text>
+      
+      <text x="600" y="310" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="670" y="325" text-anchor="middle" class="text text-sm">意思決定</text>
+    </g>
+  </g>
+  
+  <!-- 議論のベストプラクティス -->
+  <g class="discussion-best-practices">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">効果的な議論のテクニック</text>
+    
+    <rect x="80" y="375" width="640" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- 建設的フィードバック -->
+    <g class="constructive-feedback">
+      <rect x="100" y="395" width="140" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 建設的姿勢</text>
+      
+      <text x="110" y="435" class="text text-sm">• 具体的な指摘</text>
+      <text x="110" y="450" class="text text-sm">• 改善案提示</text>
+      <text x="110" y="465" class="text text-sm">• 学習機会創出</text>
+      <text x="110" y="480" class="text text-sm">• 前向きな表現</text>
+    </g>
+    
+    <!-- 明確なコミュニケーション -->
+    <g class="clear-communication">
+      <rect x="260" y="395" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 明確な表現</text>
+      
+      <text x="270" y="435" class="text text-sm">• 簡潔な説明</text>
+      <text x="270" y="450" class="text text-sm">• 例示・図解活用</text>
+      <text x="270" y="465" class="text text-sm">• 意図の明確化</text>
+      <text x="270" y="480" class="text text-sm">• 質問の具体化</text>
+    </g>
+    
+    <!-- 迅速な対応 -->
+    <g class="responsive-engagement">
+      <rect x="420" y="395" width="140" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 迅速な対応</text>
+      
+      <text x="430" y="435" class="text text-sm">• タイムリーな返答</text>
+      <text x="430" y="450" class="text text-sm">• 進捗状況共有</text>
+      <text x="430" y="465" class="text text-sm">• 質問への回答</text>
+      <text x="430" y="480" class="text text-sm">• 感謝の表明</text>
+    </g>
+    
+    <!-- 解決志向 -->
+    <g class="solution-oriented">
+      <rect x="580" y="395" width="140" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 解決志向</text>
+      
+      <text x="590" y="435" class="text text-sm">• 問題の特定</text>
+      <text x="590" y="450" class="text text-sm">• 解決策検討</text>
+      <text x="590" y="465" class="text text-sm">• 代替案提示</text>
+      <text x="590" y="480" class="text text-sm">• 合意形成</text>
+    </g>
+  </g>
+  
+  <!-- 議論管理のコツ -->
+  <g class="discussion-management-tips">
+    <text x="400" y="545" text-anchor="middle" class="text text-md">議論管理のコツ</text>
+    
+    <!-- 作成者として -->
+    <g class="as-author">
+      <rect x="80" y="560" width="300" height="35" rx="8" class="primary border" opacity="0.1"/>
+      <text x="100" y="580" class="text text-sm" style="font-weight: 600;">👤 作成者:</text>
+      <text x="150" y="580" class="text text-sm">オープンな姿勢 | 説明責任 | 感謝表明 | 継続改善</text>
+    </g>
+    
+    <!-- レビュアーとして -->
+    <g class="as-reviewer">
+      <rect x="400" y="560" width="300" height="35" rx="8" class="success border" opacity="0.1"/>
+      <text x="420" y="580" class="text text-sm" style="font-weight: 600;">👁️ レビュアー:</text>
+      <text x="480" y="580" class="text text-sm">建設的批判 | 学習支援 | 品質確保 | チーム成長</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,167 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>PR品質ゲート</title>
+  <desc>Pull Requestの品質を保証するためのチェックポイントと基準</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR品質ゲート</text>
+  
+  <!-- 概要 -->
+  <g class="quality-gates-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">品質保証のためのチェックポイント</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ 一貫した品質基準でプロダクトの安定性を確保</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">自動化されたチェックと人的レビューの組み合わせ</text>
+  </g>
+  
+  <!-- 品質ゲートの層 -->
+  <g class="quality-gate-layers">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">多層の品質チェック</text>
+    
+    <rect x="50" y="200" width="700" height="280" rx="8" class="bg-alt border"/>
+    
+    <!-- 自動チェック層 -->
+    <g class="automated-checks">
+      <text x="400" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">レイヤー1: 自動チェック</text>
+      
+      <!-- テスト実行 -->
+      <g class="test-execution">
+        <rect x="80" y="235" width="120" height="80" rx="8" class="success border" opacity="0.1"/>
+        <text x="140" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧪 テスト実行</text>
+        
+        <text x="90" y="275" class="text text-sm">• 単体テスト</text>
+        <text x="90" y="290" class="text text-sm">• 統合テスト</text>
+        <text x="90" y="305" class="text text-sm">• E2Eテスト</text>
+      </g>
+      
+      <!-- コード品質 -->
+      <g class="code-quality-check">
+        <rect x="220" y="235" width="120" height="80" rx="8" class="primary border" opacity="0.1"/>
+        <text x="280" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 コード品質</text>
+        
+        <text x="230" y="275" class="text text-sm">• 静的解析</text>
+        <text x="230" y="290" class="text text-sm">• カバレッジ</text>
+        <text x="230" y="305" class="text text-sm">• 複雑度測定</text>
+      </g>
+      
+      <!-- セキュリティ -->
+      <g class="security-check">
+        <rect x="360" y="235" width="120" height="80" rx="8" class="error border" opacity="0.1"/>
+        <text x="420" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔒 セキュリティ</text>
+        
+        <text x="370" y="275" class="text text-sm">• 脆弱性スキャン</text>
+        <text x="370" y="290" class="text text-sm">• 依存関係チェック</text>
+        <text x="370" y="305" class="text text-sm">• シークレット検出</text>
+      </g>
+      
+      <!-- パフォーマンス -->
+      <g class="performance-check">
+        <rect x="500" y="235" width="120" height="80" rx="8" class="warning border" opacity="0.1"/>
+        <text x="560" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ パフォーマンス</text>
+        
+        <text x="510" y="275" class="text text-sm">• ビルド時間</text>
+        <text x="510" y="290" class="text text-sm">• 実行速度</text>
+        <text x="510" y="305" class="text text-sm">• メモリ使用量</text>
+      </g>
+      
+      <!-- 規約チェック -->
+      <g class="standards-check">
+        <rect x="640" y="235" width="120" height="80" rx="8" class="neutral border" opacity="0.1"/>
+        <text x="700" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 規約チェック</text>
+        
+        <text x="650" y="275" class="text text-sm">• コーディング規約</text>
+        <text x="650" y="290" class="text text-sm">• 命名規則</text>
+        <text x="650" y="305" class="text text-sm">• フォーマット</text>
+      </g>
+    </g>
+    
+    <!-- 人的レビュー層 -->
+    <g class="human-review">
+      <text x="400" y="345" text-anchor="middle" class="text text-sm" style="font-weight: 600;">レイヤー2: 人的レビュー</text>
+      
+      <!-- 機能レビュー -->
+      <g class="functional-review">
+        <rect x="120" y="355" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+        <text x="190" y="375" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 機能レビュー</text>
+        <text x="190" y="395" text-anchor="middle" class="text text-sm">要件実現・ロジック妥当性</text>
+      </g>
+      
+      <!-- 設計レビュー -->
+      <g class="design-review">
+        <rect x="280" y="355" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+        <text x="350" y="375" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏗️ 設計レビュー</text>
+        <text x="350" y="395" text-anchor="middle" class="text text-sm">アーキテクチャ・保守性</text>
+      </g>
+      
+      <!-- セキュリティレビュー -->
+      <g class="security-review">
+        <rect x="440" y="355" width="140" height="60" rx="8" class="error border" opacity="0.1"/>
+        <text x="510" y="375" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 セキュリティ</text>
+        <text x="510" y="395" text-anchor="middle" class="text text-sm">脅威分析・対策妥当性</text>
+      </g>
+    </g>
+    
+    <!-- 承認層 -->
+    <g class="approval-layer">
+      <text x="400" y="445" text-anchor="middle" class="text text-sm" style="font-weight: 600;">レイヤー3: 最終承認</text>
+      
+      <!-- 技術承認 -->
+      <g class="technical-approval">
+        <rect x="180" y="455" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+        <text x="250" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👨‍💻 技術承認</text>
+        <text x="250" y="495" text-anchor="middle" class="text text-sm">技術リード・アーキテクト</text>
+      </g>
+      
+      <!-- ビジネス承認 -->
+      <g class="business-approval">
+        <rect x="340" y="455" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+        <text x="410" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 ビジネス承認</text>
+        <text x="410" y="495" text-anchor="middle" class="text text-sm">プロダクトオーナー</text>
+      </g>
+      
+      <!-- リリース承認 -->
+      <g class="release-approval">
+        <rect x="500" y="455" width="140" height="60" rx="8" class="neutral border" opacity="0.1"/>
+        <text x="570" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 リリース承認</text>
+        <text x="570" y="495" text-anchor="middle" class="text text-sm">運用チーム・QA</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 品質基準設定 -->
+  <g class="quality-criteria">
+    <text x="400" y="510" text-anchor="middle" class="text text-md">品質基準の設定例</text>
+    
+    <!-- 必須基準 -->
+    <g class="mandatory-criteria">
+      <rect x="80" y="525" width="300" height="50" rx="8" class="error border" opacity="0.1"/>
+      <text x="100" y="545" class="text text-sm" style="font-weight: 600;">🚫 必須基準:</text>
+      <text x="100" y="560" class="text text-sm">テスト成功率100% | セキュリティチェックパス | 2名以上承認</text>
+    </g>
+    
+    <!-- 推奨基準 -->
+    <g class="recommended-criteria">
+      <rect x="400" y="525" width="300" height="50" rx="8" class="success border" opacity="0.1"/>
+      <text x="420" y="545" class="text text-sm" style="font-weight: 600;">✅ 推奨基準:</text>
+      <text x="420" y="560" class="text text-sm">カバレッジ80%以上 | 複雑度10以下 | パフォーマンス劣化なし</text>
+    </g>
+  </g>
+</svg>

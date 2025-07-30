@@ -1,0 +1,201 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .success-stroke { stroke: var(--svg-success); stroke-width: 2; }
+      .warning { fill: var(--svg-warning); }
+      .warning-stroke { stroke: var(--svg-warning); stroke-width: 2; }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Pull Request概要</title>
+  <desc>Pull Requestの基本概念とGitHub開発における重要性</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Pull Request概要</text>
+  
+  <!-- PRの概要 -->
+  <g class="pr-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">Pull Request (PR) とは</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔀 変更を提案し、レビューを経てコードを統合する仕組み</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">協力的な開発・品質保証・知識共有を実現するGitHubの中核機能</text>
+  </g>
+  
+  <!-- PRの役割と価値 -->
+  <g class="pr-roles-values">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">Pull Requestの役割と価値</text>
+    
+    <!-- 品質管理 -->
+    <g class="quality-control">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 品質管理</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="60" y="260" class="text text-sm">• コードレビュー</text>
+      <text x="60" y="275" class="text text-sm">• 自動テスト実行</text>
+      <text x="60" y="290" class="text text-sm">• 品質チェック</text>
+      
+      <text x="60" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="60" y="325" class="text text-sm">バグ防止・安定性向上</text>
+    </g>
+    
+    <!-- 協力・コミュニケーション -->
+    <g class="collaboration-communication">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 協力・議論</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="240" y="260" class="text text-sm">• 議論の場</text>
+      <text x="240" y="275" class="text text-sm">• フィードバック</text>
+      <text x="240" y="290" class="text text-sm">• 知識共有</text>
+      
+      <text x="240" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="240" y="325" class="text text-sm">チーム学習・スキル向上</text>
+    </g>
+    
+    <!-- 変更履歴管理 -->
+    <g class="change-history">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 履歴管理</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="420" y="260" class="text text-sm">• 変更の文脈記録</text>
+      <text x="420" y="275" class="text text-sm">• 意思決定履歴</text>
+      <text x="420" y="290" class="text text-sm">• 関連Issue追跡</text>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="420" y="325" class="text text-sm">保守性・理解性向上</text>
+    </g>
+    
+    <!-- 段階的統合 -->
+    <g class="gradual-integration">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 段階的統合</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">機能:</text>
+      <text x="600" y="260" class="text text-sm">• 安全な変更適用</text>
+      <text x="600" y="275" class="text text-sm">• ロールバック可能</text>
+      <text x="600" y="290" class="text text-sm">• 影響範囲限定</text>
+      
+      <text x="600" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="600" y="325" text-anchor="middle" class="text text-sm">リスク軽減</text>
+    </g>
+  </g>
+  
+  <!-- PRの基本的な流れ -->
+  <g class="pr-basic-flow">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">Pull Requestの基本的な流れ</text>
+    
+    <rect x="80" y="375" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 変更作成 -->
+    <g class="step-1-create-changes">
+      <rect x="100" y="395" width="100" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 変更作成</text>
+      <text x="150" y="435" text-anchor="middle" class="text text-sm">ブランチで</text>
+      <text x="150" y="450" text-anchor="middle" class="text text-sm">機能開発</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="200" y1="425" x2="220" y2="425" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: PR作成 -->
+    <g class="step-2-create-pr">
+      <rect x="240" y="395" width="100" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="290" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ PR作成</text>
+      <text x="290" y="435" text-anchor="middle" class="text text-sm">変更内容</text>
+      <text x="290" y="450" text-anchor="middle" class="text text-sm">説明・提案</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="340" y1="425" x2="360" y2="425" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: レビュー -->
+    <g class="step-3-review">
+      <rect x="380" y="395" width="100" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="430" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ レビュー</text>
+      <text x="430" y="435" text-anchor="middle" class="text text-sm">議論・検証</text>
+      <text x="430" y="450" text-anchor="middle" class="text text-sm">修正・改善</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="480" y1="425" x2="500" y2="425" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ4: 承認 -->
+    <g class="step-4-approval">
+      <rect x="520" y="395" width="100" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="570" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 承認</text>
+      <text x="570" y="435" text-anchor="middle" class="text text-sm">品質確認</text>
+      <text x="570" y="450" text-anchor="middle" class="text text-sm">Approve</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="620" y1="425" x2="640" y2="425" class="success-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ5: マージ -->
+    <g class="step-5-merge">
+      <rect x="660" y="395" width="80" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">5️⃣ マージ</text>
+      <text x="700" y="435" text-anchor="middle" class="text text-sm">統合</text>
+      <text x="700" y="450" text-anchor="middle" class="text text-sm">完了</text>
+    </g>
+    
+    <!-- フィードバックループ -->
+    <line x1="430" y1="395" x2="430" y2="375" class="warning-stroke"/>
+    <line x1="430" y1="375" x2="290" y2="375" class="warning-stroke"/>
+    <line x1="290" y1="375" x2="290" y2="395" class="warning-stroke" marker-end="url(#arrow)"/>
+    <text x="360" y="370" text-anchor="middle" class="text text-sm warning">修正が必要な場合</text>
+  </g>
+  
+  <!-- PRのメリット -->
+  <g class="pr-benefits">
+    <text x="400" y="525" text-anchor="middle" class="text text-md">Pull Requestのメリット</text>
+    
+    <!-- チーム開発 -->
+    <g class="team-development">
+      <rect x="80" y="545" width="160" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 チーム開発</text>
+      <text x="160" y="580" text-anchor="middle" class="text text-sm">協力・並行開発</text>
+    </g>
+    
+    <!-- 品質向上 -->
+    <g class="quality-improvement">
+      <rect x="260" y="545" width="160" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 品質向上</text>
+      <text x="340" y="580" text-anchor="middle" class="text text-sm">レビュー・テスト</text>
+    </g>
+    
+    <!-- 知識共有 -->
+    <g class="knowledge-sharing">
+      <rect x="440" y="545" width="160" height="40" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧠 知識共有</text>
+      <text x="520" y="580" text-anchor="middle" class="text text-sm">学習・スキル向上</text>
+    </g>
+    
+    <!-- 透明性 -->
+    <g class="transparency">
+      <rect x="620" y="545" width="160" height="40" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ 透明性</text>
+      <text x="700" y="580" text-anchor="middle" class="text text-sm">可視化・追跡可能</text>
+    </g>
+  </g>
+</svg>
