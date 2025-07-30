@@ -181,19 +181,25 @@
         }
     }
 
-    // 画像の安全な強化（最小限）
+    // 画像の安全な強化（最小限・最適化）
     function enhanceImages() {
         const images = document.querySelectorAll('img');
         
-        // 処理件数制限
-        const maxImages = Math.min(images.length, 30);
+        // 処理件数制限を大幅に削減（105個のSVGがあるため）
+        const maxImages = Math.min(images.length, 15);
         
         for (let i = 0; i < maxImages; i++) {
             const img = images[i];
             
-            // 遅延読み込み
+            // 遅延読み込み（特にSVGに重要）
             if (!img.hasAttribute('loading')) {
                 img.setAttribute('loading', 'lazy');
+            }
+            
+            // SVGファイルの最適化
+            if (img.src && img.src.includes('.svg')) {
+                // SVGのデコードを遅延
+                img.setAttribute('decoding', 'async');
             }
             
             // エラーハンドリング
@@ -201,6 +207,10 @@
                 this.style.display = 'none';
                 console.warn('[Safe JS] Image failed to load:', this.src);
             });
+        }
+        
+        if (images.length > maxImages) {
+            console.warn(`[Safe JS] Processed only ${maxImages} images out of ${images.length} due to ${document.querySelectorAll('img[src*=".svg"]').length} SVG diagrams`);
         }
     }
 
@@ -281,15 +291,19 @@
         safeExecute(initSmoothScrolling, 'initSmoothScrolling');
     }
 
-    // 重い処理の遅延初期化
+    // 重い処理の遅延初期化（105個のSVG対応）
     function initHeavyFeatures() {
-        // 重い処理は200ms後に実行し、各処理に制限時間を設ける
+        // 大量のSVGがあるため、より慎重な遅延実行
         setTimeout(() => {
-            safeExecuteWithTimeout(() => addHeadingIds(), 300, 'addHeadingIds');
-            safeExecuteWithTimeout(() => handleExternalLinks(), 200, 'handleExternalLinks');
-            safeExecuteWithTimeout(() => enhanceImages(), 200, 'enhanceImages');
-            safeExecuteWithTimeout(() => initCodeCopy(), 300, 'initCodeCopy');
-        }, 200);
+            safeExecuteWithTimeout(() => addHeadingIds(), 200, 'addHeadingIds');
+            safeExecuteWithTimeout(() => handleExternalLinks(), 150, 'handleExternalLinks');
+        }, 300);
+        
+        // さらに遅延してSVG処理とコードコピー
+        setTimeout(() => {
+            safeExecuteWithTimeout(() => enhanceImages(), 300, 'enhanceImages');
+            safeExecuteWithTimeout(() => initCodeCopy(), 200, 'initCodeCopy');
+        }, 800);
     }
 
     // DOMContentLoaded時の初期化
