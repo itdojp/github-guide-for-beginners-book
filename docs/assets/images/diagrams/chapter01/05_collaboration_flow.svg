@@ -1,0 +1,165 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コラボレーションの流れ</title>
+  <desc>GitHubを使ったチーム開発における基本的な協働ワークフロー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コラボレーションの流れ</text>
+  
+  <!-- チームメンバー -->
+  <g class="team-members">
+    <!-- 開発者A -->
+    <g class="developer-a">
+      <circle cx="150" cy="100" r="25" class="primary border"/>
+      <text x="150" y="90" text-anchor="middle" class="text text-sm">👤</text>
+      <text x="150" y="110" text-anchor="middle" class="text text-sm">開発者A</text>
+      <text x="150" y="135" text-anchor="middle" class="text text-sm">フロントエンド</text>
+    </g>
+    
+    <!-- 開発者B -->
+    <g class="developer-b">
+      <circle cx="400" cy="100" r="25" class="success border"/>
+      <text x="400" y="90" text-anchor="middle" class="text text-sm">👤</text>
+      <text x="400" y="110" text-anchor="middle" class="text text-sm">開発者B</text>
+      <text x="400" y="135" text-anchor="middle" class="text text-sm">バックエンド</text>
+    </g>
+    
+    <!-- 開発者C -->
+    <g class="developer-c">
+      <circle cx="650" cy="100" r="25" class="warning border"/>
+      <text x="650" y="90" text-anchor="middle" class="text text-sm">👤</text>
+      <text x="650" y="110" text-anchor="middle" class="text text-sm">開発者C</text>
+      <text x="650" y="135" text-anchor="middle" class="text text-sm">レビュアー</text>
+    </g>
+  </g>
+  
+  <!-- 中央リポジトリ -->
+  <g class="central-repository">
+    <rect x="320" y="180" width="160" height="80" rx="8" class="neutral border"/>
+    <text x="400" y="205" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏛️ 中央リポジトリ</text>
+    <text x="400" y="225" text-anchor="middle" class="text text-sm">GitHub上の共有リポジトリ</text>
+    <text x="400" y="245" text-anchor="middle" class="text text-sm">プロジェクトの真実の源</text>
+  </g>
+  
+  <!-- 協働ワークフロー -->
+  <g class="collaboration-workflow">
+    <text x="400" y="300" text-anchor="middle" class="text text-md">基本的な協働ワークフロー</text>
+    
+    <!-- Step 1: Clone/Fork -->
+    <g class="step-1">
+      <rect x="80" y="320" width="120" height="60" rx="4" class="primary border" opacity="0.1"/>
+      <text x="140" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1. Clone/Fork</text>
+      <text x="140" y="355" text-anchor="middle" class="text text-sm">リポジトリを</text>
+      <text x="140" y="370" text-anchor="middle" class="text text-sm">ローカルに複製</text>
+    </g>
+    
+    <!-- Step 2: Branch -->
+    <g class="step-2">
+      <rect x="220" y="320" width="120" height="60" rx="4" class="warning border" opacity="0.1"/>
+      <text x="280" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2. Branch作成</text>
+      <text x="280" y="355" text-anchor="middle" class="text text-sm">機能別に</text>
+      <text x="280" y="370" text-anchor="middle" class="text text-sm">作業ブランチ</text>
+    </g>
+    
+    <!-- Step 3: Development -->
+    <g class="step-3">
+      <rect x="360" y="320" width="120" height="60" rx="4" class="success border" opacity="0.1"/>
+      <text x="420" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3. 開発・コミット</text>
+      <text x="420" y="355" text-anchor="middle" class="text text-sm">機能実装と</text>
+      <text x="420" y="370" text-anchor="middle" class="text text-sm">変更記録</text>
+    </g>
+    
+    <!-- Step 4: Push -->
+    <g class="step-4">
+      <rect x="500" y="320" width="120" height="60" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="560" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4. Push</text>
+      <text x="560" y="355" text-anchor="middle" class="text text-sm">リモートに</text>
+      <text x="560" y="370" text-anchor="middle" class="text text-sm">変更をアップ</text>
+    </g>
+    
+    <!-- ワークフロー矢印 -->
+    <line x1="200" y1="350" x2="220" y2="350" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="340" y1="350" x2="360" y2="350" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="480" y1="350" x2="500" y2="350" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- Pull Request プロセス -->
+  <g class="pull-request-process">
+    <text x="400" y="420" text-anchor="middle" class="text text-md">Pull Request プロセス</text>
+    
+    <!-- PR作成 -->
+    <g class="pr-creation">
+      <rect x="100" y="440" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="170" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 PR作成</text>
+      <text x="170" y="485" text-anchor="middle" class="text text-sm">• 変更内容説明</text>
+      <text x="170" y="500" text-anchor="middle" class="text text-sm">• レビュアー指定</text>
+      <text x="170" y="515" text-anchor="middle" class="text text-sm">• 自動テスト実行</text>
+    </g>
+    
+    <!-- コードレビュー -->
+    <g class="code-review">
+      <rect x="280" y="440" width="140" height="80" rx="4" class="warning border" opacity="0.1"/>
+      <text x="350" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👀 コードレビュー</text>
+      <text x="350" y="485" text-anchor="middle" class="text text-sm">• 品質チェック</text>
+      <text x="350" y="500" text-anchor="middle" class="text text-sm">• 改善提案</text>
+      <text x="350" y="515" text-anchor="middle" class="text text-sm">• 知識共有</text>
+    </g>
+    
+    <!-- 修正・改善 -->
+    <g class="improvements">
+      <rect x="460" y="440" width="140" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="530" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 修正・改善</text>
+      <text x="530" y="485" text-anchor="middle" class="text text-sm">• フィードバック対応</text>
+      <text x="530" y="500" text-anchor="middle" class="text text-sm">• 追加コミット</text>
+      <text x="530" y="515" text-anchor="middle" class="text text-sm">• 再レビュー</text>
+    </g>
+    
+    <!-- マージ -->
+    <g class="merge">
+      <rect x="640" y="440" width="140" height="80" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="710" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎉 マージ</text>
+      <text x="710" y="485" text-anchor="middle" class="text text-sm">• 本流に統合</text>
+      <text x="710" y="500" text-anchor="middle" class="text text-sm">• 機能リリース</text>
+      <text x="710" y="515" text-anchor="middle" class="text text-sm">• ブランチ削除</text>
+    </g>
+    
+    <!-- PRプロセス矢印 -->
+    <line x1="240" y1="480" x2="280" y2="480" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="420" y1="480" x2="460" y2="480" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="600" y1="480" x2="640" y2="480" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- フィードバックループ -->
+    <path d="M 460 460 Q 400 420 350 440" fill="none" class="warning" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+    <text x="400" y="430" text-anchor="middle" class="text text-sm warning">修正要求</text>
+  </g>
+  
+  <!-- コラボレーションのメリット -->
+  <g class="collaboration-benefits">
+    <rect x="50" y="550" width="700" height="40" rx="4" class="bg-alt border"/>
+    <text x="60" y="565" class="text text-sm" style="font-weight: 600;">🤝 コラボレーションのメリット:</text>
+    <text x="60" y="580" class="text text-sm">品質向上 | 知識共有 | 作業分散 | 責任の明確化 | バックアップとしての冗長性</text>
+  </g>
+</svg>

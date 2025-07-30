@@ -1,0 +1,186 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Gitの分散型概念</title>
+  <desc>集中型vs分散型バージョン管理システムの比較とGitの特徴</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Gitの分散型概念</text>
+  
+  <!-- 集中型システム -->
+  <g class="centralized-system">
+    <text x="200" y="80" text-anchor="middle" class="text text-md warning">集中型システム (SVN等)</text>
+    
+    <!-- 中央サーバー -->
+    <g class="central-server">
+      <rect x="150" y="100" width="100" height="80" rx="8" class="warning border"/>
+      <text x="200" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 中央サーバー</text>
+      <text x="200" y="145" text-anchor="middle" class="text text-sm">完全な履歴</text>
+      <text x="200" y="160" text-anchor="middle" class="text text-sm">権限制御</text>
+      <text x="200" y="175" text-anchor="middle" class="text text-sm">単一障害点</text>
+    </g>
+    
+    <!-- クライアント1 -->
+    <g class="client-1">
+      <rect x="50" y="220" width="80" height="60" rx="4" class="neutral border"/>
+      <text x="90" y="240" text-anchor="middle" class="text text-sm">👤 開発者A</text>
+      <text x="90" y="255" text-anchor="middle" class="text text-sm">作業コピー</text>
+      <text x="90" y="270" text-anchor="middle" class="text text-sm">のみ</text>
+    </g>
+    
+    <!-- クライアント2 -->
+    <g class="client-2">
+      <rect x="160" y="220" width="80" height="60" rx="4" class="neutral border"/>
+      <text x="200" y="240" text-anchor="middle" class="text text-sm">👤 開発者B</text>
+      <text x="200" y="255" text-anchor="middle" class="text text-sm">作業コピー</text>
+      <text x="200" y="270" text-anchor="middle" class="text text-sm">のみ</text>
+    </g>
+    
+    <!-- クライアント3 -->
+    <g class="client-3">
+      <rect x="270" y="220" width="80" height="60" rx="4" class="neutral border"/>
+      <text x="310" y="240" text-anchor="middle" class="text text-sm">👤 開発者C</text>
+      <text x="310" y="255" text-anchor="middle" class="text text-sm">作業コピー</text>
+      <text x="310" y="270" text-anchor="middle" class="text text-sm">のみ</text>
+    </g>
+    
+    <!-- 接続線 -->
+    <line x1="200" y1="180" x2="90" y2="220" class="warning" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="200" y1="180" x2="200" y2="220" class="warning" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="200" y1="180" x2="310" y2="220" class="warning" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- 制約 -->
+    <text x="200" y="310" text-anchor="middle" class="text text-sm error">⚠️ ネットワーク必須・単一障害点</text>
+  </g>
+  
+  <!-- 分散型システム -->
+  <g class="distributed-system">
+    <text x="600" y="80" text-anchor="middle" class="text text-md success">分散型システム (Git)</text>
+    
+    <!-- リモートリポジトリ -->
+    <g class="remote-repository">
+      <rect x="550" y="100" width="100" height="80" rx="8" class="success border"/>
+      <text x="600" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ リモート</text>
+      <text x="600" y="140" text-anchor="middle" class="text text-sm">リポジトリ</text>
+      <text x="600" y="155" text-anchor="middle" class="text text-sm">(GitHub等)</text>
+      <text x="600" y="170" text-anchor="middle" class="text text-sm">共有拠点</text>
+    </g>
+    
+    <!-- ローカルリポジトリ1 -->
+    <g class="local-repo-1">
+      <rect x="450" y="220" width="80" height="80" rx="4" class="primary border"/>
+      <text x="490" y="240" text-anchor="middle" class="text text-sm">👤 開発者A</text>
+      <text x="490" y="255" text-anchor="middle" class="text text-sm">完全な</text>
+      <text x="490" y="270" text-anchor="middle" class="text text-sm">ローカル</text>
+      <text x="490" y="285" text-anchor="middle" class="text text-sm">リポジトリ</text>
+    </g>
+    
+    <!-- ローカルリポジトリ2 -->
+    <g class="local-repo-2">
+      <rect x="560" y="220" width="80" height="80" rx="4" class="primary border"/>
+      <text x="600" y="240" text-anchor="middle" class="text text-sm">👤 開発者B</text>
+      <text x="600" y="255" text-anchor="middle" class="text text-sm">完全な</text>
+      <text x="600" y="270" text-anchor="middle" class="text text-sm">ローカル</text>
+      <text x="600" y="285" text-anchor="middle" class="text text-sm">リポジトリ</text>
+    </g>
+    
+    <!-- ローカルリポジトリ3 -->
+    <g class="local-repo-3">
+      <rect x="670" y="220" width="80" height="80" rx="4" class="primary border"/>
+      <text x="710" y="240" text-anchor="middle" class="text text-sm">👤 開発者C</text>
+      <text x="710" y="255" text-anchor="middle" class="text text-sm">完全な</text>
+      <text x="710" y="270" text-anchor="middle" class="text text-sm">ローカル</text>
+      <text x="710" y="285" text-anchor="middle" class="text text-sm">リポジトリ</text>
+    </g>
+    
+    <!-- 双方向接続線 -->
+    <line x1="580" y1="180" x2="510" y2="220" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="520" y1="220" x2="580" y2="180" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <line x1="600" y1="180" x2="600" y2="220" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="600" y1="220" x2="600" y2="180" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <line x1="620" y1="180" x2="690" y2="220" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="700" y1="220" x2="620" y2="180" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- 利点 -->
+    <text x="600" y="320" text-anchor="middle" class="text text-sm success">✅ オフライン作業可能・高い冗長性</text>
+  </g>
+  
+  <!-- 比較表 -->
+  <g class="comparison-table">
+    <text x="400" y="370" text-anchor="middle" class="text text-md">集中型 vs 分散型 比較</text>
+    
+    <rect x="100" y="390" width="600" height="160" rx="4" class="bg-alt border"/>
+    
+    <!-- ヘッダー -->
+    <rect x="100" y="390" width="600" height="25" class="primary" opacity="0.2"/>
+    <text x="200" y="408" text-anchor="middle" class="text text-sm" style="font-weight: 600;">特徴</text>
+    <text x="400" y="408" text-anchor="middle" class="text text-sm" style="font-weight: 600;">集中型</text>
+    <text x="600" y="408" text-anchor="middle" class="text text-sm" style="font-weight: 600;">分散型</text>
+    
+    <!-- ネットワーク要件 -->
+    <rect x="100" y="415" width="600" height="25" class="bg"/>
+    <text x="200" y="432" text-anchor="middle" class="text text-sm">ネットワーク要件</text>
+    <text x="400" y="432" text-anchor="middle" class="text text-sm warning">常時必要</text>
+    <text x="600" y="432" text-anchor="middle" class="text text-sm success">同期時のみ</text>
+    
+    <!-- 履歴保持 -->
+    <rect x="100" y="440" width="600" height="25" class="bg-alt"/>
+    <text x="200" y="457" text-anchor="middle" class="text text-sm">履歴保持</text>
+    <text x="400" y="457" text-anchor="middle" class="text text-sm">サーバーのみ</text>
+    <text x="600" y="457" text-anchor="middle" class="text text-sm">全員が完全履歴</text>
+    
+    <!-- パフォーマンス -->
+    <rect x="100" y="465" width="600" height="25" class="bg"/>
+    <text x="200" y="482" text-anchor="middle" class="text text-sm">パフォーマンス</text>
+    <text x="400" y="482" text-anchor="middle" class="text text-sm">ネットワーク依存</text>
+    <text x="600" y="482" text-anchor="middle" class="text text-sm">ローカル高速</text>
+    
+    <!-- ブランチ作成 -->
+    <rect x="100" y="490" width="600" height="25" class="bg-alt"/>
+    <text x="200" y="507" text-anchor="middle" class="text text-sm">ブランチ作成</text>
+    <text x="400" y="507" text-anchor="middle" class="text text-sm">重い処理</text>
+    <text x="600" y="507" text-anchor="middle" class="text text-sm">軽量・高速</text>
+    
+    <!-- バックアップ -->
+    <rect x="100" y="515" width="600" height="25" class="bg"/>
+    <text x="200" y="532" text-anchor="middle" class="text text-sm">バックアップ</text>
+    <text x="400" y="532" text-anchor="middle" class="text text-sm">サーバー依存</text>
+    <text x="600" y="532" text-anchor="middle" class="text text-sm">自然な分散</text>
+    
+    <!-- 学習コスト -->
+    <rect x="100" y="540" width="600" height="10" class="bg-alt"/>
+    <text x="200" y="549" text-anchor="middle" class="text text-sm">学習コスト</text>
+    <text x="400" y="549" text-anchor="middle" class="text text-sm success">低</text>
+    <text x="600" y="549" text-anchor="middle" class="text text-sm warning">やや高</text>
+  </g>
+  
+  <!-- 結論 -->
+  <g class="conclusion">
+    <rect x="50" y="570" width="700" height="25" rx="2" class="primary" opacity="0.2"/>
+    <text x="400" y="587" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Gitの分散型アーキテクチャは現代開発に最適化された設計</text>
+  </g>
+</svg>

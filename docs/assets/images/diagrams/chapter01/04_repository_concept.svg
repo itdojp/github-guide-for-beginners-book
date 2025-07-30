@@ -1,0 +1,177 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リポジトリの概念</title>
+  <desc>リポジトリの構造と構成要素、ローカルとリモートの関係</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リポジトリの概念</text>
+  
+  <!-- リポジトリの定義 -->
+  <g class="repository-definition">
+    <rect x="150" y="70" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="95" text-anchor="middle" class="text text-md primary" style="font-weight: 600;">リポジトリ (Repository)</text>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm">プロジェクトのファイルとその変更履歴を保存する「倉庫」</text>
+  </g>
+  
+  <!-- リポジトリの構造 -->
+  <g class="repository-structure">
+    <text x="400" y="170" text-anchor="middle" class="text text-md">リポジトリの構造</text>
+    
+    <!-- ファイルエリア -->
+    <g class="files-area">
+      <rect x="80" y="190" width="140" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="215" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 プロジェクトファイル</text>
+      
+      <!-- ファイル例 -->
+      <rect x="90" y="230" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="100" y="242" class="text text-sm" style="font-family: monospace;">README.md</text>
+      
+      <rect x="90" y="250" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="100" y="262" class="text text-sm" style="font-family: monospace;">src/main.js</text>
+      
+      <rect x="90" y="270" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="100" y="282" class="text text-sm" style="font-family: monospace;">package.json</text>
+      
+      <rect x="90" y="290" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="100" y="302" class="text text-sm" style="font-family: monospace;">docs/</text>
+    </g>
+    
+    <!-- 履歴エリア -->
+    <g class="history-area">
+      <rect x="260" y="190" width="140" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="215" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 変更履歴</text>
+      
+      <!-- コミット履歴 -->
+      <g class="commit-list">
+        <circle cx="280" cy="235" r="3" class="warning"/>
+        <text x="290" y="240" class="text text-sm">feat: 新機能追加</text>
+        
+        <circle cx="280" cy="255" r="3" class="warning"/>
+        <text x="290" y="260" class="text text-sm">fix: バグ修正</text>
+        
+        <circle cx="280" cy="275" r="3" class="warning"/>
+        <text x="290" y="280" class="text text-sm">docs: README更新</text>
+        
+        <circle cx="280" cy="295" r="3" class="warning"/>
+        <text x="290" y="300" class="text text-sm">初回コミット</text>
+        
+        <!-- 接続線 -->
+        <line x1="280" y1="238" x2="280" y2="252" class="warning" stroke-width="2"/>
+        <line x1="280" y1="258" x2="280" y2="272" class="warning" stroke-width="2"/>
+        <line x1="280" y1="278" x2="280" y2="292" class="warning" stroke-width="2"/>
+      </g>
+    </g>
+    
+    <!-- ブランチエリア -->
+    <g class="branches-area">
+      <rect x="440" y="190" width="140" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="510" y="215" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ</text>
+      
+      <!-- ブランチ一覧 -->
+      <rect x="450" y="230" width="120" height="15" rx="2" class="success border"/>
+      <text x="460" y="242" class="text text-sm">main (デフォルト)</text>
+      
+      <rect x="450" y="250" width="120" height="15" rx="2" class="primary border"/>
+      <text x="460" y="262" class="text text-sm">feature/login</text>
+      
+      <rect x="450" y="270" width="120" height="15" rx="2" class="warning border"/>
+      <text x="460" y="282" class="text text-sm">develop</text>
+      
+      <rect x="450" y="290" width="120" height="15" rx="2" class="neutral border"/>
+      <text x="460" y="302" class="text text-sm">hotfix/security</text>
+    </g>
+    
+    <!-- 設定エリア -->
+    <g class="settings-area">
+      <rect x="620" y="190" width="140" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="690" y="215" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定・メタデータ</text>
+      
+      <!-- 設定項目 -->
+      <text x="630" y="235" class="text text-sm">• アクセス権限</text>
+      <text x="630" y="250" class="text text-sm">• コラボレータ</text>
+      <text x="630" y="265" class="text text-sm">• ブランチ保護</text>
+      <text x="630" y="280" class="text text-sm">• Webhook</text>
+      <text x="630" y="295" class="text text-sm">• Issue テンプレート</text>
+    </g>
+  </g>
+  
+  <!-- ローカル vs リモート -->
+  <g class="local-vs-remote">
+    <text x="400" y="360" text-anchor="middle" class="text text-md">ローカル vs リモートリポジトリ</text>
+    
+    <!-- ローカルリポジトリ -->
+    <g class="local-repository">
+      <rect x="100" y="380" width="200" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="200" y="405" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 ローカルリポジトリ</text>
+      <text x="200" y="425" text-anchor="middle" class="text text-sm">• 個人のPC上</text>
+      <text x="200" y="440" text-anchor="middle" class="text text-sm">• 高速アクセス</text>
+      <text x="200" y="455" text-anchor="middle" class="text text-sm">• オフライン作業可</text>
+      <text x="200" y="470" text-anchor="middle" class="text text-sm">• プライベート環境</text>
+    </g>
+    
+    <!-- リモートリポジトリ -->
+    <g class="remote-repository">
+      <rect x="500" y="380" width="200" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="600" y="405" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ リモートリポジトリ</text>
+      <text x="600" y="425" text-anchor="middle" class="text text-sm">• GitHub等のサーバー</text>
+      <text x="600" y="440" text-anchor="middle" class="text text-sm">• チーム共有</text>
+      <text x="600" y="455" text-anchor="middle" class="text text-sm">• バックアップ</text>
+      <text x="600" y="470" text-anchor="middle" class="text text-sm">• 協働の拠点</text>
+    </g>
+    
+    <!-- 同期の矢印 -->
+    <g class="sync-arrows">
+      <!-- Push -->
+      <path d="M 300 420 Q 350 400 500 420" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+      <text x="400" y="410" text-anchor="middle" class="text text-sm primary">Push</text>
+      
+      <!-- Pull -->
+      <path d="M 500 460 Q 450 480 300 460" fill="none" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+      <text x="400" y="490" text-anchor="middle" class="text text-sm success">Pull</text>
+    </g>
+  </g>
+  
+  <!-- リポジトリの種類 -->
+  <g class="repository-types">
+    <text x="400" y="520" text-anchor="middle" class="text text-md">リポジトリの公開レベル</text>
+    
+    <!-- Public -->
+    <g class="public-repo">
+      <rect x="120" y="540" width="120" height="40" rx="4" class="success border" opacity="0.1"/>
+      <text x="180" y="560" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 Public</text>
+      <text x="180" y="575" text-anchor="middle" class="text text-sm">誰でも閲覧可能</text>
+    </g>
+    
+    <!-- Private -->
+    <g class="private-repo">
+      <rect x="280" y="540" width="120" height="40" rx="4" class="warning border" opacity="0.1"/>
+      <text x="340" y="560" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔒 Private</text>
+      <text x="340" y="575" text-anchor="middle" class="text text-sm">招待者のみ</text>
+    </g>
+    
+    <!-- Internal -->
+    <g class="internal-repo">
+      <rect x="440" y="540" width="120" height="40" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="500" y="560" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 Internal</text>
+      <text x="500" y="575" text-anchor="middle" class="text text-sm">組織内のみ</text>
+    </g>
+  </g>
+</svg>

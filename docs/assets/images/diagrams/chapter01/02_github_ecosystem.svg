@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>GitHubエコシステム</title>
+  <desc>GitHubを中心とした開発ツールとサービスの生態系</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">GitHubエコシステム</text>
+  
+  <!-- 中央のGitHub -->
+  <g class="github-core">
+    <circle cx="400" cy="300" r="80" class="primary" opacity="0.2"/>
+    <circle cx="400" cy="300" r="80" class="primary-stroke"/>
+    <text x="400" y="295" text-anchor="middle" class="text text-md">GitHub</text>
+    <text x="400" y="315" text-anchor="middle" class="text text-sm">コードホスティング</text>
+  </g>
+  
+  <!-- 周辺ツール群 -->
+  
+  <!-- 開発ツール -->
+  <g class="development-tools">
+    <rect x="120" y="120" width="120" height="60" rx="4" class="success border"/>
+    <text x="180" y="145" text-anchor="middle" class="text text-sm">開発ツール</text>
+    <text x="180" y="165" text-anchor="middle" class="text text-sm">VS Code, IntelliJ</text>
+    <line x1="240" y1="180" x2="340" y2="240" class="primary-stroke"/>
+  </g>
+  
+  <!-- CI/CDツール -->
+  <g class="cicd-tools">
+    <rect x="560" y="120" width="120" height="60" rx="4" class="warning border"/>
+    <text x="620" y="145" text-anchor="middle" class="text text-sm">CI/CD</text>
+    <text x="620" y="165" text-anchor="middle" class="text text-sm">Actions, Jenkins</text>
+    <line x1="560" y1="180" x2="460" y2="240" class="primary-stroke"/>
+  </g>
+  
+  <!-- プロジェクト管理 -->
+  <g class="project-management">
+    <rect x="120" y="480" width="120" height="60" rx="4" class="neutral border"/>
+    <text x="180" y="505" text-anchor="middle" class="text text-sm">プロジェクト管理</text>
+    <text x="180" y="525" text-anchor="middle" class="text text-sm">Issues, Projects</text>
+    <line x1="240" y1="480" x2="340" y2="360" class="primary-stroke"/>
+  </g>
+  
+  <!-- デプロイメント -->
+  <g class="deployment">
+    <rect x="560" y="480" width="120" height="60" rx="4" class="error border"/>
+    <text x="620" y="505" text-anchor="middle" class="text text-sm">デプロイメント</text>
+    <text x="620" y="525" text-anchor="middle" class="text text-sm">Pages, Heroku</text>
+    <line x1="560" y1="480" x2="460" y2="360" class="primary-stroke"/>
+  </g>
+  
+  <!-- コミュニティ -->
+  <g class="community">
+    <rect x="40" y="280" width="100" height="60" rx="4" class="bg-alt border"/>
+    <text x="90" y="305" text-anchor="middle" class="text text-sm">コミュニティ</text>
+    <text x="90" y="325" text-anchor="middle" class="text text-sm">オープンソース</text>
+    <line x1="140" y1="310" x2="320" y2="300" class="primary-stroke"/>
+  </g>
+  
+  <!-- エンタープライズ -->
+  <g class="enterprise">
+    <rect x="660" y="280" width="100" height="60" rx="4" class="bg-alt border"/>
+    <text x="710" y="305" text-anchor="middle" class="text text-sm">エンタープライズ</text>
+    <text x="710" y="325" text-anchor="middle" class="text text-sm">企業向け</text>
+    <line x1="660" y1="310" x2="480" y2="300" class="primary-stroke"/>
+  </g>
+  
+  <!-- 学習リソース -->
+  <g class="learning">
+    <rect x="340" y="80" width="120" height="40" rx="4" class="primary border" opacity="0.1"/>
+    <text x="400" y="105" text-anchor="middle" class="text text-sm">学習リソース</text>
+    <line x1="400" y1="120" x2="400" y2="220" class="primary-stroke"/>
+  </g>
+  
+  <!-- サポートツール -->
+  <g class="support-tools">
+    <rect x="340" y="480" width="120" height="40" rx="4" class="primary border" opacity="0.1"/>
+    <text x="400" y="505" text-anchor="middle" class="text text-sm">サポートツール</text>
+    <line x1="400" y1="480" x2="400" y2="380" class="primary-stroke"/>
+  </g>
+</svg>

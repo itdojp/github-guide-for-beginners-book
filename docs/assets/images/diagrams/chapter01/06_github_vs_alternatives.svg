@@ -1,0 +1,184 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>GitHub vs 他サービス比較</title>
+  <desc>主要なGitホスティングサービスの特徴と使い分け</desc>
+  
+  <!-- タイトル -->  
+  <text x="400" y="40" text-anchor="middle" class="text text-md">GitHub vs 他サービス比較</text>
+  
+  <!-- サービス比較 -->
+  <g class="service-comparison">
+    <!-- GitHub -->
+    <g class="github-service">
+      <rect x="80" y="70" width="140" height="180" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐙 GitHub</text>
+      
+      <!-- 特徴 -->
+      <text x="90" y="115" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="90" y="130" class="text text-sm">• 最大のエコシステム</text>
+      <text x="90" y="145" class="text text-sm">• 豊富な統合機能</text>
+      <text x="90" y="160" class="text text-sm">• 強力なActions</text>
+      <text x="90" y="175" class="text text-sm">• コミュニティ活発</text>
+      
+      <!-- 適用場面 -->
+      <text x="90" y="195" class="text text-sm" style="font-weight: 600;">適用場面:</text>
+      <text x="90" y="210" class="text text-sm">• オープンソース</text>
+      <text x="90" y="225" class="text text-sm">• スタートアップ</text>
+      <text x="90" y="240" class="text text-sm">• 個人プロジェクト</text>
+    </g>
+    
+    <!-- GitLab -->
+    <g class="gitlab-service">
+      <rect x="250" y="70" width="140" height="180" rx="8" class="warning border" opacity="0.1"/>
+      <text x="320" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🦊 GitLab</text>
+      
+      <!-- 特徴 -->
+      <text x="260" y="115" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="260" y="130" class="text text-sm">• 統合DevOpsプラット</text>
+      <text x="260" y="145" class="text text-sm">• セルフホスト可能</text>
+      <text x="260" y="160" class="text text-sm">• 強力なCI/CD</text>
+      <text x="260" y="175" class="text text-sm">• エンタープライズ向け</text>
+      
+      <!-- 適用場面 -->
+      <text x="260" y="195" class="text text-sm" style="font-weight: 600;">適用場面:</text>
+      <text x="260" y="210" class="text text-sm">• 企業内開発</text>
+      <text x="260" y="225" class="text text-sm">• セキュリティ重視</text>
+      <text x="260" y="240" class="text text-sm">• オンプレミス</text>
+    </g>
+    
+    <!-- Bitbucket -->
+    <g class="bitbucket-service">
+      <rect x="420" y="70" width="140" height="180" rx="8" class="success border" opacity="0.1"/>
+      <text x="490" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🪣 Bitbucket</text>
+      
+      <!-- 特徴 -->
+      <text x="430" y="115" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="430" y="130" class="text text-sm">• Atlassian統合</text>
+      <text x="430" y="145" class="text text-sm">• Jira連携強化</text>
+      <text x="430" y="160" class="text text-sm">• 小チーム無料</text>
+      <text x="430" y="175" class="text text-sm">• プルリクエスト</text>
+      
+      <!-- 適用場面 -->
+      <text x="430" y="195" class="text text-sm" style="font-weight: 600;">適用場面:</text>
+      <text x="430" y="210" class="text text-sm">• Jira使用企業</text>
+      <text x="430" y="225" class="text text-sm">• 小規模チーム</text>
+      <text x="430" y="240" class="text text-sm">• アジャイル開発</text>
+    </g>
+    
+    <!-- Azure DevOps -->
+    <g class="azure-devops-service">
+      <rect x="590" y="70" width="140" height="180" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="660" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ Azure DevOps</text>
+      
+      <!-- 特徴 -->
+      <text x="600" y="115" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="600" y="130" class="text text-sm">• Microsoft統合</text>
+      <text x="600" y="145" class="text text-sm">• 企業向け機能</text>
+      <text x="600" y="160" class="text text-sm">• Azure統合</text>
+      <text x="600" y="175" class="text text-sm">• ボード管理</text>
+      
+      <!-- 適用場面 -->
+      <text x="600" y="195" class="text text-sm" style="font-weight: 600;">適用場面:</text>
+      <text x="600" y="210" class="text text-sm">• .NET開発</text>
+      <text x="600" y="225" class="text text-sm">• Microsoft環境</text>
+      <text x="600" y="240" class="text text-sm">• エンタープライズ</text>
+    </g>
+  </g>
+  
+  <!-- 比較マトリックス -->
+  <g class="comparison-matrix">
+    <text x="400" y="290" text-anchor="middle" class="text text-md">主要機能比較</text>
+    
+    <rect x="100" y="310" width="600" height="200" rx="4" class="bg-alt border"/>
+    
+    <!-- ヘッダー -->
+    <rect x="100" y="310" width="600" height="25" class="primary" opacity="0.2"/>
+    <text x="150" y="327" text-anchor="middle" class="text text-sm" style="font-weight: 600;">機能</text>
+    <text x="250" y="327" text-anchor="middle" class="text text-sm" style="font-weight: 600;">GitHub</text>
+    <text x="350" y="327" text-anchor="middle" class="text text-sm" style="font-weight: 600;">GitLab</text>
+    <text x="450" y="327" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Bitbucket</text>
+    <text x="600" y="327" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Azure DevOps</text>
+    
+    <!-- 無料プラン -->
+    <rect x="100" y="335" width="600" height="25" class="bg"/>
+    <text x="150" y="352" text-anchor="middle" class="text text-sm">無料プラン</text>
+    <text x="250" y="352" text-anchor="middle" class="text text-sm success">優秀</text>
+    <text x="350" y="352" text-anchor="middle" class="text text-sm success">優秀</text>
+    <text x="450" y="352" text-anchor="middle" class="text text-sm primary">良</text>
+    <text x="600" y="352" text-anchor="middle" class="text text-sm primary">良</text>
+    
+    <!-- CI/CD -->
+    <rect x="100" y="360" width="600" height="25" class="bg-alt"/>
+    <text x="150" y="377" text-anchor="middle" class="text text-sm">CI/CD</text>
+    <text x="250" y="377" text-anchor="middle" class="text text-sm success">Actions</text>
+    <text x="350" y="377" text-anchor="middle" class="text text-sm success">内蔵</text>
+    <text x="450" y="377" text-anchor="middle" class="text text-sm primary">Pipelines</text>
+    <text x="600" y="377" text-anchor="middle" class="text text-sm success">強力</text>
+    
+    <!-- プロジェクト管理 -->
+    <rect x="100" y="385" width="600" height="25" class="bg"/>
+    <text x="150" y="402" text-anchor="middle" class="text text-sm">プロジェクト管理</text>
+    <text x="250" y="402" text-anchor="middle" class="text text-sm primary">Projects</text>
+    <text x="350" y="402" text-anchor="middle" class="text text-sm success">強力</text>
+    <text x="450" y="402" text-anchor="middle" class="text text-sm warning">基本</text>
+    <text x="600" y="402" text-anchor="middle" class="text text-sm success">Boards</text>
+    
+    <!-- セルフホスト -->
+    <rect x="100" y="410" width="600" height="25" class="bg-alt"/>
+    <text x="150" y="427" text-anchor="middle" class="text text-sm">セルフホスト</text>
+    <text x="250" y="427" text-anchor="middle" class="text text-sm error">不可</text>
+    <text x="350" y="427" text-anchor="middle" class="text text-sm success">可能</text>
+    <text x="450" y="427" text-anchor="middle" class="text text-sm warning">限定</text>
+    <text x="600" y="427" text-anchor="middle" class="text text-sm success">可能</text>
+    
+    <!-- コミュニティ -->
+    <rect x="100" y="435" width="600" height="25" class="bg"/>
+    <text x="150" y="452" text-anchor="middle" class="text text-sm">コミュニティ</text>
+    <text x="250" y="452" text-anchor="middle" class="text text-sm success">最大</text>
+    <text x="350" y="452" text-anchor="middle" class="text text-sm primary">成長中</text>
+    <text x="450" y="452" text-anchor="middle" class="text text-sm warning">小規模</text>
+    <text x="600" y="452" text-anchor="middle" class="text text-sm primary">企業中心</text>
+    
+    <!-- 学習コスト -->
+    <rect x="100" y="460" width="600" height="25" class="bg-alt"/>
+    <text x="150" y="477" text-anchor="middle" class="text text-sm">学習コスト</text>
+    <text x="250" y="477" text-anchor="middle" class="text text-sm success">低</text>
+    <text x="350" y="477" text-anchor="middle" class="text text-sm warning">中</text>
+    <text x="450" y="477" text-anchor="middle" class="text text-sm success">低</text>
+    <text x="600" y="477" text-anchor="middle" class="text text-sm warning">中</text>
+    
+    <!-- 総合評価 -->
+    <rect x="100" y="485" width="600" height="25" class="primary" opacity="0.2"/>
+    <text x="150" y="502" text-anchor="middle" class="text text-sm" style="font-weight: 600;">総合評価</text>
+    <text x="250" y="502" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">⭐⭐⭐⭐⭐</text>
+    <text x="350" y="502" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">⭐⭐⭐⭐</text>
+    <text x="450" y="502" text-anchor="middle" class="text text-sm primary" style="font-weight: 600;">⭐⭐⭐</text>
+    <text x="600" y="502" text-anchor="middle" class="text text-sm primary" style="font-weight: 600;">⭐⭐⭐⭐</text>
+  </g>
+  
+  <!-- 選択指針 -->
+  <g class="selection-guide">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">選択指針</text>
+    <rect x="50" y="555" width="700" height="35" rx="4" class="bg-alt border"/>
+    <text x="60" y="570" class="text text-sm" style="font-weight: 600;">💡 初心者・個人開発 → GitHub | 企業・セキュリティ重視 → GitLab | Microsoft環境 → Azure DevOps</text>
+    <text x="60" y="585" class="text text-sm">本書ではGitHubを中心に解説：最も広く使われ、学習リソースが豊富</text>
+  </g>
+</svg>

@@ -1,0 +1,192 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>学習ロードマップ</title>
+  <desc>GitHubマスターまでの段階的学習パスと習得目標</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">学習ロードマップ</text>
+  
+  <!-- 学習段階 -->
+  <g class="learning-stages">
+    
+    <!-- Level 1: 基礎 -->
+    <g class="level-1">
+      <rect x="80" y="80" width="140" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 Level 1: 基礎</text>
+      <text x="150" y="125" text-anchor="middle" class="text text-sm">期間: 1-2週間</text>
+      
+      <!-- 学習内容 -->
+      <text x="90" y="145" class="text text-sm">✓ バージョン管理概念</text>
+      <text x="90" y="160" class="text text-sm">✓ GitHubアカウント作成</text>
+      <text x="90" y="175" class="text text-sm">✓ リポジトリ操作</text>
+      <text x="90" y="190" class="text text-sm">✓ Web UI基本操作</text>
+    </g>
+    
+    <!-- Level 2: 実践 -->
+    <g class="level-2">
+      <rect x="250" y="80" width="140" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="320" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ Level 2: 実践</text>
+      <text x="320" y="125" text-anchor="middle" class="text text-sm">期間: 2-3週間</text>
+      
+      <!-- 学習内容 -->
+      <text x="260" y="145" class="text text-sm">✓ ローカル環境構築</text>
+      <text x="260" y="160" class="text text-sm">✓ Git基本コマンド</text>
+      <text x="260" y="175" class="text text-sm">✓ ブランチ操作</text>
+      <text x="260" y="190" class="text text-sm">✓ 個人プロジェクト運用</text>
+    </g>
+    
+    <!-- Level 3: 協働 -->
+    <g class="level-3">
+      <rect x="420" y="80" width="140" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 Level 3: 協働</text>
+      <text x="490" y="125" text-anchor="middle" class="text text-sm">期間: 3-4週間</text>
+      
+      <!-- 学習内容 -->
+      <text x="430" y="145" class="text text-sm">✓ Pull Request</text>
+      <text x="430" y="160" class="text text-sm">✓ コードレビュー</text>
+      <text x="430" y="175" class="text text-sm">✓ Issue管理</text>
+      <text x="430" y="190" class="text text-sm">✓ チーム開発参加</text>
+    </g>
+    
+    <!-- Level 4: 上級 -->
+    <g class="level-4">
+      <rect x="590" y="80" width="140" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="660" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 Level 4: 上級</text>
+      <text x="660" y="125" text-anchor="middle" class="text text-sm">期間: 継続学習</text>
+      
+      <!-- 学習内容 -->
+      <text x="600" y="145" class="text text-sm">✓ GitHub Actions</text>
+      <text x="600" y="160" class="text text-sm">✓ 高度なGit操作</text>
+      <text x="600" y="175" class="text text-sm">✓ セキュリティ対策</text>
+      <text x="600" y="190" class="text text-sm">✓ プロジェクト管理</text>
+    </g>
+    
+    <!-- 進歩の矢印 -->
+    <line x1="220" y1="140" x2="250" y2="140" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="390" y1="140" x2="420" y2="140" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="560" y1="140" x2="590" y2="140" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- 習得スキルマップ -->
+  <g class="skill-map">
+    <text x="400" y="250" text-anchor="middle" class="text text-md">習得スキルマップ</text>
+    
+    <!-- 技術スキル -->
+    <g class="technical-skills">
+      <rect x="100" y="270" width="200" height="140" rx="8" class="primary border" opacity="0.1"/>
+      <text x="200" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 技術スキル</text>
+      
+      <!-- 基礎技術 -->
+      <text x="110" y="315" class="text text-sm" style="font-weight: 600;">基礎:</text>
+      <text x="110" y="330" class="text text-sm">• Git コマンド</text>
+      <text x="110" y="345" class="text text-sm">• GitHub Web UI</text>
+      <text x="110" y="360" class="text text-sm">• Markdown記法</text>
+      
+      <!-- 応用技術 -->
+      <text x="110" y="380" class="text text-sm" style="font-weight: 600;">応用:</text>
+      <text x="110" y="395" class="text text-sm">• ブランチ戦略</text>
+    </g>
+    
+    <!-- 協働スキル -->
+    <g class="collaboration-skills">
+      <rect x="320" y="270" width="200" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="420" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 協働スキル</text>
+      
+      <!-- コミュニケーション -->
+      <text x="330" y="315" class="text text-sm" style="font-weight: 600;">コミュニケーション:</text>
+      <text x="330" y="330" class="text text-sm">• Issue作成・管理</text>
+      <text x="330" y="345" class="text text-sm">• レビューコメント</text>
+      <text x="330" y="360" class="text text-sm">• ドキュメント作成</text>
+      
+      <!-- チームワーク -->
+      <text x="330" y="380" class="text text-sm" style="font-weight: 600;">チームワーク:</text>
+      <text x="330" y="395" class="text text-sm">• 役割分担理解</text>
+    </g>
+    
+    <!-- プロジェクト管理 -->
+    <g class="project-management">
+      <rect x="540" y="270" width="200" height="140" rx="8" class="warning border" opacity="0.1"/>
+      <text x="640" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 プロジェクト管理</text>
+      
+      <!-- 計画 -->
+      <text x="550" y="315" class="text text-sm" style="font-weight: 600;">計画:</text>
+      <text x="550" y="330" class="text text-sm">• マイルストーン設定</text>
+      <text x="550" y="345" class="text text-sm">• タスク分解</text>
+      <text x="550" y="360" class="text text-sm">• 進捗管理</text>
+      
+      <!-- 品質管理 -->
+      <text x="550" y="380" class="text text-sm" style="font-weight: 600;">品質管理:</text>
+      <text x="550" y="395" class="text text-sm">• テスト戦略</text>
+    </g>
+  </g>
+  
+  <!-- 実践プロジェクト例 -->
+  <g class="practice-projects">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">段階別実践プロジェクト例</text>
+    
+    <!-- 初級プロジェクト -->
+    <g class="beginner-projects">
+      <rect x="80" y="470" width="140" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="150" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌱 初級</text>
+      <text x="150" y="510" text-anchor="middle" class="text text-sm">• 個人ポートフォリオ</text>
+      <text x="150" y="525" text-anchor="middle" class="text text-sm">• 学習ノート</text>
+      <text x="150" y="540" text-anchor="middle" class="text text-sm">• 静的Webサイト</text>
+    </g>
+    
+    <!-- 中級プロジェクト -->
+    <g class="intermediate-projects">
+      <rect x="250" y="470" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="320" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 中級</text>
+      <text x="320" y="510" text-anchor="middle" class="text text-sm">• Todoアプリ</text>
+      <text x="320" y="525" text-anchor="middle" class="text text-sm">• APIクライアント</text>
+      <text x="320" y="540" text-anchor="middle" class="text text-sm">• OSS貢献</text>
+    </g>
+    
+    <!-- 上級プロジェクト -->
+    <g class="advanced-projects">
+      <rect x="420" y="470" width="140" height="80" rx="4" class="warning border" opacity="0.1"/>
+      <text x="490" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌳 上級</text>
+      <text x="490" y="510" text-anchor="middle" class="text text-sm">• チーム開発</text>
+      <text x="490" y="525" text-anchor="middle" class="text text-sm">• CI/CD構築</text>
+      <text x="490" y="540" text-anchor="middle" class="text text-sm">• プロジェクト主導</text>
+    </g>
+    
+    <!-- 専門プロジェクト -->
+    <g class="expert-projects">
+      <rect x="590" y="470" width="140" height="80" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="660" y="490" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏛️ 専門</text>
+      <text x="660" y="510" text-anchor="middle" class="text text-sm">• 大規模OSS</text>
+      <text x="660" y="525" text-anchor="middle" class="text text-sm">• 技術記事執筆</text>
+      <text x="660" y="540" text-anchor="middle" class="text text-sm">• コミュニティ運営</text>
+    </g>
+  </g>
+  
+  <!-- 学習のコツ -->
+  <g class="learning-tips">
+    <rect x="50" y="570" width="700" height="25" rx="2" class="bg-alt border"/>
+    <text x="60" y="587" class="text text-sm" style="font-weight: 600;">💡 学習のコツ: 毎日少しずつ実践 | 分からないことは積極的に質問 | 実際のプロジェクトで経験を積む</text>
+  </g>
+</svg>
