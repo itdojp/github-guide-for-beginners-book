@@ -1,0 +1,161 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ライセンス選択</title>
+  <desc>オープンソースプロジェクトにおけるライセンスの種類と選択指針</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ライセンス選択</text>
+  
+  <!-- ライセンスの重要性 -->
+  <g class="license-importance">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">なぜライセンスが重要か？</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚖️ 法的保護と利用条件の明確化</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">コードの使用・改変・配布における権利と義務を定義</text>
+  </g>
+  
+  <!-- 主要ライセンスの分類 -->
+  <g class="license-categories">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">主要ライセンスの分類</text>
+    
+    <!-- Permissive -->
+    <g class="permissive-licenses">
+      <rect x="80" y="200" width="200" height="160" rx="8" class="success border" opacity="0.1"/>
+      <text x="180" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🟢 Permissive (寛容)</text>
+      
+      <!-- MIT -->
+      <rect x="90" y="240" width="180" height="30" rx="4" class="success border"/>
+      <text x="180" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">MIT License</text>
+      <text x="180" y="268" text-anchor="middle" class="text text-sm">最もシンプル・広く使用</text>
+      
+      <!-- Apache 2.0 -->
+      <rect x="90" y="280" width="180" height="30" rx="4" class="success border"/>
+      <text x="180" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Apache 2.0</text>
+      <text x="180" y="308" text-anchor="middle" class="text text-sm">特許保護付き</text>
+      
+      <!-- BSD -->
+      <rect x="90" y="320" width="180" height="30" rx="4" class="success border"/>
+      <text x="180" y="335" text-anchor="middle" class="text text-sm" style="font-weight: 600;">BSD 3-Clause</text>
+      <text x="180" y="348" text-anchor="middle" class="text text-sm">シンプルで実績豊富</text>
+    </g>
+    
+    <!-- Copyleft -->
+    <g class="copyleft-licenses">
+      <rect x="300" y="200" width="200" height="160" rx="8" class="primary border" opacity="0.1"/>
+      <text x="400" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 Copyleft (相互)</text>
+      
+      <!-- GPL v3 -->
+      <rect x="310" y="240" width="180" height="30" rx="4" class="primary border"/>
+      <text x="400" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">GPL v3</text>
+      <text x="400" y="268" text-anchor="middle" class="text text-sm">強いコピーレフト</text>
+      
+      <!-- LGPL -->
+      <rect x="310" y="280" width="180" height="30" rx="4" class="primary border"/>
+      <text x="400" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">LGPL v3</text>
+      <text x="400" y="308" text-anchor="middle" class="text text-sm">ライブラリ向け</text>
+      
+      <!-- AGPL -->
+      <rect x="310" y="320" width="180" height="30" rx="4" class="primary border"/>
+      <text x="400" y="335" text-anchor="middle" class="text text-sm" style="font-weight: 600;">AGPL v3</text>
+      <text x="400" y="348" text-anchor="middle" class="text text-sm">ネットワークサービス対応</text>
+    </g>
+    
+    <!-- Other -->
+    <g class="other-licenses">
+      <rect x="520" y="200" width="200" height="160" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="620" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚪ その他・特殊</text>
+      
+      <!-- Unlicense -->
+      <rect x="530" y="240" width="180" height="30" rx="4" class="neutral border"/>
+      <text x="620" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Unlicense</text>
+      <text x="620" y="268" text-anchor="middle" class="text text-sm">パブリックドメイン</text>
+      
+      <!-- Creative Commons -->
+      <rect x="530" y="280" width="180" height="30" rx="4" class="neutral border"/>
+      <text x="620" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Creative Commons</text>
+      <text x="620" y="308" text-anchor="middle" class="text text-sm">文書・作品向け</text>
+      
+      <!-- Proprietary -->
+      <rect x="530" y="320" width="180" height="30" rx="4" class="neutral border"/>
+      <text x="620" y="335" text-anchor="middle" class="text text-sm" style="font-weight: 600;">All Rights Reserved</text>
+      <text x="620" y="348" text-anchor="middle" class="text text-sm">独占的ライセンス</text>
+    </g>
+  </g>
+  
+  <!-- ライセンス選択フローチャート -->
+  <g class="license-selection-flow">
+    <text x="400" y="400" text-anchor="middle" class="text text-md">ライセンス選択フローチャート</text>
+    
+    <!-- 質問1: オープンソースか -->
+    <g class="question-1">
+      <polygon points="400,420 350,440 400,460 450,440" class="warning border" opacity="0.1"/>
+      <polygon points="400,420 350,440 400,460 450,440" class="warning-stroke" fill="none"/>
+      <text x="400" y="445" text-anchor="middle" class="text text-sm" style="font-weight: 600;">オープンソース？</text>
+    </g>
+    
+    <!-- No パス -->
+    <g class="no-path">
+      <rect x="480" y="430" width="120" height="30" rx="4" class="neutral border"/>
+      <text x="540" y="450" text-anchor="middle" class="text text-sm" style="font-weight: 600;">All Rights Reserved</text>
+      <line x1="450" y1="440" x2="480" y2="445" class="primary-stroke" marker-end="url(#arrow)"/>
+      <text x="465" y="437" text-anchor="middle" class="text text-sm">No</text>
+    </g>
+    
+    <!-- Yes パス -->
+    <g class="yes-path">
+      <polygon points="300,480 250,500 300,520 350,500" class="primary border" opacity="0.1"/>
+      <polygon points="300,480 250,500 300,520 350,500" class="primary-stroke" fill="none"/>
+      <text x="300" y="500" text-anchor="middle" class="text text-sm" style="font-weight: 600;">改変版も</text>
+      <text x="300" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">オープンソース？</text>
+      
+      <line x1="380" y1="450" x2="340" y2="480" class="primary-stroke" marker-end="url(#arrow)"/>
+      <text x="360" y="465" text-anchor="middle" class="text text-sm">Yes</text>
+    </g>
+    
+    <!-- Copyleft推奨 -->
+    <g class="copyleft-recommendation">
+      <rect x="150" y="540" width="100" height="30" rx="4" class="primary border"/>
+      <text x="200" y="560" text-anchor="middle" class="text text-sm" style="font-weight: 600;">GPL v3 推奨</text>
+      <line x1="270" y1="510" x2="220" y2="540" class="primary-stroke" marker-end="url(#arrow)"/>
+      <text x="245" y="525" text-anchor="middle" class="text text-sm">Yes</text>
+    </g>
+    
+    <!-- Permissive推奨 -->
+    <g class="permissive-recommendation">
+      <rect x="350" y="540" width="100" height="30" rx="4" class="success border"/>
+      <text x="400" y="560" text-anchor="middle" class="text text-sm" style="font-weight: 600;">MIT 推奨</text>
+      <line x1="330" y1="510" x2="380" y2="540" class="primary-stroke" marker-end="url(#arrow)"/>
+      <text x="355" y="525" text-anchor="middle" class="text text-sm">No</text>
+    </g>
+  </g>
+  
+  <!-- 人気ライセンスの使用率 -->
+  <g class="license-popularity">
+    <rect x="520" y="480" width="220" height="100" rx="8" class="bg-alt border"/>
+    <text x="630" y="500" text-anchor="middle" class="text text-sm" style="font-weight: 600;">GitHub人気ライセンス</text>
+    
+    <text x="530" y="520" class="text text-sm">1. MIT License (47%)</text>
+    <text x="530" y="535" class="text text-sm">2. Apache 2.0 (13%)</text>
+    <text x="530" y="550" class="text text-sm">3. GPL v3 (9%)</text>
+    <text x="530" y="565" class="text text-sm">4. BSD 3-Clause (6%)</text>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+    
+    <marker id="arrow-success" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="success"/>
+    </marker>
+    
+    <marker id="arrow-warning" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="warning"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Git基本操作フロー</title>
+  <desc>clone、push、pullの基本的な操作フローと関係性</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Git基本操作フロー</text>
+  
+  <!-- リモートリポジトリ -->
+  <g class="remote-repository">
+    <rect x="320" y="80" width="160" height="80" rx="8" class="success border"/>
+    <text x="400" y="105" text-anchor="middle" class="text text-md">リモートリポジトリ</text>
+    <text x="400" y="125" text-anchor="middle" class="text text-sm">(GitHub)</text>
+    <text x="400" y="145" text-anchor="middle" class="text text-sm">origin/main</text>
+  </g>
+  
+  <!-- ローカルリポジトリ1 -->
+  <g class="local-repo-1">
+    <rect x="80" y="280" width="160" height="80" rx="8" class="primary border"/>
+    <text x="160" y="305" text-anchor="middle" class="text text-sm">ローカルリポジトリ</text>
+    <text x="160" y="325" text-anchor="middle" class="text text-sm">(Developer A)</text>
+    <text x="160" y="345" text-anchor="middle" class="text text-sm">local main</text>
+  </g>
+  
+  <!-- ローカルリポジトリ2 -->
+  <g class="local-repo-2">
+    <rect x="560" y="280" width="160" height="80" rx="8" class="primary border"/>
+    <text x="640" y="305" text-anchor="middle" class="text text-sm">ローカルリポジトリ</text>
+    <text x="640" y="325" text-anchor="middle" class="text text-sm">(Developer B)</text>
+    <text x="640" y="345" text-anchor="middle" class="text text-sm">local main</text>
+  </g>
+  
+  <!-- Clone操作 -->
+  <g class="clone-operations">
+    <path d="M 360 160 Q 260 220 200 280" fill="none" class="neutral" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="280" y="200" text-anchor="middle" class="text text-sm" style="font-weight: 600;">git clone</text>
+    <text x="280" y="215" text-anchor="middle" class="text text-sm">初回複製</text>
+    
+    <path d="M 440 160 Q 540 220 600 280" fill="none" class="neutral" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="520" y="200" text-anchor="middle" class="text text-sm" style="font-weight: 600;">git clone</text>
+    <text x="520" y="215" text-anchor="middle" class="text text-sm">初回複製</text>
+  </g>
+  
+  <!-- Push操作 -->
+  <g class="push-operations">
+    <path d="M 200 280 Q 260 220 360 160" fill="none" class="success" stroke-width="2" marker-end="url(#arrow-success)"/>
+    <text x="280" y="240" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">git push</text>
+    <text x="280" y="255" text-anchor="middle" class="text text-sm success">変更をアップロード</text>
+    
+    <path d="M 600 280 Q 540 220 440 160" fill="none" class="success" stroke-width="2" marker-end="url(#arrow-success)"/>
+    <text x="520" y="240" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">git push</text>
+    <text x="520" y="255" text-anchor="middle" class="text text-sm success">変更をアップロード</text>
+  </g>
+  
+  <!-- Pull操作 -->
+  <g class="pull-operations">
+    <path d="M 380 160 Q 320 220 240 280" fill="none" class="warning" stroke-width="2" marker-end="url(#arrow-warning)"/>
+    <text x="310" y="235" text-anchor="middle" class="text text-sm warning" style="font-weight: 600;">git pull</text>
+    <text x="310" y="250" text-anchor="middle" class="text text-sm warning">変更をダウンロード</text>
+    
+    <path d="M 420 160 Q 480 220 560 280" fill="none" class="warning" stroke-width="2" marker-end="url(#arrow-warning)"/>
+    <text x="490" y="235" text-anchor="middle" class="text text-sm warning" style="font-weight: 600;">git pull</text>
+    <text x="490" y="250" text-anchor="middle" class="text text-sm warning">変更をダウンロード</text>
+  </g>
+  
+  <!-- 操作説明 -->
+  <g class="operation-details">
+    <text x="400" y="420" text-anchor="middle" class="text text-md">基本操作の詳細</text>
+    
+    <!-- Clone -->
+    <g class="clone-detail">
+      <rect x="60" y="450" width="180" height="100" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="150" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">git clone</text>
+      <text x="150" y="490" text-anchor="middle" class="text text-sm">• リポジトリ全体をコピー</text>
+      <text x="150" y="505" text-anchor="middle" class="text text-sm">• 初回のみ実行</text>
+      <text x="150" y="520" text-anchor="middle" class="text text-sm">• .gitディレクトリも含む</text>
+      <text x="150" y="535" text-anchor="middle" class="text text-sm">• 自動でorigin設定</text>
+    </g>
+    
+    <!-- Push -->
+    <g class="push-detail">
+      <rect x="280" y="450" width="180" height="100" rx="4" class="success border" opacity="0.1"/>
+      <text x="370" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">git push</text>
+      <text x="370" y="490" text-anchor="middle" class="text text-sm">• ローカルの変更を送信</text>
+      <text x="370" y="505" text-anchor="middle" class="text text-sm">• コミット後に実行</text>
+      <text x="370" y="520" text-anchor="middle" class="text text-sm">• 他の人と共有</text>
+      <text x="370" y="535" text-anchor="middle" class="text text-sm">• 認証が必要</text>
+    </g>
+    
+    <!-- Pull -->
+    <g class="pull-detail">
+      <rect x="500" y="450" width="180" height="100" rx="4" class="warning border" opacity="0.1"/>
+      <text x="590" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">git pull</text>
+      <text x="590" y="490" text-anchor="middle" class="text text-sm">• リモートの変更を取得</text>
+      <text x="590" y="505" text-anchor="middle" class="text text-sm">• fetch + merge</text>
+      <text x="590" y="520" text-anchor="middle" class="text text-sm">• 他の人の変更を反映</text>
+      <text x="590" y="535" text-anchor="middle" class="text text-sm">• 作業前に実行推奨</text>
+    </g>
+  </g>
+  
+  <!-- コマンド例 -->
+  <g class="command-examples">
+    <rect x="100" y="380" width="600" height="25" rx="2" class="bg-alt border"/>
+    <text x="110" y="395" class="text text-sm" style="font-family: monospace;">git clone https://github.com/user/repo.git</text>
+    <text x="450" y="395" class="text text-sm" style="font-family: monospace;">git push origin main</text>
+    <text x="650" y="395" class="text text-sm" style="font-family: monospace;">git pull origin main</text>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>命名規則とベストプラクティス</title>
+  <desc>ファイルやディレクトリの命名における一貫性とメンテナンス性の向上</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">命名規則とベストプラクティス</text>
+  
+  <!-- 命名の重要性 -->
+  <g class="naming-importance">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">なぜ命名規則が重要か？</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 一貫性のある命名でプロジェクトの理解と保守性を向上</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">チーム開発での混乱防止・新規参加者の学習コスト削減・検索効率向上</text>
+  </g>
+  
+  <!-- 基本的な命名規則 -->
+  <g class="basic-naming-rules">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">基本的な命名規則</text>
+    
+    <!-- 良い例 -->
+    <g class="good-examples">
+      <rect x="80" y="200" width="300" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="230" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 良い例</text>
+      
+      <!-- ファイル名 -->
+      <text x="90" y="245" class="text text-sm" style="font-weight: 600;">📄 ファイル名:</text>
+      <text x="90" y="260" class="text text-sm" style="font-family: monospace;">user-profile.component.js</text>
+      <text x="90" y="275" class="text text-sm" style="font-family: monospace;">api-client.service.js</text>
+      <text x="90" y="290" class="text text-sm" style="font-family: monospace;">user-authentication.test.js</text>
+      
+      <!-- ディレクトリ名 -->
+      <text x="90" y="310" class="text text-sm" style="font-weight: 600;">📁 ディレクトリ名:</text>
+      <text x="90" y="325" class="text text-sm" style="font-family: monospace;">components/user-interface/</text>
+      <text x="90" y="340" class="text text-sm" style="font-family: monospace;">utils/date-formatting/</text>
+    </g>
+    
+    <!-- 悪い例 -->
+    <g class="bad-examples">
+      <rect x="420" y="200" width="300" height="140" rx="8" class="error border" opacity="0.1"/>
+      <text x="570" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❌ 悪い例</text>
+      
+      <!-- ファイル名 -->
+      <text x="430" y="245" class="text text-sm" style="font-weight: 600;">📄 ファイル名:</text>
+      <text x="430" y="260" class="text text-sm" style="font-family: monospace;">UsrPrf.js (略語)</text>
+      <text x="430" y="275" class="text text-sm" style="font-family: monospace;">temp123.js (意味不明)</text>
+      <text x="430" y="290" class="text text-sm" style="font-family: monospace;">USERDATA (拡張子なし)</text>
+      
+      <!-- ディレクトリ名 -->
+      <text x="430" y="310" class="text text-sm" style="font-weight: 600;">📁 ディレクトリ名:</text>
+      <text x="430" y="325" class="text text-sm" style="font-family: monospace;">stuff/ (曖昧)</text>
+      <text x="430" y="340" class="text text-sm" style="font-family: monospace;">NEW FOLDER/ (スペース)</text>
+    </g>
+  </g>
+  
+  <!-- 言語・フレームワーク別の規則 -->
+  <g class="language-conventions">
+    <text x="400" y="370" text-anchor="middle" class="text text-md">言語・フレームワーク別の命名規則</text>
+    
+    <!-- JavaScript/React -->
+    <g class="javascript-conventions">
+      <rect x="80" y="390" width="160" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📗 JavaScript/React</text>
+      <text x="90" y="435" class="text text-sm" style="font-family: monospace;">camelCase</text>
+      <text x="90" y="450" class="text text-sm" style="font-family: monospace;">UserProfile.jsx</text>
+      <text x="90" y="465" class="text text-sm" style="font-family: monospace;">apiClient.js</text>
+      <text x="90" y="480" class="text text-sm" style="font-family: monospace;">user.service.js</text>
+    </g>
+    
+    <!-- Python -->
+    <g class="python-conventions">
+      <rect x="260" y="390" width="160" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐍 Python</text>
+      <text x="270" y="435" class="text text-sm" style="font-family: monospace;">snake_case</text>
+      <text x="270" y="450" class="text text-sm" style="font-family: monospace;">user_profile.py</text>
+      <text x="270" y="465" class="text text-sm" style="font-family: monospace;">api_client.py</text>
+      <text x="270" y="480" class="text text-sm" style="font-family: monospace;">test_user.py</text>
+    </g>
+    
+    <!-- Java -->
+    <g class="java-conventions">
+      <rect x="440" y="390" width="160" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☕ Java</text>
+      <text x="450" y="435" class="text text-sm" style="font-family: monospace;">PascalCase</text>
+      <text x="450" y="450" class="text text-sm" style="font-family: monospace;">UserProfile.java</text>
+      <text x="450" y="465" class="text text-sm" style="font-family: monospace;">ApiClient.java</text>
+      <text x="450" y="480" class="text text-sm" style="font-family: monospace;">UserTest.java</text>
+    </g>
+    
+    <!-- CSS/SCSS -->
+    <g class="css-conventions">
+      <rect x="620" y="390" width="160" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎨 CSS/SCSS</text>
+      <text x="630" y="435" class="text text-sm" style="font-family: monospace;">kebab-case</text>
+      <text x="630" y="450" class="text text-sm" style="font-family: monospace;">user-profile.css</text>
+      <text x="630" y="465" class="text text-sm" style="font-family: monospace;">main-layout.scss</text>
+      <text x="630" y="480" class="text text-sm" style="font-family: monospace;">button-styles.css</text>
+    </g>
+  </g>
+  
+  <!-- ベストプラクティス -->
+  <g class="best-practices">
+    <text x="400" y="520" text-anchor="middle" class="text text-md">命名のベストプラクティス</text>
+    
+    <!-- 実践項目 -->
+    <rect x="50" y="535" width="700" height="50" rx="8" class="bg-alt border"/>
+    
+    <!-- 左側の項目 -->
+    <text x="60" y="555" class="text text-sm" style="font-weight: 600;">🎯 明確で具体的:</text>
+    <text x="180" y="555" class="text text-sm">目的が一目で分かる名前</text>
+    
+    <text x="60" y="575" class="text text-sm" style="font-weight: 600;">🔄 一貫性維持:</text>
+    <text x="160" y="575" class="text text-sm">プロジェクト全体で統一</text>
+    
+    <!-- 右側の項目 -->
+    <text x="380" y="555" class="text text-sm" style="font-weight: 600;">📏 適切な長さ:</text>
+    <text x="480" y="555" class="text text-sm">短すぎず長すぎず</text>
+    
+    <text x="380" y="575" class="text text-sm" style="font-weight: 600;">🌐 英語使用:</text>
+    <text x="460" y="575" class="text text-sm">国際的な開発チーム対応</text>
+  </g>
+</svg>

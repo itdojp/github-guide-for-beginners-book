@@ -1,0 +1,165 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ブランチでのファイル操作</title>
+  <desc>異なるブランチ間でのファイル操作と状態管理</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ブランチでのファイル操作</text>
+  
+  <!-- ブランチ構造 -->
+  <g class="branch-structure">
+    <!-- mainブランチ -->
+    <g class="main-branch">
+      <line x1="100" y1="100" x2="700" y2="100" class="success" stroke-width="4"/>
+      <text x="80" y="105" text-anchor="end" class="text text-sm success" style="font-weight: 600;">main</text>
+      
+      <!-- mainのコミット -->
+      <circle cx="150" cy="100" r="6" class="success"/>
+      <circle cx="250" cy="100" r="6" class="success"/>
+      <circle cx="400" cy="100" r="6" class="success"/>
+      <circle cx="600" cy="100" r="6" class="success"/>
+      
+      <!-- mainのファイル状態 -->
+      <text x="150" y="85" text-anchor="middle" class="text text-sm">v1.0</text>
+      <text x="250" y="85" text-anchor="middle" class="text text-sm">v1.1</text>
+      <text x="400" y="85" text-anchor="middle" class="text text-sm">v1.2</text>
+      <text x="600" y="85" text-anchor="middle" class="text text-sm">v2.0</text>
+    </g>
+    
+    <!-- feature/loginブランチ -->
+    <g class="feature-branch">
+      <path d="M 250 100 Q 270 130 290 160 L 480 160 Q 500 130 520 100" 
+            fill="none" class="primary" stroke-width="3"/>
+      <text x="80" y="165" text-anchor="end" class="text text-sm primary" style="font-weight: 600;">feature/login</text>
+      
+      <!-- featureのコミット -->
+      <circle cx="320" cy="160" r="6" class="primary"/>
+      <circle cx="400" cy="160" r="6" class="primary"/>
+      <circle cx="480" cy="160" r="6" class="primary"/>
+      
+      <!-- featureのファイル状態 -->
+      <text x="320" y="180" text-anchor="middle" class="text text-sm">login.js</text>
+      <text x="400" y="180" text-anchor="middle" class="text text-sm">auth.js</text>
+      <text x="480" y="180" text-anchor="middle" class="text text-sm">tests</text>
+    </g>
+    
+    <!-- hotfix/bugfixブランチ -->
+    <g class="hotfix-branch">
+      <path d="M 400 100 Q 420 70 440 40 L 540 40 Q 560 70 580 100" 
+            fill="none" class="error" stroke-width="3"/>
+      <text x="80" y="45" text-anchor="end" class="text text-sm error" style="font-weight: 600;">hotfix/bugfix</text>
+      
+      <!-- hotfixのコミット -->
+      <circle cx="490" cy="40" r="6" class="error"/>
+      
+      <!-- hotfixのファイル状態 -->
+      <text x="490" y="25" text-anchor="middle" class="text text-sm">security.js</text>
+    </g>
+  </g>
+  
+  <!-- ファイル状態の比較 -->
+  <g class="file-state-comparison">
+    <text x="400" y="230" text-anchor="middle" class="text text-md">ブランチ間のファイル状態</text>
+    
+    <!-- mainブランチのファイル -->
+    <g class="main-files">
+      <rect x="80" y="250" width="200" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="180" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 main ブランチ</text>
+      
+      <text x="90" y="295" class="text text-sm">📄 README.md</text>
+      <text x="90" y="310" class="text text-sm">📄 index.html</text>
+      <text x="90" y="325" class="text text-sm">📄 app.js</text>
+      <text x="90" y="340" class="text text-sm">📄 style.css</text>
+      <text x="90" y="355" class="text text-sm">📁 assets/</text>
+    </g>
+    
+    <!-- feature/loginブランチのファイル -->
+    <g class="feature-files">
+      <rect x="300" y="250" width="200" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="400" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 feature/login ブランチ</text>
+      
+      <text x="310" y="295" class="text text-sm">📄 README.md</text>
+      <text x="310" y="310" class="text text-sm">📄 index.html</text>
+      <text x="310" y="325" class="text text-sm success">📄 app.js (修正)</text>
+      <text x="310" y="340" class="text text-sm">📄 style.css</text>
+      <text x="310" y="355" class="text text-sm warning">📄 login.js (新規)</text>
+    </g>
+    
+    <!-- hotfix/bugfixブランチのファイル -->
+    <g class="hotfix-files">
+      <rect x="520" y="250" width="200" height="120" rx="8" class="error border" opacity="0.1"/>
+      <text x="620" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 hotfix/bugfix ブランチ</text>
+      
+      <text x="530" y="295" class="text text-sm">📄 README.md</text>
+      <text x="530" y="310" class="text text-sm">📄 index.html</text>
+      <text x="530" y="325" class="text text-sm error">📄 app.js (緊急修正)</text>
+      <text x="530" y="340" class="text text-sm">📄 style.css</text>
+      <text x="530" y="355" class="text text-sm">📁 assets/</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ切り替え時の動作 -->
+  <g class="branch-switching">
+    <text x="400" y="410" text-anchor="middle" class="text text-md">ブランチ切り替え時の動作</text>
+    
+    <!-- Before -->
+    <g class="before-switch">
+      <rect x="100" y="430" width="150" height="80" rx="4" class="warning border" opacity="0.1"/>
+      <text x="175" y="450" text-anchor="middle" class="text text-sm" style="font-weight: 600;">切り替え前</text>
+      <text x="175" y="470" text-anchor="middle" class="text text-sm">feature/login</text>
+      <text x="175" y="485" text-anchor="middle" class="text text-sm">login.js が存在</text>
+      <text x="175" y="500" text-anchor="middle" class="text text-sm">app.js v1.3</text>
+    </g>
+    
+    <!-- Switch Action -->
+    <g class="switch-action">
+      <rect x="300" y="450" width="100" height="40" rx="20" class="primary"/>
+      <text x="350" y="475" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">git switch</text>
+    </g>
+    
+    <!-- After -->
+    <g class="after-switch">
+      <rect x="450" y="430" width="150" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="525" y="450" text-anchor="middle" class="text text-sm" style="font-weight: 600;">切り替え後</text>
+      <text x="525" y="470" text-anchor="middle" class="text text-sm">main</text>
+      <text x="525" y="485" text-anchor="middle" class="text text-sm">login.js が消失</text>
+      <text x="525" y="500" text-anchor="middle" class="text text-sm">app.js v1.2</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="250" y1="470" x2="300" y2="470" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="400" y1="470" x2="450" y2="470" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- 重要な概念 -->
+  <g class="important-concepts">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">重要な概念</text>
+    
+    <rect x="50" y="555" width="700" height="35" rx="4" class="bg-alt border"/>
+    <text x="60" y="570" class="text text-sm" style="font-weight: 600;">💡 ブランチ固有のファイル状態:</text>
+    <text x="60" y="585" class="text text-sm">各ブランチは独立したファイル状態を持つ | 切り替え時にワーキングディレクトリが変化 | 未コミット変更は持ち越される</text>
+  </g>
+</svg>

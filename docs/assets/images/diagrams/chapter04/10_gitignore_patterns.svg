@@ -1,0 +1,173 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>.gitignoreパターン</title>
+  <desc>Gitで管理から除外するファイルの指定方法とパターン例</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">.gitignoreパターン</text>
+  
+  <!-- .gitignoreの目的 -->
+  <g class="gitignore-purpose">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">.gitignoreの目的</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 不要なファイルをGit管理から除外</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">一時ファイル、ビルド成果物、機密情報などを自動的に無視</text>
+  </g>
+  
+  <!-- 基本パターン -->
+  <g class="basic-patterns">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">基本的なパターン記法</text>
+    
+    <!-- 具体的ファイル -->
+    <g class="specific-file">
+      <rect x="80" y="200" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 具体的ファイル</text>
+      
+      <rect x="90" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="95" y="247" class="text text-sm" style="font-family: monospace;">config.json</text>
+      
+      <rect x="90" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="95" y="267" class="text text-sm" style="font-family: monospace;">secret.key</text>
+    </g>
+    
+    <!-- ワイルドカード -->
+    <g class="wildcard">
+      <rect x="240" y="200" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌟 ワイルドカード</text>
+      
+      <rect x="250" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="255" y="247" class="text text-sm" style="font-family: monospace;">*.log</text>
+      
+      <rect x="250" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="255" y="267" class="text text-sm" style="font-family: monospace;">temp_*</text>
+    </g>
+    
+    <!-- ディレクトリ -->
+    <g class="directory">
+      <rect x="400" y="200" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 ディレクトリ</text>
+      
+      <rect x="410" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="415" y="247" class="text text-sm" style="font-family: monospace;">node_modules/</text>
+      
+      <rect x="410" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="415" y="267" class="text text-sm" style="font-family: monospace;">build/</text>
+    </g>
+    
+    <!-- 再帰パターン -->
+    <g class="recursive">
+      <rect x="560" y="200" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 再帰パターン</text>
+      
+      <rect x="570" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="575" y="247" class="text text-sm" style="font-family: monospace;">**/debug.log</text>
+      
+      <rect x="570" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
+      <text x="575" y="267" class="text text-sm" style="font-family: monospace;">src/**/*.tmp</text>
+    </g>
+  </g>
+  
+  <!-- 言語別の一般的なパターン -->
+  <g class="language-patterns">
+    <text x="400" y="320" text-anchor="middle" class="text text-md">言語別の一般的なパターン</text>
+    
+    <!-- Node.js -->
+    <g class="nodejs-patterns">
+      <rect x="80" y="340" width="150" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="155" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📗 Node.js</text>
+      
+      <text x="90" y="380" class="text text-sm" style="font-family: monospace;">node_modules/</text>
+      <text x="90" y="395" class="text text-sm" style="font-family: monospace;">npm-debug.log*</text>
+      <text x="90" y="410" class="text text-sm" style="font-family: monospace;">.env</text>
+      <text x="90" y="425" class="text text-sm" style="font-family: monospace;">dist/</text>
+    </g>
+    
+    <!-- Python -->
+    <g class="python-patterns">
+      <rect x="250" y="340" width="150" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐍 Python</text>
+      
+      <text x="260" y="380" class="text text-sm" style="font-family: monospace;">__pycache__/</text>
+      <text x="260" y="395" class="text text-sm" style="font-family: monospace;">*.pyc</text>
+      <text x="260" y="410" class="text text-sm" style="font-family: monospace;">.pytest_cache/</text>
+      <text x="260" y="425" class="text text-sm" style="font-family: monospace;">venv/</text>
+    </g>
+    
+    <!-- Java -->
+    <g class="java-patterns">
+      <rect x="420" y="340" width="150" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="495" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☕ Java</text>
+      
+      <text x="430" y="380" class="text text-sm" style="font-family: monospace;">*.class</text>
+      <text x="430" y="395" class="text text-sm" style="font-family: monospace;">target/</text>
+      <text x="430" y="410" class="text text-sm" style="font-family: monospace;">*.jar</text>
+      <text x="430" y="425" class="text text-sm" style="font-family: monospace;">.gradle/</text>
+    </g>
+    
+    <!-- 共通パターン -->
+    <g class="common-patterns">
+      <rect x="590" y="340" width="150" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="665" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 共通</text>
+      
+      <text x="600" y="380" class="text text-sm" style="font-family: monospace;">.DS_Store</text>
+      <text x="600" y="395" class="text text-sm" style="font-family: monospace;">Thumbs.db</text>
+      <text x="600" y="410" class="text text-sm" style="font-family: monospace;">*.log</text>
+      <text x="600" y="425" class="text text-sm" style="font-family: monospace;">*.tmp</text>
+    </g>
+  </g>
+  
+  <!-- 高度なパターン -->
+  <g class="advanced-patterns">
+    <text x="400" y="470" text-anchor="middle" class="text text-md">高度なパターン</text>
+    
+    <!-- 否定パターン -->
+    <g class="negation">
+      <rect x="120" y="490" width="160" height="60" rx="4" class="error border" opacity="0.1"/>
+      <text x="200" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❗ 否定パターン</text>
+      <text x="130" y="525" class="text text-sm" style="font-family: monospace;">*.log</text>
+      <text x="130" y="540" class="text text-sm" style="font-family: monospace;">!important.log</text>
+    </g>
+    
+    <!-- コメント -->
+    <g class="comments">
+      <rect x="300" y="490" width="160" height="60" rx="4" class="primary border" opacity="0.1"/>
+      <text x="380" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コメント</text>
+      <text x="310" y="525" class="text text-sm" style="font-family: monospace;"># ログファイル</text>
+      <text x="310" y="540" class="text text-sm" style="font-family: monospace;">*.log</text>
+    </g>
+    
+    <!-- 空行の意味 -->
+    <g class="empty-lines">
+      <rect x="480" y="490" width="160" height="60" rx="4" class="success border" opacity="0.1"/>
+      <text x="560" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 空行で区切り</text>
+      <text x="490" y="525" class="text text-sm">セクション分け</text>
+      <text x="490" y="540" class="text text-sm">可読性向上</text>
+    </g>
+  </g>
+  
+  <!-- ベストプラクティス -->
+  <g class="best-practices">
+    <rect x="50" y="570" width="700" height="25" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="585" class="text text-sm" style="font-weight: 600;">💡 ベストプラクティス:</text>
+    <text x="60" y="598" class="text text-sm">プロジェクト初期に設定 | GitHub テンプレート活用 | 機密情報は絶対に除外 | 定期的に見直し</text>
+  </g>
+</svg>

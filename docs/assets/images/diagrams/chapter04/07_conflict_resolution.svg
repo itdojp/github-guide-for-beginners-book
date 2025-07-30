@@ -1,0 +1,140 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コンフリクト解決</title>
+  <desc>マージ時のコンフリクト発生から解決までのプロセス</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コンフリクト解決</text>
+  
+  <!-- コンフリクト発生の原因 -->
+  <g class="conflict-cause">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">コンフリクト発生の原因</text>
+    
+    <!-- 同じファイルの同じ箇所を異なるブランチで編集 -->
+    <g class="conflict-scenario">
+      <!-- mainブランチの変更 -->
+      <rect x="80" y="95" width="250" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="205" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">main ブランチの変更</text>
+      
+      <rect x="90" y="125" width="230" height="40" rx="2" class="bg-alt border"/>
+      <text x="95" y="138" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
+      <text x="95" y="152" class="text text-sm" style="font-family: monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
+      <text x="95" y="166" class="text text-sm" style="font-family: monospace;">}</text>
+      
+      <!-- featureブランチの変更 -->
+      <rect x="470" y="95" width="250" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="595" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">feature ブランチの変更</text>
+      
+      <rect x="480" y="125" width="230" height="40" rx="2" class="bg-alt border"/>
+      <text x="485" y="138" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
+      <text x="485" y="152" class="text text-sm" style="font-family: monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
+      <text x="485" y="166" class="text text-sm" style="font-family: monospace;">}</text>
+      
+      <!-- 競合マーク -->
+      <text x="400" y="145" text-anchor="middle" class="text text-md error" style="font-weight: 600;">⚡ 同じ行を異なる内容に変更</text>
+    </g>
+  </g>
+  
+  <!-- コンフリクトの表示 -->
+  <g class="conflict-display">
+    <text x="400" y="210" text-anchor="middle" class="text text-md">コンフリクトマーカーの表示</text>
+    
+    <rect x="150" y="230" width="500" height="120" rx="8" class="error border" opacity="0.1/>
+    <text x="400" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">conflicted-file.js</text>
+    
+    <!-- コンフリクト内容 -->
+    <rect x="170" y="265" width="460" height="75" rx="2" class="bg-alt border"/>
+    <text x="175" y="278" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
+    <text x="175" y="292" class="text text-sm" style="font-family: monospace; color: #dc3545;">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+    <text x="175" y="306" class="text text-sm" style="font-family: monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
+    <text x="175" y="320" class="text text-sm" style="font-family: monospace; color: #6c757d;">=======</text>
+    <text x="175" y="334" class="text text-sm" style="font-family: monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
+    <text x="175" y="348" class="text text-sm" style="font-family: monospace; color: #dc3545;">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/greeting</text>
+  </g>
+  
+  <!-- 解決プロセス -->
+  <g class="resolution-process">
+    <text x="400" y="380" text-anchor="middle" class="text text-md">解決プロセス</text>
+    
+    <!-- Step 1: マーカー識別 -->
+    <g class="step-1">
+      <rect x="60" y="400" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="130" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1. マーカー識別</text>
+      <text x="130" y="445" text-anchor="middle" class="text text-sm">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+      <text x="130" y="460" text-anchor="middle" class="text text-sm">=======</text>
+      <text x="130" y="475" text-anchor="middle" class="text text-sm">&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</text>
+    </g>
+    
+    <!-- Step 2: 内容選択 -->
+    <g class="step-2">
+      <rect x="220" y="400" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="290" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2. 内容選択</text>
+      <text x="290" y="445" text-anchor="middle" class="text text-sm">• 一方を採用</text>
+      <text x="290" y="460" text-anchor="middle" class="text text-sm">• 両方を統合</text>
+      <text x="290" y="475" text-anchor="middle" class="text text-sm">• 新規作成</text>
+    </g>
+    
+    <!-- Step 3: マーカー削除 -->
+    <g class="step-3">
+      <rect x="380" y="400" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="450" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3. マーカー削除</text>
+      <text x="450" y="445" text-anchor="middle" class="text text-sm">すべてのマーカー</text>
+      <text x="450" y="460" text-anchor="middle" class="text text-sm">を削除</text>
+      <text x="450" y="475" text-anchor="middle" class="text text-sm">最終内容のみ残す</text>
+    </g>
+    
+    <!-- Step 4: テスト・コミット -->
+    <g class="step-4">
+      <rect x="540" y="400" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="610" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4. テスト・コミット</text>
+      <text x="610" y="445" text-anchor="middle" class="text text-sm">動作確認</text>
+      <text x="610" y="460" text-anchor="middle" class="text text-sm">git add</text>
+      <text x="610" y="475" text-anchor="middle" class="text text-sm">git commit</text>
+    </g>
+    
+    <!-- プロセス矢印 -->
+    <line x1="200" y1="440" x2="220" y2="440" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="360" y1="440" x2="380" y2="440" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="520" y1="440" x2="540" y2="440" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- 解決後のファイル -->
+  <g class="resolved-file">
+    <text x="400" y="510" text-anchor="middle" class="text text-md">解決後のファイル</text>
+    
+    <rect x="250" y="525" width="300" height="50" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">resolved-file.js</text>
+    
+    <rect x="270" y="555" width="260" height="15" rx="2" class="bg-alt border"/>
+    <text x="275" y="565" class="text text-sm" style="font-family: monospace;">  return `Hello there, ${name}!`;</text>
+  </g>
+  
+  <!-- 解決のコツ -->
+  <g class="resolution-tips">
+    <rect x="50" y="580" width="700" height="15" rx="2" class="primary border" opacity="0.1"/>
+    <text x="60" y="592" class="text text-sm" style="font-weight: 600;">💡 解決のコツ: 両方の変更意図を理解 | チームメンバーと相談 | テストを忘れずに | 段階的に解決</text>
+  </g>
+</svg>

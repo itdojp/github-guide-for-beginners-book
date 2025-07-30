@@ -1,0 +1,119 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>README.mdの重要性</title>
+  <desc>プロジェクトの顔となるREADMEファイルの構成と重要性</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">README.mdの重要性</text>
+  
+  <!-- READMEの位置づけ -->
+  <g class="readme-position">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">プロジェクトの「顔」としてのREADME</text>
+    
+    <!-- リポジトリ構造 -->
+    <rect x="250" y="95" width="300" height="120" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 project-repository</text>
+    
+    <!-- ファイル一覧 -->
+    <text x="270" y="135" class="text text-sm success" style="font-weight: 600;">📄 README.md ← 最初に表示される</text>
+    <text x="270" y="150" class="text text-sm">📄 package.json</text>
+    <text x="270" y="165" class="text text-sm">📁 src/</text>
+    <text x="270" y="180" class="text text-sm">📁 docs/</text>
+    <text x="270" y="195" class="text text-sm">📄 LICENSE</text>
+    
+    <!-- 重要性の説明 -->
+    <rect x="580" y="100" width="150" height="110" rx="4" class="warning border" opacity="0.1"/>
+    <text x="655" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 第一印象</text>
+    <text x="655" y="140" text-anchor="middle" class="text text-sm">訪問者が最初に</text>
+    <text x="655" y="155" text-anchor="middle" class="text text-sm">目にする情報</text>
+    <text x="655" y="175" text-anchor="middle" class="text text-sm">プロジェクトの</text>
+    <text x="655" y="190" text-anchor="middle" class="text text-sm">価値を伝える</text>
+  </g>
+  
+  <!-- READMEの基本構成 -->
+  <g class="readme-structure">
+    <text x="400" y="250" text-anchor="middle" class="text text-md">READMEの基本構成</text>
+    
+    <!-- セクション1: プロジェクト概要 -->
+    <g class="project-overview">
+      <rect x="80" y="270" width="140" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 プロジェクト概要</text>
+      <text x="150" y="315" text-anchor="middle" class="text text-sm">• タイトル</text>
+      <text x="150" y="330" text-anchor="middle" class="text text-sm">• 説明</text>
+      <text x="150" y="345" text-anchor="middle" class="text text-sm">• 目的</text>
+      <text x="150" y="360" text-anchor="middle" class="text text-sm">• スクリーンショット</text>
+    </g>
+    
+    <!-- セクション2: インストール -->
+    <g class="installation">
+      <rect x="240" y="270" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ インストール</text>
+      <text x="310" y="315" text-anchor="middle" class="text text-sm">• 必要環境</text>
+      <text x="310" y="330" text-anchor="middle" class="text text-sm">• インストール手順</text>
+      <text x="310" y="345" text-anchor="middle" class="text text-sm">• 依存関係</text>
+      <text x="310" y="360" text-anchor="middle" class="text text-sm">• 設定方法</text>
+    </g>
+    
+    <!-- セクション3: 使用方法 -->
+    <g class="usage">
+      <rect x="400" y="270" width="140" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 使用方法</text>
+      <text x="470" y="315" text-anchor="middle" class="text text-sm">• 基本的な使い方</text>
+      <text x="470" y="330" text-anchor="middle" class="text text-sm">• コード例</text>
+      <text x="470" y="345" text-anchor="middle" class="text text-sm">• API リファレンス</text>
+      <text x="470" y="360" text-anchor="middle" class="text text-sm">• トラブルシューティング</text>
+    </g>
+    
+    <!-- セクション4: 貢献 -->
+    <g class="contribution">
+      <rect x="560" y="270" width="140" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 貢献・ライセンス</text>
+      <text x="630" y="315" text-anchor="middle" class="text text-sm">• 貢献ガイドライン</text>
+      <text x="630" y="330" text-anchor="middle" class="text text-sm">• ライセンス情報</text>
+      <text x="630" y="345" text-anchor="middle" class="text text-sm">• 作者情報</text>
+      <text x="630" y="360" text-anchor="middle" class="text text-sm">• 謝辞</text>
+    </g>
+  </g>
+  
+  <!-- READMEの例 -->
+  <g class="readme-example">
+    <text x="400" y="400" text-anchor="middle" class="text text-md">READMEの実例</text>
+    
+    <rect x="100" y="420" width="600" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- Markdown例 -->
+    <text x="120" y="440" class="text text-sm" style="font-family: monospace; font-weight: 600;"># Awesome Todo App</text>
+    <text x="120" y="455" class="text text-sm" style="font-family: monospace;">シンプルで使いやすいTodoアプリケーションです。</text>
+    <text x="120" y="475" class="text text-sm" style="font-family: monospace; font-weight: 600;">## インストール</text>
+    <text x="120" y="490" class="text text-sm" style="font-family: monospace;">```bash</text>
+    <text x="120" y="505" class="text text-sm" style="font-family: monospace;">npm install</text>
+    <text x="120" y="520" class="text text-sm" style="font-family: monospace;">npm start</text>
+    <text x="120" y="535" class="text text-sm" style="font-family: monospace;">```</text>
+  </g>
+  
+  <!-- READMEの効果 -->
+  <g class="readme-benefits">
+    <text x="400" y="560" text-anchor="middle" class="text text-md">良いREADMEの効果</text>
+    
+    <rect x="50" y="575" width="700" height="20" rx="4" class="success border" opacity="0.1"/>
+    <text x="60" y="590" class="text text-sm" style="font-weight: 600;">🎯 効果: プロジェクトの理解促進 | 新規貢献者の参加障壁低下 | メンテナンス負荷軽減 | プロジェクトの信頼性向上</text>
+  </g>
+</svg>

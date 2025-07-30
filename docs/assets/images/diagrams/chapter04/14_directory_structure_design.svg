@@ -1,0 +1,163 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ディレクトリ構造設計</title>
+  <desc>プロジェクトの可読性と保守性を高めるディレクトリ構造の設計原則</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ディレクトリ構造設計</text>
+  
+  <!-- 設計原則 -->
+  <g class="design-principles">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">良いディレクトリ構造の原則</text>
+    
+    <!-- 原則1: 論理的分類 -->
+    <g class="logical-grouping">
+      <rect x="80" y="95" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧠 論理的分類</text>
+      <text x="150" y="140" text-anchor="middle" class="text text-sm">• 機能別に分離</text>
+      <text x="150" y="155" text-anchor="middle" class="text text-sm">• 役割の明確化</text>
+      <text x="150" y="170" text-anchor="middle" class="text text-sm">• 関連ファイル集約</text>
+    </g>
+    
+    <!-- 原則2: 直感的命名 -->
+    <g class="intuitive-naming">
+      <rect x="240" y="95" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 直感的命名</text>
+      <text x="310" y="140" text-anchor="middle" class="text text-sm">• 目的が分かりやすい</text>
+      <text x="310" y="155" text-anchor="middle" class="text text-sm">• 略語は最小限</text>
+      <text x="310" y="170" text-anchor="middle" class="text text-sm">• 一貫性のある命名</text>
+    </g>
+    
+    <!-- 原則3: 適切な階層 -->
+    <g class="proper-hierarchy">
+      <rect x="400" y="95" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 適切な階層</text>
+      <text x="470" y="140" text-anchor="middle" class="text text-sm">• 深すぎない構造</text>
+      <text x="470" y="155" text-anchor="middle" class="text text-sm">• 必要な時に細分化</text>
+      <text x="470" y="170" text-anchor="middle" class="text text-sm">• バランスの取れた深度</text>
+    </g>
+    
+    <!-- 原則4: 拡張性 -->
+    <g class="scalability">
+      <rect x="560" y="95" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 拡張性</text>
+      <text x="630" y="140" text-anchor="middle" class="text text-sm">• 成長を見据えた設計</text>
+      <text x="630" y="155" text-anchor="middle" class="text text-sm">• 新機能追加しやすい</text>
+      <text x="630" y="170" text-anchor="middle" class="text text-sm">• リファクタ容易</text>
+    </g>
+  </g>
+  
+  <!-- プロジェクト種類別の例 -->
+  <g class="project-examples">
+    <text x="400" y="210" text-anchor="middle" class="text text-md">プロジェクト種類別構造例</text>
+    
+    <!-- Webアプリケーション -->
+    <g class="web-app-structure">
+      <rect x="80" y="230" width="200" height="160" rx="8" class="primary border" opacity="0.1"/>
+      <text x="180" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 Webアプリケーション</text>
+      
+      <text x="90" y="275" class="text text-sm" style="font-family: monospace;">📁 project-root/</text>
+      <text x="100" y="290" class="text text-sm" style="font-family: monospace;">├── 📁 src/</text>
+      <text x="110" y="305" class="text text-sm" style="font-family: monospace;">│   ├── 📁 components/</text>
+      <text x="110" y="320" class="text text-sm" style="font-family: monospace;">│   ├── 📁 pages/</text>
+      <text x="110" y="335" class="text text-sm" style="font-family: monospace;">│   └── 📁 utils/</text>
+      <text x="100" y="350" class="text text-sm" style="font-family: monospace;">├── 📁 public/</text>
+      <text x="100" y="365" class="text text-sm" style="font-family: monospace;">├── 📁 tests/</text>
+      <text x="100" y="380" class="text text-sm" style="font-family: monospace;">└── 📄 package.json</text>
+    </g>
+    
+    <!-- ライブラリ -->
+    <g class="library-structure">
+      <rect x="300" y="230" width="200" height="160" rx="8" class="success border" opacity="0.1"/>
+      <text x="400" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 ライブラリ</text>
+      
+      <text x="310" y="275" class="text text-sm" style="font-family: monospace;">📁 library-name/</text>
+      <text x="320" y="290" class="text text-sm" style="font-family: monospace;">├── 📁 lib/</text>
+      <text x="330" y="305" class="text text-sm" style="font-family: monospace;">│   ├── 📄 index.js</text>
+      <text x="330" y="320" class="text text-sm" style="font-family: monospace;">│   └── 📁 modules/</text>
+      <text x="320" y="335" class="text text-sm" style="font-family: monospace;">├── 📁 docs/</text>
+      <text x="320" y="350" class="text text-sm" style="font-family: monospace;">├── 📁 examples/</text>
+      <text x="320" y="365" class="text text-sm" style="font-family: monospace;">├── 📁 test/</text>
+      <text x="320" y="380" class="text text-sm" style="font-family: monospace;">└── 📄 README.md</text>
+    </g>
+    
+    <!-- データサイエンス -->
+    <g class="data-science-structure">
+      <rect x="520" y="230" width="200" height="160" rx="8" class="warning border" opacity="0.1"/>
+      <text x="620" y="255" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 データサイエンス</text>
+      
+      <text x="530" y="275" class="text text-sm" style="font-family: monospace;">📁 data-project/</text>
+      <text x="540" y="290" class="text text-sm" style="font-family: monospace;">├── 📁 data/</text>
+      <text x="550" y="305" class="text text-sm" style="font-family: monospace;">│   ├── 📁 raw/</text>
+      <text x="550" y="320" class="text text-sm" style="font-family: monospace;">│   └── 📁 processed/</text>
+      <text x="540" y="335" class="text text-sm" style="font-family: monospace;">├── 📁 notebooks/</text>
+      <text x="540" y="350" class="text text-sm" style="font-family: monospace;">├── 📁 scripts/</text>
+      <text x="540" y="365" class="text text-sm" style="font-family: monospace;">├── 📁 models/</text>
+      <text x="540" y="380" class="text text-sm" style="font-family: monospace;">└── 📄 requirements.txt</text>
+    </g>
+  </g>
+  
+  <!-- 共通ディレクトリの役割 -->
+  <g class="common-directories">
+    <text x="400" y="420" text-anchor="middle" class="text text-md">共通ディレクトリの役割</text>
+    
+    <!-- ドキュメント系 -->
+    <g class="documentation-dirs">
+      <rect x="80" y="440" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📖 ドキュメント系</text>
+      <text x="150" y="475" text-anchor="middle" class="text text-sm">docs/ - API文書</text>
+      <text x="150" y="490" text-anchor="middle" class="text text-sm">README.md - 概要</text>
+    </g>
+    
+    <!-- 設定系 -->
+    <g class="config-dirs">
+      <rect x="240" y="440" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定系</text>
+      <text x="310" y="475" text-anchor="middle" class="text text-sm">config/ - 設定ファイル</text>
+      <text x="310" y="490" text-anchor="middle" class="text text-sm">.env - 環境変数</text>
+    </g>
+    
+    <!-- 開発系 -->
+    <g class="development-dirs">
+      <rect x="400" y="440" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ 開発系</text>
+      <text x="470" y="475" text-anchor="middle" class="text text-sm">scripts/ - ビルドスクリプト</text>
+      <text x="470" y="490" text-anchor="middle" class="text text-sm">tools/ - 開発ツール</text>
+    </g>
+    
+    <!-- 出力系 -->
+    <g class="output-dirs">
+      <rect x="560" y="440" width="140" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 出力系</text>
+      <text x="630" y="475" text-anchor="middle" class="text text-sm">dist/ - ビルド成果物</text>
+      <text x="630" y="490" text-anchor="middle" class="text text-sm">build/ - 一時ファイル</text>
+    </g>
+  </g>
+  
+  <!-- .gitignoreとの連携 -->
+  <g class="gitignore-integration">
+    <text x="400" y="530" text-anchor="middle" class="text text-md">.gitignoreとの連携</text>
+    
+    <rect x="100" y="545" width="600" height="40" rx="8" class="bg-alt border"/>
+    <text x="400" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 管理対象外ディレクトリ</text>
+    <text x="120" y="580" class="text text-sm">node_modules/, dist/, build/, .cache/, temp/, logs/ などは .gitignore で除外</text>
+  </g>
+</svg>
