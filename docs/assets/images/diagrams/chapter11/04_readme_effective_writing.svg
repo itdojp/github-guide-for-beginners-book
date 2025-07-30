@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>README 効果的な書き方</title>
+  <desc>魅力的で効果的なREADMEの作成方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">README 効果的な書き方</text>
+  
+  <!-- 概要 -->
+  <g class="readme-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">📖 魅力的なREADME構築法</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">第一印象の向上、理解促進、利用促進を実現する文書作成</text>
+  </g>
+  
+  <!-- README構成要素 -->
+  <g class="readme-components">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">README構成要素</text>
+    
+    <!-- ヘッダー部 -->
+    <g class="header-section">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 ヘッダー部</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">構成要素:</text>
+      <text x="50" y="200" class="text text-sm">• プロジェクト名</text>
+      <text x="50" y="215" class="text text-sm">• 一行説明</text>
+      <text x="50" y="230" class="text text-sm">• バッジ・ステータス</text>
+      <text x="50" y="245" class="text text-sm">• デモ・スクリーンショット</text>
+    </g>
+    
+    <!-- 説明部 -->
+    <g class="description-section">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 説明部</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">内容項目:</text>
+      <text x="220" y="200" class="text text-sm">• 背景・目的</text>
+      <text x="220" y="215" class="text text-sm">• 主要機能</text>
+      <text x="220" y="230" class="text text-sm">• 技術スタック</text>
+      <text x="220" y="245" class="text text-sm">• 特徴・利点</text>
+    </g>
+    
+    <!-- 利用方法 -->
+    <g class="usage-section">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 利用方法</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">手順項目:</text>
+      <text x="390" y="200" class="text text-sm">• インストール</text>
+      <text x="390" y="215" class="text text-sm">• セットアップ</text>
+      <text x="390" y="230" class="text text-sm">• 基本的な使用例</text>
+      <text x="390" y="245" class="text text-sm">• 設定オプション</text>
+    </g>
+    
+    <!-- 貢献・参考 -->
+    <g class="contribution-section">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 貢献・参考</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">含む情報:</text>
+      <text x="560" y="200" class="text text-sm">• 貢献ガイドライン</text>
+      <text x="560" y="215" class="text text-sm">• ライセンス情報</text>
+      <text x="560" y="230" class="text text-sm">• 連絡先</text>
+      <text x="560" y="245" class="text text-sm">• 謝辞・参考資料</text>
+    </g>
+  </g>
+  
+  <!-- 効果的な書き方 -->
+  <g class="effective-writing">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的な書き方のテクニック</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 視覚的構造化 -->
+    <g class="visual-structure">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ 視覚的構造</text>
+      
+      <text x="110" y="355" class="text text-sm">• 階層見出し</text>
+      <text x="110" y="370" class="text text-sm">• 箇条書き</text>
+      <text x="110" y="385" class="text text-sm">• コードブロック</text>
+    </g>
+    
+    <!-- 簡潔性 -->
+    <g class="conciseness">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 簡潔性</text>
+      
+      <text x="270" y="355" class="text text-sm">• 要点絞り込み</text>
+      <text x="270" y="370" class="text text-sm">• 冗長表現回避</text>
+      <text x="270" y="385" class="text text-sm">• 段階的詳細</text>
+    </g>
+    
+    <!-- 具体性 -->
+    <g class="specificity">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 具体性</text>
+      
+      <text x="430" y="355" class="text text-sm">• 実用例提示</text>
+      <text x="430" y="370" class="text text-sm">• 数値・データ</text>
+      <text x="430" y="385" class="text text-sm">• 実際のコード</text>
+    </g>
+    
+    <!-- 更新性 -->
+    <g class="maintainability">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 更新性</text>
+      
+      <text x="590" y="355" class="text text-sm">• 最新情報保持</text>
+      <text x="590" y="370" class="text text-sm">• 変更履歴</text>
+      <text x="590" y="385" class="text text-sm">• 既知の問題</text>
+    </g>
+  </g>
+  
+  <!-- 高度なテクニック -->
+  <g class="advanced-techniques">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">高度なテクニック</text>
+    
+    <!-- マルチメディア活用 -->
+    <g class="multimedia-usage">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎬 マルチメディア</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">活用要素:</text>
+      <text x="60" y="520" class="text text-sm">• GIF デモ</text>
+      <text x="60" y="535" class="text text-sm">• スクリーンキャスト</text>
+      <text x="60" y="550" class="text text-sm">• アーキテクチャ図</text>
+      <text x="60" y="565" class="text text-sm">• フローチャート</text>
+    </g>
+    
+    <!-- インタラクティブ要素 -->
+    <g class="interactive-elements">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ インタラクティブ</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">要素例:</text>
+      <text x="250" y="520" class="text text-sm">• 折りたたみセクション</text>
+      <text x="250" y="535" class="text text-sm">• インライン実行</text>
+      <text x="250" y="550" class="text text-sm">• リンク集</text>
+      <text x="250" y="565" class="text text-sm">• 目次ナビゲーション</text>
+    </g>
+    
+    <!-- 国際化対応 -->
+    <g class="internationalization">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌍 国際化対応</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">対応項目:</text>
+      <text x="440" y="520" class="text text-sm">• 多言語版提供</text>
+      <text x="440" y="535" class="text text-sm">• 文化的配慮</text>
+      <text x="440" y="550" class="text text-sm">• 地域別例示</text>
+      <text x="440" y="565" class="text text-sm">• 時差・単位考慮</text>
+    </g>
+    
+    <!-- SEO・発見性 -->
+    <g class="seo-discoverability">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 SEO・発見性</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">最適化要素:</text>
+      <text x="630" y="520" class="text text-sm">• キーワード含有</text>
+      <text x="630" y="535" class="text text-sm">• メタデータ設定</text>
+      <text x="630" y="550" class="text text-sm">• 関連タグ付け</text>
+      <text x="630" y="565" class="text text-sm">• 外部リンク対策</text>
+    </g>
+  </g>
+</svg>

@@ -54,39 +54,40 @@
 }
 
 /* SVG Diagram Styles - Direct fallback for reliability */
-svg .bg { 
-    fill: var(--svg-bg, #ffffff); 
+svg .bg, .page-content svg .bg { 
+    fill: var(--svg-bg, #ffffff) !important; 
 }
-svg .bg-alt { 
-    fill: var(--svg-bg-alt, #f8fafc); 
+svg .bg-alt, .page-content svg .bg-alt { 
+    fill: var(--svg-bg-alt, #f8fafc) !important; 
 }
-svg .text { 
-    fill: var(--svg-text, #1e293b); 
-    font-family: system-ui, sans-serif; 
+svg .text, .page-content svg .text { 
+    fill: var(--svg-text, #1e293b) !important; 
+    font-family: system-ui, sans-serif !important; 
 }
-svg .border { 
-    stroke: var(--svg-border, #e2e8f0); 
-    fill: none; 
-    stroke-width: 1; 
+svg .border, .page-content svg .border { 
+    stroke: var(--svg-border, #e2e8f0) !important; 
+    fill: none !important; 
+    stroke-width: 1 !important; 
 }
-svg .primary { 
-    fill: var(--svg-primary, #2563eb); 
+svg .primary, .page-content svg .primary { 
+    fill: var(--svg-primary, #2563eb) !important; 
 }
-svg .primary-stroke { 
-    stroke: var(--svg-primary, #2563eb); 
-    stroke-width: 2; 
+svg .primary-stroke, .page-content svg .primary-stroke { 
+    stroke: var(--svg-primary, #2563eb) !important; 
+    stroke-width: 2 !important; 
+    fill: none !important;
 }
-svg .success { 
-    fill: var(--svg-success, #10b981); 
+svg .success, .page-content svg .success { 
+    fill: var(--svg-success, #10b981) !important; 
 }
-svg .warning { 
-    fill: var(--svg-warning, #f59e0b); 
+svg .warning, .page-content svg .warning { 
+    fill: var(--svg-warning, #f59e0b) !important; 
 }
-svg .error { 
-    fill: var(--svg-error, #ef4444); 
+svg .error, .page-content svg .error { 
+    fill: var(--svg-error, #ef4444) !important; 
 }
-svg .neutral { 
-    fill: var(--svg-neutral, #64748b); 
+svg .neutral, .page-content svg .neutral { 
+    fill: var(--svg-neutral, #64748b) !important; 
 }
 
 /* Dark Theme */
@@ -123,26 +124,26 @@ svg .neutral {
 }
 
 /* Dark Theme SVG Overrides */
-[data-theme="dark"] svg .bg { 
-    fill: var(--svg-bg, #0f172a); 
+[data-theme="dark"] svg .bg, [data-theme="dark"] .page-content svg .bg { 
+    fill: var(--svg-bg, #0f172a) !important; 
 }
-[data-theme="dark"] svg .bg-alt { 
-    fill: var(--svg-bg-alt, #1e293b); 
+[data-theme="dark"] svg .bg-alt, [data-theme="dark"] .page-content svg .bg-alt { 
+    fill: var(--svg-bg-alt, #1e293b) !important; 
 }
-[data-theme="dark"] svg .text { 
-    fill: var(--svg-text, #f1f5f9); 
+[data-theme="dark"] svg .text, [data-theme="dark"] .page-content svg .text { 
+    fill: var(--svg-text, #f1f5f9) !important; 
 }
-[data-theme="dark"] svg .border { 
-    stroke: var(--svg-border, #334155); 
+[data-theme="dark"] svg .border, [data-theme="dark"] .page-content svg .border { 
+    stroke: var(--svg-border, #334155) !important; 
 }
-[data-theme="dark"] svg .primary { 
-    fill: var(--svg-primary, #3b82f6); 
+[data-theme="dark"] svg .primary, [data-theme="dark"] .page-content svg .primary { 
+    fill: var(--svg-primary, #3b82f6) !important; 
 }
-[data-theme="dark"] svg .primary-stroke { 
-    stroke: var(--svg-primary, #3b82f6); 
+[data-theme="dark"] svg .primary-stroke, [data-theme="dark"] .page-content svg .primary-stroke { 
+    stroke: var(--svg-primary, #3b82f6) !important; 
 }
-[data-theme="dark"] svg .neutral { 
-    fill: var(--svg-neutral, #94a3b8); 
+[data-theme="dark"] svg .neutral, [data-theme="dark"] .page-content svg .neutral { 
+    fill: var(--svg-neutral, #94a3b8) !important; 
 }
 
 /* Base Styles */

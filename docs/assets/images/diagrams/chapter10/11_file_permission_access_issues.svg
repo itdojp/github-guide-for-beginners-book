@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ファイル権限・アクセス問題</title>
+  <desc>ファイルシステムの権限とアクセス制御の問題解決</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ファイル権限・アクセス問題</text>
+  
+  <!-- 概要 -->
+  <g class="permission-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="error border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🔐 ファイルアクセス権限のトラブル解決</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">読み取り・書き込み・実行権限とディレクトリアクセス問題</text>
+  </g>
+  
+  <!-- 権限問題の種類 -->
+  <g class="permission-problem-types">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">権限問題の種類</text>
+    
+    <!-- 読み取り権限なし -->
+    <g class="read-permission-denied">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📖 読み取り拒否</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• Permission denied</text>
+      <text x="50" y="215" class="text text-sm">• ファイル開けない</text>
+      <text x="50" y="230" class="text text-sm">• git status失敗</text>
+      <text x="50" y="245" class="text text-sm">• cat/less エラー</text>
+    </g>
+    
+    <!-- 書き込み権限なし -->
+    <g class="write-permission-denied">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✏️ 書き込み拒否</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• Read-only file</text>
+      <text x="220" y="215" class="text text-sm">• 保存できない</text>
+      <text x="220" y="230" class="text text-sm">• git add失敗</text>
+      <text x="220" y="245" class="text text-sm">• ファイル更新不可</text>
+    </g>
+    
+    <!-- 実行権限なし -->
+    <g class="execute-permission-denied">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 実行拒否</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• Command not found</text>
+      <text x="390" y="215" class="text text-sm">• スクリプト実行不可</text>
+      <text x="390" y="230" class="text text-sm">• ディレクトリ入れない</text>
+      <text x="390" y="245" class="text text-sm">• git hooks失敗</text>
+    </g>
+    
+    <!-- 所有者問題 -->
+    <g class="ownership-issues">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👤 所有者問題</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• Operation not permitted</text>
+      <text x="560" y="215" class="text text-sm">• sudo必要</text>
+      <text x="560" y="230" class="text text-sm">• 他ユーザー所有</text>
+      <text x="560" y="245" class="text text-sm">• グループ権限不足</text>
+    </g>
+  </g>
+  
+  <!-- 権限確認手順 -->
+  <g class="permission-check-steps">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">権限確認手順</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 基本確認 -->
+    <g class="basic-permission-check">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 基本確認</text>
+      
+      <text x="110" y="355" class="text text-sm">ls -la</text>
+      <text x="110" y="370" class="text text-sm">権限表示</text>
+    </g>
+    
+    <!-- 詳細確認 -->
+    <g class="detailed-permission-check">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 詳細確認</text>
+      
+      <text x="270" y="355" class="text text-sm">stat [file]</text>
+      <text x="270" y="370" class="text text-sm">詳細情報</text>
+    </g>
+    
+    <!-- 所有者確認 -->
+    <g class="ownership-check">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 所有者確認</text>
+      
+      <text x="430" y="355" class="text text-sm">whoami</text>
+      <text x="430" y="370" class="text text-sm">id</text>
+    </g>
+    
+    <!-- プロセス確認 -->
+    <g class="process-check">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ プロセス確認</text>
+      
+      <text x="590" y="355" class="text text-sm">ps aux | grep git</text>
+      <text x="590" y="370" class="text text-sm">実行ユーザー</text>
+    </g>
+  </g>
+  
+  <!-- 権限修正方法 -->
+  <g class="permission-fix-methods">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">権限修正方法</text>
+    
+    <!-- chmod修正 -->
+    <g class="chmod-fix">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 chmod修正</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">基本コマンド:</text>
+      <text x="60" y="500" class="text text-sm">chmod 755 [dir]</text>
+      <text x="60" y="515" class="text text-sm">chmod 644 [file]</text>
+      <text x="60" y="530" class="text text-sm">chmod +x [script]</text>
+      <text x="60" y="545" class="text text-sm">chmod -R 755 [dir]</text>
+      <text x="60" y="560" class="text text-sm">再帰的権限設定</text>
+    </g>
+    
+    <!-- chown修正 -->
+    <g class="chown-fix">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👤 chown修正</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">所有者変更:</text>
+      <text x="250" y="500" class="text text-sm">sudo chown $USER [file]</text>
+      <text x="250" y="515" class="text text-sm">sudo chown -R $USER .</text>
+      <text x="250" y="530" class="text text-sm">chown user:group [file]</text>
+      <text x="250" y="545" class="text text-sm">グループ設定</text>
+      <text x="250" y="560" class="text text-sm">⚠️ sudo権限必要</text>
+    </g>
+    
+    <!-- Git固有設定 -->
+    <g class="git-specific-fix">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 Git固有設定</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">Git権限設定:</text>
+      <text x="440" y="500" class="text text-sm">git config core.fileMode</text>
+      <text x="440" y="515" class="text text-sm">false</text>
+      <text x="440" y="530" class="text text-sm">権限変更無視</text>
+      <text x="440" y="545" class="text text-sm">chmod +x .git/hooks/*</text>
+      <text x="440" y="560" class="text text-sm">hooks実行権限</text>
+    </g>
+    
+    <!-- 環境設定 -->
+    <g class="environment-setup">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 環境設定</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">予防設定:</text>
+      <text x="630" y="500" class="text text-sm">umask 022</text>
+      <text x="630" y="515" class="text text-sm">デフォルト権限</text>
+      <text x="630" y="530" class="text text-sm">usermod -a -G git</text>
+      <text x="630" y="545" class="text text-sm">グループ追加</text>
+      <text x="630" y="560" class="text text-sm">適切な権限設計</text>
+    </g>
+  </g>
+</svg>

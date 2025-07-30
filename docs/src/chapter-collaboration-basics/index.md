@@ -292,6 +292,8 @@ Push と Pull を自動的に実行する便利機能です。
 
 次の章では、複数人でのチーム開発に必要なブランチ機能とマージ操作について学習します。
 
+![ワークフローベストプラクティス]({{ '/assets/images/diagrams/chapter05/17_workflow_best_practices.svg' | relative_url }})
+
 **理解度確認：**
 □ GitHub Desktop をインストールし、基本設定ができる  
 □ リポジトリをcloneし、ローカルで編集できる  

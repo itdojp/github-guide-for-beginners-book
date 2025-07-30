@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>チーム協業トラブルシューティング</title>
+  <desc>チーム開発での協業問題と解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">チーム協業トラブルシューティング</text>
+  
+  <!-- 概要 -->
+  <g class="collaboration-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">👥 チーム開発での協業問題解決</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">ワークフロー混乱、コミュニケーション不足、競合解決の体系的対処</text>
+  </g>
+  
+  <!-- 協業問題の種類 -->
+  <g class="collaboration-problems">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要協業問題</text>
+    
+    <!-- ワークフロー混乱 -->
+    <g class="workflow-confusion">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 ワークフロー混乱</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• ブランチ戦略未統一</text>
+      <text x="50" y="215" class="text text-sm">• マージルール不明</text>
+      <text x="50" y="230" class="text text-sm">• レビュープロセス混乱</text>
+      <text x="50" y="245" class="text text-sm">• リリース手順不一致</text>
+    </g>
+    
+    <!-- コミュニケーション不足 -->
+    <g class="communication-issues">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミュニケーション</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• 変更通知不足</text>
+      <text x="220" y="215" class="text text-sm">• 作業重複</text>
+      <text x="220" y="230" class="text text-sm">• 要件理解齟齬</text>
+      <text x="220" y="245" class="text text-sm">• 進捗共有不備</text>
+    </g>
+    
+    <!-- 競合頻発 -->
+    <g class="frequent-conflicts">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 競合頻発</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• 同一ファイル編集</text>
+      <text x="390" y="215" class="text text-sm">• マージ競合多発</text>
+      <text x="390" y="230" class="text text-sm">• 統合作業困難</text>
+      <text x="390" y="245" class="text text-sm">• 進捗阻害</text>
+    </g>
+    
+    <!-- 権限管理問題 -->
+    <g class="permission-management">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 権限管理</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• アクセス権不適切</text>
+      <text x="560" y="215" class="text text-sm">• レビュー権限なし</text>
+      <text x="560" y="230" class="text text-sm">• 管理者権限過多</text>
+      <text x="560" y="245" class="text text-sm">• セキュリティリスク</text>
+    </g>
+  </g>
+  
+  <!-- 問題解決アプローチ -->
+  <g class="resolution-approach">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">問題解決アプローチ</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 現状分析 -->
+    <g class="situation-analysis">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 現状分析</text>
+      
+      <text x="110" y="355" class="text text-sm">チーム規模確認</text>
+      <text x="110" y="370" class="text text-sm">既存プロセス調査</text>
+    </g>
+    
+    <!-- ルール策定 -->
+    <g class="rule-establishment">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ ルール策定</text>
+      
+      <text x="270" y="355" class="text text-sm">ワークフロー定義</text>
+      <text x="270" y="370" class="text text-sm">責任範囲明確化</text>
+    </g>
+    
+    <!-- ツール導入 -->
+    <g class="tool-introduction">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ ツール導入</text>
+      
+      <text x="430" y="355" class="text text-sm">自動化設定</text>
+      <text x="430" y="370" class="text text-sm">統合環境構築</text>
+    </g>
+    
+    <!-- 継続改善 -->
+    <g class="continuous-improvement">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 継続改善</text>
+      
+      <text x="590" y="355" class="text text-sm">定期振り返り</text>
+      <text x="590" y="370" class="text text-sm">プロセス最適化</text>
+    </g>
+  </g>
+  
+  <!-- 具体的解決策 -->
+  <g class="specific-solutions">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">具体的解決策</text>
+    
+    <!-- ワークフロー標準化 -->
+    <g class="workflow-standardization">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 ワークフロー標準化</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">実装項目:</text>
+      <text x="60" y="500" class="text text-sm">1. Git-flow採用</text>
+      <text x="60" y="515" class="text text-sm">2. ブランチ命名規則</text>
+      <text x="60" y="530" class="text text-sm">3. PR テンプレート</text>
+      <text x="60" y="545" class="text text-sm">4. マージポリシー</text>
+      <text x="60" y="560" class="text text-sm">5. ドキュメント化</text>
+    </g>
+    
+    <!-- コミュニケーション改善 -->
+    <g class="communication-improvement">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミュニケーション</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">改善策:</text>
+      <text x="250" y="500" class="text text-sm">1. 日次スタンドアップ</text>
+      <text x="250" y="515" class="text text-sm">2. Issue テンプレート</text>
+      <text x="250" y="530" class="text text-sm">3. Slack/Teams連携</text>
+      <text x="250" y="545" class="text text-sm">4. 進捗ダッシュボード</text>
+      <text x="250" y="560" class="text text-sm">5. 定期レビュー会</text>
+    </g>
+    
+    <!-- 競合回避戦略 -->
+    <g class="conflict-avoidance">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 競合回避戦略</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">戦略:</text>
+      <text x="440" y="500" class="text text-sm">1. 機能単位分割</text>
+      <text x="440" y="515" class="text text-sm">2. 短期間ブランチ</text>
+      <text x="440" y="530" class="text text-sm">3. 定期的リベース</text>
+      <text x="440" y="545" class="text text-sm">4. ペアプログラミング</text>
+      <text x="440" y="560" class="text text-sm">5. 自動マージ支援</text>
+    </g>
+    
+    <!-- 権限・自動化設定 -->
+    <g class="permission-automation">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 権限・自動化</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">設定項目:</text>
+      <text x="630" y="500" class="text text-sm">1. Branch protection</text>
+      <text x="630" y="515" class="text text-sm">2. CODEOWNERS設定</text>
+      <text x="630" y="530" class="text text-sm">3. CI/CD パイプライン</text>
+      <text x="630" y="545" class="text text-sm">4. 自動テスト</text>
+      <text x="630" y="560" class="text text-sm">5. デプロイ自動化</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ネットワーキング・コミュニティ構築</title>
+  <desc>GitHub を活用したネットワーキングとコミュニティ構築戦略</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ネットワーキング・コミュニティ構築</text>
+  
+  <!-- 概要 -->
+  <g class="networking-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🤝 GitHub コミュニティ参加戦略</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">関係構築、知識共有、相互成長を促進する効果的な参加手法</text>
+  </g>
+  
+  <!-- ネットワーキングの段階 -->
+  <g class="networking-stages">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">ネットワーキングの段階</text>
+    
+    <!-- 観察・学習 -->
+    <g class="observation-learning">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ 観察・学習</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">活動内容:</text>
+      <text x="50" y="200" class="text text-sm">• プロジェクト探索</text>
+      <text x="50" y="215" class="text text-sm">• コード学習</text>
+      <text x="50" y="230" class="text text-sm">• 議論追跡</text>
+      <text x="50" y="245" class="text text-sm">• トレンド把握</text>
+    </g>
+    
+    <!-- 参加・貢献 -->
+    <g class="participation-contribution">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 参加・貢献</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">活動内容:</text>
+      <text x="220" y="200" class="text text-sm">• Issue報告</text>
+      <text x="220" y="215" class="text text-sm">• プルリクエスト</text>
+      <text x="220" y="230" class="text text-sm">• ドキュメント改善</text>
+      <text x="220" y="245" class="text text-sm">• 質問回答</text>
+    </g>
+    
+    <!-- 協業・リード -->
+    <g class="collaboration-leadership">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 協業・リード</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">活動内容:</text>
+      <text x="390" y="200" class="text text-sm">• 共同開発</text>
+      <text x="390" y="215" class="text text-sm">• プロジェクト主導</text>
+      <text x="390" y="230" class="text text-sm">• メンタリング</text>
+      <text x="390" y="245" class="text text-sm">• 知識共有</text>
+    </g>
+    
+    <!-- コミュニティ形成 -->
+    <g class="community-building">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌟 コミュニティ形成</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">活動内容:</text>
+      <text x="560" y="200" class="text text-sm">• 組織運営</text>
+      <text x="560" y="215" class="text text-sm">• イベント企画</text>
+      <text x="560" y="230" class="text text-sm">• 標準策定</text>
+      <text x="560" y="245" class="text text-sm">• エコシステム構築</text>
+    </g>
+  </g>
+  
+  <!-- 効果的な参加手法 -->
+  <g class="effective-participation">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的な参加手法</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 価値提供重視 -->
+    <g class="value-focused">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💎 価値提供重視</text>
+      
+      <text x="110" y="355" class="text text-sm">• 質の高い貢献</text>
+      <text x="110" y="370" class="text text-sm">• 問題解決志向</text>
+      <text x="110" y="385" class="text text-sm">• 建設的議論</text>
+    </g>
+    
+    <!-- 継続的関与 -->
+    <g class="continuous-engagement">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 継続的関与</text>
+      
+      <text x="270" y="355" class="text text-sm">• 定期的参加</text>
+      <text x="270" y="370" class="text text-sm">• 長期コミット</text>
+      <text x="270" y="385" class="text text-sm">• 関係構築</text>
+    </g>
+    
+    <!-- 多様性尊重 -->
+    <g class="diversity-respect">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌈 多様性尊重</text>
+      
+      <text x="430" y="355" class="text text-sm">• 異なる視点</text>
+      <text x="430" y="370" class="text text-sm">• 包容的態度</text>
+      <text x="430" y="385" class="text text-sm">• 文化的配慮</text>
+    </g>
+    
+    <!-- 透明性確保 -->
+    <g class="transparency-maintenance">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 透明性確保</text>
+      
+      <text x="590" y="355" class="text text-sm">• オープン対話</text>
+      <text x="590" y="370" class="text text-sm">• 意図明確化</text>
+      <text x="590" y="385" class="text text-sm">• プロセス公開</text>
+    </g>
+  </g>
+  
+  <!-- コミュニティ構築戦略 -->
+  <g class="community-building-strategies">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">コミュニティ構築戦略</text>
+    
+    <!-- 知識共有プラットフォーム -->
+    <g class="knowledge-sharing">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 知識共有</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">構築要素:</text>
+      <text x="60" y="520" class="text text-sm">• 技術記事・ブログ</text>
+      <text x="60" y="535" class="text text-sm">• チュートリアル作成</text>
+      <text x="60" y="550" class="text text-sm">• ライブ配信</text>
+      <text x="60" y="565" class="text text-sm">• Q&A プラットフォーム</text>
+    </g>
+    
+    <!-- 協業プロジェクト -->
+    <g class="collaborative-projects">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 協業プロジェクト</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">推進項目:</text>
+      <text x="250" y="520" class="text text-sm">• オープンソース開発</text>
+      <text x="250" y="535" class="text text-sm">• ハッカソン企画</text>
+      <text x="250" y="550" class="text text-sm">• 共同研究</text>
+      <text x="250" y="565" class="text text-sm">• 標準化活動</text>
+    </g>
+    
+    <!-- メンタリング・教育 -->
+    <g class="mentoring-education">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎓 メンタリング</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">教育活動:</text>
+      <text x="440" y="520" class="text text-sm">• 新人指導</text>
+      <text x="440" y="535" class="text text-sm">• スキルアップ支援</text>
+      <text x="440" y="550" class="text text-sm">• キャリア相談</text>
+      <text x="440" y="565" class="text text-sm">• 学習リソース</text>
+    </g>
+    
+    <!-- イベント・ネットワーキング -->
+    <g class="events-networking">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎪 イベント</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">開催形式:</text>
+      <text x="630" y="520" class="text text-sm">• 勉強会・セミナー</text>
+      <text x="630" y="535" class="text text-sm">• カンファレンス</text>
+      <text x="630" y="550" class="text text-sm">• ワークショップ</text>
+      <text x="630" y="565" class="text text-sm">• 交流会・懇親会</text>
+    </g>
+  </g>
+</svg>

@@ -733,6 +733,8 @@ jobs:
 
 次の章では、セキュリティ対策について学び、安全なGitHub利用方法を身につけます。
 
+![PRベストプラクティスサマリー]({{ '/assets/images/diagrams/chapter08/14_pr_best_practices_summary.svg' | relative_url }})
+
 **理解度確認：**
 □ GitHub Actionsの基本概念を理解している  
 □ 基本的なワークフローを作成・設定できる  

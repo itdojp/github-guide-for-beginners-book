@@ -12,7 +12,11 @@ layout: book
 
 ## 12.1 よくある問題と解決方法
 
+![よくあるエラーの概要]({{ '/assets/images/diagrams/chapter10/01_common_errors_overview.svg' | relative_url }})
+
 ### 認証関連の問題
+
+![認証トラブルシューティング]({{ '/assets/images/diagrams/chapter10/02_authentication_troubleshooting.svg' | relative_url }})
 
 **パスワード認証の廃止エラー**
 
@@ -215,6 +219,8 @@ git push --force origin main
 
 ### GitHub Pages関連の問題
 
+![ネットワーク接続問題]({{ '/assets/images/diagrams/chapter10/03_network_connection_issues.svg' | relative_url }})
+
 **404エラーの診断と解決**
 
 **よくある原因と解決方法：**
@@ -272,6 +278,9 @@ bundle exec jekyll serve
 ```
 
 **一般的な解決方法：**
+
+![診断ツールの使用]({{ '/assets/images/diagrams/chapter10/06_diagnostic_tools_usage.svg' | relative_url }})
+
 ```yaml
 # Gemfile の作成
 source "https://rubygems.org"
@@ -1042,6 +1051,8 @@ exit 0
 - 予防的なメンテナンス
 
 これらの知識により、GitHubを使用中に問題が発生しても、冷静に対処し、効率的に解決できるようになりました。また、問題の発生を未然に防ぐための予防策も身につけることができました。
+
+![予防ベストプラクティス]({{ '/assets/images/diagrams/chapter10/16_prevention_best_practices.svg' | relative_url }})
 
 **理解度確認：**
 □ 一般的なGitHub/Git問題を特定し、解決できる  

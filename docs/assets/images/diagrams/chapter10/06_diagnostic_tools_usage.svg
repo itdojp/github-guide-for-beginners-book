@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>診断ツール使用法</title>
+  <desc>Git問題診断のためのツールとコマンド活用法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">診断ツール使用法</text>
+  
+  <!-- 概要 -->
+  <g class="diagnostic-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🔍 効果的な問題診断手法</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">Git標準コマンドと外部ツールによる体系的診断</text>
+  </g>
+  
+  <!-- Git標準診断コマンド -->
+  <g class="git-diagnostic-commands">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">Git標準診断コマンド</text>
+    
+    <!-- git status -->
+    <g class="git-status">
+      <rect x="50" y="145" width="160" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="130" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 git status</text>
+      
+      <text x="60" y="185" class="text text-sm" style="font-weight: 600;">確認内容:</text>
+      <text x="60" y="200" class="text text-sm">• ワーキングツリー状態</text>
+      <text x="60" y="215" class="text text-sm">• ステージング状態</text>
+      <text x="60" y="230" class="text text-sm">• ブランチ位置</text>
+      <text x="60" y="245" class="text text-sm">• 推奨アクション</text>
+    </g>
+    
+    <!-- git log -->
+    <g class="git-log">
+      <rect x="230" y="145" width="160" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📜 git log</text>
+      
+      <text x="240" y="185" class="text text-sm" style="font-weight: 600;">確認内容:</text>
+      <text x="240" y="200" class="text text-sm">• コミット履歴</text>
+      <text x="240" y="215" class="text text-sm">• ブランチ分岐</text>
+      <text x="240" y="230" class="text text-sm">• マージ状況</text>
+      <text x="240" y="245" class="text text-sm">• 作業者情報</text>
+    </g>
+    
+    <!-- git remote -->
+    <g class="git-remote">
+      <rect x="410" y="145" width="160" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 git remote</text>
+      
+      <text x="420" y="185" class="text text-sm" style="font-weight: 600;">確認内容:</text>
+      <text x="420" y="200" class="text text-sm">• リモート設定</text>
+      <text x="420" y="215" class="text text-sm">• URL設定</text>
+      <text x="420" y="230" class="text text-sm">• 認証方式</text>
+      <text x="420" y="245" class="text text-sm">• 接続可能性</text>
+    </g>
+    
+    <!-- git config -->
+    <g class="git-config">
+      <rect x="590" y="145" width="160" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ git config</text>
+      
+      <text x="600" y="185" class="text text-sm" style="font-weight: 600;">確認内容:</text>
+      <text x="600" y="200" class="text text-sm">• 設定値全体</text>
+      <text x="600" y="215" class="text text-sm">• 設定ファイル場所</text>
+      <text x="600" y="230" class="text text-sm">• 優先順位</text>
+      <text x="600" y="245" class="text text-sm">• 有効な設定</text>
+    </g>
+  </g>
+  
+  <!-- 詳細診断コマンド -->
+  <g class="detailed-diagnostic">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">詳細診断コマンド</text>
+    
+    <rect x="80" y="300" width="640" height="110" rx="8" class="bg-alt border"/>
+    
+    <!-- git fsck -->
+    <g class="git-fsck">
+      <rect x="100" y="320" width="140" height="70" rx="8" class="error border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 git fsck</text>
+      
+      <text x="110" y="355" class="text text-sm">git fsck --full</text>
+      <text x="110" y="370" class="text text-sm">リポジトリ整合性</text>
+      <text x="110" y="385" class="text text-sm">破損検出</text>
+    </g>
+    
+    <!-- git reflog -->
+    <g class="git-reflog">
+      <rect x="260" y="320" width="140" height="70" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 git reflog</text>
+      
+      <text x="270" y="355" class="text text-sm">git reflog --all</text>
+      <text x="270" y="370" class="text text-sm">操作履歴</text>
+      <text x="270" y="385" class="text text-sm">削除コミット追跡</text>
+    </g>
+    
+    <!-- git diff -->
+    <g class="git-diff">
+      <rect x="420" y="320" width="140" height="70" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 git diff</text>
+      
+      <text x="430" y="355" class="text text-sm">git diff --stat</text>
+      <text x="430" y="370" class="text text-sm">変更内容確認</text>
+      <text x="430" y="385" class="text text-sm">競合箇所特定</text>
+    </g>
+    
+    <!-- git blame -->
+    <g class="git-blame">
+      <rect x="580" y="320" width="140" height="70" rx="8" class="success border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 git blame</text>
+      
+      <text x="590" y="355" class="text text-sm">git blame [file]</text>
+      <text x="590" y="370" class="text text-sm">変更履歴詳細</text>
+      <text x="590" y="385" class="text text-sm">問題箇所特定</text>
+    </g>
+  </g>
+  
+  <!-- 外部診断ツール -->
+  <g class="external-tools">
+    <text x="400" y="440" text-anchor="middle" class="text text-md">外部診断ツール</text>
+    
+    <!-- GitHub CLI -->
+    <g class="github-cli">
+      <rect x="50" y="455" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 GitHub CLI</text>
+      
+      <text x="60" y="495" class="text text-sm" style="font-weight: 600;">診断機能:</text>
+      <text x="60" y="510" class="text text-sm">gh auth status</text>
+      <text x="60" y="525" class="text text-sm">gh repo view</text>
+      <text x="60" y="540" class="text text-sm">gh api /user</text>
+      <text x="60" y="555" class="text text-sm">認証状態確認</text>
+    </g>
+    
+    <!-- SSH診断 -->
+    <g class="ssh-diagnostic">
+      <rect x="240" y="455" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔑 SSH診断</text>
+      
+      <text x="250" y="495" class="text text-sm" style="font-weight: 600;">診断コマンド:</text>
+      <text x="250" y="510" class="text text-sm">ssh -T git@github.com</text>
+      <text x="250" y="525" class="text text-sm">ssh -vT git@github.com</text>
+      <text x="250" y="540" class="text text-sm">ssh-add -l</text>
+      <text x="250" y="555" class="text text-sm">詳細ログ確認</text>
+    </g>
+    
+    <!-- ネットワーク診断 -->
+    <g class="network-diagnostic">
+      <rect x="430" y="455" width="170" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="515" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 ネットワーク</text>
+      
+      <text x="440" y="495" class="text text-sm" style="font-weight: 600;">診断コマンド:</text>
+      <text x="440" y="510" class="text text-sm">ping github.com</text>
+      <text x="440" y="525" class="text text-sm">nslookup github.com</text>
+      <text x="440" y="540" class="text text-sm">curl -I github.com</text>
+      <text x="440" y="555" class="text text-sm">接続性確認</text>
+    </g>
+    
+    <!-- 統合ツール -->
+    <g class="integrated-tools">
+      <rect x="620" y="455" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="705" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ 統合ツール</text>
+      
+      <text x="630" y="495" class="text text-sm" style="font-weight: 600;">推奨ツール:</text>
+      <text x="630" y="510" class="text text-sm">• VS Code拡張</text>
+      <text x="630" y="525" class="text text-sm">• GitKraken</text>
+      <text x="630" y="540" class="text text-sm">• SourceTree</text>
+      <text x="630" y="555" class="text text-sm">GUI診断支援</text>
+    </g>
+  </g>
+</svg>

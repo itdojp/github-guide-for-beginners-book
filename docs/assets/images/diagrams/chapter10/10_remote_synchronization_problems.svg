@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リモート同期問題</title>
+  <desc>リモートリポジトリとの同期エラーと解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リモート同期問題</text>
+  
+  <!-- 概要 -->
+  <g class="remote-sync-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🌐 リモートとの同期エラー解決</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">Push/Pull失敗、履歴分岐、リモート設定問題の対処</text>
+  </g>
+  
+  <!-- 主要同期問題 -->
+  <g class="sync-problem-types">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要同期問題</text>
+    
+    <!-- Push拒否 -->
+    <g class="push-rejected">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 Push拒否</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="50" y="200" class="text text-sm">• Non-fast-forward</text>
+      <text x="50" y="215" class="text text-sm">• リモート更新済み</text>
+      <text x="50" y="230" class="text text-sm">• 履歴分岐</text>
+      <text x="50" y="245" class="text text-sm">• 権限不足</text>
+    </g>
+    
+    <!-- Pull競合 -->
+    <g class="pull-conflicts">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ Pull競合</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="220" y="200" class="text text-sm">• 同時変更</text>
+      <text x="220" y="215" class="text text-sm">• マージ競合</text>
+      <text x="220" y="230" class="text text-sm">• ローカル未コミット</text>
+      <text x="220" y="245" class="text text-sm">• リベース失敗</text>
+    </g>
+    
+    <!-- リモート設定エラー -->
+    <g class="remote-config-errors">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定エラー</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="390" y="200" class="text text-sm">• URL間違い</text>
+      <text x="390" y="215" class="text text-sm">• 認証設定不備</text>
+      <text x="390" y="230" class="text text-sm">• リモート未設定</text>
+      <text x="390" y="245" class="text text-sm">• 追跡ブランチなし</text>
+    </g>
+    
+    <!-- 大容量ファイル問題 -->
+    <g class="large-file-issues">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 大容量問題</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="560" y="200" class="text text-sm">• ファイルサイズ制限</text>
+      <text x="560" y="215" class="text text-sm">• 帯域制限</text>
+      <text x="560" y="230" class="text text-sm">• タイムアウト</text>
+      <text x="560" y="245" class="text text-sm">• LFS未使用</text>
+    </g>
+  </g>
+  
+  <!-- 診断手順 -->
+  <g class="sync-diagnosis">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">同期問題診断手順</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 状態確認 -->
+    <g class="status-check">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 状態確認</text>
+      
+      <text x="110" y="355" class="text text-sm">git status</text>
+      <text x="110" y="370" class="text text-sm">git remote -v</text>
+    </g>
+    
+    <!-- リモート状況 -->
+    <g class="remote-status">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ リモート状況</text>
+      
+      <text x="270" y="355" class="text text-sm">git fetch</text>
+      <text x="270" y="370" class="text text-sm">git log --graph</text>
+    </g>
+    
+    <!-- 分岐確認 -->
+    <g class="divergence-check">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 分岐確認</text>
+      
+      <text x="430" y="355" class="text text-sm">git log --oneline</text>
+      <text x="430" y="370" class="text text-sm">origin/main..HEAD</text>
+    </g>
+    
+    <!-- 認証確認 -->
+    <g class="auth-check">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 認証確認</text>
+      
+      <text x="590" y="355" class="text text-sm">ssh -T git@github.com</text>
+      <text x="590" y="370" class="text text-sm">権限テスト</text>
+    </g>
+  </g>
+  
+  <!-- 解決方法 -->
+  <g class="sync-solutions">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">解決方法</text>
+    
+    <!-- Push拒否解決 -->
+    <g class="push-rejection-fix">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="error border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 Push拒否解決</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="60" y="500" class="text text-sm">1. git fetch origin</text>
+      <text x="60" y="515" class="text text-sm">2. git merge origin/main</text>
+      <text x="60" y="530" class="text text-sm">3. 競合解決</text>
+      <text x="60" y="545" class="text text-sm">4. git push origin main</text>
+      <text x="60" y="560" class="text text-sm">履歴統合後再Push</text>
+    </g>
+    
+    <!-- Pull競合解決 -->
+    <g class="pull-conflict-fix">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ Pull競合解決</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="250" y="500" class="text text-sm">1. git stash</text>
+      <text x="250" y="515" class="text text-sm">2. git pull origin main</text>
+      <text x="250" y="530" class="text text-sm">3. git stash pop</text>
+      <text x="250" y="545" class="text text-sm">4. 競合解決・コミット</text>
+      <text x="250" y="560" class="text text-sm">作業保存後統合</text>
+    </g>
+    
+    <!-- リモート設定修正 -->
+    <g class="remote-config-fix">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定修正</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="440" y="500" class="text text-sm">1. git remote rm origin</text>
+      <text x="440" y="515" class="text text-sm">2. git remote add origin</text>
+      <text x="440" y="530" class="text text-sm">   [correct-URL]</text>
+      <text x="440" y="545" class="text text-sm">3. git push -u origin main</text>
+      <text x="440" y="560" class="text text-sm">URL・認証設定修正</text>
+    </g>
+    
+    <!-- 強制同期 -->
+    <g class="force-sync">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💪 強制同期</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">最終手段:</text>
+      <text x="630" y="500" class="text text-sm">1. バックアップ作成</text>
+      <text x="630" y="515" class="text text-sm">2. git reset --hard</text>
+      <text x="630" y="530" class="text text-sm">   origin/main</text>
+      <text x="630" y="545" class="text text-sm">3. git push --force</text>
+      <text x="630" y="560" class="text text-sm">⚠️ 危険：慎重に使用</text>
+    </g>
+  </g>
+</svg>

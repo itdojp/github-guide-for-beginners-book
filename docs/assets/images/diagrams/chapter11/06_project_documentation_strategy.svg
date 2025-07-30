@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>プロジェクト ドキュメント戦略</title>
+  <desc>効果的なプロジェクトドキュメントの構築戦略</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">プロジェクト ドキュメント戦略</text>
+  
+  <!-- 概要 -->
+  <g class="documentation-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">📚 戦略的ドキュメント構築</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">理解促進、利用拡大、保守性向上を実現する包括的文書体系</text>
+  </g>
+  
+  <!-- ドキュメント階層 -->
+  <g class="documentation-hierarchy">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">ドキュメント階層</text>
+    
+    <!-- 概要レベル -->
+    <g class="overview-level">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 概要レベル</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">文書類:</text>
+      <text x="50" y="200" class="text text-sm">• README.md</text>
+      <text x="50" y="215" class="text text-sm">• プロジェクト概要</text>
+      <text x="50" y="230" class="text text-sm">• 機能説明</text>
+      <text x="50" y="245" class="text text-sm">• 利用目的</text>
+    </g>
+    
+    <!-- 利用レベル -->
+    <g class="usage-level">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 利用レベル</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">文書類:</text>
+      <text x="220" y="200" class="text text-sm">• インストール手順</text>
+      <text x="220" y="215" class="text text-sm">• クイックスタート</text>
+      <text x="220" y="230" class="text text-sm">• 使用例・チュートリアル</text>
+      <text x="220" y="245" class="text text-sm">• 設定ガイド</text>
+    </g>
+    
+    <!-- 技術レベル -->
+    <g class="technical-level">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 技術レベル</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">文書類:</text>
+      <text x="390" y="200" class="text text-sm">• API リファレンス</text>
+      <text x="390" y="215" class="text text-sm">• アーキテクチャ設計</text>
+      <text x="390" y="230" class="text text-sm">• 内部仕様</text>
+      <text x="390" y="245" class="text text-sm">• 拡張ガイド</text>
+    </g>
+    
+    <!-- 貢献レベル -->
+    <g class="contribution-level">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 貢献レベル</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">文書類:</text>
+      <text x="560" y="200" class="text text-sm">• CONTRIBUTING.md</text>
+      <text x="560" y="215" class="text text-sm">• コーディング規約</text>
+      <text x="560" y="230" class="text text-sm">• 開発環境構築</text>
+      <text x="560" y="245" class="text text-sm">• テスト指針</text>
+    </g>
+  </g>
+  
+  <!-- 効果的な文書作成 -->
+  <g class="effective-documentation">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的な文書作成手法</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ユーザー視点 -->
+    <g class="user-perspective">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 ユーザー視点</text>
+      
+      <text x="110" y="355" class="text text-sm">• 利用シナリオ</text>
+      <text x="110" y="370" class="text text-sm">• ペルソナ設定</text>
+      <text x="110" y="385" class="text text-sm">• 段階的学習</text>
+    </g>
+    
+    <!-- 実践的内容 -->
+    <g class="practical-content">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 実践的内容</text>
+      
+      <text x="270" y="355" class="text text-sm">• 具体例多用</text>
+      <text x="270" y="370" class="text text-sm">• コード実例</text>
+      <text x="270" y="385" class="text text-sm">• トラブル対処</text>
+    </g>
+    
+    <!-- 視覚的構造 -->
+    <g class="visual-structure">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎨 視覚的構造</text>
+      
+      <text x="430" y="355" class="text text-sm">• 図表活用</text>
+      <text x="430" y="370" class="text text-sm">• 階層構造</text>
+      <text x="430" y="385" class="text text-sm">• 色彩・装飾</text>
+    </g>
+    
+    <!-- 更新維持 -->
+    <g class="maintenance-updates">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 更新維持</text>
+      
+      <text x="590" y="355" class="text text-sm">• 継続的更新</text>
+      <text x="590" y="370" class="text text-sm">• バージョン管理</text>
+      <text x="590" y="385" class="text text-sm">• 整合性確保</text>
+    </g>
+  </g>
+  
+  <!-- 高度なドキュメント戦略 -->
+  <g class="advanced-documentation">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">高度なドキュメント戦略</text>
+    
+    <!-- 自動生成活用 -->
+    <g class="automated-generation">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤖 自動生成活用</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">活用分野:</text>
+      <text x="60" y="520" class="text text-sm">• API ドキュメント</text>
+      <text x="60" y="535" class="text text-sm">• コード解説</text>
+      <text x="60" y="550" class="text text-sm">• 変更履歴</text>
+      <text x="60" y="565" class="text text-sm">• テストカバレッジ</text>
+    </g>
+    
+    <!-- インタラクティブ -->
+    <g class="interactive-documentation">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ インタラクティブ</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">機能例:</text>
+      <text x="250" y="520" class="text text-sm">• ライブデモ</text>
+      <text x="250" y="535" class="text text-sm">• コード実行環境</text>
+      <text x="250" y="550" class="text text-sm">• パラメータ調整</text>
+      <text x="250" y="565" class="text text-sm">• リアルタイム結果</text>
+    </g>
+    
+    <!-- 多言語対応 -->
+    <g class="multilingual-support">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌍 多言語対応</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">対応要素:</text>
+      <text x="440" y="520" class="text text-sm">• 主要言語翻訳</text>
+      <text x="440" y="535" class="text text-sm">• 文化的適応</text>
+      <text x="440" y="550" class="text text-sm">• 地域別例示</text>
+      <text x="440" y="565" class="text text-sm">• 国際標準準拠</text>
+    </g>
+    
+    <!-- コミュニティ連携 -->
+    <g class="community-integration">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 コミュニティ連携</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">連携項目:</text>
+      <text x="630" y="520" class="text text-sm">• ユーザー投稿</text>
+      <text x="630" y="535" class="text text-sm">• FAQ共有</text>
+      <text x="630" y="550" class="text text-sm">• 事例集</text>
+      <text x="630" y="565" class="text text-sm">• フィードバック</text>
+    </g>
+  </g>
+</svg>

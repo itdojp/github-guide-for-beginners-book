@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>キャリア開発活用</title>
+  <desc>GitHub ポートフォリオを活用したキャリア開発戦略</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">キャリア開発活用</text>
+  
+  <!-- 概要 -->
+  <g class="career-development-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">💼 GitHub ポートフォリオでキャリア加速</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">転職、昇進、独立、スキルアップの戦略的活用法</text>
+  </g>
+  
+  <!-- キャリアステージ別活用 -->
+  <g class="career-stage-utilization">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">キャリアステージ別活用</text>
+    
+    <!-- 新卒・入門 -->
+    <g class="entry-level">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌱 新卒・入門</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">重点戦略:</text>
+      <text x="50" y="200" class="text text-sm">• 学習意欲アピール</text>
+      <text x="50" y="215" class="text text-sm">• 基礎技術習得証明</text>
+      <text x="50" y="230" class="text text-sm">• 成長軌跡可視化</text>
+      <text x="50" y="245" class="text text-sm">• 継続性強調</text>
+    </g>
+    
+    <!-- 中途・転職 -->
+    <g class="mid-career">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 中途・転職</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">重点戦略:</text>
+      <text x="220" y="200" class="text text-sm">• 実務経験証明</text>
+      <text x="220" y="215" class="text text-sm">• 即戦力アピール</text>
+      <text x="220" y="230" class="text text-sm">• 問題解決力表現</text>
+      <text x="220" y="245" class="text text-sm">• 技術幅の広さ</text>
+    </g>
+    
+    <!-- シニア・管理職 -->
+    <g class="senior-management">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👑 シニア・管理職</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">重点戦略:</text>
+      <text x="390" y="200" class="text text-sm">• リーダーシップ実績</text>
+      <text x="390" y="215" class="text text-sm">• アーキテクチャ設計</text>
+      <text x="390" y="230" class="text text-sm">• メンタリング経験</text>
+      <text x="390" y="245" class="text text-sm">• 戦略的思考力</text>
+    </g>
+    
+    <!-- 独立・起業 -->
+    <g class="entrepreneurship">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 独立・起業</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">重点戦略:</text>
+      <text x="560" y="200" class="text text-sm">• 独自性・革新性</text>
+      <text x="560" y="215" class="text text-sm">• 市場価値創出</text>
+      <text x="560" y="230" class="text text-sm">• 信頼性・実績</text>
+      <text x="560" y="245" class="text text-sm">• ビジョン表現</text>
+    </g>
+  </g>
+  
+  <!-- 転職活動での活用 -->
+  <g class="job-search-utilization">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">転職活動での活用</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 書類選考対策 -->
+    <g class="document-screening">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 書類選考</text>
+      
+      <text x="110" y="355" class="text text-sm">• GitHub URL記載</text>
+      <text x="110" y="370" class="text text-sm">• 代表作品選定</text>
+      <text x="110" y="385" class="text text-sm">• 技術マッチング</text>
+    </g>
+    
+    <!-- 技術面接準備 -->
+    <g class="technical-interview">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 技術面接</text>
+      
+      <text x="270" y="355" class="text text-sm">• コード解説準備</text>
+      <text x="270" y="370" class="text text-sm">• 設計思想説明</text>
+      <text x="270" y="385" class="text text-sm">• 改善点議論</text>
+    </g>
+    
+    <!-- 文化適合性 -->
+    <g class="cultural-fit">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎭 文化適合</text>
+      
+      <text x="430" y="355" class="text text-sm">• 協業スタイル</text>
+      <text x="430" y="370" class="text text-sm">• 価値観表現</text>
+      <text x="430" y="385" class="text text-sm">• コミュニケーション</text>
+    </g>
+    
+    <!-- 継続的評価 -->
+    <g class="ongoing-evaluation">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 継続評価</text>
+      
+      <text x="590" y="355" class="text text-sm">• 現職パフォーマンス</text>
+      <text x="590" y="370" class="text text-sm">• 成長速度</text>
+      <text x="590" y="385" class="text text-sm">• 将来性予測</text>
+    </g>
+  </g>
+  
+  <!-- キャリア加速のテクニック -->
+  <g class="career-acceleration-techniques">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">キャリア加速のテクニック</text>
+    
+    <!-- 個人ブランディング -->
+    <g class="personal-branding">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏷️ 個人ブランディング</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">構築要素:</text>
+      <text x="60" y="520" class="text text-sm">• 専門分野確立</text>
+      <text x="60" y="535" class="text text-sm">• 独自性表現</text>
+      <text x="60" y="550" class="text text-sm">• 一貫したメッセージ</text>
+      <text x="60" y="565" class="text text-sm">• 信頼性構築</text>
+    </g>
+    
+    <!-- 思想リーダーシップ -->
+    <g class="thought-leadership">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 思想リーダーシップ</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">発信活動:</text>
+      <text x="250" y="520" class="text text-sm">• 技術ブログ執筆</text>
+      <text x="250" y="535" class="text text-sm">• カンファレンス講演</text>
+      <text x="250" y="550" class="text text-sm">• オープンソース主導</text>
+      <text x="250" y="565" class="text text-sm">• 業界標準策定</text>
+    </g>
+    
+    <!-- ネットワーク戦略 -->
+    <g class="networking-strategy">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 ネットワーク戦略</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">関係構築:</text>
+      <text x="440" y="520" class="text text-sm">• 業界人脈形成</text>
+      <text x="440" y="535" class="text text-sm">• メンター関係</text>
+      <text x="440" y="550" class="text text-sm">• 相互支援体制</text>
+      <text x="440" y="565" class="text text-sm">• グローバル視点</text>
+    </g>
+    
+    <!-- 継続学習システム -->
+    <g class="continuous-learning">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 継続学習</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">学習体系:</text>
+      <text x="630" y="520" class="text text-sm">• 新技術キャッチアップ</text>
+      <text x="630" y="535" class="text text-sm">• 深化と拡張</text>
+      <text x="630" y="550" class="text text-sm">• 実践的適用</text>
+      <text x="630" y="565" class="text text-sm">• 知識体系化</text>
+    </g>
+  </g>
+</svg>

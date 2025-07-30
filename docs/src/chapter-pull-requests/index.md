@@ -270,6 +270,8 @@ Welcome to Our Website (mainブランチの内容)
 - 機能ごとにファイルを分離
 - 共通部分の変更は慎重に
 
+![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
+
 ---
 
 ## まとめ

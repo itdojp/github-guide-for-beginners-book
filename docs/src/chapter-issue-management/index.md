@@ -386,6 +386,8 @@ Done:
 - [ ] テスト手順チェックリストの導入
 ```
 
+![長期的エンゲージメント]({{ '/assets/images/diagrams/chapter07/12_long_term_engagement.svg' | relative_url }})
+
 ---
 
 ## まとめ

@@ -36,6 +36,8 @@ layout: book
 
 GitHubのリポジトリも、これと同じような考え方です。ただし、GitHubのリポジトリには以下の特別な機能が追加されています：
 
+![リポジトリ構造]({{ '/assets/images/diagrams/chapter04/02_repository_structure.svg' | relative_url }})
+
 **変更履歴の自動記録**
 - いつ、誰が、何を変更したかがすべて記録される
 - 間違えても過去の状態に戻せる
@@ -59,6 +61,8 @@ GitHubのリポジトリも、これと同じような考え方です。ただ�
 1. 画面右上の「+」ボタンをクリック
 2. ドロップダウンメニューから「New repository」を選択
 3. リポジトリ作成画面が開く
+
+![WebUI操作フロー]({{ '/assets/images/diagrams/chapter04/01_web_ui_operation_flow.svg' | relative_url }})
 
 **Step 3: リポジトリの基本情報を入力**
 

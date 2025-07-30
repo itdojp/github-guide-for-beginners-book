@@ -1,0 +1,181 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>認証・権限トラブルシューティング</title>
+  <desc>GitHubの認証と権限エラーの診断と解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">認証・権限トラブルシューティング</text>
+  
+  <!-- 概要 -->
+  <g class="auth-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="error border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🔐 認証エラーの原因と対処法</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">権限不足、認証情報の問題を体系的に解決</text>
+  </g>
+  
+  <!-- 主要エラーパターン -->
+  <g class="error-patterns">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要エラーパターン</text>
+    
+    <!-- 403 Forbidden -->
+    <g class="error-403">
+      <rect x="50" y="145" width="170" height="100" rx="8" class="error border" opacity="0.1"/>
+      <text x="135" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❌ 403 Forbidden</text>
+      
+      <text x="60" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="60" y="200" class="text text-sm">• 権限不足</text>
+      <text x="60" y="215" class="text text-sm">• Private repository</text>
+      <text x="60" y="230" class="text text-sm">• Token無効</text>
+    </g>
+    
+    <!-- SSH Key エラー -->
+    <g class="error-ssh">
+      <rect x="240" y="145" width="170" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔑 SSH Key エラー</text>
+      
+      <text x="250" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="250" y="200" class="text text-sm">• 鍵が未登録</text>
+      <text x="250" y="215" class="text text-sm">• 秘密鍵アクセス不可</text>
+      <text x="250" y="230" class="text text-sm">• Agent未起動</text>
+    </g>
+    
+    <!-- Token エラー -->
+    <g class="error-token">
+      <rect x="430" y="145" width="170" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="515" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎫 Token エラー</text>
+      
+      <text x="440" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="440" y="200" class="text text-sm">• 期限切れ</text>
+      <text x="440" y="215" class="text text-sm">• スコープ不足</text>
+      <text x="440" y="230" class="text text-sm">• 設定ミス</text>
+    </g>
+    
+    <!-- Two-factor認証 -->
+    <g class="error-2fa">
+      <rect x="620" y="145" width="170" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="705" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ Two-factor</text>
+      
+      <text x="630" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
+      <text x="630" y="200" class="text text-sm">• 2FA未対応</text>
+      <text x="630" y="215" class="text text-sm">• App password未使用</text>
+      <text x="630" y="230" class="text text-sm">• 認証失敗</text>
+    </g>
+  </g>
+  
+  <!-- 診断手順 -->
+  <g class="diagnosis-steps">
+    <text x="400" y="275" text-anchor="middle" class="text text-md">診断手順</text>
+    
+    <rect x="80" y="290" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 認証方式確認 -->
+    <g class="step-1-auth-method">
+      <rect x="100" y="310" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="170" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 認証方式確認</text>
+      
+      <text x="110" y="345" class="text text-sm">git remote -v</text>
+      <text x="110" y="360" class="text text-sm">ssh -T git@github.com</text>
+      <text x="110" y="375" class="text text-sm">git config --list</text>
+    </g>
+    
+    <!-- ステップ2: 権限確認 -->
+    <g class="step-2-permissions">
+      <rect x="260" y="310" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 権限確認</text>
+      
+      <text x="270" y="345" class="text text-sm">Repository Settings</text>
+      <text x="270" y="360" class="text text-sm">Collaborator status</text>
+      <text x="270" y="375" class="text text-sm">Organization member</text>
+    </g>
+    
+    <!-- ステップ3: 認証情報確認 -->
+    <g class="step-3-credentials">
+      <rect x="420" y="310" width="140" height="80" rx="8" class="error border" opacity="0.1"/>
+      <text x="490" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 認証情報確認</text>
+      
+      <text x="430" y="345" class="text text-sm">SSH key 一覧</text>
+      <text x="430" y="360" class="text text-sm">Token 有効性</text>
+      <text x="430" y="375" class="text text-sm">2FA 設定</text>
+    </g>
+    
+    <!-- ステップ4: 修正実行 -->
+    <g class="step-4-fix">
+      <rect x="580" y="310" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="650" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 修正実行</text>
+      
+      <text x="590" y="345" class="text text-sm">設定更新</text>
+      <text x="590" y="360" class="text text-sm">再認証</text>
+      <text x="590" y="375" class="text text-sm">動作確認</text>
+    </g>
+  </g>
+  
+  <!-- 解決方法 -->
+  <g class="solutions">
+    <text x="400" y="440" text-anchor="middle" class="text text-md">解決方法</text>
+    
+    <!-- SSH Key問題 -->
+    <g class="ssh-solution">
+      <rect x="50" y="455" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔑 SSH Key設定</text>
+      
+      <text x="60" y="495" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="60" y="510" class="text text-sm">1. ssh-keygen -t ed25519</text>
+      <text x="60" y="525" class="text text-sm">2. GitHub Settings登録</text>
+      <text x="60" y="540" class="text text-sm">3. ssh-add ~/.ssh/id_ed25519</text>
+      <text x="60" y="555" class="text text-sm">4. 接続テスト実行</text>
+    </g>
+    
+    <!-- Token再生成 -->
+    <g class="token-solution">
+      <rect x="240" y="455" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎫 Token再生成</text>
+      
+      <text x="250" y="495" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="250" y="510" class="text text-sm">1. Settings → Tokens</text>
+      <text x="250" y="525" class="text text-sm">2. 適切なScope選択</text>
+      <text x="250" y="540" class="text text-sm">3. git config設定</text>
+      <text x="250" y="555" class="text text-sm">4. 認証テスト</text>
+    </g>
+    
+    <!-- 権限要求 -->
+    <g class="permission-solution">
+      <rect x="430" y="455" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 権限要求</text>
+      
+      <text x="440" y="495" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="440" y="510" class="text text-sm">1. Repository Owner確認</text>
+      <text x="440" y="525" class="text text-sm">2. 権限レベル確認</text>
+      <text x="440" y="540" class="text text-sm">3. アクセス要求</text>
+      <text x="440" y="555" class="text text-sm">4. Fork検討</text>
+    </g>
+    
+    <!-- 2FA対応 -->
+    <g class="2fa-solution">
+      <rect x="620" y="455" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="475" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ 2FA対応</text>
+      
+      <text x="630" y="495" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="630" y="510" class="text text-sm">1. App Password生成</text>
+      <text x="630" y="525" class="text text-sm">2. SSH Key利用</text>
+      <text x="630" y="540" class="text text-sm">3. Token認証</text>
+      <text x="630" y="555" class="text text-sm">4. 設定保存</text>
+    </g>
+  </g>
+</svg>

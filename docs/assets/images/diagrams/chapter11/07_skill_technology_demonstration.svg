@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>スキル・技術実証</title>
+  <desc>GitHub を通じた効果的なスキルと技術力の実証方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">スキル・技術実証</text>
+  
+  <!-- 概要 -->
+  <g class="skill-demonstration-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="neutral border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🛠️ GitHub による技術力実証</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">具体的成果物、実装パターン、問題解決力の効果的アピール</text>
+  </g>
+  
+  <!-- 実証レベル -->
+  <g class="demonstration-levels">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">実証レベル</text>
+    
+    <!-- 基礎技術 -->
+    <g class="basic-skills">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🟢 基礎技術</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">実証項目:</text>
+      <text x="50" y="200" class="text text-sm">• 言語構文理解</text>
+      <text x="50" y="215" class="text text-sm">• 基本アルゴリズム</text>
+      <text x="50" y="230" class="text text-sm">• データ構造活用</text>
+      <text x="50" y="245" class="text text-sm">• 開発環境構築</text>
+    </g>
+    
+    <!-- 応用技術 -->
+    <g class="applied-skills">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔵 応用技術</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">実証項目:</text>
+      <text x="220" y="200" class="text text-sm">• フレームワーク活用</text>
+      <text x="220" y="215" class="text text-sm">• アーキテクチャ設計</text>
+      <text x="220" y="230" class="text text-sm">• パフォーマンス最適化</text>
+      <text x="220" y="245" class="text text-sm">• セキュリティ対策</text>
+    </g>
+    
+    <!-- 専門技術 -->
+    <g class="specialized-skills">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🟡 専門技術</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">実証項目:</text>
+      <text x="390" y="200" class="text text-sm">• 分野特化知識</text>
+      <text x="390" y="215" class="text text-sm">• 最新技術適用</text>
+      <text x="390" y="230" class="text text-sm">• 独自手法開発</text>
+      <text x="390" y="245" class="text text-sm">• 研究開発能力</text>
+    </g>
+    
+    <!-- リーダーシップ -->
+    <g class="leadership-skills">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔴 リーダーシップ</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">実証項目:</text>
+      <text x="560" y="200" class="text text-sm">• チーム開発経験</text>
+      <text x="560" y="215" class="text text-sm">• プロジェクト管理</text>
+      <text x="560" y="230" class="text text-sm">• メンタリング実績</text>
+      <text x="560" y="245" class="text text-sm">• コミュニティ貢献</text>
+    </g>
+  </g>
+  
+  <!-- 実証手法 -->
+  <g class="demonstration-methods">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的な実証手法</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ポートフォリオ -->
+    <g class="portfolio-showcase">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 ポートフォリオ</text>
+      
+      <text x="110" y="355" class="text text-sm">• 多様な成果物</text>
+      <text x="110" y="370" class="text text-sm">• 進歩の軌跡</text>
+      <text x="110" y="385" class="text text-sm">• 品質向上</text>
+    </g>
+    
+    <!-- ライブデモ -->
+    <g class="live-demonstrations">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎬 ライブデモ</text>
+      
+      <text x="270" y="355" class="text text-sm">• 動作確認</text>
+      <text x="270" y="370" class="text text-sm">• ユーザー体験</text>
+      <text x="270" y="385" class="text text-sm">• 実用性証明</text>
+    </g>
+    
+    <!-- コード解説 -->
+    <g class="code-explanation">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💭 コード解説</text>
+      
+      <text x="430" y="355" class="text text-sm">• 設計思想</text>
+      <text x="430" y="370" class="text text-sm">• 実装技法</text>
+      <text x="430" y="385" class="text text-sm">• 最適化手法</text>
+    </g>
+    
+    <!-- 貢献実績 -->
+    <g class="contribution-records">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 貢献実績</text>
+      
+      <text x="590" y="355" class="text text-sm">• オープンソース</text>
+      <text x="590" y="370" class="text text-sm">• コミュニティ</text>
+      <text x="590" y="385" class="text text-sm">• 知識共有</text>
+    </g>
+  </g>
+  
+  <!-- 分野別実証戦略 -->
+  <g class="domain-specific-strategies">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">分野別実証戦略</text>
+    
+    <!-- Web開発 -->
+    <g class="web-development">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 Web開発</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">実証要素:</text>
+      <text x="60" y="520" class="text text-sm">• レスポンシブデザイン</text>
+      <text x="60" y="535" class="text text-sm">• フロント・バック連携</text>
+      <text x="60" y="550" class="text text-sm">• デプロイ自動化</text>
+      <text x="60" y="565" class="text text-sm">• パフォーマンス</text>
+    </g>
+    
+    <!-- データサイエンス -->
+    <g class="data-science">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 データサイエンス</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">実証要素:</text>
+      <text x="250" y="520" class="text text-sm">• データ可視化</text>
+      <text x="250" y="535" class="text text-sm">• 機械学習モデル</text>
+      <text x="250" y="550" class="text text-sm">• 統計分析手法</text>
+      <text x="250" y="565" class="text text-sm">• 実データ活用</text>
+    </g>
+    
+    <!-- モバイル開発 -->
+    <g class="mobile-development">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📱 モバイル開発</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">実証要素:</text>
+      <text x="440" y="520" class="text text-sm">• ネイティブ・クロス</text>
+      <text x="440" y="535" class="text text-sm">• UI/UX設計</text>
+      <text x="440" y="550" class="text text-sm">• ストア公開</text>
+      <text x="440" y="565" class="text text-sm">• 端末最適化</text>
+    </g>
+    
+    <!-- インフラ・DevOps -->
+    <g class="infrastructure-devops">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 インフラ・DevOps</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">実証要素:</text>
+      <text x="630" y="520" class="text text-sm">• Infrastructure as Code</text>
+      <text x="630" y="535" class="text text-sm">• CI/CD パイプライン</text>
+      <text x="630" y="550" class="text text-sm">• 監視・ログ管理</text>
+      <text x="630" y="565" class="text text-sm">• スケーラビリティ</text>
+    </g>
+  </g>
+</svg>

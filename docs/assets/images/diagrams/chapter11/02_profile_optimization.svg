@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>プロフィール最適化</title>
+  <desc>GitHub プロフィールの効果的な最適化手法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">プロフィール最適化</text>
+  
+  <!-- 概要 -->
+  <g class="profile-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">👤 GitHub プロフィールの戦略的構築</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">第一印象の向上、専門性のアピール、信頼性の確立</text>
+  </g>
+  
+  <!-- プロフィール要素 -->
+  <g class="profile-elements">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">プロフィール構成要素</text>
+    
+    <!-- 基本情報 -->
+    <g class="basic-information">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 基本情報</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">必須項目:</text>
+      <text x="50" y="200" class="text text-sm">• プロフィール画像</text>
+      <text x="50" y="215" class="text text-sm">• 実名・適切なハンドル</text>
+      <text x="50" y="230" class="text text-sm">• 自己紹介</text>
+      <text x="50" y="245" class="text text-sm">• 所属・職種</text>
+    </g>
+    
+    <!-- 連絡先情報 -->
+    <g class="contact-information">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📧 連絡先</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">推奨項目:</text>
+      <text x="220" y="200" class="text text-sm">• メールアドレス</text>
+      <text x="220" y="215" class="text text-sm">• 個人サイト・ブログ</text>
+      <text x="220" y="230" class="text text-sm">• LinkedIn</text>
+      <text x="220" y="245" class="text text-sm">• X (Twitter)</text>
+    </g>
+    
+    <!-- スキル情報 -->
+    <g class="skill-information">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ スキル</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">表現方法:</text>
+      <text x="390" y="200" class="text text-sm">• 使用技術一覧</text>
+      <text x="390" y="215" class="text text-sm">• 興味分野</text>
+      <text x="390" y="230" class="text text-sm">• 現在学習中</text>
+      <text x="390" y="245" class="text text-sm">• 経験年数</text>
+    </g>
+    
+    <!-- アクティビティ -->
+    <g class="activity-information">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 アクティビティ</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">可視化要素:</text>
+      <text x="560" y="200" class="text text-sm">• コミットグラフ</text>
+      <text x="560" y="215" class="text text-sm">• 言語統計</text>
+      <text x="560" y="230" class="text text-sm">• 貢献実績</text>
+      <text x="560" y="245" class="text text-sm">• リポジトリ統計</text>
+    </g>
+  </g>
+  
+  <!-- README プロフィール -->
+  <g class="readme-profile">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">README プロフィール</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- ヘッダー -->
+    <g class="profile-header">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎨 ヘッダー</text>
+      
+      <text x="110" y="355" class="text text-sm">• 挨拶・自己紹介</text>
+      <text x="110" y="370" class="text text-sm">• バナー画像</text>
+    </g>
+    
+    <!-- スキルバッジ -->
+    <g class="skill-badges">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏆 バッジ</text>
+      
+      <text x="270" y="355" class="text text-sm">• 技術スタック</text>
+      <text x="270" y="370" class="text text-sm">• 認定資格</text>
+    </g>
+    
+    <!-- 統計情報 -->
+    <g class="statistics">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 統計</text>
+      
+      <text x="430" y="355" class="text text-sm">• GitHub Stats</text>
+      <text x="430" y="370" class="text text-sm">• 最多使用言語</text>
+    </g>
+    
+    <!-- 連絡先 -->
+    <g class="contact-links">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 リンク</text>
+      
+      <text x="590" y="355" class="text text-sm">• SNS リンク</text>
+      <text x="590" y="370" class="text text-sm">• ポートフォリオ</text>
+    </g>
+  </g>
+  
+  <!-- 最適化のポイント -->
+  <g class="optimization-points">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">最適化のポイント</text>
+    
+    <!-- 一貫性 -->
+    <g class="consistency">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 一貫性</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">統一要素:</text>
+      <text x="60" y="500" class="text text-sm">• ハンドル名統一</text>
+      <text x="60" y="515" class="text text-sm">• デザインテーマ</text>
+      <text x="60" y="530" class="text text-sm">• トーン＆マナー</text>
+      <text x="60" y="545" class="text text-sm">• プロフィール画像</text>
+      <text x="60" y="560" class="text text-sm">ブランド構築</text>
+    </g>
+    
+    <!-- 更新性 -->
+    <g class="maintainability">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 更新性</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">更新項目:</text>
+      <text x="250" y="500" class="text text-sm">• 現在の学習内容</text>
+      <text x="250" y="515" class="text text-sm">• 最新プロジェクト</text>
+      <text x="250" y="530" class="text text-sm">• スキルセット</text>
+      <text x="250" y="545" class="text text-sm">• 目標・興味分野</text>
+      <text x="250" y="560" class="text text-sm">鮮度保持</text>
+    </g>
+    
+    <!-- 可読性 -->
+    <g class="readability">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📖 可読性</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">改善要素:</text>
+      <text x="440" y="500" class="text text-sm">• 適切な文章長</text>
+      <text x="440" y="515" class="text text-sm">• 視覚的構造化</text>
+      <text x="440" y="530" class="text text-sm">• 適度な絵文字使用</text>
+      <text x="440" y="545" class="text text-sm">• 段落分けと空白</text>
+      <text x="440" y="560" class="text text-sm">伝わりやすさ</text>
+    </g>
+    
+    <!-- SEO 対応 -->
+    <g class="seo-optimization">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 SEO 対応</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">検索最適化:</text>
+      <text x="630" y="500" class="text text-sm">• キーワード含有</text>
+      <text x="630" y="515" class="text text-sm">• 技術名明記</text>
+      <text x="630" y="530" class="text text-sm">• 業界用語使用</text>
+      <text x="630" y="545" class="text text-sm">• メタデータ設定</text>
+      <text x="630" y="560" class="text text-sm">発見可能性</text>
+    </g>
+  </g>
+</svg>

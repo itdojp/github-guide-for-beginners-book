@@ -1,0 +1,189 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>データ復旧・バックアップ戦略</title>
+  <desc>Git データの効果的なバックアップと復旧戦略</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">データ復旧・バックアップ戦略</text>
+  
+  <!-- 概要 -->
+  <g class="backup-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">💾 Git データの保護と復旧戦略</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">予防的バックアップと緊急時復旧の体系的アプローチ</text>
+  </g>
+  
+  <!-- バックアップの階層 -->
+  <g class="backup-layers">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">バックアップの階層</text>
+    
+    <!-- ローカルバックアップ -->
+    <g class="local-backup">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 ローカル</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">方法:</text>
+      <text x="50" y="200" class="text text-sm">• git clone --bare</text>
+      <text x="50" y="215" class="text text-sm">• ファイルシステム</text>
+      <text x="50" y="230" class="text text-sm">• 外部ドライブ</text>
+      <text x="50" y="245" class="text text-sm">• 即座アクセス可能</text>
+    </g>
+    
+    <!-- リモートバックアップ -->
+    <g class="remote-backup">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 リモート</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">方法:</text>
+      <text x="220" y="200" class="text text-sm">• GitHub/GitLab</text>
+      <text x="220" y="215" class="text text-sm">• 複数リモート</text>
+      <text x="220" y="230" class="text text-sm">• クラウドストレージ</text>
+      <text x="220" y="245" class="text text-sm">• 地理的分散</text>
+    </g>
+    
+    <!-- アーカイブバックアップ -->
+    <g class="archive-backup">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 アーカイブ</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">方法:</text>
+      <text x="390" y="200" class="text text-sm">• git archive</text>
+      <text x="390" y="215" class="text text-sm">• tar/zip圧縮</text>
+      <text x="390" y="230" class="text text-sm">• 定期スナップ</text>
+      <text x="390" y="245" class="text text-sm">• 長期保存</text>
+    </g>
+    
+    <!-- 自動バックアップ -->
+    <g class="automated-backup">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤖 自動化</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">方法:</text>
+      <text x="560" y="200" class="text text-sm">• cron/scheduled task</text>
+      <text x="560" y="215" class="text text-sm">• CI/CD パイプライン</text>
+      <text x="560" y="230" class="text text-sm">• git hooks</text>
+      <text x="560" y="245" class="text text-sm">• 人的エラー防止</text>
+    </g>
+  </g>
+  
+  <!-- バックアップ戦略 -->
+  <g class="backup-strategies">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的なバックアップ戦略</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 3-2-1 ルール -->
+    <g class="three-two-one-rule">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 3-2-1 ルール</text>
+      
+      <text x="110" y="355" class="text text-sm">3コピー保持</text>
+      <text x="110" y="370" class="text text-sm">2種類メディア</text>
+      <text x="110" y="385" class="text text-sm">1つはオフサイト</text>
+    </g>
+    
+    <!-- 頻度設定 -->
+    <g class="backup-frequency">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⏰ 頻度設定</text>
+      
+      <text x="270" y="355" class="text text-sm">日次：作業ファイル</text>
+      <text x="270" y="370" class="text text-sm">週次：完全バックアップ</text>
+      <text x="270" y="385" class="text text-sm">月次：アーカイブ</text>
+    </g>
+    
+    <!-- 検証手順 -->
+    <g class="backup-verification">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 検証手順</text>
+      
+      <text x="430" y="355" class="text text-sm">復旧テスト</text>
+      <text x="430" y="370" class="text text-sm">整合性チェック</text>
+      <text x="430" y="385" class="text text-sm">定期監査</text>
+    </g>
+    
+    <!-- ドキュメント化 -->
+    <g class="backup-documentation">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 文書化</text>
+      
+      <text x="590" y="355" class="text text-sm">復旧手順書</text>
+      <text x="590" y="370" class="text text-sm">責任者明確化</text>
+      <text x="590" y="385" class="text text-sm">更新スケジュール</text>
+    </g>
+  </g>
+  
+  <!-- 復旧シナリオ -->
+  <g class="recovery-scenarios">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">復旧シナリオ</text>
+    
+    <!-- 部分データ損失 -->
+    <g class="partial-data-loss">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ 部分データ損失</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">復旧手順:</text>
+      <text x="60" y="500" class="text text-sm">1. git reflog確認</text>
+      <text x="60" y="515" class="text text-sm">2. 消失コミット特定</text>
+      <text x="60" y="530" class="text text-sm">3. git reset [hash]</text>
+      <text x="60" y="545" class="text text-sm">4. cherry-pick適用</text>
+      <text x="60" y="560" class="text text-sm">選択的復旧</text>
+    </g>
+    
+    <!-- 完全データ損失 -->
+    <g class="complete-data-loss">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="error border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💥 完全データ損失</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">復旧手順:</text>
+      <text x="250" y="500" class="text text-sm">1. バックアップ確認</text>
+      <text x="250" y="515" class="text text-sm">2. 最新バックアップ選択</text>
+      <text x="250" y="530" class="text text-sm">3. git clone [backup]</text>
+      <text x="250" y="545" class="text text-sm">4. 差分作業復元</text>
+      <text x="250" y="560" class="text text-sm">全面復旧</text>
+    </g>
+    
+    <!-- 履歴破損 -->
+    <g class="history-corruption">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 履歴破損</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">復旧手順:</text>
+      <text x="440" y="500" class="text text-sm">1. git fsck診断</text>
+      <text x="440" y="515" class="text text-sm">2. 健全バックアップ特定</text>
+      <text x="440" y="530" class="text text-sm">3. .git ディレクトリ置換</text>
+      <text x="440" y="545" class="text text-sm">4. 最新変更マージ</text>
+      <text x="440" y="560" class="text text-sm">構造復旧</text>
+    </g>
+    
+    <!-- 環境破損 -->
+    <g class="environment-corruption">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🖥️ 環境破損</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">復旧手順:</text>
+      <text x="630" y="500" class="text text-sm">1. 新環境準備</text>
+      <text x="630" y="515" class="text text-sm">2. Git再インストール</text>
+      <text x="630" y="530" class="text text-sm">3. 設定ファイル復元</text>
+      <text x="630" y="545" class="text text-sm">4. リポジトリクローン</text>
+      <text x="630" y="560" class="text text-sm">環境再構築</text>
+    </g>
+  </g>
+</svg>

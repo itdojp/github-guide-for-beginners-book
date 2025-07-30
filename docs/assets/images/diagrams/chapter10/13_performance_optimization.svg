@@ -1,0 +1,189 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>パフォーマンス最適化</title>
+  <desc>Git操作の速度向上とパフォーマンス最適化手法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">パフォーマンス最適化</text>
+  
+  <!-- 概要 -->
+  <g class="performance-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">⚡ Git操作の高速化テクニック</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">リポジトリサイズ削減、操作速度向上、効率的な運用手法</text>
+  </g>
+  
+  <!-- パフォーマンス問題の識別 -->
+  <g class="performance-issues">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">パフォーマンス問題の識別</text>
+    
+    <!-- 大容量リポジトリ -->
+    <g class="large-repository">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 大容量リポジトリ</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• clone時間長い</text>
+      <text x="50" y="215" class="text text-sm">• ディスク容量圧迫</text>
+      <text x="50" y="230" class="text text-sm">• 操作が重い</text>
+      <text x="50" y="245" class="text text-sm">• ネットワーク負荷</text>
+    </g>
+    
+    <!-- 多数ファイル -->
+    <g class="many-files">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 多数ファイル</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• status遅い</text>
+      <text x="220" y="215" class="text text-sm">• add/commit時間</text>
+      <text x="220" y="230" class="text text-sm">• インデックス肥大</text>
+      <text x="220" y="245" class="text text-sm">• 差分計算負荷</text>
+    </g>
+    
+    <!-- 複雑な履歴 -->
+    <g class="complex-history">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 複雑な履歴</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• log表示遅い</text>
+      <text x="390" y="215" class="text text-sm">• マージ計算重い</text>
+      <text x="390" y="230" class="text text-sm">• ブランチ多数</text>
+      <text x="390" y="245" class="text text-sm">• 分岐複雑化</text>
+    </g>
+    
+    <!-- ネットワーク問題 -->
+    <g class="network-issues">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 ネットワーク</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• fetch/push遅い</text>
+      <text x="560" y="215" class="text text-sm">• タイムアウト頻発</text>
+      <text x="560" y="230" class="text text-sm">• 帯域制限</text>
+      <text x="560" y="245" class="text text-sm">• 接続不安定</text>
+    </g>
+  </g>
+  
+  <!-- 最適化手法 -->
+  <g class="optimization-techniques">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">最適化手法</text>
+    
+    <rect x="50" y="300" width="700" height="130" rx="8" class="bg-alt border"/>
+    
+    <!-- リポジトリクリーンアップ -->
+    <g class="repository-cleanup">
+      <rect x="70" y="320" width="160" height="90" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧹 クリーンアップ</text>
+      
+      <text x="80" y="360" class="text text-sm" style="font-weight: 600;">実行コマンド:</text>
+      <text x="80" y="375" class="text text-sm">git gc --aggressive</text>
+      <text x="80" y="390" class="text text-sm">git prune</text>
+      <text x="80" y="405" class="text text-sm">オブジェクト整理</text>
+    </g>
+    
+    <!-- Shallow Clone -->
+    <g class="shallow-clone">
+      <rect x="250" y="320" width="160" height="90" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📉 Shallow Clone</text>
+      
+      <text x="260" y="360" class="text text-sm" style="font-weight: 600;">実行コマンド:</text>
+      <text x="260" y="375" class="text text-sm">git clone --depth 1</text>
+      <text x="260" y="390" class="text text-sm">git fetch --unshallow</text>
+      <text x="260" y="405" class="text text-sm">履歴制限取得</text>
+    </g>
+    
+    <!-- Git LFS -->
+    <g class="git-lfs">
+      <rect x="430" y="320" width="160" height="90" rx="8" class="warning border" opacity="0.1"/>
+      <text x="510" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💾 Git LFS</text>
+      
+      <text x="440" y="360" class="text text-sm" style="font-weight: 600;">実行コマンド:</text>
+      <text x="440" y="375" class="text text-sm">git lfs track "*.bin"</text>
+      <text x="440" y="390" class="text text-sm">大容量ファイル分離</text>
+      <text x="440" y="405" class="text text-sm">ポインタ管理</text>
+    </g>
+    
+    <!-- Sparse Checkout -->
+    <g class="sparse-checkout">
+      <rect x="610" y="320" width="160" height="90" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="690" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 Sparse Checkout</text>
+      
+      <text x="620" y="360" class="text text-sm" style="font-weight: 600;">実行コマンド:</text>
+      <text x="620" y="375" class="text text-sm">git sparse-checkout init</text>
+      <text x="620" y="390" class="text text-sm">git sparse-checkout set</text>
+      <text x="620" y="405" class="text text-sm">部分チェックアウト</text>
+    </g>
+  </g>
+  
+  <!-- 設定最適化 -->
+  <g class="configuration-optimization">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">設定最適化</text>
+    
+    <!-- コア設定 -->
+    <g class="core-configuration">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ コア設定</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">推奨設定:</text>
+      <text x="60" y="520" class="text text-sm">core.preloadindex true</text>
+      <text x="60" y="535" class="text text-sm">core.fscache true</text>
+      <text x="60" y="550" class="text text-sm">status.showUntrackedFiles</text>
+      <text x="60" y="565" class="text text-sm">no</text>
+    </g>
+    
+    <!-- キャッシュ設定 -->
+    <g class="cache-configuration">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💨 キャッシュ設定</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">推奨設定:</text>
+      <text x="250" y="520" class="text text-sm">pack.threads 0</text>
+      <text x="250" y="535" class="text text-sm">pack.deltaCacheSize 2g</text>
+      <text x="250" y="550" class="text text-sm">pack.windowMemory 1g</text>
+      <text x="250" y="565" class="text text-sm">並列処理最適化</text>
+    </g>
+    
+    <!-- ネットワーク設定 -->
+    <g class="network-configuration">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 ネットワーク</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">推奨設定:</text>
+      <text x="440" y="520" class="text text-sm">http.postBuffer 524288000</text>
+      <text x="440" y="535" class="text text-sm">http.lowSpeedLimit 1000</text>
+      <text x="440" y="550" class="text text-sm">http.lowSpeedTime 600</text>
+      <text x="440" y="565" class="text text-sm">転送最適化</text>
+    </g>
+    
+    <!-- モニタリング -->
+    <g class="monitoring-setup">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 モニタリング</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">監視項目:</text>
+      <text x="630" y="520" class="text text-sm">git count-objects -v</text>
+      <text x="630" y="535" class="text text-sm">du -sh .git</text>
+      <text x="630" y="550" class="text text-sm">time git [command]</text>
+      <text x="630" y="565" class="text text-sm">継続的監視</text>
+    </g>
+  </g>
+</svg>

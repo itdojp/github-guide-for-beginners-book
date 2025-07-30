@@ -1,0 +1,181 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リポジトリ破損復旧</title>
+  <desc>Gitリポジトリの破損検出と復旧手順</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リポジトリ破損復旧</text>
+  
+  <!-- 概要 -->
+  <g class="corruption-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="error border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">💥 リポジトリ破損の検出と復旧</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">データ損失を最小限に抑える体系的復旧アプローチ</text>
+  </g>
+  
+  <!-- 破損の兆候 -->
+  <g class="corruption-symptoms">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">破損の兆候</text>
+    
+    <!-- Git操作エラー -->
+    <g class="git-operation-errors">
+      <rect x="40" y="145" width="150" height="100" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💀 Git操作エラー</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• fatal: bad object</text>
+      <text x="50" y="215" class="text text-sm">• corrupt tree</text>
+      <text x="50" y="230" class="text text-sm">• missing blob</text>
+    </g>
+    
+    <!-- インデックス破損 -->
+    <g class="index-corruption">
+      <rect x="210" y="145" width="150" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📂 インデックス破損</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• index file corrupt</text>
+      <text x="220" y="215" class="text text-sm">• staging失敗</text>
+      <text x="220" y="230" class="text text-sm">• status異常</text>
+    </g>
+    
+    <!-- 参照破損 -->
+    <g class="ref-corruption">
+      <rect x="380" y="145" width="150" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 参照破損</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• ref does not exist</text>
+      <text x="390" y="215" class="text text-sm">• HEAD detached</text>
+      <text x="390" y="230" class="text text-sm">• branch消失</text>
+    </g>
+    
+    <!-- オブジェクト破損 -->
+    <g class="object-corruption">
+      <rect x="550" y="145" width="150" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 オブジェクト破損</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• object file corrupt</text>
+      <text x="560" y="215" class="text text-sm">• SHA-1 mismatch</text>
+      <text x="560" y="230" class="text text-sm">• pack file broken</text>
+    </g>
+  </g>
+  
+  <!-- 診断手順 -->
+  <g class="diagnosis-steps">
+    <text x="400" y="275" text-anchor="middle" class="text text-md">診断手順</text>
+    
+    <rect x="80" y="290" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 基本チェック -->
+    <g class="basic-check">
+      <rect x="100" y="310" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 基本チェック</text>
+      
+      <text x="110" y="345" class="text text-sm">git status</text>
+      <text x="110" y="360" class="text text-sm">動作確認</text>
+    </g>
+    
+    <!-- 整合性チェック -->
+    <g class="integrity-check">
+      <rect x="260" y="310" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 整合性チェック</text>
+      
+      <text x="270" y="345" class="text text-sm">git fsck --full</text>
+      <text x="270" y="360" class="text text-sm">完全検査</text>
+    </g>
+    
+    <!-- 詳細診断 -->
+    <g class="detailed-diagnosis">
+      <rect x="420" y="310" width="140" height="60" rx="8" class="error border" opacity="0.1"/>
+      <text x="490" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 詳細診断</text>
+      
+      <text x="430" y="345" class="text text-sm">git fsck --lost-found</text>
+      <text x="430" y="360" class="text text-sm">紛失オブジェクト</text>
+    </g>
+    
+    <!-- バックアップ確認 -->
+    <g class="backup-check">
+      <rect x="580" y="310" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="650" y="330" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ バックアップ確認</text>
+      
+      <text x="590" y="345" class="text text-sm">remote状況</text>
+      <text x="590" y="360" class="text text-sm">復旧可能性</text>
+    </g>
+  </g>
+  
+  <!-- 復旧方法 -->
+  <g class="recovery-methods">
+    <text x="400" y="420" text-anchor="middle" class="text text-md">復旧方法</text>
+    
+    <!-- 軽度破損復旧 -->
+    <g class="minor-recovery">
+      <rect x="50" y="435" width="170" height="125" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ 軽度破損復旧</text>
+      
+      <text x="60" y="475" class="text text-sm" style="font-weight: 600;">手順:</text>
+      <text x="60" y="490" class="text text-sm">1. git gc --aggressive</text>
+      <text x="60" y="505" class="text text-sm">2. git repack -a -d</text>
+      <text x="60" y="520" class="text text-sm">3. git prune</text>
+      <text x="60" y="535" class="text text-sm">4. git fsck確認</text>
+      <text x="60" y="550" class="text text-sm">オブジェクト最適化</text>
+    </g>
+    
+    <!-- インデックス修復 -->
+    <g class="index-repair">
+      <rect x="240" y="435" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📂 インデックス修復</text>
+      
+      <text x="250" y="475" class="text text-sm" style="font-weight: 600;">手順:</text>
+      <text x="250" y="490" class="text text-sm">1. git reset --hard</text>
+      <text x="250" y="505" class="text text-sm">2. rm -f .git/index</text>
+      <text x="250" y="520" class="text text-sm">3. git reset</text>
+      <text x="250" y="535" class="text text-sm">4. git add .</text>
+      <text x="250" y="550" class="text text-sm">インデックス再構築</text>
+    </g>
+    
+    <!-- 参照修復 -->
+    <g class="ref-repair">
+      <rect x="430" y="435" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 参照修復</text>
+      
+      <text x="440" y="475" class="text text-sm" style="font-weight: 600;">手順:</text>
+      <text x="440" y="490" class="text text-sm">1. git reflog確認</text>
+      <text x="440" y="505" class="text text-sm">2. git checkout [hash]</text>
+      <text x="440" y="520" class="text text-sm">3. git branch temp</text>
+      <text x="440" y="535" class="text text-sm">4. ブランチ再作成</text>
+      <text x="440" y="550" class="text text-sm">参照関係復元</text>
+    </g>
+    
+    <!-- 完全復旧 -->
+    <g class="complete-recovery">
+      <rect x="620" y="435" width="170" height="125" rx="8" class="error border" opacity="0.1"/>
+      <text x="705" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🆘 完全復旧</text>
+      
+      <text x="630" y="475" class="text text-sm" style="font-weight: 600;">最終手段:</text>
+      <text x="630" y="490" class="text text-sm">1. 作業ファイル退避</text>
+      <text x="630" y="505" class="text text-sm">2. git clone --bare</text>
+      <text x="630" y="520" class="text text-sm">3. .git置換</text>
+      <text x="630" y="535" class="text text-sm">4. 変更復元</text>
+      <text x="630" y="550" class="text text-sm">リポジトリ再構築</text>
+    </g>
+  </g>
+</svg>

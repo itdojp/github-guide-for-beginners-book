@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ポートフォリオの重要性</title>
+  <desc>GitHub ポートフォリオが持つ価値と重要性</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ポートフォリオの重要性</text>
+  
+  <!-- 概要 -->
+  <g class="portfolio-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">📂 GitHub ポートフォリオの価値</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">技術力の可視化、キャリア構築、信頼性向上の中核ツール</text>
+  </g>
+  
+  <!-- ポートフォリオの目的 -->
+  <g class="portfolio-purposes">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">ポートフォリオの目的</text>
+    
+    <!-- スキル証明 -->
+    <g class="skill-demonstration">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 スキル証明</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="50" y="200" class="text text-sm">• 技術力の可視化</text>
+      <text x="50" y="215" class="text text-sm">• 実装経験の証明</text>
+      <text x="50" y="230" class="text text-sm">• 成長軌跡の記録</text>
+      <text x="50" y="245" class="text text-sm">• 専門分野の明示</text>
+    </g>
+    
+    <!-- キャリア支援 -->
+    <g class="career-support">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💼 キャリア支援</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="220" y="200" class="text text-sm">• 転職活動支援</text>
+      <text x="220" y="215" class="text text-sm">• フリーランス営業</text>
+      <text x="220" y="230" class="text text-sm">• 昇進・昇格材料</text>
+      <text x="220" y="245" class="text text-sm">• 業界内認知度</text>
+    </g>
+    
+    <!-- ネットワーキング -->
+    <g class="networking">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 ネットワーキング</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="390" y="200" class="text text-sm">• 同業者とのつながり</text>
+      <text x="390" y="215" class="text text-sm">• メンター関係構築</text>
+      <text x="390" y="230" class="text text-sm">• コラボレーション</text>
+      <text x="390" y="245" class="text text-sm">• 情報交換</text>
+    </g>
+    
+    <!-- 学習促進 -->
+    <g class="learning-acceleration">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 学習促進</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="560" y="200" class="text text-sm">• 継続的な学習</text>
+      <text x="560" y="215" class="text text-sm">• フィードバック受領</text>
+      <text x="560" y="230" class="text text-sm">• 知識の定着</text>
+      <text x="560" y="245" class="text text-sm">• 新技術探求</text>
+    </g>
+  </g>
+  
+  <!-- 評価される要素 -->
+  <g class="evaluation-criteria">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">評価される要素</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- コード品質 -->
+    <g class="code-quality">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💎 コード品質</text>
+      
+      <text x="110" y="355" class="text text-sm">• 可読性</text>
+      <text x="110" y="370" class="text text-sm">• 保守性</text>
+      <text x="110" y="385" class="text text-sm">• 設計思想</text>
+    </g>
+    
+    <!-- プロジェクト多様性 -->
+    <g class="project-diversity">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌈 多様性</text>
+      
+      <text x="270" y="355" class="text text-sm">• 技術スタック</text>
+      <text x="270" y="370" class="text text-sm">• 問題解決領域</text>
+      <text x="270" y="385" class="text text-sm">• 完成度</text>
+    </g>
+    
+    <!-- 継続性 -->
+    <g class="consistency">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 継続性</text>
+      
+      <text x="430" y="355" class="text text-sm">• コミット頻度</text>
+      <text x="430" y="370" class="text text-sm">• 長期取り組み</text>
+      <text x="430" y="385" class="text text-sm">• 成長軌跡</text>
+    </g>
+    
+    <!-- コミュニケーション -->
+    <g class="communication">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミュニケーション</text>
+      
+      <text x="590" y="355" class="text text-sm">• ドキュメント</text>
+      <text x="590" y="370" class="text text-sm">• README充実</text>
+      <text x="590" y="385" class="text text-sm">• Issue対応</text>
+    </g>
+  </g>
+  
+  <!-- 業界別重要度 -->
+  <g class="industry-importance">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">業界別重要度</text>
+    
+    <!-- IT・テック -->
+    <g class="it-tech">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 IT・テック</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">重要度: ★★★★★</text>
+      <text x="60" y="520" class="text text-sm">必須レベル</text>
+      <text x="60" y="535" class="text text-sm">• スタートアップ</text>
+      <text x="60" y="550" class="text text-sm">• 開発会社</text>
+      <text x="60" y="565" class="text text-sm">• SaaS企業</text>
+    </g>
+    
+    <!-- 従来型企業 -->
+    <g class="traditional-companies">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 従来型企業</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">重要度: ★★★☆☆</text>
+      <text x="250" y="520" class="text text-sm">差別化要因</text>
+      <text x="250" y="535" class="text text-sm">• 製造業</text>
+      <text x="250" y="550" class="text text-sm">• 金融機関</text>
+      <text x="250" y="565" class="text text-sm">• 大企業DX部門</text>
+    </g>
+    
+    <!-- フリーランス -->
+    <g class="freelance">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 フリーランス</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">重要度: ★★★★★</text>
+      <text x="440" y="520" class="text text-sm">信頼性の証明</text>
+      <text x="440" y="535" class="text text-sm">• 営業資料</text>
+      <text x="440" y="550" class="text text-sm">• 実績証明</text>
+      <text x="440" y="565" class="text text-sm">• 継続案件獲得</text>
+    </g>
+    
+    <!-- 学術・研究 -->
+    <g class="academic-research">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎓 学術・研究</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">重要度: ★★★★☆</text>
+      <text x="630" y="520" class="text text-sm">研究成果公開</text>
+      <text x="630" y="535" class="text text-sm">• オープンサイエンス</text>
+      <text x="630" y="550" class="text text-sm">• 論文補足資料</text>
+      <text x="630" y="565" class="text text-sm">• 共同研究促進</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ブランチ管理問題</title>
+  <desc>ブランチ操作のトラブルと解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ブランチ管理問題</text>
+  
+  <!-- 概要 -->
+  <g class="branch-issues-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🌿 ブランチ操作のトラブル解決</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">分岐管理、スイッチ問題、履歴修正の安全な対処</text>
+  </g>
+  
+  <!-- 主要問題パターン -->
+  <g class="branch-problem-patterns">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要ブランチ問題</text>
+    
+    <!-- ブランチ切り替え失敗 -->
+    <g class="checkout-failure">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 切り替え失敗</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• 未コミット変更</text>
+      <text x="50" y="215" class="text text-sm">• 競合するファイル</text>
+      <text x="50" y="230" class="text text-sm">• 存在しないブランチ</text>
+      <text x="50" y="245" class="text text-sm">• 権限エラー</text>
+    </g>
+    
+    <!-- Detached HEAD -->
+    <g class="detached-head">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👻 Detached HEAD</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• (no branch) 状態</text>
+      <text x="220" y="215" class="text text-sm">• コミット孤立リスク</text>
+      <text x="220" y="230" class="text text-sm">• ブランチ参照なし</text>
+      <text x="220" y="245" class="text text-sm">• 履歴から切り離し</text>
+    </g>
+    
+    <!-- ブランチ削除問題 -->
+    <g class="branch-deletion-issues">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🗑️ 削除問題</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• 削除拒否</text>
+      <text x="390" y="215" class="text text-sm">• 未マージブランチ</text>
+      <text x="390" y="230" class="text text-sm">• 現在ブランチ削除</text>
+      <text x="390" y="245" class="text text-sm">• リモート参照残存</text>
+    </g>
+    
+    <!-- ブランチ名競合 -->
+    <g class="branch-name-conflicts">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📛 名前競合</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• 既存ブランチ名</text>
+      <text x="560" y="215" class="text text-sm">• 大文字小文字</text>
+      <text x="560" y="230" class="text text-sm">• 特殊文字問題</text>
+      <text x="560" y="245" class="text text-sm">• リモートとの競合</text>
+    </g>
+  </g>
+  
+  <!-- 解決手順 -->
+  <g class="branch-resolution-steps">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">問題別解決手順</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 切り替え失敗解決 -->
+    <g class="checkout-fix">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="error border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 切り替え修正</text>
+      
+      <text x="110" y="355" class="text text-sm">git stash</text>
+      <text x="110" y="370" class="text text-sm">git checkout [branch]</text>
+      <text x="110" y="385" class="text text-sm">git stash pop</text>
+    </g>
+    
+    <!-- Detached HEAD修復 -->
+    <g class="detached-head-fix">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👻 HEAD修復</text>
+      
+      <text x="270" y="355" class="text text-sm">git branch temp</text>
+      <text x="270" y="370" class="text text-sm">git checkout main</text>
+      <text x="270" y="385" class="text text-sm">git merge temp</text>
+    </g>
+    
+    <!-- 削除問題解決 -->
+    <g class="deletion-fix">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🗑️ 削除修正</text>
+      
+      <text x="430" y="355" class="text text-sm">git branch -D [name]</text>
+      <text x="430" y="370" class="text text-sm">強制削除</text>
+      <text x="430" y="385" class="text text-sm">事前バックアップ</text>
+    </g>
+    
+    <!-- 名前修正 -->
+    <g class="name-fix">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📛 名前修正</text>
+      
+      <text x="590" y="355" class="text text-sm">git branch -m old new</text>
+      <text x="590" y="370" class="text text-sm">リネーム</text>
+      <text x="590" y="385" class="text text-sm">リモート更新</text>
+    </g>
+  </g>
+  
+  <!-- 予防策とベストプラクティス -->
+  <g class="branch-best-practices">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">予防策とベストプラクティス</text>
+    
+    <!-- 作業前チェック -->
+    <g class="pre-work-check">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 作業前チェック</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">確認項目:</text>
+      <text x="60" y="520" class="text text-sm">1. git status確認</text>
+      <text x="60" y="535" class="text text-sm">2. 未コミット変更</text>
+      <text x="60" y="550" class="text text-sm">3. 現在ブランチ確認</text>
+      <text x="60" y="565" class="text text-sm">4. リモート同期状態</text>
+    </g>
+    
+    <!-- 安全な切り替え -->
+    <g class="safe-switching">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 安全な切り替え</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">推奨手順:</text>
+      <text x="250" y="520" class="text text-sm">1. 作業保存/コミット</text>
+      <text x="250" y="535" class="text text-sm">2. git stash活用</text>
+      <text x="250" y="550" class="text text-sm">3. ブランチ存在確認</text>
+      <text x="250" y="565" class="text text-sm">4. 段階的切り替え</text>
+    </g>
+    
+    <!-- 命名規則 -->
+    <g class="naming-conventions">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 命名規則</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">推奨パターン:</text>
+      <text x="440" y="520" class="text text-sm">• feature/[機能名]</text>
+      <text x="440" y="535" class="text text-sm">• bugfix/[issue番号]</text>
+      <text x="440" y="550" class="text text-sm">• hotfix/[緊急修正]</text>
+      <text x="440" y="565" class="text text-sm">• 英数字とハイフン</text>
+    </g>
+    
+    <!-- 履歴管理 -->
+    <g class="history-management">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 履歴管理</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">管理ポイント:</text>
+      <text x="630" y="520" class="text text-sm">1. 定期的なクリーンアップ</text>
+      <text x="630" y="535" class="text text-sm">2. マージ済み削除</text>
+      <text x="630" y="550" class="text text-sm">3. リモート追跡整理</text>
+      <text x="630" y="565" class="text text-sm">4. reflog活用</text>
+    </g>
+  </g>
+</svg>

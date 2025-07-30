@@ -18,6 +18,8 @@ GitHubアカウントには、あなたの学習成果、作品、そして将�
 
 **GitHubアカウントが狙われる理由：**
 
+![セキュリティ問題の対処]({{ '/assets/images/diagrams/chapter10/14_security_issue_handling.svg' | relative_url }})
+
 **貴重な知的財産**
 - あなたが時間をかけて作成したプログラム
 - 独自のアイデアや設計思想

@@ -318,6 +318,8 @@ Revertが完了すると：
 
 複数のcommitを一度に取り消したい場合は、以下のような手順になります：
 
+![ファイル履歴の表示]({{ '/assets/images/diagrams/chapter04/04_file_history_display.svg' | relative_url }})
+
 **新しいcommitから順番に取り消す**
 commitは新しいものから順番にRevertしていきます。古いcommitを先に取り消すと、コンフリクト（競合）が発生する可能性があります。
 
@@ -344,6 +346,8 @@ A: はい、可能です。Revertした変更を再度有効にしたい場合�
 
 **Q: 古いcommitだけをピンポイントでRevertできますか？**
 A: 可能ですが、その後のcommitで同じ部分が変更されている場合、コンフリクトが発生する可能性があります。
+
+![コンフリクト解決方法]({{ '/assets/images/diagrams/chapter04/07_conflict_resolution.svg' | relative_url }})
 
 **Q: Web画面以外でRevertする方法はありますか？**
 A: はい、GitHub DesktopやGitコマンドを使用しても同様の操作が可能です。

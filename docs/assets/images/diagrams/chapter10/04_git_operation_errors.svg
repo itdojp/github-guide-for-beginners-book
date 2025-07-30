@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Git操作エラー</title>
+  <desc>Git操作時のエラーと解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Git操作エラー</text>
+  
+  <!-- 概要 -->
+  <g class="git-errors-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">📦 Git操作の代表的エラーと対処法</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">マージ、ブランチ、履歴操作でのトラブル解決</text>
+  </g>
+  
+  <!-- 主要エラーパターン -->
+  <g class="git-error-patterns">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要Git操作エラー</text>
+    
+    <!-- Merge Conflict -->
+    <g class="merge-conflict">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ Merge Conflict</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• <<<<<<< HEAD</text>
+      <text x="50" y="215" class="text text-sm">• 同一箇所の変更</text>
+      <text x="50" y="230" class="text text-sm">• マージ停止</text>
+      <text x="50" y="245" class="text text-sm">• 手動解決必要</text>
+    </g>
+    
+    <!-- Detached HEAD -->
+    <g class="detached-head">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👻 Detached HEAD</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• ブランチ外状態</text>
+      <text x="220" y="215" class="text text-sm">• コミット消失リスク</text>
+      <text x="220" y="230" class="text text-sm">• (no branch)</text>
+      <text x="220" y="245" class="text text-sm">• 履歴から切り離し</text>
+    </g>
+    
+    <!-- Failed Push -->
+    <g class="failed-push">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 Push失敗</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• Non-fast-forward</text>
+      <text x="390" y="215" class="text text-sm">• 履歴の分岐</text>
+      <text x="390" y="230" class="text text-sm">• Remote変更</text>
+      <text x="390" y="245" class="text text-sm">• 強制push危険</text>
+    </g>
+    
+    <!-- Corrupted Repository -->
+    <g class="corrupted-repo">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💥 リポジトリ破損</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• .git ディレクトリ損傷</text>
+      <text x="560" y="215" class="text text-sm">• Object missing</text>
+      <text x="560" y="230" class="text text-sm">• Index破損</text>
+      <text x="560" y="245" class="text text-sm">• 操作全般失敗</text>
+    </g>
+  </g>
+  
+  <!-- Merge Conflict解決 -->
+  <g class="merge-conflict-resolution">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">Merge Conflict解決手順</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 状況確認 -->
+    <g class="conflict-step-1">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="error border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 状況確認</text>
+      
+      <text x="110" y="355" class="text text-sm">git status</text>
+      <text x="110" y="370" class="text text-sm">conflicted files</text>
+      <text x="110" y="385" class="text text-sm">影響範囲確認</text>
+    </g>
+    
+    <!-- ステップ2: 競合解決 -->
+    <g class="conflict-step-2">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 競合解決</text>
+      
+      <text x="270" y="355" class="text text-sm">エディタで編集</text>
+      <text x="270" y="370" class="text text-sm"><<<<<<< 削除</text>
+      <text x="270" y="385" class="text text-sm">最適解統合</text>
+    </g>
+    
+    <!-- ステップ3: 解決済マーク -->
+    <g class="conflict-step-3">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 解決マーク</text>
+      
+      <text x="430" y="355" class="text text-sm">git add [file]</text>
+      <text x="430" y="370" class="text text-sm">全ファイル追加</text>
+      <text x="430" y="385" class="text text-sm">ステージング</text>
+    </g>
+    
+    <!-- ステップ4: マージ完了 -->
+    <g class="conflict-step-4">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 完了</text>
+      
+      <text x="590" y="355" class="text text-sm">git commit</text>
+      <text x="590" y="370" class="text text-sm">マージメッセージ</text>
+      <text x="590" y="385" class="text text-sm">動作確認</text>
+    </g>
+  </g>
+  
+  <!-- その他の解決方法 -->
+  <g class="other-solutions">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">その他の解決方法</text>
+    
+    <!-- Detached HEAD解決 -->
+    <g class="detached-head-solution">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👻 Detached HEAD</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="60" y="520" class="text text-sm">1. git branch temp</text>
+      <text x="60" y="535" class="text text-sm">2. git checkout main</text>
+      <text x="60" y="550" class="text text-sm">3. git merge temp</text>
+      <text x="60" y="565" class="text text-sm">4. git branch -d temp</text>
+    </g>
+    
+    <!-- Push失敗解決 -->
+    <g class="push-failure-solution">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚫 Push失敗</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">解決手順:</text>
+      <text x="250" y="520" class="text text-sm">1. git fetch origin</text>
+      <text x="250" y="535" class="text text-sm">2. git merge origin/main</text>
+      <text x="250" y="550" class="text text-sm">3. 競合があれば解決</text>
+      <text x="250" y="565" class="text text-sm">4. git push origin main</text>
+    </g>
+    
+    <!-- リポジトリ修復 -->
+    <g class="repo-repair-solution">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💥 リポジトリ修復</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">修復手順:</text>
+      <text x="440" y="520" class="text text-sm">1. git fsck --full</text>
+      <text x="440" y="535" class="text text-sm">2. git gc --aggressive</text>
+      <text x="440" y="550" class="text text-sm">3. git reflog 確認</text>
+      <text x="440" y="565" class="text text-sm">4. 必要時re-clone</text>
+    </g>
+    
+    <!-- 緊急時対処 -->
+    <g class="emergency-solution">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🆘 緊急時対処</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">最終手段:</text>
+      <text x="630" y="520" class="text text-sm">1. 作業ファイル退避</text>
+      <text x="630" y="535" class="text text-sm">2. 新規clone</text>
+      <text x="630" y="550" class="text text-sm">3. 変更復元</text>
+      <text x="630" y="565" class="text text-sm">4. 新規コミット</text>
+    </g>
+  </g>
+</svg>

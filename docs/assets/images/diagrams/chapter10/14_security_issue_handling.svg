@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>セキュリティ問題対処</title>
+  <desc>Git・GitHubでのセキュリティ問題の検出と対処方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">セキュリティ問題対処</text>
+  
+  <!-- 概要 -->
+  <g class="security-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="error border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🔒 セキュリティリスクの検出と対処</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">機密情報漏洩、不正アクセス、脆弱性の予防と対応</text>
+  </g>
+  
+  <!-- セキュリティリスクの種類 -->
+  <g class="security-risk-types">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要セキュリティリスク</text>
+    
+    <!-- 機密情報漏洩 -->
+    <g class="credential-leakage">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔑 機密情報漏洩</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">リスク:</text>
+      <text x="50" y="200" class="text text-sm">• API キー</text>
+      <text x="50" y="215" class="text text-sm">• パスワード</text>
+      <text x="50" y="230" class="text text-sm">• 秘密鍵</text>
+      <text x="50" y="245" class="text text-sm">• 設定ファイル</text>
+    </g>
+    
+    <!-- 不正アクセス -->
+    <g class="unauthorized-access">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚨 不正アクセス</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">リスク:</text>
+      <text x="220" y="200" class="text text-sm">• アカウント乗っ取り</text>
+      <text x="220" y="215" class="text text-sm">• 権限昇格</text>
+      <text x="220" y="230" class="text text-sm">• 不正な変更</text>
+      <text x="220" y="245" class="text text-sm">• データ改ざん</text>
+    </g>
+    
+    <!-- 脆弱性 -->
+    <g class="vulnerabilities">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ 脆弱性</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">リスク:</text>
+      <text x="390" y="200" class="text text-sm">• 依存関係脆弱性</text>
+      <text x="390" y="215" class="text text-sm">• コード注入</text>
+      <text x="390" y="230" class="text text-sm">• 設定不備</text>
+      <text x="390" y="245" class="text text-sm">• 古いライブラリ</text>
+    </g>
+    
+    <!-- 設定ミス -->
+    <g class="configuration-errors">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定ミス</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">リスク:</text>
+      <text x="560" y="200" class="text text-sm">• 公開範囲間違い</text>
+      <text x="560" y="215" class="text text-sm">• 権限設定不備</text>
+      <text x="560" y="230" class="text text-sm">• ブランチ保護なし</text>
+      <text x="560" y="245" class="text text-sm">• 監査ログ無効</text>
+    </g>
+  </g>
+  
+  <!-- 検出手法 -->
+  <g class="detection-methods">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">セキュリティ問題検出</text>
+    
+    <rect x="80" y="300" width="640" height="100" rx="8" class="bg-alt border"/>
+    
+    <!-- 自動スキャン -->
+    <g class="automated-scanning">
+      <rect x="100" y="320" width="140" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 自動スキャン</text>
+      
+      <text x="110" y="355" class="text text-sm">git secrets</text>
+      <text x="110" y="370" class="text text-sm">truffleHog</text>
+    </g>
+    
+    <!-- GitHub機能 -->
+    <g class="github-features">
+      <rect x="260" y="320" width="140" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐙 GitHub機能</text>
+      
+      <text x="270" y="355" class="text text-sm">Secret scanning</text>
+      <text x="270" y="370" class="text text-sm">Dependabot</text>
+    </g>
+    
+    <!-- 手動確認 -->
+    <g class="manual-review">
+      <rect x="420" y="320" width="140" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ 手動確認</text>
+      
+      <text x="430" y="355" class="text text-sm">コードレビュー</text>
+      <text x="430" y="370" class="text text-sm">設定監査</text>
+    </g>
+    
+    <!-- 継続監視 -->
+    <g class="continuous-monitoring">
+      <rect x="580" y="320" width="140" height="60" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 継続監視</text>
+      
+      <text x="590" y="355" class="text text-sm">ログ監視</text>
+      <text x="590" y="370" class="text text-sm">アクセス分析</text>
+    </g>
+  </g>
+  
+  <!-- 対処手順 -->
+  <g class="response-procedures">
+    <text x="400" y="430" text-anchor="middle" class="text text-md">セキュリティ問題対処手順</text>
+    
+    <!-- 機密情報漏洩対処 -->
+    <g class="credential-leak-response">
+      <rect x="50" y="445" width="170" height="125" rx="8" class="error border" opacity="0.1"/>
+      <text x="135" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔑 機密情報対処</text>
+      
+      <text x="60" y="485" class="text text-sm" style="font-weight: 600;">緊急対応:</text>
+      <text x="60" y="500" class="text text-sm">1. 即座に無効化</text>
+      <text x="60" y="515" class="text text-sm">2. 履歴から完全削除</text>
+      <text x="60" y="530" class="text text-sm">3. git filter-repo使用</text>
+      <text x="60" y="545" class="text text-sm">4. 新しい認証情報生成</text>
+      <text x="60" y="560" class="text text-sm">5. チーム全体に通知</text>
+    </g>
+    
+    <!-- アクセス制御強化 -->
+    <g class="access-control-enhancement">
+      <rect x="240" y="445" width="170" height="125" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚨 アクセス制御</text>
+      
+      <text x="250" y="485" class="text text-sm" style="font-weight: 600;">強化手順:</text>
+      <text x="250" y="500" class="text text-sm">1. 2FA有効化必須</text>
+      <text x="250" y="515" class="text text-sm">2. 最小権限原則</text>
+      <text x="250" y="530" class="text text-sm">3. 定期権限見直し</text>
+      <text x="250" y="545" class="text text-sm">4. SSH Key更新</text>
+      <text x="250" y="560" class="text text-sm">5. アクセスログ監視</text>
+    </g>
+    
+    <!-- 脆弱性修正 -->
+    <g class="vulnerability-patching">
+      <rect x="430" y="445" width="170" height="125" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛡️ 脆弱性修正</text>
+      
+      <text x="440" y="485" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="440" y="500" class="text text-sm">1. 脆弱性影響評価</text>
+      <text x="440" y="515" class="text text-sm">2. 依存関係更新</text>
+      <text x="440" y="530" class="text text-sm">3. セキュリティパッチ</text>
+      <text x="440" y="545" class="text text-sm">4. 回帰テスト実行</text>
+      <text x="440" y="560" class="text text-sm">5. 緊急デプロイ</text>
+    </g>
+    
+    <!-- 予防策実装 -->
+    <g class="prevention-implementation">
+      <rect x="620" y="445" width="170" height="125" rx="8" class="success border" opacity="0.1"/>
+      <text x="705" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ 予防策実装</text>
+      
+      <text x="630" y="485" class="text text-sm" style="font-weight: 600;">実装項目:</text>
+      <text x="630" y="500" class="text text-sm">1. pre-commit hooks</text>
+      <text x="630" y="515" class="text text-sm">2. Branch protection</text>
+      <text x="630" y="530" class="text text-sm">3. 自動セキュリティ検査</text>
+      <text x="630" y="545" class="text text-sm">4. 定期セキュリティ監査</text>
+      <text x="630" y="560" class="text text-sm">5. セキュリティ研修</text>
+    </g>
+  </g>
+</svg>

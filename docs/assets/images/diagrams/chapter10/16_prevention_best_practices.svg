@@ -1,0 +1,189 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>予防・ベストプラクティス</title>
+  <desc>トラブル予防のためのベストプラクティスと継続的改善</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">予防・ベストプラクティス</text>
+  
+  <!-- 概要 -->
+  <g class="prevention-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">🛡️ トラブル予防のベストプラクティス</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">事前対策、継続的監視、プロセス改善による問題の根本的予防</text>
+  </g>
+  
+  <!-- 予防の4つの柱 -->
+  <g class="prevention-pillars">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">予防の4つの柱</text>
+    
+    <!-- プロセス設計 -->
+    <g class="process-design">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 プロセス設計</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">要素:</text>
+      <text x="50" y="200" class="text text-sm">• 明確なワークフロー</text>
+      <text x="50" y="215" class="text text-sm">• 役割と責任分担</text>
+      <text x="50" y="230" class="text text-sm">• 承認プロセス</text>
+      <text x="50" y="245" class="text text-sm">• 例外処理手順</text>
+    </g>
+    
+    <!-- 自動化導入 -->
+    <g class="automation-introduction">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤖 自動化導入</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">要素:</text>
+      <text x="220" y="200" class="text text-sm">• CI/CD パイプライン</text>
+      <text x="220" y="215" class="text text-sm">• 自動テスト</text>
+      <text x="220" y="230" class="text text-sm">• コード検査</text>
+      <text x="220" y="245" class="text text-sm">• デプロイ自動化</text>
+    </g>
+    
+    <!-- 監視・モニタリング -->
+    <g class="monitoring-surveillance">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 監視・モニタリング</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">要素:</text>
+      <text x="390" y="200" class="text text-sm">• リアルタイム監視</text>
+      <text x="390" y="215" class="text text-sm">• ログ分析</text>
+      <text x="390" y="230" class="text text-sm">• パフォーマンス追跡</text>
+      <text x="390" y="245" class="text text-sm">• アラート設定</text>
+    </g>
+    
+    <!-- 教育・啓発 -->
+    <g class="education-awareness">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 教育・啓発</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">要素:</text>
+      <text x="560" y="200" class="text text-sm">• 継続的研修</text>
+      <text x="560" y="215" class="text text-sm">• ドキュメント整備</text>
+      <text x="560" y="230" class="text text-sm">• ナレッジ共有</text>
+      <text x="560" y="245" class="text text-sm">• メンタリング</text>
+    </g>
+  </g>
+  
+  <!-- 実装レベル別ベストプラクティス -->
+  <g class="implementation-levels">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">実装レベル別ベストプラクティス</text>
+    
+    <rect x="50" y="300" width="700" height="130" rx="8" class="bg-alt border"/>
+    
+    <!-- 個人レベル -->
+    <g class="individual-level">
+      <rect x="70" y="320" width="160" height="90" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👤 個人レベル</text>
+      
+      <text x="80" y="360" class="text text-sm" style="font-weight: 600;">実践項目:</text>
+      <text x="80" y="375" class="text text-sm">• 定期コミット</text>
+      <text x="80" y="390" class="text text-sm">• 意味のあるメッセージ</text>
+      <text x="80" y="405" class="text text-sm">• ブランチ戦略遵守</text>
+    </g>
+    
+    <!-- チームレベル -->
+    <g class="team-level">
+      <rect x="250" y="320" width="160" height="90" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 チームレベル</text>
+      
+      <text x="260" y="360" class="text text-sm" style="font-weight: 600;">実践項目:</text>
+      <text x="260" y="375" class="text text-sm">• コードレビュー文化</text>
+      <text x="260" y="390" class="text text-sm">• ペアプログラミング</text>
+      <text x="260" y="405" class="text text-sm">• 知識共有会</text>
+    </g>
+    
+    <!-- プロジェクトレベル -->
+    <g class="project-level">
+      <rect x="430" y="320" width="160" height="90" rx="8" class="warning border" opacity="0.1"/>
+      <text x="510" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 プロジェクトレベル</text>
+      
+      <text x="440" y="360" class="text text-sm" style="font-weight: 600;">実践項目:</text>
+      <text x="440" y="375" class="text text-sm">• Branch protection</text>
+      <text x="440" y="390" class="text text-sm">• 自動化パイプライン</text>
+      <text x="440" y="405" class="text text-sm">• 品質ゲート設定</text>
+    </g>
+    
+    <!-- 組織レベル -->
+    <g class="organization-level">
+      <rect x="610" y="320" width="160" height="90" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="690" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 組織レベル</text>
+      
+      <text x="620" y="360" class="text text-sm" style="font-weight: 600;">実践項目:</text>
+      <text x="620" y="375" class="text text-sm">• 統一ガイドライン</text>
+      <text x="620" y="390" class="text text-sm">• セキュリティポリシー</text>
+      <text x="620" y="405" class="text text-sm">• 継続的改善文化</text>
+    </g>
+  </g>
+  
+  <!-- 継続的改善サイクル -->
+  <g class="continuous-improvement-cycle">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">継続的改善サイクル</text>
+    
+    <!-- 測定・評価 -->
+    <g class="measure-evaluate">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 測定・評価</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">測定項目:</text>
+      <text x="60" y="520" class="text text-sm">• エラー発生率</text>
+      <text x="60" y="535" class="text text-sm">• 解決時間</text>
+      <text x="60" y="550" class="text text-sm">• チーム生産性</text>
+      <text x="60" y="565" class="text text-sm">• 品質指標</text>
+    </g>
+    
+    <!-- 分析・改善点識別 -->
+    <g class="analyze-identify">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 分析・改善点識別</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">分析手法:</text>
+      <text x="250" y="520" class="text text-sm">• 根本原因分析</text>
+      <text x="250" y="535" class="text text-sm">• トレンド分析</text>
+      <text x="250" y="550" class="text text-sm">• パフォーマンス比較</text>
+      <text x="250" y="565" class="text text-sm">• ギャップ分析</text>
+    </g>
+    
+    <!-- 対策実装 -->
+    <g class="implement-measures">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ 対策実装</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">実装内容:</text>
+      <text x="440" y="520" class="text text-sm">• プロセス改善</text>
+      <text x="440" y="535" class="text text-sm">• ツール導入</text>
+      <text x="440" y="550" class="text text-sm">• 教育プログラム</text>
+      <text x="440" y="565" class="text text-sm">• 自動化拡張</text>
+    </g>
+    
+    <!-- 効果検証 -->
+    <g class="verify-effectiveness">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 効果検証</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">検証項目:</text>
+      <text x="630" y="520" class="text text-sm">• 改善効果測定</text>
+      <text x="630" y="535" class="text text-sm">• 副作用確認</text>
+      <text x="630" y="550" class="text text-sm">• フィードバック収集</text>
+      <text x="630" y="565" class="text text-sm">• 次回改善計画</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>設定・環境問題</title>
+  <desc>Git設定と環境問題の診断と解決方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">設定・環境問題</text>
+  
+  <!-- 概要 -->
+  <g class="config-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="neutral border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">⚙️ Git設定と環境の問題解決</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">設定ファイル、パス、権限問題の体系的対処</text>
+  </g>
+  
+  <!-- 主要問題パターン -->
+  <g class="config-problems">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">主要設定問題</text>
+    
+    <!-- 設定値不正 -->
+    <g class="invalid-config">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="error border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❌ 設定値不正</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="50" y="200" class="text text-sm">• 認証情報間違い</text>
+      <text x="50" y="215" class="text text-sm">• URL形式エラー</text>
+      <text x="50" y="230" class="text text-sm">• エンコード問題</text>
+      <text x="50" y="245" class="text text-sm">• 設定重複・競合</text>
+    </g>
+    
+    <!-- パス問題 -->
+    <g class="path-issues">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 パス問題</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="220" y="200" class="text text-sm">• 実行パス未設定</text>
+      <text x="220" y="215" class="text text-sm">• 相対パス問題</text>
+      <text x="220" y="230" class="text text-sm">• 空白文字含む</text>
+      <text x="220" y="245" class="text text-sm">• 特殊文字エラー</text>
+    </g>
+    
+    <!-- 権限不足 -->
+    <g class="permission-issues">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 権限不足</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="390" y="200" class="text text-sm">• 書き込み権限なし</text>
+      <text x="390" y="215" class="text text-sm">• 実行権限なし</text>
+      <text x="390" y="230" class="text text-sm">• 管理者権限必要</text>
+      <text x="390" y="245" class="text text-sm">• ファイル所有者</text>
+    </g>
+    
+    <!-- 環境変数問題 -->
+    <g class="env-var-issues">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 環境変数</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
+      <text x="560" y="200" class="text text-sm">• PATH設定不備</text>
+      <text x="560" y="215" class="text text-sm">• GIT_* 変数問題</text>
+      <text x="560" y="230" class="text text-sm">• LANG/LC_* 問題</text>
+      <text x="560" y="245" class="text text-sm">• プロキシ変数</text>
+    </g>
+  </g>
+  
+  <!-- 設定確認手順 -->
+  <g class="config-check-steps">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">設定確認手順</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 基本確認 -->
+    <g class="check-step-1">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ 基本確認</text>
+      
+      <text x="110" y="355" class="text text-sm">git --version</text>
+      <text x="110" y="370" class="text text-sm">which git</text>
+      <text x="110" y="385" class="text text-sm">echo $PATH</text>
+    </g>
+    
+    <!-- ステップ2: 設定確認 -->
+    <g class="check-step-2">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ 設定確認</text>
+      
+      <text x="270" y="355" class="text text-sm">git config --list</text>
+      <text x="270" y="370" class="text text-sm">git config --show-origin</text>
+      <text x="270" y="385" class="text text-sm">設定階層確認</text>
+    </g>
+    
+    <!-- ステップ3: ファイル確認 -->
+    <g class="check-step-3">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ ファイル確認</text>
+      
+      <text x="430" y="355" class="text text-sm">~/.gitconfig</text>
+      <text x="430" y="370" class="text text-sm">.git/config</text>
+      <text x="430" y="385" class="text text-sm">権限確認</text>
+    </g>
+    
+    <!-- ステップ4: 環境確認 -->
+    <g class="check-step-4">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ 環境確認</text>
+      
+      <text x="590" y="355" class="text text-sm">env | grep GIT</text>
+      <text x="590" y="370" class="text text-sm">locale</text>
+      <text x="590" y="385" class="text text-sm">プロキシ設定</text>
+    </g>
+  </g>
+  
+  <!-- 解決方法 -->
+  <g class="config-solutions">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">解決方法</text>
+    
+    <!-- 設定修正 -->
+    <g class="config-fix">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定修正</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="60" y="520" class="text text-sm">1. 設定階層理解</text>
+      <text x="60" y="535" class="text text-sm">2. 適切なレベル選択</text>
+      <text x="60" y="550" class="text text-sm">3. git config --global</text>
+      <text x="60" y="565" class="text text-sm">4. 設定値検証</text>
+    </g>
+    
+    <!-- パス修正 -->
+    <g class="path-fix">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 パス修正</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="250" y="520" class="text text-sm">1. 絶対パス使用</text>
+      <text x="250" y="535" class="text text-sm">2. 空白文字エスケープ</text>
+      <text x="250" y="550" class="text text-sm">3. PATH環境変数</text>
+      <text x="250" y="565" class="text text-sm">4. シンボリックリンク</text>
+    </g>
+    
+    <!-- 権限修正 -->
+    <g class="permission-fix">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 権限修正</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="440" y="520" class="text text-sm">1. chmod 755 [dir]</text>
+      <text x="440" y="535" class="text text-sm">2. chown $USER [file]</text>
+      <text x="440" y="550" class="text text-sm">3. sudo権限確認</text>
+      <text x="440" y="565" class="text text-sm">4. umask設定</text>
+    </g>
+    
+    <!-- 環境修正 -->
+    <g class="env-fix">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 環境修正</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">修正手順:</text>
+      <text x="630" y="520" class="text text-sm">1. .bashrc編集</text>
+      <text x="630" y="535" class="text text-sm">2. export PATH=...</text>
+      <text x="630" y="550" class="text text-sm">3. source .bashrc</text>
+      <text x="630" y="565" class="text text-sm">4. 新規セッション確認</text>
+    </g>
+  </g>
+</svg>

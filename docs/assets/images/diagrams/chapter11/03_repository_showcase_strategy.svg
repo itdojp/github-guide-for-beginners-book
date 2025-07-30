@@ -1,0 +1,185 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リポジトリ ショーケース戦略</title>
+  <desc>効果的なリポジトリ選択と配置戦略</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リポジトリ ショーケース戦略</text>
+  
+  <!-- 概要 -->
+  <g class="showcase-overview">
+    <rect x="100" y="60" width="600" height="45" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="80" text-anchor="middle" class="text text-md">📋 戦略的リポジトリ配置</text>
+    <text x="400" y="95" text-anchor="middle" class="text text-sm">技術力アピール、多様性表現、成長軌跡の効果的な可視化</text>
+  </g>
+  
+  <!-- ショーケース戦略 -->
+  <g class="showcase-strategies">
+    <text x="400" y="130" text-anchor="middle" class="text text-md">ショーケース戦略</text>
+    
+    <!-- Pin戦略 -->
+    <g class="pinning-strategy">
+      <rect x="40" y="145" width="150" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="115" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📌 Pin戦略</text>
+      
+      <text x="50" y="185" class="text text-sm" style="font-weight: 600;">選択基準:</text>
+      <text x="50" y="200" class="text text-sm">• 最高品質作品</text>
+      <text x="50" y="215" class="text text-sm">• 技術多様性</text>
+      <text x="50" y="230" class="text text-sm">• 完成度の高さ</text>
+      <text x="50" y="245" class="text text-sm">• 実用性</text>
+    </g>
+    
+    <!-- 分野別分散 -->
+    <g class="domain-distribution">
+      <rect x="210" y="145" width="150" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="285" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌈 分野別分散</text>
+      
+      <text x="220" y="185" class="text text-sm" style="font-weight: 600;">カテゴリ:</text>
+      <text x="220" y="200" class="text text-sm">• Web開発</text>
+      <text x="220" y="215" class="text text-sm">• データ分析</text>
+      <text x="220" y="230" class="text text-sm">• モバイルアプリ</text>
+      <text x="220" y="245" class="text text-sm">• DevOps/インフラ</text>
+    </g>
+    
+    <!-- 難易度段階 -->
+    <g class="difficulty-levels">
+      <rect x="380" y="145" width="150" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 難易度段階</text>
+      
+      <text x="390" y="185" class="text text-sm" style="font-weight: 600;">レベル構成:</text>
+      <text x="390" y="200" class="text text-sm">• 入門プロジェクト</text>
+      <text x="390" y="215" class="text text-sm">• 中級アプリケーション</text>
+      <text x="390" y="230" class="text text-sm">• 上級システム</text>
+      <text x="390" y="245" class="text text-sm">• 研究・実験</text>
+    </g>
+    
+    <!-- 時系列展開 -->
+    <g class="chronological-development">
+      <rect x="550" y="145" width="150" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="625" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⏰ 時系列展開</text>
+      
+      <text x="560" y="185" class="text text-sm" style="font-weight: 600;">成長軌跡:</text>
+      <text x="560" y="200" class="text text-sm">• 学習初期作品</text>
+      <text x="560" y="215" class="text text-sm">• 転換点プロジェクト</text>
+      <text x="560" y="230" class="text text-sm">• 最新技術適用</text>
+      <text x="560" y="245" class="text text-sm">• 継続的改良</text>
+    </g>
+  </g>
+  
+  <!-- リポジトリの種類 -->
+  <g class="repository-types">
+    <text x="400" y="285" text-anchor="middle" class="text text-md">効果的なリポジトリタイプ</text>
+    
+    <rect x="80" y="300" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 完成アプリケーション -->
+    <g class="complete-applications">
+      <rect x="100" y="320" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 完成アプリ</text>
+      
+      <text x="110" y="355" class="text text-sm">• 実用的価値</text>
+      <text x="110" y="370" class="text text-sm">• デプロイ済み</text>
+      <text x="110" y="385" class="text text-sm">• ユーザー視点</text>
+    </g>
+    
+    <!-- ライブラリ・ツール -->
+    <g class="libraries-tools">
+      <rect x="260" y="320" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 ライブラリ</text>
+      
+      <text x="270" y="355" class="text text-sm">• 再利用可能</text>
+      <text x="270" y="370" class="text text-sm">• API設計力</text>
+      <text x="270" y="385" class="text text-sm">• 抽象化思考</text>
+    </g>
+    
+    <!-- 学習・実験 -->
+    <g class="learning-experiments">
+      <rect x="420" y="320" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧪 学習・実験</text>
+      
+      <text x="430" y="355" class="text text-sm">• 新技術習得</text>
+      <text x="430" y="370" class="text text-sm">• プロトタイプ</text>
+      <text x="430" y="385" class="text text-sm">• 探究心表現</text>
+    </g>
+    
+    <!-- 貢献・協業 -->
+    <g class="contributions-collaborations">
+      <rect x="580" y="320" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 貢献・協業</text>
+      
+      <text x="590" y="355" class="text text-sm">• オープンソース</text>
+      <text x="590" y="370" class="text text-sm">• チーム開発</text>
+      <text x="590" y="385" class="text text-sm">• コミュニティ</text>
+    </g>
+  </g>
+  
+  <!-- 品質向上のポイント -->
+  <g class="quality-improvement">
+    <text x="400" y="450" text-anchor="middle" class="text text-md">品質向上のポイント</text>
+    
+    <!-- ドキュメント充実 -->
+    <g class="documentation-enhancement">
+      <rect x="50" y="465" width="170" height="110" rx="8" class="success border" opacity="0.1"/>
+      <text x="135" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 ドキュメント</text>
+      
+      <text x="60" y="505" class="text text-sm" style="font-weight: 600;">充実項目:</text>
+      <text x="60" y="520" class="text text-sm">• 詳細README</text>
+      <text x="60" y="535" class="text text-sm">• API仕様書</text>
+      <text x="60" y="550" class="text text-sm">• 使用方法・例</text>
+      <text x="60" y="565" class="text text-sm">• アーキテクチャ図</text>
+    </g>
+    
+    <!-- コード品質 -->
+    <g class="code-quality">
+      <rect x="240" y="465" width="170" height="110" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💎 コード品質</text>
+      
+      <text x="250" y="505" class="text text-sm" style="font-weight: 600;">改善項目:</text>
+      <text x="250" y="520" class="text text-sm">• 一貫したスタイル</text>
+      <text x="250" y="535" class="text text-sm">• 適切なコメント</text>
+      <text x="250" y="550" class="text text-sm">• テストコード</text>
+      <text x="250" y="565" class="text text-sm">• パフォーマンス</text>
+    </g>
+    
+    <!-- プロジェクト管理 -->
+    <g class="project-management">
+      <rect x="430" y="465" width="170" height="110" rx="8" class="warning border" opacity="0.1"/>
+      <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 プロジェクト管理</text>
+      
+      <text x="440" y="505" class="text text-sm" style="font-weight: 600;">管理要素:</text>
+      <text x="440" y="520" class="text text-sm">• Issue管理</text>
+      <text x="440" y="535" class="text text-sm">• マイルストーン</text>
+      <text x="440" y="550" class="text text-sm">• リリースタグ</text>
+      <text x="440" y="565" class="text text-sm">• 変更履歴</text>
+    </g>
+    
+    <!-- デプロイ・公開 -->
+    <g class="deployment-publishing">
+      <rect x="620" y="465" width="170" height="110" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="705" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 デプロイ・公開</text>
+      
+      <text x="630" y="505" class="text text-sm" style="font-weight: 600;">公開形態:</text>
+      <text x="630" y="520" class="text text-sm">• GitHub Pages</text>
+      <text x="630" y="535" class="text text-sm">• Netlify/Vercel</text>
+      <text x="630" y="550" class="text text-sm">• パッケージ公開</text>
+      <text x="630" y="565" class="text text-sm">• デモ環境</text>
+    </g>
+  </g>
+</svg>

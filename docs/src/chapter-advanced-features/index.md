@@ -12,6 +12,8 @@ layout: book
 
 ## 11.1 GitHub Packages
 
+![ポートフォリオの重要性]({{ '/assets/images/diagrams/chapter11/01_portfolio_importance.svg' | relative_url }})
+
 ### パッケージ管理の概念と価値
 
 **パッケージ管理とは：**
@@ -320,6 +322,8 @@ jobs:
 
 ## 11.2 GitHub Codespaces
 
+![プロフィール最適化]({{ '/assets/images/diagrams/chapter11/02_profile_optimization.svg' | relative_url }})
+
 ### クラウド開発環境の概念
 
 **従来の開発環境の課題：**
@@ -334,6 +338,8 @@ jobs:
 - 高性能クラウドコンピューティング
 - 即座のプロジェクト開始
 - チーム間での環境統一
+
+![リポジトリショーケース戦略]({{ '/assets/images/diagrams/chapter11/03_repository_showcase_strategy.svg' | relative_url }})
 
 ### Codespaces の設定と利用
 
@@ -1238,6 +1244,8 @@ async function sendEmailNotification(event, data) {
 - 継続的な改善サイクル
 
 次の章では、トラブルシューティングについて学び、GitHubの使用中に発生する可能性のある問題の解決方法を身につけます。
+
+![キャリア開発活用]({{ '/assets/images/diagrams/chapter11/10_career_development_utilization.svg' | relative_url }})
 
 **理解度確認：**
 □ GitHub Packagesでパッケージを公開・管理できる  
