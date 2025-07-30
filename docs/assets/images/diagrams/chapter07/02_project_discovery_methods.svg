@@ -1,0 +1,162 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>プロジェクト発見方法</title>
+  <desc>GitHub上で自分に適したオープンソースプロジェクトを見つける方法</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">プロジェクト発見方法</text>
+  
+  <!-- 発見方法の概要 -->
+  <g class="discovery-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">自分に合ったプロジェクトを見つけよう</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 興味・スキル・時間に応じた戦略的なプロジェクト選択</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">数百万のプロジェクトから最適なものを効率的に発見する手法</text>
+  </g>
+  
+  <!-- 発見方法の分類 -->
+  <g class="discovery-methods">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">4つの主要な発見手法</text>
+    
+    <!-- 方法1: 検索機能活用 -->
+    <g class="search-method">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 検索機能活用</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">基本検索:</text>
+      <text x="60" y="260" class="text text-sm">• キーワード検索</text>
+      <text x="60" y="275" class="text text-sm">• 言語フィルター</text>
+      
+      <text x="60" y="295" class="text text-sm" style="font-weight: 600;">高度検索:</text>
+      <text x="60" y="310" class="text text-sm">• Stars数、Fork数</text>
+      <text x="60" y="325" class="text text-sm">• 更新日、作成日</text>
+    </g>
+    
+    <!-- 方法2: トレンド・推薦 -->
+    <g class="trending-method">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 トレンド・推薦</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">GitHub発見:</text>
+      <text x="240" y="260" class="text text-sm">• Trending ページ</text>
+      <text x="240" y="275" class="text text-sm">• Explore 機能</text>
+      
+      <text x="240" y="295" class="text text-sm" style="font-weight: 600;">個人推薦:</text>
+      <text x="240" y="310" class="text text-sm">• For you 推薦</text>
+      <text x="240" y="325" class="text text-sm">• 関連プロジェクト</text>
+    </g>
+    
+    <!-- 方法3: コミュニティ情報 -->
+    <g class="community-method">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 コミュニティ情報</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">外部情報源:</text>
+      <text x="420" y="260" class="text text-sm">• ブログ・記事</text>
+      <text x="420" y="275" class="text text-sm">• SNS・フォーラム</text>
+      
+      <text x="420" y="295" class="text text-sm" style="font-weight: 600;">人的ネットワーク:</text>
+      <text x="420" y="310" class="text text-sm">• フォロー機能</text>
+      <text x="420" y="325" class="text text-sm">• 開発者推薦</text>
+    </g>
+    
+    <!-- 方法4: 実用性重視 -->
+    <g class="practical-method">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 実用性重視</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">業務関連:</text>
+      <text x="600" y="260" class="text text-sm">• 使用中ツール</text>
+      <text x="600" y="275" class="text text-sm">• 依存関係</text>
+      
+      <text x="600" y="295" class="text text-sm" style="font-weight: 600;">学習目的:</text>
+      <text x="600" y="310" class="text text-sm">• 教育プロジェクト</text>
+      <text x="600" y="325" class="text text-sm">• サンプルコード</text>
+    </g>
+  </g>
+  
+  <!-- 評価ポイント -->
+  <g class="evaluation-points">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">プロジェクト評価のポイント</text>
+    
+    <rect x="80" y="375" width="640" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- 活動状況 -->
+    <g class="activity-status">
+      <rect x="100" y="395" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="170" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 活動状況</text>
+      
+      <text x="110" y="435" class="text text-sm">• 最近のコミット</text>
+      <text x="110" y="450" class="text text-sm">• Issue/PR状況</text>
+      <text x="110" y="465" class="text text-sm">• レスポンス速度</text>
+    </g>
+    
+    <!-- コミュニティ規模 -->
+    <g class="community-size">
+      <rect x="260" y="395" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="330" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 コミュニティ</text>
+      
+      <text x="270" y="435" class="text text-sm">• Stars・Forks数</text>
+      <text x="270" y="450" class="text text-sm">• Contributors数</text>
+      <text x="270" y="465" class="text text-sm">• Discussion活発度</text>
+    </g>
+    
+    <!-- ドキュメント品質 -->
+    <g class="documentation-quality">
+      <rect x="420" y="395" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="490" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📚 ドキュメント</text>
+      
+      <text x="430" y="435" class="text text-sm">• README充実度</text>
+      <text x="430" y="450" class="text text-sm">• CONTRIBUTING</text>
+      <text x="430" y="465" class="text text-sm">• Issue template</text>
+    </g>
+    
+    <!-- 技術的品質 -->
+    <g class="technical-quality">
+      <rect x="580" y="395" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 技術品質</text>
+      
+      <text x="590" y="435" class="text text-sm">• コード品質</text>
+      <text x="590" y="450" class="text text-sm">• テストカバレッジ</text>
+      <text x="590" y="465" class="text text-sm">• CI/CD設定</text>
+    </g>
+  </g>
+  
+  <!-- 初心者向けプロジェクトの見つけ方 -->
+  <g class="beginner-friendly-projects">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">初心者向けプロジェクトの見つけ方</text>
+    
+    <!-- 検索キーワード例 -->
+    <g class="search-examples">
+      <rect x="50" y="555" width="320" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="70" y="575" class="text text-sm" style="font-weight: 600;">🎯 検索キーワード:</text>
+      <text x="70" y="590" class="text text-sm">"good first issue" "beginner-friendly" "hacktoberfest"</text>
+    </g>
+    
+    <!-- ラベル・タグ -->
+    <g class="labels-tags">
+      <rect x="390" y="555" width="360" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="410" y="575" class="text text-sm" style="font-weight: 600;">🏷️ 注目ラベル:</text>
+      <text x="410" y="590" class="text text-sm">"help wanted" "easy" "documentation" "first-timers-only"</text>
+    </g>
+  </g>
+</svg>
