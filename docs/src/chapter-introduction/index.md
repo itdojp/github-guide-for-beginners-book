@@ -31,6 +31,8 @@ layout: book
 └── index_最終版_本当に最終_レビュー後.html
 ```
 
+![バージョン管理の必要性]({{ '/assets/images/diagrams/chapter01/01_version_control_necessity.svg' | relative_url }})
+
 このような「ファイル名バージョン管理」は、以下の深刻な問題を引き起こします：
 
 #### 1. どれが最新版かわからない
@@ -52,6 +54,10 @@ layout: book
 **Git**: 分散バージョン管理システム。ファイルの変更履歴を効率的に記録・管理
 **GitHub**: Gitリポジトリをクラウドで管理し、チーム開発を支援するWebサービス
 
+![バージョン管理の進化]({{ '/assets/images/diagrams/chapter01/01_version_control_evolution.svg' | relative_url }})
+
+![Git分散コンセプト]({{ '/assets/images/diagrams/chapter01/02_git_distributed_concept.svg' | relative_url }})
+
 ## Git/GitHubの基本概念
 
 ### リポジトリ（Repository）
@@ -72,6 +78,8 @@ layout: book
 1. **個人での基本操作**：まず一人でGit/GitHubを使えるようになる
 2. **チーム開発の基礎**：他の人との協力作業ができるようになる
 3. **高度な活用法**：効率的なワークフローと自動化を身につける
+
+![学習ロードマップ]({{ '/assets/images/diagrams/chapter01/07_learning_roadmap.svg' | relative_url }})
 
 ### 実践重視
 理論だけでなく、実際に手を動かしながら学習を進めます。章ごとに実習課題があり、段階的にスキルアップできます。

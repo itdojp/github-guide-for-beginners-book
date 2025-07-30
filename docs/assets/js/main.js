@@ -1,109 +1,167 @@
 /**
- * Main JavaScript file - Additional utilities and enhancements
+ * Safe Main JavaScript - Error-resistant implementation for github-guide-for-beginners-book
+ * Based on book-formatter's safe implementation
  */
 
 (function() {
     'use strict';
     
-    // Smooth scrolling for anchor links
+    // エラーハンドリングラッパー
+    function safeExecute(fn, context = '', fallback = null) {
+        try {
+            return fn();
+        } catch (error) {
+            console.warn(`[Safe JS] Error in ${context}:`, error.message);
+            if (fallback && typeof fallback === 'function') {
+                try {
+                    return fallback(error);
+                } catch (fallbackError) {
+                    console.error(`[Safe JS] Fallback also failed in ${context}:`, fallbackError.message);
+                }
+            }
+            return null;
+        }
+    }
+
+    // パフォーマンス制限付きの処理実行
+    function safeExecuteWithTimeout(fn, timeout = 1000, context = '') {
+        return new Promise((resolve) => {
+            const timer = setTimeout(() => {
+                console.warn(`[Safe JS] Timeout in ${context} after ${timeout}ms`);
+                resolve(null);
+            }, timeout);
+
+            try {
+                const result = fn();
+                clearTimeout(timer);
+                resolve(result);
+            } catch (error) {
+                clearTimeout(timer);
+                console.warn(`[Safe JS] Error in ${context}:`, error.message);
+                resolve(null);
+            }
+        });
+    }
+
+    // Smooth scrolling for anchor links (safe version)
     function initSmoothScrolling() {
         document.addEventListener('click', (e) => {
-            const link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            
-            e.preventDefault();
-            const targetId = link.getAttribute('href').slice(1);
-            const target = document.getElementById(targetId);
-            
-            if (target) {
-                const headerHeight = document.querySelector('.book-header')?.offsetHeight || 0;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            safeExecute(() => {
+                const link = e.target.closest('a[href^="#"]');
+                if (!link) return;
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
                 
-                // Update URL without jumping
-                history.pushState(null, '', link.getAttribute('href'));
-            }
+                if (target) {
+                    const headerHeight = document.querySelector('.book-header')?.offsetHeight || 0;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without jumping
+                    history.pushState(null, '', link.getAttribute('href'));
+                }
+            }, 'smoothScrolling');
         });
     }
     
-    // Add IDs to headings for anchor links (optimized)
+    // Add IDs to headings for anchor links (safe optimized version)
     function addHeadingIds() {
-        const headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3');
+        const headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
+        let idCounter = 0;
         
-        // Process only first 20 headings to prevent browser hanging
-        const limitedHeadings = Array.from(headings).slice(0, 20);
+        // 処理件数制限（パフォーマンス保護）
+        const maxHeadings = Math.min(headings.length, 50);
         
-        limitedHeadings.forEach((heading, index) => {
+        for (let i = 0; i < maxHeadings; i++) {
+            const heading = headings[i];
             if (!heading.id) {
-                // Simplified ID generation
-                const text = heading.textContent.trim();
-                const id = `heading-${index}-${text.substring(0, 10).replace(/[^\w]+/g, '')}`;
-                heading.id = id;
+                // 複雑な正規表現を避けて、シンプルなID生成
+                heading.id = `heading-${++idCounter}`;
             }
-            
-            // Skip anchor links for better performance
-        });
+        }
+        
+        if (headings.length > maxHeadings) {
+            console.warn(`[Safe JS] Processed only ${maxHeadings} headings out of ${headings.length} for performance reasons`);
+        }
     }
     
-    // Table of Contents generator (simplified for performance)
+    // TOC生成の安全な実装
     function generateTOC() {
         const tocContainer = document.querySelector('.page-toc');
         if (!tocContainer) return;
+
+        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        if (headings.length === 0) return;
+
+        const tocList = document.createElement('ul');
+        tocList.className = 'toc-list';
+
+        // 処理件数制限
+        const maxTocItems = Math.min(headings.length, 30);
         
-        const headings = document.querySelectorAll('.page-content h2');
-        if (headings.length === 0 || headings.length > 15) return; // Skip TOC for very long pages
-        
-        const toc = document.createElement('ul');
-        toc.className = 'page-toc-list';
-        
-        // Simple flat TOC structure for better performance
-        Array.from(headings).slice(0, 10).forEach((heading, index) => {
-            const item = document.createElement('li');
+        for (let i = 0; i < maxTocItems; i++) {
+            const heading = headings[i];
+            if (!heading.id) continue;
+
+            const listItem = document.createElement('li');
+            listItem.className = 'toc-item';
+            
             const link = document.createElement('a');
+            link.href = `#${heading.id}`;
+            link.textContent = heading.textContent.substring(0, 50); // 長さ制限
+            link.className = 'toc-link';
             
-            link.href = `#heading-${index}`;
-            link.textContent = heading.textContent.substring(0, 30);
-            link.className = 'page-toc-link';
-            
-            item.appendChild(link);
-            toc.appendChild(item);
-        });
-        
-        tocContainer.appendChild(toc);
-        
-        // Skip scroll highlighting for better performance
+            listItem.appendChild(link);
+            tocList.appendChild(listItem);
+        }
+
+        tocContainer.innerHTML = '';
+        tocContainer.appendChild(tocList);
     }
     
-    // Skip TOC highlighting for performance
-    
-    // External link handler (simplified)
+    // 外部リンクの安全な処理
     function handleExternalLinks() {
         const links = document.querySelectorAll('a[href^="http"]');
         
-        // Process only first 50 external links for performance
-        Array.from(links).slice(0, 50).forEach(link => {
-            if (link.hostname !== window.location.hostname) {
+        // 処理件数制限
+        const maxLinks = Math.min(links.length, 100);
+        
+        for (let i = 0; i < maxLinks; i++) {
+            const link = links[i];
+            if (!link.hasAttribute('target')) {
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
-                // Skip icon for better performance
             }
-        });
+        }
     }
-    
-    // Image loading enhancement (minimal)
+
+    // 画像の安全な強化
     function enhanceImages() {
-        const images = document.querySelectorAll('.page-content img');
+        const images = document.querySelectorAll('img');
         
-        // Only add lazy loading for performance
-        Array.from(images).slice(0, 20).forEach(img => {
+        // 処理件数制限
+        const maxImages = Math.min(images.length, 50);
+        
+        for (let i = 0; i < maxImages; i++) {
+            const img = images[i];
+            
+            // 遅延読み込み
             if (!img.hasAttribute('loading')) {
                 img.setAttribute('loading', 'lazy');
             }
-        });
+            
+            // エラーハンドリング
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.warn('[Safe JS] Image failed to load:', this.src);
+            });
+        }
     }
     
     // Skip image modal for performance
@@ -225,27 +283,47 @@
         document.head.insertAdjacentHTML('beforeend', styles);
     }
     
-    // Initialize all features
-    function init() {
-        addStyles();
-        initSmoothScrolling();
-        
-        // Delay heavy processing to prevent browser hanging
-        setTimeout(() => {
-            addHeadingIds();
-            enhanceImages();
-        }, 500);
-        
-        // Further delay less critical features
-        setTimeout(() => {
-            handleExternalLinks();
-        }, 2000);
+    // 基本機能の初期化
+    function initBasicFeatures() {
+        safeExecute(addStyles, 'addStyles');
+        safeExecute(initSmoothScrolling, 'initSmoothScrolling');
     }
-    
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
+
+    // 重い処理の遅延初期化
+    function initHeavyFeatures() {
+        // 重い処理は100ms後に実行し、各処理に制限時間を設ける
+        setTimeout(() => {
+            safeExecuteWithTimeout(() => addHeadingIds(), 500, 'addHeadingIds');
+            safeExecuteWithTimeout(() => generateTOC(), 500, 'generateTOC');
+            safeExecuteWithTimeout(() => handleExternalLinks(), 300, 'handleExternalLinks');
+            safeExecuteWithTimeout(() => enhanceImages(), 300, 'enhanceImages');
+        }, 100);
     }
+
+    // DOMContentLoaded時の初期化
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('[Safe JS] Initializing safe JavaScript features...');
+        
+        // 基本機能をすぐに実行
+        initBasicFeatures();
+        
+        // 重い処理は遅延実行
+        initHeavyFeatures();
+        
+        console.log('[Safe JS] Safe JavaScript initialization completed');
+    });
+
+    // 未処理エラーのキャッチ
+    window.addEventListener('error', function(event) {
+        console.warn('[Safe JS] Uncaught error:', event.error);
+        // エラーがあってもページの動作は継続
+        return true;
+    });
+
+    // Promise rejection のキャッチ
+    window.addEventListener('unhandledrejection', function(event) {
+        console.warn('[Safe JS] Unhandled promise rejection:', event.reason);
+        // エラーがあってもページの動作は継続
+        event.preventDefault();
+    });
 })();

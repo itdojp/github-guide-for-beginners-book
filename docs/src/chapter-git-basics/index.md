@@ -17,6 +17,8 @@ layout: book
 
 Gitは、ファイルの変更を3つの段階で管理します。この概念を理解することが、Git習得の第一歩です。
 
+![リポジトリコンセプト]({{ '/assets/images/diagrams/chapter01/04_repository_concept.svg' | relative_url }})
+
 #### 1. Working Directory（作業ディレクトリ）
 あなたが実際にファイルを編集している場所です。普通のフォルダと同じように、ファイルを作成・編集・削除できます。
 
@@ -48,6 +50,8 @@ Working Directory → Staging Area → Repository
 
 この仕組みにより、「すべての変更をまとめてコミット」ではなく、「関連する変更だけを論理的な単位でコミット」できます。
 
+![開発ワークフロー概要]({{ '/assets/images/diagrams/chapter01/08_development_workflow_overview.svg' | relative_url }})
+
 ## リポジトリの作成と基本操作
 
 ### 新しいリポジトリの作成手順
@@ -61,6 +65,8 @@ Working Directory → Staging Area → Repository
 1. 画面右上の「+」ボタンをクリック
 2. ドロップダウンメニューから「New repository」を選択
 3. リポジトリ作成画面が開く
+
+![コラボレーションフロー]({{ '/assets/images/diagrams/chapter01/05_collaboration_flow.svg' | relative_url }})
 
 **Step 3: リポジトリの基本情報を入力**
 
