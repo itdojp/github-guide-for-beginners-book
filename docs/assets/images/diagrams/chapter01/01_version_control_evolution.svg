@@ -1,0 +1,118 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>バージョン管理の進化</title>
+  <desc>手動管理からGitHub分散管理システムまでの進化過程</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">バージョン管理の進化</text>
+  
+  <!-- 段階1: 手動管理 -->
+  <g class="manual-stage">
+    <rect x="60" y="80" width="140" height="100" rx="4" class="error border"/>
+    <text x="130" y="105" text-anchor="middle" class="text text-sm">手動管理</text>
+    <text x="130" y="125" text-anchor="middle" class="text text-sm">• ファイル複製</text>
+    <text x="130" y="145" text-anchor="middle" class="text text-sm">• 混乱しやすい</text>
+    <text x="130" y="165" text-anchor="middle" class="text text-sm">• 復元困難</text>
+  </g>
+  
+  <!-- 矢印1 -->
+  <line x1="220" y1="130" x2="270" y2="130" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- 段階2: 集中管理 -->
+  <g class="centralized-stage">
+    <rect x="290" y="80" width="140" height="100" rx="4" class="warning border"/>
+    <text x="360" y="105" text-anchor="middle" class="text text-sm">集中管理</text>
+    <text x="360" y="125" text-anchor="middle" class="text text-sm">• 中央サーバー</text>
+    <text x="360" y="145" text-anchor="middle" class="text text-sm">• 履歴管理</text>
+    <text x="360" y="165" text-anchor="middle" class="text text-sm">• 単一障害点</text>
+  </g>
+  
+  <!-- 矢印2 -->
+  <line x1="450" y1="130" x2="500" y2="130" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- 段階3: 分散管理 -->
+  <g class="distributed-stage">
+    <rect x="520" y="80" width="140" height="100" rx="4" class="success border"/>
+    <text x="590" y="105" text-anchor="middle" class="text text-sm">分散管理</text>
+    <text x="590" y="125" text-anchor="middle" class="text text-sm">• 完全な複製</text>
+    <text x="590" y="145" text-anchor="middle" class="text text-sm">• 高い冗長性</text>
+    <text x="590" y="165" text-anchor="middle" class="text text-sm">• GitHub</text>
+  </g>
+  
+  <!-- 詳細比較 -->
+  <text x="400" y="240" text-anchor="middle" class="text text-md">特徴比較</text>
+  
+  <!-- 比較表 -->
+  <g class="comparison-table">
+    <!-- ヘッダー -->
+    <rect x="100" y="270" width="600" height="30" class="bg-alt border"/>
+    <text x="150" y="290" text-anchor="middle" class="text text-sm">項目</text>
+    <text x="300" y="290" text-anchor="middle" class="text text-sm">手動管理</text>
+    <text x="500" y="290" text-anchor="middle" class="text text-sm">集中管理</text>
+    <text x="650" y="290" text-anchor="middle" class="text text-sm">分散管理</text>
+    
+    <!-- 行1: 履歴管理 -->
+    <rect x="100" y="300" width="600" height="25" class="bg border"/>
+    <text x="150" y="318" text-anchor="middle" class="text text-sm">履歴管理</text>
+    <text x="300" y="318" text-anchor="middle" class="text text-sm error">×</text>
+    <text x="500" y="318" text-anchor="middle" class="text text-sm success">○</text>
+    <text x="650" y="318" text-anchor="middle" class="text text-sm success">◎</text>
+    
+    <!-- 行2: 協業性 -->
+    <rect x="100" y="325" width="600" height="25" class="bg-alt border"/>
+    <text x="150" y="343" text-anchor="middle" class="text text-sm">協業性</text>
+    <text x="300" y="343" text-anchor="middle" class="text text-sm error">×</text>
+    <text x="500" y="343" text-anchor="middle" class="text text-sm warning">△</text>
+    <text x="650" y="343" text-anchor="middle" class="text text-sm success">◎</text>
+    
+    <!-- 行3: 安全性 -->
+    <rect x="100" y="350" width="600" height="25" class="bg border"/>
+    <text x="150" y="368" text-anchor="middle" class="text text-sm">安全性</text>
+    <text x="300" y="368" text-anchor="middle" class="text text-sm error">×</text>
+    <text x="500" y="368" text-anchor="middle" class="text text-sm warning">△</text>
+    <text x="650" y="368" text-anchor="middle" class="text text-sm success">◎</text>
+  </g>
+  
+  <!-- GitHub価値提案 -->
+  <text x="400" y="420" text-anchor="middle" class="text text-md">GitHubが解決する課題</text>
+  
+  <g class="github-benefits">
+    <rect x="80" y="450" width="160" height="80" rx="4" class="primary border" opacity="0.1"/>
+    <text x="160" y="475" text-anchor="middle" class="text text-sm">コラボレーション</text>
+    <text x="160" y="495" text-anchor="middle" class="text text-sm">• プルリクエスト</text>
+    <text x="160" y="515" text-anchor="middle" class="text text-sm">• コードレビュー</text>
+    
+    <rect x="320" y="450" width="160" height="80" rx="4" class="primary border" opacity="0.1"/>
+    <text x="400" y="475" text-anchor="middle" class="text text-sm">プロジェクト管理</text>
+    <text x="400" y="495" text-anchor="middle" class="text text-sm">• Issue管理</text>
+    <text x="400" y="515" text-anchor="middle" class="text text-sm">• マイルストーン</text>
+    
+    <rect x="560" y="450" width="160" height="80" rx="4" class="primary border" opacity="0.1"/>
+    <text x="640" y="475" text-anchor="middle" class="text text-sm">自動化</text>
+    <text x="640" y="495" text-anchor="middle" class="text text-sm">• CI/CD</text>
+    <text x="640" y="515" text-anchor="middle" class="text text-sm">• Actions</text>
+  </g>
+</svg>
