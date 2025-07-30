@@ -1,0 +1,155 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コミュニティエチケット</title>
+  <desc>オープンソースコミュニティでの適切な振る舞いとマナー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コミュニティエチケット</text>
+  
+  <!-- エチケットの概要 -->
+  <g class="etiquette-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">良いコミュニティメンバーになるために</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤝 相互尊重と建設的なコミュニケーション</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">多様な背景を持つ人々が協力する健全なコミュニティ作り</text>
+  </g>
+  
+  <!-- 基本原則 -->
+  <g class="basic-principles">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">基本原則</text>
+    
+    <!-- 尊重・礼儀 -->
+    <g class="respect-courtesy">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🙏 尊重・礼儀</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">心がけ:</text>
+      <text x="60" y="260" class="text text-sm">• 丁寧な言葉遣い</text>
+      <text x="60" y="275" class="text text-sm">• 相手の立場理解</text>
+      <text x="60" y="290" class="text text-sm">• 建設的な議論</text>
+      
+      <text x="60" y="310" class="text text-sm" style="font-weight: 600;">避ける:</text>
+      <text x="60" y="325" class="text text-sm">攻撃的な表現</text>
+    </g>
+    
+    <!-- 透明性・誠実性 -->
+    <g class="transparency-honesty">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💎 透明性・誠実</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">実践:</text>
+      <text x="240" y="260" class="text text-sm">• 意図の明確化</text>
+      <text x="240" y="275" class="text text-sm">• 知識レベル正直申告</text>
+      <text x="240" y="290" class="text text-sm">• ミス・不明点承認</text>
+      
+      <text x="240" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="240" y="325" class="text text-sm">信頼関係構築</text>
+    </g>
+    
+    <!-- 協力・支援 -->
+    <g class="collaboration-support">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🤲 協力・支援</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">姿勢:</text>
+      <text x="420" y="260" class="text text-sm">• 他者の学習支援</text>
+      <text x="420" y="275" class="text text-sm">• 知識・経験共有</text>
+      <text x="420" y="290" class="text text-sm">• コミュニティ貢献</text>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">方法:</text>
+      <text x="420" y="325" class="text text-sm">質問回答・文書化</text>
+    </g>
+    
+    <!-- 多様性・包摂 -->
+    <g class="diversity-inclusion">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌈 多様性・包摂</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">認識:</text>
+      <text x="600" y="260" class="text text-sm">• 文化的違い</text>
+      <text x="600" y="275" class="text text-sm">• 技術レベル差</text>
+      <text x="600" y="290" class="text text-sm">• 言語の壁</text>
+      
+      <text x="600" y="310" class="text text-sm" style="font-weight: 600;">対応:</text>
+      <text x="600" y="325" class="text text-sm">包摂的な言動</text>
+    </g>
+  </g>
+  
+  <!-- コミュニケーションベストプラクティス -->
+  <g class="communication-best-practices">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">コミュニケーションベストプラクティス</text>
+    
+    <rect x="80" y="375" width="640" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- 質問のマナー -->
+    <g class="question-etiquette">
+      <rect x="100" y="395" width="180" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="190" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❓ 質問のマナー</text>
+      
+      <text x="110" y="435" class="text text-sm" style="font-weight: 600;">良い質問:</text>
+      <text x="110" y="450" class="text text-sm">• 調査済み事項明記</text>
+      <text x="110" y="465" class="text text-sm">• 具体的な状況説明</text>
+      <text x="110" y="480" class="text text-sm">• 期待する結果記載</text>
+    </g>
+    
+    <!-- 回答・支援 -->
+    <g class="answer-support">
+      <rect x="300" y="395" width="180" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="390" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 回答・支援</text>
+      
+      <text x="310" y="435" class="text text-sm" style="font-weight: 600;">効果的回答:</text>
+      <text x="310" y="450" class="text text-sm">• 段階的な説明</text>
+      <text x="310" y="465" class="text text-sm">• 追加リソース提供</text>
+      <text x="310" y="480" class="text text-sm">• 学習機会創出</text>
+    </g>
+    
+    <!-- 批判・フィードバック -->
+    <g class="criticism-feedback">
+      <rect x="500" y="395" width="180" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="590" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 建設的批判</text>
+      
+      <text x="510" y="435" class="text text-sm" style="font-weight: 600;">アプローチ:</text>
+      <text x="510" y="450" class="text text-sm">• 問題と人格分離</text>
+      <text x="510" y="465" class="text text-sm">• 改善案提示</text>
+      <text x="510" y="480" class="text text-sm">• 感謝・承認併用</text>
+    </g>
+  </g>
+  
+  <!-- 避けるべき行動 -->
+  <g class="behaviors-to-avoid">
+    <text x="400" y="545" text-anchor="middle" class="text text-md">避けるべき行動</text>
+    
+    <!-- ネガティブな行動 -->
+    <g class="negative-behaviors">
+      <rect x="50" y="560" width="350" height="35" rx="8" class="error border" opacity="0.1"/>
+      <text x="70" y="580" class="text text-sm" style="font-weight: 600;">🚫 避ける:</text>
+      <text x="130" y="580" class="text text-sm">人格攻撃 | 差別的発言 | スパム | 無関係な議論 | 感情的な反応</text>
+    </g>
+    
+    <!-- ポジティブな代替 -->
+    <g class="positive-alternatives">
+      <rect x="420" y="560" width="350" height="35" rx="8" class="success border" opacity="0.1"/>
+      <text x="440" y="580" class="text text-sm" style="font-weight: 600;">✅ 代わりに:</text>
+      <text x="510" y="580" class="text text-sm">問題焦点 | 事実ベース | 価値提供 | 関連性維持 | 冷静対応</text>
+    </g>
+  </g>
+</svg>

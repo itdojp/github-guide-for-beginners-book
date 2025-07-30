@@ -1,0 +1,190 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>テスト貢献</title>
+  <desc>オープンソースプロジェクトでのテスト作成・改善・実行による品質向上</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">テスト貢献</text>
+  
+  <!-- テスト貢献の概要 -->
+  <g class="testing-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">テスト貢献の重要性</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧪 ソフトウェア品質と信頼性の向上に直結</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">バグ発見・回帰防止・仕様理解促進の重要な役割</text>
+  </g>
+  
+  <!-- テスト貢献の種類 -->
+  <g class="testing-contribution-types">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">テスト貢献の種類</text>
+    
+    <!-- 単体テスト -->
+    <g class="unit-testing">
+      <rect x="50" y="200" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔬 単体テスト</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">対象:</text>
+      <text x="60" y="260" class="text text-sm">• 個別関数・メソッド</text>
+      <text x="60" y="275" class="text text-sm">• クラス単位</text>
+      <text x="60" y="290" class="text text-sm">• モジュール単位</text>
+      
+      <text x="60" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="60" y="325" class="text text-sm">早期バグ発見</text>
+    </g>
+    
+    <!-- 統合テスト -->
+    <g class="integration-testing">
+      <rect x="230" y="200" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 統合テスト</text>
+      
+      <text x="240" y="245" class="text text-sm" style="font-weight: 600;">対象:</text>
+      <text x="240" y="260" class="text text-sm">• モジュール間連携</text>
+      <text x="240" y="275" class="text text-sm">• API統合</text>
+      <text x="240" y="290" class="text text-sm">• データベース連携</text>
+      
+      <text x="240" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="240" y="325" class="text text-sm">連携問題発見</text>
+    </g>
+    
+    <!-- E2Eテスト -->
+    <g class="e2e-testing">
+      <rect x="410" y="200" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎭 E2Eテスト</text>
+      
+      <text x="420" y="245" class="text text-sm" style="font-weight: 600;">対象:</text>
+      <text x="420" y="260" class="text text-sm">• ユーザーシナリオ</text>
+      <text x="420" y="275" class="text text-sm">• ワークフロー全体</text>
+      <text x="420" y="290" class="text text-sm">• ブラウザ操作</text>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="420" y="325" class="text text-sm">実用性確認</text>
+    </g>
+    
+    <!-- パフォーマンステスト -->
+    <g class="performance-testing">
+      <rect x="590" y="200" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ パフォーマンス</text>
+      
+      <text x="600" y="245" class="text text-sm" style="font-weight: 600;">対象:</text>
+      <text x="600" y="260" class="text text-sm">• 処理速度</text>
+      <text x="600" y="275" class="text text-sm">• リソース使用量</text>
+      <text x="600" y="290" class="text text-sm">• 負荷耐性</text>
+      
+      <text x="600" y="310" class="text text-sm" style="font-weight: 600;">効果:</text>
+      <text x="600" y="325" class="text text-sm">品質保証</text>
+    </g>
+  </g>
+  
+  <!-- テスト作成のアプローチ -->
+  <g class="testing-approaches">
+    <text x="400" y="355" text-anchor="middle" class="text text-md">テスト作成のアプローチ</text>
+    
+    <rect x="80" y="375" width="640" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- バグ再現テスト -->
+    <g class="bug-reproduction">
+      <rect x="100" y="395" width="140" height="80" rx="8" class="error border" opacity="0.1"/>
+      <text x="170" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐛 バグ再現</text>
+      
+      <text x="110" y="435" class="text text-sm">• Issue報告バグ</text>
+      <text x="110" y="450" class="text text-sm">• 再現テスト作成</text>
+      <text x="110" y="465" class="text text-sm">• 修正後回帰防止</text>
+    </g>
+    
+    <!-- カバレッジ向上 -->
+    <g class="coverage-improvement">
+      <rect x="260" y="395" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="330" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 カバレッジ</text>
+      
+      <text x="270" y="435" class="text text-sm">• 未テスト箇所発見</text>
+      <text x="270" y="450" class="text text-sm">• テストケース追加</text>
+      <text x="270" y="465" class="text text-sm">• 網羅性向上</text>
+    </g>
+    
+    <!-- エッジケース -->
+    <g class="edge-cases">
+      <rect x="420" y="395" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ エッジケース</text>
+      
+      <text x="430" y="435" class="text text-sm">• 境界値テスト</text>
+      <text x="430" y="450" class="text text-sm">• 異常系テスト</text>
+      <text x="430" y="465" class="text text-sm">• 例外処理確認</text>
+    </g>
+    
+    <!-- テストインフラ -->
+    <g class="test-infrastructure">
+      <rect x="580" y="395" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="650" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏗️ テストインフラ</text>
+      
+      <text x="590" y="435" class="text text-sm">• CI/CD改善</text>
+      <text x="590" y="450" class="text text-sm">• テスト環境構築</text>
+      <text x="590" y="465" class="text text-sm">• ツール導入</text>
+    </g>
+  </g>
+  
+  <!-- テスト貢献のプロセス -->
+  <g class="testing-process">
+    <text x="400" y="525" text-anchor="middle" class="text text-md">テスト貢献のプロセス</text>
+    
+    <!-- 問題発見 -->
+    <g class="issue-discovery">
+      <rect x="50" y="545" width="120" height="40" rx="8" class="primary border" opacity="0.1"/>
+      <text x="110" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 問題発見</text>
+      <text x="110" y="580" text-anchor="middle" class="text text-sm">テスト不足特定</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="170" y1="565" x2="190" y2="565" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- テスト設計 -->
+    <g class="test-design">
+      <rect x="210" y="545" width="120" height="40" rx="8" class="success border" opacity="0.1"/>
+      <text x="270" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 テスト設計</text>
+      <text x="270" y="580" text-anchor="middle" class="text text-sm">ケース設計</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="330" y1="565" x2="350" y2="565" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- 実装・実行 -->
+    <g class="implementation-execution">
+      <rect x="370" y="545" width="120" height="40" rx="8" class="warning border" opacity="0.1"/>
+      <text x="430" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 実装・実行</text>
+      <text x="430" y="580" text-anchor="middle" class="text text-sm">テストコード作成</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="490" y1="565" x2="510" y2="565" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- 継続保守 -->
+    <g class="continuous-maintenance">
+      <rect x="530" y="545" width="120" height="40" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="590" y="565" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 継続保守</text>
+      <text x="590" y="580" text-anchor="middle" class="text text-sm">メンテナンス</text>
+    </g>
+  </g>
+</svg>

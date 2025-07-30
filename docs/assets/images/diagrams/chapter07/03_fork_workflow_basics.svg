@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .success-stroke { stroke: var(--svg-success); stroke-width: 2; }
+      .warning { fill: var(--svg-warning); }
+      .warning-stroke { stroke: var(--svg-warning); stroke-width: 2; }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>フォークワークフローの基本</title>
+  <desc>オープンソースプロジェクトに貢献するためのフォークベースワークフロー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">フォークワークフローの基本</text>
+  
+  <!-- フォークワークフローの概要 -->
+  <g class="fork-workflow-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">フォークワークフローとは</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🍴 他人のリポジトリを自分のアカウントにコピーして開発</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">オリジナルプロジェクトに直接アクセス権がなくても貢献可能</text>
+  </g>
+  
+  <!-- フォークワークフローの流れ -->
+  <g class="fork-workflow-process">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">フォークワークフローの流れ</text>
+    
+    <rect x="50" y="200" width="700" height="220" rx="8" class="bg-alt border"/>
+    
+    <!-- ステップ1: 元リポジトリ -->
+    <g class="step-1-original">
+      <rect x="80" y="220" width="120" height="60" rx="8" class="warning border" opacity="0.1"/>
+      <text x="140" y="240" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 元リポジトリ</text>
+      <text x="140" y="255" text-anchor="middle" class="text text-sm">owner/project</text>
+      <text x="140" y="270" text-anchor="middle" class="text text-sm">(upstream)</text>
+    </g>
+    
+    <!-- 矢印: フォーク -->
+    <line x1="200" y1="250" x2="230" y2="250" class="primary-stroke" marker-end="url(#arrow)"/>
+    <text x="215" y="240" text-anchor="middle" class="text text-sm">Fork</text>
+    
+    <!-- ステップ2: 自分のフォーク -->
+    <g class="step-2-fork">
+      <rect x="250" y="220" width="120" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="240" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🍴 自分のフォーク</text>
+      <text x="310" y="255" text-anchor="middle" class="text text-sm">yourname/project</text>
+      <text x="310" y="270" text-anchor="middle" class="text text-sm">(origin)</text>
+    </g>
+    
+    <!-- 矢印: クローン -->
+    <line x1="310" y1="280" x2="310" y2="310" class="success-stroke" marker-end="url(#arrow)"/>
+    <text x="330" y="300" class="text text-sm">Clone</text>
+    
+    <!-- ステップ3: ローカルリポジトリ -->
+    <g class="step-3-local">
+      <rect x="250" y="320" width="120" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 ローカル</text>
+      <text x="310" y="355" text-anchor="middle" class="text text-sm">作業環境</text>
+      <text x="310" y="370" text-anchor="middle" class="text text-sm">開発・テスト</text>
+    </g>
+    
+    <!-- 矢印: プッシュ -->
+    <line x1="370" y1="350" x2="430" y2="350" class="primary-stroke" marker-end="url(#arrow)"/>
+    <text x="400" y="340" text-anchor="middle" class="text text-sm">Push</text>
+    
+    <!-- ステップ4: フィーチャーブランチ -->
+    <g class="step-4-feature-branch">
+      <rect x="450" y="320" width="120" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="510" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ</text>
+      <text x="510" y="355" text-anchor="middle" class="text text-sm">feature/new-func</text>
+      <text x="510" y="370" text-anchor="middle" class="text text-sm">変更をプッシュ</text>
+    </g>
+    
+    <!-- 矢印: プルリクエスト -->
+    <line x1="510" y1="320" x2="510" y2="290" class="warning-stroke" marker-end="url(#arrow)"/>
+    <line x1="510" y1="290" x2="140" y2="290" class="warning-stroke" marker-end="url(#arrow)"/>
+    <line x1="140" y1="290" x2="140" y2="280" class="warning-stroke" marker-end="url(#arrow)"/>
+    <text x="320" y="280" text-anchor="middle" class="text text-sm">Pull Request</text>
+    
+    <!-- リポジトリ間の関係説明 -->
+    <g class="repository-relationships">
+      <text x="400" y="410" text-anchor="middle" class="text text-sm" style="font-weight: 600;">リポジトリ間の関係</text>
+      
+      <rect x="80" y="425" width="180" height="15" rx="2" class="bg border"/>
+      <text x="85" y="437" class="text text-sm" style="font-family: monospace;">git remote add upstream</text>
+      <text x="270" y="437" class="text text-sm">元リポジトリ追加</text>
+      
+      <rect x="440" y="425" width="180" height="15" rx="2" class="bg border"/>
+      <text x="445" y="437" class="text text-sm" style="font-family: monospace;">git fetch upstream</text>
+      <text x="630" y="437" class="text text-sm">最新取得</text>
+    </g>
+  </g>
+  
+  <!-- フォークの利点と注意点 -->
+  <g class="fork-pros-cons">
+    <text x="400" y="475" text-anchor="middle" class="text text-md">フォークの利点と注意点</text>
+    
+    <!-- 利点 -->
+    <g class="fork-advantages">
+      <rect x="100" y="495" width="250" height="70" rx="8" class="success border" opacity="0.1"/>
+      <text x="225" y="515" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 利点</text>
+      
+      <text x="120" y="535" class="text text-sm">• 権限なしで貢献可能</text>
+      <text x="120" y="550" class="text text-sm">• 自由な実験・開発</text>
+      <text x="120" y="565" class="text text-sm">• 独立した作業環境</text>
+    </g>
+    
+    <!-- 注意点 -->
+    <g class="fork-cautions">
+      <rect x="370" y="495" width="250" height="70" rx="8" class="warning border" opacity="0.1"/>
+      <text x="495" y="515" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ 注意点</text>
+      
+      <text x="390" y="535" class="text text-sm">• 定期的な同期が必要</text>
+      <text x="390" y="550" class="text text-sm">• PR承認が必要</text>
+      <text x="390" y="565" class="text text-sm">• コンフリクト可能性</text>
+    </g>
+  </g>
+  
+  <!-- ベストプラクティス -->
+  <g class="best-practices">
+    <rect x="50" y="575" width="700" height="20" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="590" class="text text-sm" style="font-weight: 600;">💡 ベストプラクティス:</text>
+    <text x="180" y="590" class="text text-sm">小さな変更から開始 | 事前にIssueで相談 | ガイドライン確認 | 定期的なupstream同期</text>
+  </g>
+</svg>

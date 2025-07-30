@@ -1,0 +1,153 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コードレビュープロセス</title>
+  <desc>効果的なコードレビューの観点と手順</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コードレビュープロセス</text>
+  
+  <!-- レビューの観点 -->
+  <g class="review-aspects">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">レビューの重要な観点</text>
+    
+    <!-- 機能性 -->
+    <g class="functionality">
+      <rect x="80" y="100" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="125" text-anchor="middle" class="text text-sm primary" style="font-weight: 600;">🎯 機能性</text>
+      <text x="150" y="145" text-anchor="middle" class="text text-sm">• 要件通りの動作</text>
+      <text x="150" y="160" text-anchor="middle" class="text text-sm">• エッジケース</text>
+      <text x="150" y="175" text-anchor="middle" class="text text-sm">• エラーハンドリング</text>
+      <text x="150" y="190" text-anchor="middle" class="text text-sm">• パフォーマンス</text>
+    </g>
+    
+    <!-- 可読性 -->
+    <g class="readability">
+      <rect x="250" y="100" width="140" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="320" y="125" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">📖 可読性</text>
+      <text x="320" y="145" text-anchor="middle" class="text text-sm">• 変数名・関数名</text>
+      <text x="320" y="160" text-anchor="middle" class="text text-sm">• コメント</text>
+      <text x="320" y="175" text-anchor="middle" class="text text-sm">• コード構造</text>
+      <text x="320" y="190" text-anchor="middle" class="text text-sm">• 一貫性</text>
+    </g>
+    
+    <!-- セキュリティ -->
+    <g class="security">
+      <rect x="420" y="100" width="140" height="100" rx="8" class="error border" opacity="0.1"/>
+      <text x="490" y="125" text-anchor="middle" class="text text-sm error" style="font-weight: 600;">🔒 セキュリティ</text>
+      <text x="490" y="145" text-anchor="middle" class="text text-sm">• 入力検証</text>
+      <text x="490" y="160" text-anchor="middle" class="text text-sm">• 認証・認可</text>
+      <text x="490" y="175" text-anchor="middle" class="text text-sm">• データ保護</text>
+      <text x="490" y="190" text-anchor="middle" class="text text-sm">• 脆弱性対策</text>
+    </g>
+    
+    <!-- 保守性 -->
+    <g class="maintainability">
+      <rect x="590" y="100" width="140" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="660" y="125" text-anchor="middle" class="text text-sm warning" style="font-weight: 600;">🔧 保守性</text>
+      <text x="660" y="145" text-anchor="middle" class="text text-sm">• テスト可能性</text>
+      <text x="660" y="160" text-anchor="middle" class="text text-sm">• 拡張性</text>
+      <text x="660" y="175" text-anchor="middle" class="text text-sm">• 依存関係</text>
+      <text x="660" y="190" text-anchor="middle" class="text text-sm">• 技術債務</text>
+    </g>
+  </g>
+  
+  <!-- レビューフロー -->
+  <g class="review-flow">
+    <text x="400" y="250" text-anchor="middle" class="text text-md">レビューフロー</text>
+    
+    <!-- 初回レビュー -->
+    <g class="initial-review">
+      <rect x="100" y="280" width="120" height="80" rx="4" class="primary border"/>
+      <text x="160" y="305" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 初回レビュー</text>
+      <text x="160" y="325" text-anchor="middle" class="text text-sm">• 全体把握</text>
+      <text x="160" y="340" text-anchor="middle" class="text text-sm">• 設計確認</text>
+      <text x="160" y="355" text-anchor="middle" class="text text-sm">• 大きな問題</text>
+    </g>
+    
+    <!-- 詳細レビュー -->
+    <g class="detailed-review">
+      <rect x="260" y="280" width="120" height="80" rx="4" class="warning border"/>
+      <text x="320" y="305" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 詳細レビュー</text>
+      <text x="320" y="325" text-anchor="middle" class="text text-sm">• 行単位確認</text>
+      <text x="320" y="340" text-anchor="middle" class="text text-sm">• ロジック検証</text>
+      <text x="320" y="355" text-anchor="middle" class="text text-sm">• 細かい改善</text>
+    </g>
+    
+    <!-- フィードバック -->
+    <g class="feedback">
+      <rect x="420" y="280" width="120" height="80" rx="4" class="neutral border"/>
+      <text x="480" y="305" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 フィードバック</text>
+      <text x="480" y="325" text-anchor="middle" class="text text-sm">• 建設的コメント</text>
+      <text x="480" y="340" text-anchor="middle" class="text text-sm">• 具体的提案</text>
+      <text x="480" y="355" text-anchor="middle" class="text text-sm">• 学習支援</text>
+    </g>
+    
+    <!-- 最終承認 -->
+    <g class="final-approval">
+      <rect x="580" y="280" width="120" height="80" rx="4" class="success border"/>
+      <text x="640" y="305" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 最終承認</text>
+      <text x="640" y="325" text-anchor="middle" class="text text-sm">• 全体再確認</text>
+      <text x="640" y="340" text-anchor="middle" class="text text-sm">• テスト確認</text>
+      <text x="640" y="355" text-anchor="middle" class="text text-sm">• 承認判断</text>
+    </g>
+  </g>
+  
+  <!-- レビューコメントの種類 -->
+  <g class="comment-types">
+    <text x="400" y="410" text-anchor="middle" class="text text-md">レビューコメントの種類</text>
+    
+    <!-- 必須修正 -->
+    <g class="required-fix">
+      <rect x="80" y="440" width="160" height="60" rx="4" class="error border" opacity="0.1"/>
+      <text x="160" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚨 必須修正 (Must Fix)</text>
+      <text x="160" y="480" text-anchor="middle" class="text text-sm">バグ・セキュリティ・仕様違反</text>
+    </g>
+    
+    <!-- 推奨修正 -->
+    <g class="suggested-fix">
+      <rect x="280" y="440" width="160" height="60" rx="4" class="warning border" opacity="0.1"/>
+      <text x="360" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💡 推奨修正 (Should Fix)</text>
+      <text x="360" y="480" text-anchor="middle" class="text text-sm">可読性・保守性の改善</text>
+    </g>
+    
+    <!-- 提案 -->
+    <g class="suggestion">
+      <rect x="480" y="440" width="160" height="60" rx="4" class="primary border" opacity="0.1"/>
+      <text x="560" y="460" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💭 提案 (Could Fix)</text>
+      <text x="560" y="480" text-anchor="middle" class="text text-sm">より良い実装方法の提案</text>
+    </g>
+  </g>
+  
+  <!-- 良いレビューコメント例 -->
+  <g class="good-comment-examples">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">良いレビューコメント例</text>
+    
+    <rect x="50" y="560" width="700" height="35" rx="4" class="bg-alt border"/>
+    
+    <!-- 具体的な例 -->
+    <text x="60" y="575" class="text text-sm" style="font-weight: 600;">✅ 良い例:</text>
+    <text x="60" y="590" class="text text-sm">"この処理でnullチェックが必要です。userオブジェクトがundefinedの場合にエラーになります。"</text>
+    
+    <!-- 悪い例 -->
+    <text x="430" y="575" class="text text-sm" style="font-weight: 600;">❌ 悪い例:</text>
+    <text x="430" y="590" class="text text-sm">"ここ、ダメです。" "なんか変。" "修正してください。"</text>
+  </g>
+</svg>

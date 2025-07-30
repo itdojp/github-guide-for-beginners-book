@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>プルリクエストワークフロー</title>
+  <desc>プルリクエストの作成から マージまでの完全なワークフロー</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">プルリクエストワークフロー</text>
+  
+  <!-- Step 1: Fork & Clone -->
+  <g class="step-1">
+    <rect x="60" y="80" width="120" height="60" rx="8" class="neutral border"/>
+    <text x="120" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Step 1</text>
+    <text x="120" y="120" text-anchor="middle" class="text text-sm">Fork &amp; Clone</text>
+  </g>
+  
+  <!-- Step 2: Create Branch -->
+  <g class="step-2">
+    <rect x="220" y="80" width="120" height="60" rx="8" class="warning border"/>
+    <text x="280" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Step 2</text>
+    <text x="280" y="120" text-anchor="middle" class="text text-sm">ブランチ作成</text>
+  </g>
+  
+  <!-- Step 3: Development -->
+  <g class="step-3">
+    <rect x="380" y="80" width="120" height="60" rx="8" class="primary border"/>
+    <text x="440" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Step 3</text>
+    <text x="440" y="120" text-anchor="middle" class="text text-sm">開発・コミット</text>
+  </g>
+  
+  <!-- Step 4: Push -->
+  <g class="step-4">
+    <rect x="540" y="80" width="120" height="60" rx="8" class="success border"/>
+    <text x="600" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Step 4</text>
+    <text x="600" y="120" text-anchor="middle" class="text text-sm">Push</text>
+  </g>
+  
+  <!-- 矢印 -->
+  <line x1="180" y1="110" x2="220" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="340" y1="110" x2="380" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="500" y1="110" x2="540" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- PR作成 -->
+  <g class="pr-creation">
+    <rect x="280" y="180" width="240" height="80" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="205" text-anchor="middle" class="text text-md primary" style="font-weight: 600;">プルリクエスト作成</text>
+    <text x="400" y="225" text-anchor="middle" class="text text-sm">• タイトルと説明</text>
+    <text x="400" y="240" text-anchor="middle" class="text text-sm">• レビュアー指定</text>
+    <text x="400" y="255" text-anchor="middle" class="text text-sm">• ラベル・マイルストーン</text>
+  </g>
+  
+  <!-- PR作成への矢印 -->
+  <line x1="600" y1="140" x2="480" y2="180" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- レビュープロセス -->
+  <g class="review-process">
+    <text x="400" y="310" text-anchor="middle" class="text text-md">レビュー・修正プロセス</text>
+    
+    <!-- レビュー -->
+    <g class="review">
+      <rect x="80" y="330" width="140" height="80" rx="4" class="warning border" opacity="0.1"/>
+      <text x="150" y="355" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 コードレビュー</text>
+      <text x="150" y="375" text-anchor="middle" class="text text-sm">• コメント</text>
+      <text x="150" y="390" text-anchor="middle" class="text text-sm">• 修正依頼</text>
+      <text x="150" y="405" text-anchor="middle" class="text text-sm">• 承認</text>
+    </g>
+    
+    <!-- 修正 -->
+    <g class="fix">
+      <rect x="260" y="330" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="330" y="355" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 修正対応</text>
+      <text x="330" y="375" text-anchor="middle" class="text text-sm">• コード修正</text>
+      <text x="330" y="390" text-anchor="middle" class="text text-sm">• 追加コミット</text>
+      <text x="330" y="405" text-anchor="middle" class="text text-sm">• Push</text>
+    </g>
+    
+    <!-- テスト -->
+    <g class="test">
+      <rect x="440" y="330" width="140" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="510" y="355" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧪 自動テスト</text>
+      <text x="510" y="375" text-anchor="middle" class="text text-sm">• CI実行</text>
+      <text x="510" y="390" text-anchor="middle" class="text text-sm">• テスト結果</text>
+      <text x="510" y="405" text-anchor="middle" class="text text-sm">• 品質チェック</text>
+    </g>
+    
+    <!-- 承認 -->
+    <g class="approval">
+      <rect x="620" y="330" width="140" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="690" y="355" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 承認</text>
+      <text x="690" y="375" text-anchor="middle" class="text text-sm">• Approve</text>
+      <text x="690" y="390" text-anchor="middle" class="text text-sm">• マージ準備</text>
+      <text x="690" y="405" text-anchor="middle" class="text text-sm">• 最終確認</text>
+    </g>
+    
+    <!-- レビューサイクル矢印 -->
+    <path d="M 220 370 Q 240 320 260 370" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+    <path d="M 400 370 Q 420 320 440 370" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+    <path d="M 580 370 Q 600 320 620 370" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- フィードバック矢印 -->
+    <path d="M 260 350 Q 240 300 220 350" fill="none" class="error" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="240" y="320" text-anchor="middle" class="text text-sm error">修正依頼</text>
+  </g>
+  
+  <!-- マージ -->
+  <g class="merge">
+    <rect x="320" y="450" width="160" height="60" rx="8" class="success border"/>
+    <text x="400" y="475" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">🎉 マージ</text>
+    <text x="400" y="495" text-anchor="middle" class="text text-sm">mainブランチに統合</text>
+  </g>
+  
+  <!-- マージへの矢印 -->
+  <line x1="690" y1="410" x2="450" y2="450" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- PRのメリット -->
+  <g class="pr-benefits">
+    <text x="400" y="550" text-anchor="middle" class="text text-md">プルリクエストのメリット</text>
+    
+    <rect x="80" y="565" width="640" height="25" rx="2" class="bg-alt border"/>
+    <text x="90" y="582" class="text text-sm">💻 コード品質向上　📖 知識共有　🤝 チーム連携　🔍 変更履歴の明確化　🛡️ 安全なデプロイ</text>
+  </g>
+</svg>
