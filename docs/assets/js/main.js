@@ -30,200 +30,83 @@
         });
     }
     
-    // Add IDs to headings for anchor links
+    // Add IDs to headings for anchor links (optimized)
     function addHeadingIds() {
-        const headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
+        const headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3');
         
-        headings.forEach(heading => {
+        // Process only first 20 headings to prevent browser hanging
+        const limitedHeadings = Array.from(headings).slice(0, 20);
+        
+        limitedHeadings.forEach((heading, index) => {
             if (!heading.id) {
-                // Generate ID from heading text
+                // Simplified ID generation
                 const text = heading.textContent.trim();
-                const id = text
-                    .toLowerCase()
-                    .replace(/[^\w\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]+/g, '-')
-                    .replace(/^-+|-+$/g, '')
-                    .substring(0, 50);
-                
-                // Ensure unique ID
-                let uniqueId = id;
-                let counter = 1;
-                while (document.getElementById(uniqueId)) {
-                    uniqueId = `${id}-${counter}`;
-                    counter++;
-                }
-                
-                heading.id = uniqueId;
+                const id = `heading-${index}-${text.substring(0, 10).replace(/[^\w]+/g, '')}`;
+                heading.id = id;
             }
             
-            // Add anchor link
-            if (!heading.querySelector('.heading-anchor')) {
-                const anchor = document.createElement('a');
-                anchor.className = 'heading-anchor';
-                anchor.href = `#${heading.id}`;
-                anchor.innerHTML = '#';
-                anchor.setAttribute('aria-label', 'Anchor link');
-                heading.appendChild(anchor);
-            }
+            // Skip anchor links for better performance
         });
     }
     
-    // Table of Contents generator for current page
+    // Table of Contents generator (simplified for performance)
     function generateTOC() {
         const tocContainer = document.querySelector('.page-toc');
         if (!tocContainer) return;
         
-        const headings = document.querySelectorAll('.page-content h2, .page-content h3');
-        if (headings.length === 0) return;
+        const headings = document.querySelectorAll('.page-content h2');
+        if (headings.length === 0 || headings.length > 15) return; // Skip TOC for very long pages
         
         const toc = document.createElement('ul');
         toc.className = 'page-toc-list';
         
-        let currentLevel = 2;
-        let currentList = toc;
-        const stack = [toc];
-        
-        headings.forEach(heading => {
-            const level = parseInt(heading.tagName.charAt(1));
+        // Simple flat TOC structure for better performance
+        Array.from(headings).slice(0, 10).forEach((heading, index) => {
             const item = document.createElement('li');
             const link = document.createElement('a');
             
-            link.href = `#${heading.id}`;
-            link.textContent = heading.textContent.replace('#', '').trim();
+            link.href = `#heading-${index}`;
+            link.textContent = heading.textContent.substring(0, 30);
             link.className = 'page-toc-link';
             
-            if (level > currentLevel) {
-                const sublist = document.createElement('ul');
-                sublist.className = 'page-toc-sublist';
-                currentList.lastElementChild?.appendChild(sublist);
-                stack.push(sublist);
-                currentList = sublist;
-            } else if (level < currentLevel) {
-                stack.pop();
-                currentList = stack[stack.length - 1];
-            }
-            
-            currentLevel = level;
             item.appendChild(link);
-            currentList.appendChild(item);
+            toc.appendChild(item);
         });
         
         tocContainer.appendChild(toc);
         
-        // Highlight current section on scroll
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(updateTOCHighlight, 100);
-        });
-        
-        updateTOCHighlight();
+        // Skip scroll highlighting for better performance
     }
     
-    // Update TOC highlight based on scroll position
-    function updateTOCHighlight() {
-        const headings = document.querySelectorAll('.page-content h2, .page-content h3');
-        const tocLinks = document.querySelectorAll('.page-toc-link');
-        
-        let currentHeading = null;
-        const scrollPosition = window.scrollY + 100; // Offset for header
-        
-        headings.forEach(heading => {
-            if (heading.offsetTop <= scrollPosition) {
-                currentHeading = heading;
-            }
-        });
-        
-        tocLinks.forEach(link => {
-            if (currentHeading && link.getAttribute('href') === `#${currentHeading.id}`) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }
+    // Skip TOC highlighting for performance
     
-    // External link handler
+    // External link handler (simplified)
     function handleExternalLinks() {
         const links = document.querySelectorAll('a[href^="http"]');
         
-        links.forEach(link => {
+        // Process only first 50 external links for performance
+        Array.from(links).slice(0, 50).forEach(link => {
             if (link.hostname !== window.location.hostname) {
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
-                
-                // Add external link icon
-                if (!link.querySelector('.external-icon')) {
-                    const icon = document.createElement('svg');
-                    icon.className = 'external-icon';
-                    icon.innerHTML = `
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                    `;
-                    link.appendChild(icon);
-                }
+                // Skip icon for better performance
             }
         });
     }
     
-    // Image loading enhancement
+    // Image loading enhancement (minimal)
     function enhanceImages() {
         const images = document.querySelectorAll('.page-content img');
         
-        images.forEach(img => {
-            // Add loading attribute
+        // Only add lazy loading for performance
+        Array.from(images).slice(0, 20).forEach(img => {
             if (!img.hasAttribute('loading')) {
                 img.setAttribute('loading', 'lazy');
-            }
-            
-            // Add error handler
-            img.addEventListener('error', function() {
-                this.classList.add('error');
-                this.alt = this.alt || 'Image failed to load';
-            });
-            
-            // Make images clickable for full view
-            if (!img.closest('a')) {
-                img.style.cursor = 'zoom-in';
-                img.addEventListener('click', () => {
-                    openImageModal(img);
-                });
             }
         });
     }
     
-    // Open image in modal
-    function openImageModal(img) {
-        const modal = document.createElement('div');
-        modal.className = 'image-modal';
-        modal.innerHTML = `
-            <div class="image-modal-content">
-                <img src="${img.src}" alt="${img.alt}">
-                <button class="image-modal-close">&times;</button>
-            </div>
-        `;
-        
-        document.body.appendChild(modal);
-        
-        // Close handlers
-        const closeModal = () => {
-            modal.remove();
-        };
-        
-        modal.querySelector('.image-modal-close').addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        
-        document.addEventListener('keydown', function escHandler(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-                document.removeEventListener('keydown', escHandler);
-            }
-        });
-    }
+    // Skip image modal for performance
     
     // Add additional styles
     function addStyles() {
@@ -350,10 +233,13 @@
         // Delay heavy processing to prevent browser hanging
         setTimeout(() => {
             addHeadingIds();
-            generateTOC();
-            handleExternalLinks();
             enhanceImages();
-        }, 100);
+        }, 500);
+        
+        // Further delay less critical features
+        setTimeout(() => {
+            handleExternalLinks();
+        }, 2000);
     }
     
     // Initialize when DOM is ready
