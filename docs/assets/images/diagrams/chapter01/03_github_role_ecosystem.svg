@@ -26,11 +26,11 @@
   
   <!-- 中央のGitHub -->
   <g class="central-github">
-    <circle cx="400" cy="200" r="70" class="primary" opacity="0.2"/>
-    <circle cx="400" cy="200" r="70" class="primary-stroke" fill="none"/>
-    <text x="400" y="185" text-anchor="middle" class="text text-md" style="font-weight: 600;">GitHub</text>
-    <text x="400" y="205" text-anchor="middle" class="text text-sm">Git hosting</text>
-    <text x="400" y="220" text-anchor="middle" class="text text-sm">+ 協働機能</text>
+    <circle cx="400" cy="220" r="70" class="primary" opacity="0.2"/>
+    <circle cx="400" cy="220" r="70" class="primary-stroke" fill="none"/>
+    <text x="400" y="205" text-anchor="middle" class="text text-md" style="font-weight: 600;">GitHub</text>
+    <text x="400" y="225" text-anchor="middle" class="text text-sm">Git hosting</text>
+    <text x="400" y="240" text-anchor="middle" class="text text-sm">+ 協働機能</text>
   </g>
   
   <!-- コード管理 -->

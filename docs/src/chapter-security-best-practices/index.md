@@ -1,6 +1,7 @@
 ---
 title: "セキュリティのベストプラクティス"
-chapter: security-best-practices
+layout: book
+order: 9
 ---
 
 # セキュリティのベストプラクティス

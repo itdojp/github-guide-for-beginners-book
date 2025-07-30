@@ -1,6 +1,7 @@
 ---
 title: "GitHubショートカット集"
 layout: book
+order: 101
 ---
 
 # 付録B：GitHubショートカット集

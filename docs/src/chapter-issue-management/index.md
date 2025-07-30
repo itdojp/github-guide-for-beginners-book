@@ -1,6 +1,7 @@
 ---
 title: "Issue管理とプロジェクト管理"
 layout: book
+order: 7
 ---
 
 # 第8章：Issue管理とプロジェクト管理

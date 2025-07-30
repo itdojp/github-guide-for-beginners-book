@@ -9,12 +9,12 @@ chapters:
     id: "1"
     number: "第1章"
   
-  - title: "GitHubアカウント作成と初期設定"
+  - title: "初めてのリポジトリ作成"
     url: "/src/chapter-github-account-setup/"
     id: "2"
     number: "第2章"
   
-  - title: "基本操作 - push、pull、clone"
+  - title: "アカウントセキュリティの基本"
     url: "/src/chapter-basic-operations/"
     id: "3"
     number: "第3章"
