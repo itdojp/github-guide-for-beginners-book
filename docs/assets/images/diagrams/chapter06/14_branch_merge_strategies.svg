@@ -1,0 +1,225 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .success-stroke { stroke: var(--svg-success); stroke-width: 2; }
+      .warning { fill: var(--svg-warning); }
+      .warning-stroke { stroke: var(--svg-warning); stroke-width: 2; }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ブランチマージ戦略の詳細</title>
+  <desc>異なるマージ戦略の特徴と使い分けの詳細解説</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ブランチマージ戦略の詳細</text>
+  
+  <!-- マージ戦略の概要 -->
+  <g class="merge-strategies-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">3つの主要なマージ戦略</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔀 マージ方法による履歴の変化とその影響</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">チームの開発スタイルと要件に応じて最適な戦略を選択</text>
+  </g>
+  
+  <!-- Fast-forward マージ詳細 -->
+  <g class="fast-forward-details">
+    <text x="130" y="185" text-anchor="middle" class="text text-md">Fast-forward マージ</text>
+    
+    <rect x="50" y="200" width="160" height="140" rx="8" class="success border" opacity="0.1"/>
+    
+    <!-- Fast-forward の図解 -->
+    <g class="ff-visualization">
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行前</text>
+      
+      <!-- main ブランチ -->
+      <circle cx="80" cy="245" r="6" class="success"/>
+      <text x="80" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">A</text>
+      
+      <line x1="86" y1="245" x2="110" y2="245" class="success-stroke"/>
+      <circle cx="120" cy="245" r="6" class="success"/>
+      <text x="120" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">B</text>
+      
+      <text x="60" y="260" class="text text-sm" style="font-size: 10px;">main</text>
+      
+      <!-- feature ブランチ -->
+      <line x1="120" y1="245" x2="140" y2="265" class="primary-stroke"/>
+      <circle cx="150" cy="275" r="6" class="primary"/>
+      <text x="150" y="279" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">C</text>
+      
+      <line x1="156" y1="275" x2="176" y2="275" class="primary-stroke"/>
+      <circle cx="185" cy="275" r="6" class="primary"/>
+      <text x="185" y="279" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">D</text>
+      
+      <text x="130" y="295" class="text text-sm" style="font-size: 10px;">feature</text>
+      
+      <!-- 実行後 -->
+      <text x="130" y="315" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行後</text>
+      
+      <circle cx="80" cy="330" r="6" class="success"/>
+      <text x="80" y="334" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">A</text>
+      
+      <line x1="86" y1="330" x2="110" y2="330" class="primary-stroke"/>
+      <circle cx="120" cy="330" r="6" class="primary"/>
+      <text x="120" y="334" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">B</text>
+      
+      <line x1="126" y1="330" x2="144" y2="330" class="primary-stroke"/>
+      <circle cx="150" cy="330" r="6" class="primary"/>
+      <text x="150" y="334" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">C</text>
+      
+      <line x1="156" y1="330" x2="176" y2="330" class="primary-stroke"/>
+      <circle cx="185" cy="330" r="6" class="primary"/>
+      <text x="185" y="334" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">D</text>
+      
+      <text x="60" y="345" class="text text-sm" style="font-size: 10px;">main</text>
+    </g>
+  </g>
+  
+  <!-- 3-way マージ詳細 -->
+  <g class="three-way-details">
+    <text x="400" y="185" text-anchor="middle" class="text text-md">3-way マージ</text>
+    
+    <rect x="320" y="200" width="160" height="140" rx="8" class="warning border" opacity="0.1"/>
+    
+    <!-- 3-way の図解 -->
+    <g class="threeway-visualization">
+      <text x="400" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行前</text>
+      
+      <!-- main ブランチ -->
+      <circle cx="350" cy="245" r="6" class="success"/>
+      <text x="350" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">A</text>
+      
+      <line x1="356" y1="245" x2="384" y2="245" class="success-stroke"/>
+      <circle cx="390" cy="245" r="6" class="success"/>
+      <text x="390" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">B</text>
+      
+      <line x1="396" y1="245" x2="424" y2="245" class="success-stroke"/>
+      <circle cx="430" cy="245" r="6" class="success"/>
+      <text x="430" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">E</text>
+      
+      <text x="330" y="260" class="text text-sm" style="font-size: 10px;">main</text>
+      
+      <!-- feature ブランチ -->
+      <line x1="390" y1="245" x2="410" y2="275" class="primary-stroke"/>
+      <circle cx="420" cy="285" r="6" class="primary"/>
+      <text x="420" y="289" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">C</text>
+      
+      <line x1="426" y1="285" x2="444" y2="285" class="primary-stroke"/>
+      <circle cx="450" cy="285" r="6" class="primary"/>
+      <text x="450" y="289" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">D</text>
+      
+      <text x="400" y="305" class="text text-sm" style="font-size: 10px;">feature</text>
+      
+      <!-- 実行後 -->
+      <text x="400" y="325" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行後（マージコミット）</text>
+      
+      <circle cx="460" cy="335" r="6" class="warning"/>
+      <text x="460" y="339" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">M</text>
+      
+      <text x="440" y="350" class="text text-sm" style="font-size: 10px;">main</text>
+    </g>
+  </g>
+  
+  <!-- Squash マージ詳細 -->
+  <g class="squash-details">
+    <text x="670" y="185" text-anchor="middle" class="text text-md">Squash マージ</text>
+    
+    <rect x="590" y="200" width="160" height="140" rx="8" class="neutral border" opacity="0.1"/>
+    
+    <!-- Squash の図解 -->
+    <g class="squash-visualization">
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行前</text>
+      
+      <!-- main ブランチ -->
+      <circle cx="620" cy="245" r="6" class="success"/>
+      <text x="620" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">A</text>
+      
+      <line x1="626" y1="245" x2="654" y2="245" class="success-stroke"/>
+      <circle cx="660" cy="245" r="6" class="success"/>
+      <text x="660" y="249" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">B</text>
+      
+      <text x="600" y="260" class="text text-sm" style="font-size: 10px;">main</text>
+      
+      <!-- feature ブランチ -->
+      <line x1="660" y1="245" x2="680" y2="275" class="primary-stroke"/>
+      <circle cx="690" cy="285" r="6" class="primary"/>
+      <text x="690" y="289" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">C</text>
+      
+      <line x1="696" y1="285" x2="714" y2="285" class="primary-stroke"/>
+      <circle cx="720" cy="285" r="6" class="primary"/>
+      <text x="720" y="289" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">D</text>
+      
+      <text x="670" y="305" class="text text-sm" style="font-size: 10px;">feature</text>
+      
+      <!-- 実行後 -->
+      <text x="670" y="325" text-anchor="middle" class="text text-sm" style="font-weight: 600;">実行後（1つのコミット）</text>
+      
+      <line x1="666" y1="335" x2="694" y2="335" class="neutral"/>
+      <circle cx="700" cy="335" r="6" class="neutral"/>
+      <text x="700" y="339" text-anchor="middle" class="text text-sm" style="fill: white; font-size: 10px;">CD</text>
+      
+      <text x="680" y="350" class="text text-sm" style="font-size: 10px;">main</text>
+    </g>
+  </g>
+  
+  <!-- 戦略の選択指針 -->
+  <g class="strategy-selection">
+    <text x="400" y="385" text-anchor="middle" class="text text-md">戦略選択の指針</text>
+    
+    <rect x="50" y="405" width="700" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- 選択基準 -->
+    <g class="selection-criteria">
+      <text x="70" y="430" class="text text-sm" style="font-weight: 600;">🎯 使用場面とメリット・デメリット</text>
+      
+      <!-- Fast-forward -->
+      <g class="ff-criteria">
+        <text x="80" y="455" class="text text-sm" style="font-weight: 600;">Fast-forward:</text>
+        <text x="80" y="470" class="text text-sm success">✅ シンプルな履歴、高速</text>
+        <text x="80" y="485" class="text text-sm error">❌ ブランチ履歴が残らない</text>
+        <text x="80" y="500" class="text text-sm">💡 個人開発、簡単な修正</text>
+      </g>
+      
+      <!-- 3-way -->
+      <g class="threeway-criteria">
+        <text x="300" y="455" class="text text-sm" style="font-weight: 600;">3-way マージ:</text>
+        <text x="300" y="470" class="text text-sm success">✅ 完全な履歴保持</text>
+        <text x="300" y="485" class="text text-sm warning">⚠️ 複雑な履歴グラフ</text>
+        <text x="300" y="500" class="text text-sm">💡 チーム開発、機能追跡重要</text>
+      </g>
+      
+      <!-- Squash -->
+      <g class="squash-criteria">
+        <text x="520" y="455" class="text text-sm" style="font-weight: 600;">Squash マージ:</text>
+        <text x="520" y="470" class="text text-sm success">✅ 整理された履歴</text>
+        <text x="520" y="485" class="text text-sm error">❌ 詳細な履歴が失われる</text>
+        <text x="520" y="500" class="text text-sm">💡 実験的機能、PR単位管理</text>
+      </g>
+    </g>
+    
+    <!-- 実践的な選択指針 -->
+    <g class="practical-guidance">
+      <rect x="70" y="515" width="660" height="25" rx="4" class="primary border" opacity="0.1"/>
+      <text x="80" y="533" class="text text-sm" style="font-weight: 600;">📋 実践指針:</text>
+      <text x="160" y="533" class="text text-sm">リリース重視→Squash | 履歴重視→3-way | 単純作業→Fast-forward | チーム方針統一が最重要</text>
+    </g>
+  </g>
+</svg>
