@@ -1,0 +1,158 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>バイナリファイル管理</title>
+  <desc>GitHubでのバイナリファイルの扱い方と注意点</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">バイナリファイル管理</text>
+  
+  <!-- バイナリファイルとは -->
+  <g class="binary-definition">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">バイナリファイルとテキストファイルの違い</text>
+    
+    <!-- テキストファイル -->
+    <g class="text-files">
+      <rect x="100" y="95" width="200" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="200" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 テキストファイル</text>
+      <text x="200" y="140" text-anchor="middle" class="text text-sm">• 人間が読める形式</text>
+      <text x="200" y="155" text-anchor="middle" class="text text-sm">• 差分表示が可能</text>
+      <text x="200" y="170" text-anchor="middle" class="text text-sm">• マージが容易</text>
+      <text x="200" y="185" text-anchor="middle" class="text text-sm">例: .txt, .js, .md</text>
+    </g>
+    
+    <!-- バイナリファイル -->
+    <g class="binary-files">
+      <rect x="350" y="95" width="200" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="450" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔒 バイナリファイル</text>
+      <text x="450" y="140" text-anchor="middle" class="text text-sm">• 機械が読む形式</text>
+      <text x="450" y="155" text-anchor="middle" class="text text-sm">• 差分表示困難</text>
+      <text x="450" y="170" text-anchor="middle" class="text text-sm">• マージ不可</text>
+      <text x="450" y="185" text-anchor="middle" class="text text-sm">例: .png, .exe, .zip</text>
+    </g>
+    
+    <!-- GitHubでの表示 -->
+    <g class="github-display">
+      <rect x="570" y="95" width="150" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="645" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👁️ GitHub表示</text>
+      <text x="645" y="140" text-anchor="middle" class="text text-sm">バイナリファイルは</text>
+      <text x="645" y="155" text-anchor="middle" class="text text-sm">"Binary file not shown"</text>
+      <text x="645" y="170" text-anchor="middle" class="text text-sm">と表示される</text>
+    </g>
+  </g>
+  
+  <!-- バイナリファイルの管理上の課題 -->
+  <g class="binary-challenges">
+    <text x="400" y="235" text-anchor="middle" class="text text-md">バイナリファイル管理の課題</text>
+    
+    <!-- 課題1: リポジトリサイズ増大 -->
+    <g class="size-issue">
+      <rect x="80" y="255" width="160" height="90" rx="8" class="error border" opacity="0.1"/>
+      <text x="160" y="280" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📈 サイズ増大</text>
+      <text x="160" y="300" text-anchor="middle" class="text text-sm">• 履歴に全版が保存</text>
+      <text x="160" y="315" text-anchor="middle" class="text text-sm">• クローン時間増加</text>
+      <text x="160" y="330" text-anchor="middle" class="text text-sm">• ストレージ圧迫</text>
+    </g>
+    
+    <!-- 課題2: 差分管理困難 -->
+    <g class="diff-issue">
+      <rect x="260" y="255" width="160" height="90" rx="8" class="warning border" opacity="0.1"/>
+      <text x="340" y="280" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 差分管理困難</text>
+      <text x="340" y="300" text-anchor="middle" class="text text-sm">• 変更内容不明</text>
+      <text x="340" y="315" text-anchor="middle" class="text text-sm">• レビュー困難</text>
+      <text x="340" y="330" text-anchor="middle" class="text text-sm">• 履歴追跡困難</text>
+    </g>
+    
+    <!-- 課題3: 競合解決不可 -->
+    <g class="merge-issue">
+      <rect x="440" y="255" width="160" height="90" rx="8" class="error border" opacity="0.1"/>
+      <text x="520" y="280" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ 競合解決不可</text>
+      <text x="520" y="300" text-anchor="middle" class="text text-sm">• 自動マージ不可</text>
+      <text x="520" y="315" text-anchor="middle" class="text text-sm">• 手動選択のみ</text>
+      <text x="520" y="330" text-anchor="middle" class="text text-sm">• 作業重複リスク</text>
+    </g>
+  </g>
+  
+  <!-- 管理戦略 -->
+  <g class="management-strategies">
+    <text x="400" y="380" text-anchor="middle" class="text text-md">バイナリファイル管理戦略</text>
+    
+    <!-- 戦略1: 最小限に抑制 -->
+    <g class="minimize-strategy">
+      <rect x="80" y="400" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✂️ 最小限に抑制</text>
+      <text x="150" y="445" text-anchor="middle" class="text text-sm">• 必要最小限のみ</text>
+      <text x="150" y="460" text-anchor="middle" class="text text-sm">• 定期的な見直し</text>
+      <text x="150" y="475" text-anchor="middle" class="text text-sm">• 代替手段検討</text>
+    </g>
+    
+    <!-- 戦略2: 適切な分類 -->
+    <g class="categorize-strategy">
+      <rect x="240" y="400" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📂 適切な分類</text>
+      <text x="310" y="445" text-anchor="middle" class="text text-sm">• assets/ フォルダ</text>
+      <text x="310" y="460" text-anchor="middle" class="text text-sm">• docs/ フォルダ</text>
+      <text x="310" y="475" text-anchor="middle" class="text text-sm">• 明確な命名</text>
+    </g>
+    
+    <!-- 戦略3: 外部ストレージ活用 -->
+    <g class="external-strategy">
+      <rect x="400" y="400" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ 外部ストレージ</text>
+      <text x="470" y="445" text-anchor="middle" class="text text-sm">• CDN活用</text>
+      <text x="470" y="460" text-anchor="middle" class="text text-sm">• クラウドストレージ</text>
+      <text x="470" y="475" text-anchor="middle" class="text text-sm">• URLリンクのみ</text>
+    </g>
+    
+    <!-- 戦略4: Git LFS -->
+    <g class="lfs-strategy">
+      <rect x="560" y="400" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 Git LFS</text>
+      <text x="630" y="445" text-anchor="middle" class="text text-sm">• 大容量ファイル</text>
+      <text x="630" y="460" text-anchor="middle" class="text text-sm">• ポインタで管理</text>
+      <text x="630" y="475" text-anchor="middle" class="text text-sm">• サイズ制限回避</text>
+    </g>
+  </g>
+  
+  <!-- バイナリファイルの種類と対処法 -->
+  <g class="binary-file-types">
+    <text x="400" y="510" text-anchor="middle" class="text text-md">バイナリファイル種類別対処法</text>
+    
+    <rect x="50" y="530" width="700" height="60" rx="8" class="bg-alt border"/>
+    
+    <!-- 対処法リスト -->
+    <text x="70" y="550" class="text text-sm" style="font-weight: 600;">🎨 画像・動画:</text>
+    <text x="180" y="550" class="text text-sm">圧縮・最適化、CDN活用</text>
+    
+    <text x="370" y="550" class="text text-sm" style="font-weight: 600;">📦 実行ファイル:</text>
+    <text x="470" y="550" class="text text-sm">Releases機能活用</text>
+    
+    <text x="70" y="570" class="text text-sm" style="font-weight: 600;">📊 データファイル:</text>
+    <text x="180" y="570" class="text text-sm">外部DB、Git LFS</text>
+    
+    <text x="370" y="570" class="text text-sm" style="font-weight: 600;">🎵 メディアファイル:</text>
+    <text x="490" y="570" class="text text-sm">ストリーミング、外部ホスティング</text>
+  </g>
+</svg>

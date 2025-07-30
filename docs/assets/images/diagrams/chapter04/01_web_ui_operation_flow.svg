@@ -1,0 +1,189 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Web UI操作フロー</title>
+  <desc>GitHubのWebインタフェースを使ったファイル操作の基本的な流れ</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Web UI操作フロー</text>
+  
+  <!-- Step 1: リポジトリアクセス -->
+  <g class="step-1">
+    <rect x="60" y="80" width="120" height="80" rx="8" class="primary border" opacity="0.1"/>
+    <text x="120" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1. リポジトリ</text>
+    <text x="120" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">アクセス</text>
+    <text x="120" y="140" text-anchor="middle" class="text text-sm">GitHub.com</text>
+    <text x="120" y="155" text-anchor="middle" class="text text-sm">ログイン</text>
+  </g>
+  
+  <!-- Step 2: リポジトリ選択 -->
+  <g class="step-2">
+    <rect x="200" y="80" width="120" height="80" rx="8" class="success border" opacity="0.1"/>
+    <text x="260" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2. リポジトリ</text>
+    <text x="260" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">選択</text>
+    <text x="260" y="140" text-anchor="middle" class="text text-sm">既存選択 or</text>
+    <text x="260" y="155" text-anchor="middle" class="text text-sm">新規作成</text>
+  </g>
+  
+  <!-- Step 3: ファイル操作 -->
+  <g class="step-3">
+    <rect x="340" y="80" width="120" height="80" rx="8" class="warning border" opacity="0.1"/>
+    <text x="400" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3. ファイル</text>
+    <text x="400" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">操作選択</text>
+    <text x="400" y="140" text-anchor="middle" class="text text-sm">新規作成 or</text>
+    <text x="400" y="155" text-anchor="middle" class="text text-sm">既存編集</text>
+  </g>
+  
+  <!-- Step 4: 編集作業 -->
+  <g class="step-4">
+    <rect x="480" y="80" width="120" height="80" rx="8" class="neutral border" opacity="0.1"/>
+    <text x="540" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4. 編集作業</text>
+    <text x="540" y="125" text-anchor="middle" class="text text-sm">Web エディタ</text>
+    <text x="540" y="140" text-anchor="middle" class="text text-sm">内容入力</text>
+    <text x="540" y="155" text-anchor="middle" class="text text-sm">プレビュー</text>
+  </g>
+  
+  <!-- Step 5: コミット -->
+  <g class="step-5">
+    <rect x="620" y="80" width="120" height="80" rx="8" class="error border" opacity="0.1"/>
+    <text x="680" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">5. コミット</text>
+    <text x="680" y="125" text-anchor="middle" class="text text-sm">メッセージ入力</text>
+    <text x="680" y="140" text-anchor="middle" class="text text-sm">説明追加</text>
+    <text x="680" y="155" text-anchor="middle" class="text text-sm">変更確定</text>
+  </g>
+  
+  <!-- フロー矢印 -->
+  <line x1="180" y1="120" x2="200" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="320" y1="120" x2="340" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="460" y1="120" x2="480" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  <line x1="600" y1="120" x2="620" y2="120" class="primary-stroke" marker-end="url(#arrow)"/>
+  
+  <!-- ファイル操作の詳細 -->
+  <g class="file-operations-detail">
+    <text x="400" y="200" text-anchor="middle" class="text text-md">ファイル操作の詳細</text>
+    
+    <!-- 新規ファイル作成 -->
+    <g class="create-new-file">
+      <rect x="80" y="220" width="150" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="155" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 新規ファイル作成</text>
+      
+      <text x="90" y="265" class="text text-sm">1. "Create new file" クリック</text>
+      <text x="90" y="280" class="text text-sm">2. ファイル名入力</text>
+      <text x="90" y="295" class="text text-sm">3. 内容編集</text>
+      <text x="90" y="310" class="text text-sm">4. コミット情報入力</text>
+      <text x="90" y="325" class="text text-sm">5. "Commit new file"</text>
+    </g>
+    
+    <!-- 既存ファイル編集 -->
+    <g class="edit-existing-file">
+      <rect x="250" y="220" width="150" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="325" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✏️ 既存ファイル編集</text>
+      
+      <text x="260" y="265" class="text text-sm">1. ファイルを選択</text>
+      <text x="260" y="280" class="text text-sm">2. "Edit this file" (✏️)</text>
+      <text x="260" y="295" class="text text-sm">3. 内容修正</text>
+      <text x="260" y="310" class="text text-sm">4. 変更理由記入</text>
+      <text x="260" y="325" class="text text-sm">5. "Commit changes"</text>
+    </g>
+    
+    <!-- ファイルアップロード -->
+    <g class="upload-files">
+      <rect x="420" y="220" width="150" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="495" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📎 ファイルアップロード</text>
+      
+      <text x="430" y="265" class="text text-sm">1. "Upload files" クリック</text>
+      <text x="430" y="280" class="text text-sm">2. ドラッグ&ドロップ</text>
+      <text x="430" y="295" class="text text-sm">3. または選択</text>
+      <text x="430" y="310" class="text text-sm">4. コミット情報</text>
+      <text x="430" y="325" class="text text-sm">5. "Commit changes"</text>
+    </g>
+    
+    <!-- ファイル削除 -->
+    <g class="delete-files">
+      <rect x="590" y="220" width="150" height="120" rx="8" class="error border" opacity="0.1"/>
+      <text x="665" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🗑️ ファイル削除</text>
+      
+      <text x="600" y="265" class="text text-sm">1. ファイルを開く</text>
+      <text x="600" y="280" class="text text-sm">2. "Delete file" (🗑️)</text>
+      <text x="600" y="295" class="text text-sm">3. 削除確認</text>
+      <text x="600" y="310" class="text text-sm">4. 削除理由記入</text>
+      <text x="600" y="325" class="text text-sm">5. "Commit changes"</text>
+    </g>
+  </g>
+  
+  <!-- コミット作成プロセス -->
+  <g class="commit-process">
+    <text x="400" y="380" text-anchor="middle" class="text text-md">コミット作成プロセス</text>
+    
+    <!-- コミットメッセージ -->
+    <g class="commit-message">
+      <rect x="100" y="400" width="200" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="200" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミットメッセージ</text>
+      
+      <rect x="110" y="440" width="180" height="20" rx="2" class="bg-alt border"/>
+      <text x="115" y="454" class="text text-sm" style="font-family: monospace;">Add user authentication</text>
+      
+      <text x="110" y="475" class="text text-sm" style="font-weight: 600;">詳細説明（任意）:</text>
+      <rect x="110" y="480" width="180" height="15" rx="2" class="bg-alt border"/>
+      <text x="115" y="492" class="text text-sm" style="font-family: monospace;">Login functionality...</text>
+    </g>
+    
+    <!-- ブランチ選択 -->
+    <g class="branch-selection">
+      <rect x="320" y="400" width="160" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="400" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ選択</text>
+      
+      <!-- ラジオボタン風 -->
+      <circle cx="340" cy="445" r="4" class="success" opacity="0.8"/>
+      <text x="355" y="450" class="text text-sm">mainブランチに直接</text>
+      
+      <circle cx="340" cy="465" r="2" class="border"/>
+      <text x="355" y="470" class="text text-sm">新しいブランチを作成</text>
+      
+      <text x="330" y="490" class="text text-sm" style="font-weight: 600;">推奨: 新ブランチ作成</text>
+    </g>
+    
+    <!-- 実行ボタン -->
+    <g class="commit-button">
+      <rect x="500" y="400" width="160" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="580" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 実行</text>
+      
+      <!-- ボタン風 -->
+      <rect x="520" y="440" width="120" height="30" rx="4" class="success"/>
+      <text x="580" y="458" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">Commit changes</text>
+      
+      <text x="510" y="485" class="text text-sm">変更が即座に反映</text>
+    </g>
+  </g>
+  
+  <!-- 注意事項 -->
+  <g class="important-notes">
+    <text x="400" y="540" text-anchor="middle" class="text text-md">重要な注意事項</text>
+    
+    <rect x="50" y="555" width="700" height="35" rx="4" class="warning border" opacity="0.1"/>
+    <text x="60" y="570" class="text text-sm" style="font-weight: 600;">⚠️ Web UIの制約:</text>
+    <text x="60" y="585" class="text text-sm">• 単一ファイルずつの操作 • 大容量ファイル制限 • 複雑な操作はローカル環境推奨 • バイナリファイルは表示制限</text>
+  </g>
+</svg>

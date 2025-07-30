@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>リポジトリ構造</title>
+  <desc>Gitリポジトリの内部構造とファイル配置</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">リポジトリ構造</text>
+  
+  <!-- ルートディレクトリ -->
+  <g class="root-directory">
+    <rect x="50" y="70" width="700" height="480" rx="8" class="border"/>
+    <text x="60" y="90" class="text text-md" style="font-weight: 600;">📁 project-root/</text>
+    
+    <!-- .gitディレクトリ -->
+    <g class="git-directory">
+      <rect x="80" y="110" width="300" height="200" rx="4" class="primary border" opacity="0.1"/>
+      <text x="90" y="130" class="text text-sm" style="font-weight: 600;">📁 .git/ (隠しディレクトリ)</text>
+      
+      <!-- .git内のファイル -->
+      <text x="100" y="150" class="text text-sm">📄 HEAD</text>
+      <text x="200" y="150" class="text text-sm">現在のブランチ</text>
+      
+      <text x="100" y="170" class="text text-sm">📄 config</text>
+      <text x="200" y="170" class="text text-sm">リポジトリ設定</text>
+      
+      <text x="100" y="190" class="text text-sm">📁 objects/</text>
+      <text x="200" y="190" class="text text-sm">コミットデータ</text>
+      
+      <text x="100" y="210" class="text text-sm">📁 refs/</text>
+      <text x="200" y="210" class="text text-sm">ブランチ・タグ</text>
+      
+      <text x="100" y="230" class="text text-sm">📄 index</text>
+      <text x="200" y="230" class="text text-sm">ステージング情報</text>
+      
+      <text x="100" y="250" class="text text-sm">📁 hooks/</text>
+      <text x="200" y="250" class="text text-sm">イベントフック</text>
+      
+      <text x="100" y="270" class="text text-sm">📁 logs/</text>
+      <text x="200" y="270" class="text text-sm">操作履歴</text>
+      
+      <text x="100" y="290" class="text text-sm">📄 COMMIT_EDITMSG</text>
+      <text x="230" y="290" class="text text-sm">最新コミット</text>
+    </g>
+    
+    <!-- 作業ディレクトリ -->
+    <g class="working-directory">
+      <rect x="420" y="110" width="300" height="200" rx="4" class="success border" opacity="0.1"/>
+      <text x="430" y="130" class="text text-sm" style="font-weight: 600;">📁 作業ディレクトリ</text>
+      
+      <!-- プロジェクトファイル -->
+      <text x="440" y="150" class="text text-sm">📄 README.md</text>
+      <text x="580" y="150" class="text text-sm">プロジェクト説明</text>
+      
+      <text x="440" y="170" class="text text-sm">📄 .gitignore</text>
+      <text x="580" y="170" class="text text-sm">除外ファイル指定</text>
+      
+      <text x="440" y="190" class="text text-sm">📁 src/</text>
+      <text x="580" y="190" class="text text-sm">ソースコード</text>
+      
+      <text x="440" y="210" class="text text-sm">📁 docs/</text>
+      <text x="580" y="210" class="text text-sm">ドキュメント</text>
+      
+      <text x="440" y="230" class="text text-sm">📁 tests/</text>
+      <text x="580" y="230" class="text text-sm">テストファイル</text>
+      
+      <text x="440" y="250" class="text text-sm">📄 package.json</text>
+      <text x="580" y="250" class="text text-sm">依存関係</text>
+      
+      <text x="440" y="270" class="text text-sm">📄 LICENSE</text>
+      <text x="580" y="270" class="text text-sm">ライセンス</text>
+      
+      <text x="440" y="290" class="text text-sm">📁 .github/</text>
+      <text x="580" y="290" class="text text-sm">GitHub設定</text>
+    </g>
+    
+    <!-- .gitignoreファイルの詳細 -->
+    <g class="gitignore-detail">
+      <rect x="80" y="330" width="640" height="100" rx="4" class="bg-alt border"/>
+      <text x="90" y="350" class="text text-sm" style="font-weight: 600;">.gitignoreファイルの例</text>
+      
+      <text x="100" y="370" class="text text-sm" style="font-family: monospace;"># 依存関係</text>
+      <text x="100" y="385" class="text text-sm" style="font-family: monospace;">node_modules/</text>
+      <text x="250" y="370" class="text text-sm" style="font-family: monospace;"># ビルド成果物</text>
+      <text x="250" y="385" class="text text-sm" style="font-family: monospace;">dist/</text>
+      <text x="350" y="370" class="text text-sm" style="font-family: monospace;"># 環境設定</text>
+      <text x="350" y="385" class="text text-sm" style="font-family: monospace;">.env</text>
+      <text x="450" y="370" class="text text-sm" style="font-family: monospace;"># OS固有</text>
+      <text x="450" y="385" class="text text-sm" style="font-family: monospace;">.DS_Store</text>
+      <text x="550" y="370" class="text text-sm" style="font-family: monospace;"># IDE設定</text>
+      <text x="550" y="385" class="text text-sm" style="font-family: monospace;">.vscode/</text>
+      
+      <text x="100" y="405" class="text text-sm" style="font-family: monospace;">*.log</text>
+      <text x="250" y="405" class="text text-sm" style="font-family: monospace;">build/</text>
+      <text x="350" y="405" class="text text-sm" style="font-family: monospace;">*.env.local</text>
+      <text x="450" y="405" class="text text-sm" style="font-family: monospace;">Thumbs.db</text>
+      <text x="550" y="405" class="text text-sm" style="font-family: monospace;">*.swp</text>
+    </g>
+    
+    <!-- READMEファイルの重要性 -->
+    <g class="readme-importance">
+      <rect x="80" y="450" width="300" height="80" rx="4" class="primary border" opacity="0.1"/>
+      <text x="90" y="470" class="text text-sm" style="font-weight: 600;">📄 README.md の重要性</text>
+      <text x="90" y="490" class="text text-sm">• プロジェクトの説明</text>
+      <text x="90" y="505" class="text text-sm">• インストール方法</text>
+      <text x="90" y="520" class="text text-sm">• 使用方法とサンプル</text>
+    </g>
+    
+    <!-- ライセンスファイル -->
+    <g class="license-file">
+      <rect x="420" y="450" width="300" height="80" rx="4" class="success border" opacity="0.1"/>
+      <text x="430" y="470" class="text text-sm" style="font-weight: 600;">📄 LICENSE ファイル</text>
+      <text x="430" y="490" class="text text-sm">• 使用許諾条件</text>
+      <text x="430" y="505" class="text text-sm">• MIT, Apache, GPL等</text>
+      <text x="430" y="520" class="text text-sm">• オープンソースでは必須</text>
+    </g>
+  </g>
+  
+  <!-- 重要な概念 -->
+  <g class="important-concepts">
+    <rect x="100" y="570" width="600" height="25" rx="2" class="warning" opacity="0.2"/>
+    <text x="400" y="588" text-anchor="middle" class="text text-sm">💡 .gitディレクトリを削除すると、Git履歴がすべて失われます！</text>
+  </g>
+</svg>

@@ -1,0 +1,197 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コミット作成プロセス</title>
+  <desc>GitHubでのコミット作成における詳細なプロセスと考慮事項</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コミット作成プロセス</text>
+  
+  <!-- プロセス概要 -->
+  <g class="process-overview">
+    <!-- Step 1: 変更内容確認 -->
+    <g class="step-1">
+      <rect x="60" y="70" width="120" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="120" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1. 変更内容</text>
+      <text x="120" y="110" text-anchor="middle" class="text text-sm" style="font-weight: 600;">確認</text>
+      <text x="120" y="130" text-anchor="middle" class="text text-sm">• 何を変更したか</text>
+      <text x="120" y="145" text-anchor="middle" class="text text-sm">• 意図した通りか</text>
+    </g>
+    
+    <!-- Step 2: コミットメッセージ -->
+    <g class="step-2">
+      <rect x="200" y="70" width="120" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="260" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2. コミット</text>
+      <text x="260" y="110" text-anchor="middle" class="text text-sm" style="font-weight: 600;">メッセージ</text>
+      <text x="260" y="130" text-anchor="middle" class="text text-sm">• 簡潔な要約</text>
+      <text x="260" y="145" text-anchor="middle" class="text text-sm">• 詳細説明</text>
+    </g>
+    
+    <!-- Step 3: ブランチ選択 -->
+    <g class="step-3">
+      <rect x="340" y="70" width="120" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="400" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3. ブランチ</text>
+      <text x="400" y="110" text-anchor="middle" class="text text-sm" style="font-weight: 600;">選択</text>
+      <text x="400" y="130" text-anchor="middle" class="text text-sm">• 直接コミット</text>
+      <text x="400" y="145" text-anchor="middle" class="text text-sm">• 新ブランチ</text>
+    </g>
+    
+    <!-- Step 4: 実行 -->
+    <g class="step-4">
+      <rect x="480" y="70" width="120" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="540" y="95" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4. 実行</text>
+      <text x="540" y="115" text-anchor="middle" class="text text-sm">コミット作成</text>
+      <text x="540" y="130" text-anchor="middle" class="text text-sm">履歴に記録</text>
+      <text x="540" y="145" text-anchor="middle" class="text text-sm">永続化</text>
+    </g>
+    
+    <!-- フロー矢印 -->
+    <line x1="180" y1="110" x2="200" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="320" y1="110" x2="340" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="460" y1="110" x2="480" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- コミットメッセージのベストプラクティス -->
+  <g class="commit-message-best-practices">
+    <text x="400" y="190" text-anchor="middle" class="text text-md">コミットメッセージのベストプラクティス</text>
+    
+    <!-- 良い例 -->
+    <g class="good-example">
+      <rect x="80" y="210" width="300" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="230" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 良い例</text>
+      
+      <!-- サマリー -->
+      <rect x="90" y="245" width="280" height="20" rx="2" class="bg-alt border"/>
+      <text x="95" y="258" class="text text-sm" style="font-family: monospace; font-weight: 600;">feat: Add user authentication system</text>
+      
+      <!-- 詳細 -->
+      <rect x="90" y="270" width="280" height="50" rx="2" class="bg-alt border"/>
+      <text x="95" y="283" class="text text-sm" style="font-family: monospace;">- Implement login/logout functionality</text>
+      <text x="95" y="296" class="text text-sm" style="font-family: monospace;">- Add password validation</text>
+      <text x="95" y="309" class="text text-sm" style="font-family: monospace;">- Include session management</text>
+    </g>
+    
+    <!-- 悪い例 -->
+    <g class="bad-example">
+      <rect x="420" y="210" width="300" height="120" rx="8" class="error border" opacity="0.1"/>
+      <text x="570" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❌ 悪い例</text>
+      
+      <!-- 悪いメッセージ例 -->
+      <rect x="430" y="245" width="280" height="15" rx="2" class="bg-alt border"/>
+      <text x="435" y="255" class="text text-sm" style="font-family: monospace;">fix</text>
+      
+      <rect x="430" y="265" width="280" height="15" rx="2" class="bg-alt border"/>
+      <text x="435" y="275" class="text text-sm" style="font-family: monospace;">update</text>
+      
+      <rect x="430" y="285" width="280" height="15" rx="2" class="bg-alt border"/>
+      <text x="435" y="295" class="text text-sm" style="font-family: monospace;">WIP</text>
+      
+      <rect x="430" y="305" width="280" height="15" rx="2" class="bg-alt border"/>
+      <text x="435" y="315" class="text text-sm" style="font-family: monospace;">asdlfkjsldfkj</text>
+    </g>
+  </g>
+  
+  <!-- コミットタイプ -->
+  <g class="commit-types">
+    <text x="400" y="360" text-anchor="middle" class="text text-md">推奨コミットタイプ</text>
+    
+    <!-- feat -->
+    <g class="type-feat">
+      <rect x="80" y="380" width="100" height="40" rx="4" class="success border" opacity="0.1"/>
+      <text x="130" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">feat:</text>
+      <text x="130" y="410" text-anchor="middle" class="text text-sm">新機能追加</text>
+    </g>
+    
+    <!-- fix -->
+    <g class="type-fix">
+      <rect x="200" y="380" width="100" height="40" rx="4" class="error border" opacity="0.1"/>
+      <text x="250" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">fix:</text>
+      <text x="250" y="410" text-anchor="middle" class="text text-sm">バグ修正</text>
+    </g>
+    
+    <!-- docs -->
+    <g class="type-docs">
+      <rect x="320" y="380" width="100" height="40" rx="4" class="primary border" opacity="0.1"/>
+      <text x="370" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">docs:</text>
+      <text x="370" y="410" text-anchor="middle" class="text text-sm">ドキュメント</text>
+    </g>
+    
+    <!-- style -->
+    <g class="type-style">
+      <rect x="440" y="380" width="100" height="40" rx="4" class="warning border" opacity="0.1"/>
+      <text x="490" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">style:</text>
+      <text x="490" y="410" text-anchor="middle" class="text text-sm">コード整形</text>
+    </g>
+    
+    <!-- refactor -->
+    <g class="type-refactor">
+      <rect x="560" y="380" width="100" height="40" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="610" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">refactor:</text>
+      <text x="610" y="410" text-anchor="middle" class="text text-sm">リファクタリング</text>
+    </g>
+    
+    <!-- test -->
+    <g class="type-test">
+      <rect x="200" y="440" width="100" height="40" rx="4" class="primary border" opacity="0.1"/>
+      <text x="250" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">test:</text>
+      <text x="250" y="470" text-anchor="middle" class="text text-sm">テスト追加</text>
+    </g>
+    
+    <!-- chore -->
+    <g class="type-chore">
+      <rect x="320" y="440" width="100" height="40" rx="4" class="neutral border" opacity="0.1"/>
+      <text x="370" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">chore:</text>
+      <text x="370" y="470" text-anchor="middle" class="text text-sm">雑務・設定</text>
+    </g>
+    
+    <!-- perf -->
+    <g class="type-perf">
+      <rect x="440" y="440" width="100" height="40" rx="4" class="success border" opacity="0.1"/>
+      <text x="490" y="455" text-anchor="middle" class="text text-sm" style="font-weight: 600;">perf:</text>
+      <text x="490" y="470" text-anchor="middle" class="text text-sm">パフォーマンス</text>
+    </g>
+  </g>
+  
+  <!-- ブランチ戦略 -->
+  <g class="branch-strategy">
+    <text x="400" y="510" text-anchor="middle" class="text text-md">ブランチ戦略の選択</text>
+    
+    <!-- 直接コミット -->
+    <g class="direct-commit">
+      <rect x="120" y="530" width="200" height="50" rx="4" class="warning border" opacity="0.1"/>
+      <text x="220" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ mainブランチに直接</text>
+      <text x="220" y="560" text-anchor="middle" class="text text-sm">小規模変更・個人プロジェクト</text>
+      <text x="220" y="575" text-anchor="middle" class="text text-sm">慎重に使用</text>
+    </g>
+    
+    <!-- 新ブランチ -->
+    <g class="new-branch">
+      <rect x="480" y="530" width="200" height="50" rx="4" class="success border" opacity="0.1"/>
+      <text x="580" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 新ブランチ作成</text>
+      <text x="580" y="560" text-anchor="middle" class="text text-sm">機能追加・チーム開発</text>
+      <text x="580" y="575" text-anchor="middle" class="text text-sm">推奨アプローチ</text>
+    </g>
+  </g>
+</svg>
