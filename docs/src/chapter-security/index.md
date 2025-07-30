@@ -1,6 +1,7 @@
 ---
 title: "セキュリティ対策と安全なGitHub利用"
 layout: book
+order: 999
 ---
 
 # 第10章：セキュリティ対策と安全なGitHub利用

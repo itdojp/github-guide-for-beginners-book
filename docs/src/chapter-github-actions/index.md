@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions入門 - 自動化の基礎"
 layout: book
+order: 8
 ---
 
 # 第9章：GitHub Actions入門 - 自動化の基礎

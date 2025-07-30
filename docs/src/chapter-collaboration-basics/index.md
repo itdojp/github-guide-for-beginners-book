@@ -1,6 +1,7 @@
 ---
 title: "GitHub Desktop の活用"
 layout: book
+order: 5
 ---
 
 # 第5章：GitHub Desktop の活用

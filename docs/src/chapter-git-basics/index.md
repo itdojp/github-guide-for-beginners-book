@@ -1,6 +1,7 @@
 ---
 title: "Git基礎 - バージョン管理の仕組み"
 layout: book
+order: 1
 ---
 
 # Git基礎 - バージョン管理の仕組み

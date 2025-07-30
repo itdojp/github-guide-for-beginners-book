@@ -1,6 +1,7 @@
 ---
 title: "Gitコマンドリファレンス"
 layout: book
+order: 100
 ---
 
 # 付録A：Gitコマンドリファレンス

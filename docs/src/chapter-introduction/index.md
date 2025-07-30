@@ -1,6 +1,7 @@
 ---
 title: "はじめに - なぜGitHubを学ぶのか"
 layout: book
+order: 0
 ---
 
 # はじめに - なぜGitHubを学ぶのか
