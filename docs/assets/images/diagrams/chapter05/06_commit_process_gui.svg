@@ -1,0 +1,161 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>コミットプロセス（GUI）</title>
+  <desc>GitHub DesktopのGUIでのコミット作成と管理プロセス</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">コミットプロセス（GUI）</text>
+  
+  <!-- コミット作成フロー -->
+  <g class="commit-flow">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">コミット作成の流れ</text>
+    
+    <!-- ステップ1: ファイル選択 -->
+    <g class="step-1-file-selection">
+      <rect x="80" y="95" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ ファイル選択</text>
+      
+      <!-- ファイルリスト -->
+      <rect x="90" y="130" width="120" height="50" rx="2" class="bg-alt border"/>
+      <text x="95" y="145" class="text text-sm">☑️ file1.js</text>
+      <text x="95" y="160" class="text text-sm">☑️ style.css</text>
+      <text x="95" y="175" class="text text-sm">☐ test.js</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="220" y1="145" x2="260" y2="145" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: メッセージ入力 -->
+    <g class="step-2-message">
+      <rect x="280" y="95" width="140" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="350" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ メッセージ入力</text>
+      
+      <!-- Summary -->
+      <rect x="290" y="130" width="120" height="20" rx="2" class="border"/>
+      <text x="295" y="145" class="text text-sm">Fix navigation bug</text>
+      
+      <!-- Description -->
+      <rect x="290" y="155" width="120" height="30" rx="2" class="border"/>
+      <text x="295" y="170" class="text text-sm">Updated CSS and</text>
+      <text x="295" y="180" class="text text-sm">JavaScript files</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="420" y1="145" x2="460" y2="145" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: コミット実行 -->
+    <g class="step-3-commit">
+      <rect x="480" y="95" width="140" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="550" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ コミット実行</text>
+      
+      <!-- コミットボタン -->
+      <rect x="500" y="140" width="100" height="30" rx="4" class="primary border"/>
+      <text x="550" y="160" text-anchor="middle" class="text text-sm" style="font-weight: 600;">Commit to main</text>
+      
+      <text x="550" y="185" text-anchor="middle" class="text text-sm">クリックで実行</text>
+    </g>
+  </g>
+  
+  <!-- コミットメッセージ領域詳細 -->
+  <g class="commit-message-area">
+    <text x="400" y="235" text-anchor="middle" class="text text-md">コミットメッセージ入力エリア</text>
+    
+    <rect x="150" y="255" width="500" height="180" rx="8" class="bg-alt border"/>
+    
+    <!-- Summary -->
+    <g class="summary-field">
+      <text x="170" y="280" class="text text-sm" style="font-weight: 600;">📝 Summary（必須）</text>
+      <rect x="170" y="290" width="460" height="25" rx="4" class="border"/>
+      <text x="180" y="308" class="text text-sm" style="font-family: monospace;">feat: Add user authentication system</text>
+      
+      <!-- 文字数カウンター -->
+      <text x="600" y="308" class="text text-sm" style="fill: #666;">50/50</text>
+    </g>
+    
+    <!-- Description -->
+    <g class="description-field">
+      <text x="170" y="335" class="text text-sm" style="font-weight: 600;">📄 Description（任意）</text>
+      <rect x="170" y="345" width="460" height="60" rx="4" class="border"/>
+      <text x="180" y="365" class="text text-sm" style="font-family: monospace;">- Implement login/logout functionality</text>
+      <text x="180" y="380" class="text text-sm" style="font-family: monospace;">- Add password validation</text>
+      <text x="180" y="395" class="text text-sm" style="font-family: monospace;">- Update user interface</text>
+    </g>
+    
+    <!-- コミットボタン -->
+    <g class="commit-button">
+      <rect x="170" y="415" width="150" height="30" rx="4" class="primary border"/>
+      <text x="245" y="435" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💾 Commit to main</text>
+      
+      <!-- オプションボタン -->
+      <rect x="340" y="415" width="120" height="30" rx="4" class="neutral border"/>
+      <text x="400" y="435" text-anchor="middle" class="text text-sm">Commit & Push</text>
+      
+      <rect x="480" y="415" width="150" height="30" rx="4" class="warning border"/>
+      <text x="555" y="435" text-anchor="middle" class="text text-sm">Commit & Create PR</text>
+    </g>
+  </g>
+  
+  <!-- コミット後の操作 -->
+  <g class="post-commit-actions">
+    <text x="400" y="465" text-anchor="middle" class="text text-md">コミット後の操作選択</text>
+    
+    <!-- Push -->
+    <g class="push-option">
+      <rect x="100" y="485" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="170" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ Push</text>
+      <text x="170" y="530" text-anchor="middle" class="text text-sm">リモートリポジトリ</text>
+      <text x="170" y="545" text-anchor="middle" class="text text-sm">に送信</text>
+      <text x="170" y="560" text-anchor="middle" class="text text-sm">他の人と共有</text>
+    </g>
+    
+    <!-- 継続編集 -->
+    <g class="continue-editing">
+      <rect x="260" y="485" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="330" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✏️ 継続編集</text>
+      <text x="330" y="530" text-anchor="middle" class="text text-sm">ローカルで</text>
+      <text x="330" y="545" text-anchor="middle" class="text text-sm">さらに変更</text>
+      <text x="330" y="560" text-anchor="middle" class="text text-sm">次のコミット準備</text>
+    </g>
+    
+    <!-- ブランチ操作 -->
+    <g class="branch-operations">
+      <rect x="420" y="485" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ操作</text>
+      <text x="490" y="530" text-anchor="middle" class="text text-sm">新しいブランチ</text>
+      <text x="490" y="545" text-anchor="middle" class="text text-sm">作成・切り替え</text>
+      <text x="490" y="560" text-anchor="middle" class="text text-sm">機能分離</text>
+    </g>
+    
+    <!-- PR作成 -->
+    <g class="create-PR">
+      <rect x="580" y="485" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="650" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 PR作成</text>
+      <text x="650" y="530" text-anchor="middle" class="text text-sm">Pull Request</text>
+      <text x="650" y="545" text-anchor="middle" class="text text-sm">をGitHubで作成</text>
+      <text x="650" y="560" text-anchor="middle" class="text text-sm">レビュー依頼</text>
+    </g>
+  </g>
+</svg>

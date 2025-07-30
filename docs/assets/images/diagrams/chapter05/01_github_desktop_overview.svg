@@ -1,0 +1,149 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>GitHub Desktop概要</title>
+  <desc>GitHub DesktopアプリケーションのGUI環境でのGit操作の特徴と利点</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">GitHub Desktop概要</text>
+  
+  <!-- GitHub Desktop とは -->
+  <g class="desktop-definition">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">GitHub Desktop とは</text>
+    
+    <rect x="150" y="90" width="500" height="80" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🖥️ GitHub公式のデスクトップGUIアプリケーション</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">コマンドライン操作を視覚的なインターフェースで実行</text>
+    <text x="400" y="155" text-anchor="middle" class="text text-sm">初心者から上級者まで、Gitワークフローを効率化</text>
+  </g>
+  
+  <!-- CLI vs GUI の比較 -->
+  <g class="cli-vs-gui">
+    <text x="400" y="200" text-anchor="middle" class="text text-md">CLI vs GUI の比較</text>
+    
+    <!-- CLI -->
+    <g class="cli-approach">
+      <rect x="100" y="220" width="200" height="140" rx="8" class="warning border" opacity="0.1"/>
+      <text x="200" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 コマンドライン (CLI)</text>
+      
+      <!-- 利点 -->
+      <text x="110" y="265" class="text text-sm" style="font-weight: 600;">✅ 利点:</text>
+      <text x="110" y="280" class="text text-sm">• 高速・正確</text>
+      <text x="110" y="295" class="text text-sm">• 自動化可能</text>
+      <text x="110" y="310" class="text text-sm">• 全機能利用可能</text>
+      
+      <!-- 課題 -->
+      <text x="110" y="330" class="text text-sm" style="font-weight: 600;">⚠️ 課題:</text>
+      <text x="110" y="345" class="text text-sm">• 学習コスト高</text>
+      <text x="110" y="360" class="text text-sm">• 視覚的確認困難</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="320" y1="290" x2="360" y2="290" class="primary-stroke" marker-end="url(#arrow)"/>
+    <text x="340" y="285" text-anchor="middle" class="text text-sm">vs</text>
+    
+    <!-- GUI -->
+    <g class="gui-approach">
+      <rect x="380" y="220" width="200" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="480" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🖱️ GitHub Desktop (GUI)</text>
+      
+      <!-- 利点 -->
+      <text x="390" y="265" class="text text-sm" style="font-weight: 600;">✅ 利点:</text>
+      <text x="390" y="280" class="text text-sm">• 直感的操作</text>
+      <text x="390" y="295" class="text text-sm">• 視覚的確認</text>
+      <text x="390" y="310" class="text text-sm">• 学習コスト低</text>
+      
+      <!-- 課題 -->
+      <text x="390" y="330" class="text text-sm" style="font-weight: 600;">⚠️ 制限:</text>
+      <text x="390" y="345" class="text text-sm">• 一部機能制限</text>
+      <text x="390" y="360" class="text text-sm">• カスタマイズ性</text>
+    </g>
+    
+    <!-- 対象ユーザー -->
+    <g class="target-users">
+      <rect x="600" y="220" width="140" height="140" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="245" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 適用ユーザー</text>
+      
+      <text x="610" y="265" class="text text-sm" style="font-weight: 600;">🔰 初心者:</text>
+      <text x="610" y="280" class="text text-sm">Git入門に最適</text>
+      
+      <text x="610" y="300" class="text text-sm" style="font-weight: 600;">👔 デザイナー:</text>
+      <text x="610" y="315" class="text text-sm">非エンジニア</text>
+      
+      <text x="610" y="335" class="text text-sm" style="font-weight: 600;">⚡ 開発者:</text>
+      <text x="610" y="350" class="text text-sm">効率化ツール</text>
+    </g>
+  </g>
+  
+  <!-- 主要機能 -->
+  <g class="key-features">
+    <text x="400" y="395" text-anchor="middle" class="text text-md">GitHub Desktop の主要機能</text>
+    
+    <!-- 機能1: リポジトリ管理 -->
+    <g class="repo-management">
+      <rect x="80" y="415" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 リポジトリ管理</text>
+      <text x="150" y="460" text-anchor="middle" class="text text-sm">• クローン</text>
+      <text x="150" y="475" text-anchor="middle" class="text text-sm">• 作成・削除</text>
+      <text x="150" y="490" text-anchor="middle" class="text text-sm">• 複数管理</text>
+    </g>
+    
+    <!-- 機能2: ブランチ操作 -->
+    <g class="branch-operations">
+      <rect x="240" y="415" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="310" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 ブランチ操作</text>
+      <text x="310" y="460" text-anchor="middle" class="text text-sm">• 作成・切り替え</text>
+      <text x="310" y="475" text-anchor="middle" class="text text-sm">• マージ・削除</text>
+      <text x="310" y="490" text-anchor="middle" class="text text-sm">• 視覚的確認</text>
+    </g>
+    
+    <!-- 機能3: コミット操作 -->
+    <g class="commit-operations">
+      <rect x="400" y="415" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 コミット操作</text>
+      <text x="470" y="460" text-anchor="middle" class="text text-sm">• 変更確認</text>
+      <text x="470" y="475" text-anchor="middle" class="text text-sm">• ステージング</text>
+      <text x="470" y="490" text-anchor="middle" class="text text-sm">• 履歴表示</text>
+    </g>
+    
+    <!-- 機能4: 同期・連携 -->
+    <g class="sync-collaboration">
+      <rect x="560" y="415" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 同期・連携</text>
+      <text x="630" y="460" text-anchor="middle" class="text text-sm">• Push/Pull</text>
+      <text x="630" y="475" text-anchor="middle" class="text text-sm">• GitHub連携</text>
+      <text x="630" y="490" text-anchor="middle" class="text text-sm">• PR作成</text>
+    </g>
+  </g>
+  
+  <!-- 学習パス -->
+  <g class="learning-path">
+    <text x="400" y="530" text-anchor="middle" class="text text-md">GitHub Desktop 学習パス</text>
+    
+    <rect x="50" y="545" width="700" height="40" rx="8" class="bg-alt border"/>
+    <text x="70" y="565" class="text text-sm" style="font-weight: 600;">📚 学習順序:</text>
+    <text x="160" y="565" class="text text-sm">インストール → 基本操作 → ブランチ管理 → チーム連携 → 高度な機能 → トラブルシューティング</text>
+  </g>
+</svg>

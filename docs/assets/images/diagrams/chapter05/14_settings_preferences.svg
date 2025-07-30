@@ -1,0 +1,146 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>設定・環境設定</title>
+  <desc>GitHub Desktopの設定項目とカスタマイズオプション</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">設定・環境設定</text>
+  
+  <!-- 設定へのアクセス -->
+  <g class="settings-access">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">設定画面へのアクセス</text>
+    
+    <!-- Windows -->
+    <g class="windows-access">
+      <rect x="150" y="95" width="200" height="60" rx="8" class="primary border" opacity="0.1"/>
+      <text x="250" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🪟 Windows</text>
+      <text x="250" y="135" text-anchor="middle" class="text text-sm">File → Options</text>
+      <text x="250" y="150" text-anchor="middle" class="text text-sm">または Ctrl + ,</text>
+    </g>
+    
+    <!-- macOS -->
+    <g class="macos-access">
+      <rect x="380" y="95" width="200" height="60" rx="8" class="success border" opacity="0.1"/>
+      <text x="480" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🍎 macOS</text>
+      <text x="480" y="135" text-anchor="middle" class="text text-sm">GitHub Desktop → Preferences</text>
+      <text x="480" y="150" text-anchor="middle" class="text text-sm">または Cmd + ,</text>
+    </g>
+  </g>
+  
+  <!-- 主要な設定項目 -->
+  <g class="main-settings">
+    <text x="400" y="190" text-anchor="middle" class="text text-md">主要な設定項目</text>
+    
+    <!-- Accounts タブ -->
+    <g class="accounts-tab">
+      <rect x="80" y="210" width="160" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="160" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👤 Accounts</text>
+      
+      <text x="90" y="255" class="text text-sm" style="font-weight: 600;">GitHub.com:</text>
+      <text x="90" y="270" class="text text-sm">• アカウント連携</text>
+      <text x="90" y="285" class="text text-sm">• サインイン/アウト</text>
+      
+      <text x="90" y="305" class="text text-sm" style="font-weight: 600;">Enterprise:</text>
+      <text x="90" y="320" class="text text-sm">• 企業アカウント追加</text>
+    </g>
+    
+    <!-- Git タブ -->
+    <g class="git-tab">
+      <rect x="260" y="210" width="160" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="340" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ Git</text>
+      
+      <text x="270" y="255" class="text text-sm" style="font-weight: 600;">User Info:</text>
+      <text x="270" y="270" class="text text-sm">• Name</text>
+      <text x="270" y="285" class="text text-sm">• Email</text>
+      
+      <text x="270" y="305" class="text text-sm" style="font-weight: 600;">Default Editor:</text>
+      <text x="270" y="320" class="text text-sm">• エディタ選択</text>
+    </g>
+    
+    <!-- Integrations タブ -->
+    <g class="integrations-tab">
+      <rect x="440" y="210" width="160" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="520" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 Integrations</text>
+      
+      <text x="450" y="255" class="text text-sm" style="font-weight: 600;">External Editor:</text>
+      <text x="450" y="270" class="text text-sm">• VS Code</text>
+      <text x="450" y="285" class="text text-sm">• Atom</text>
+      <text x="450" y="300" class="text text-sm">• Sublime Text</text>
+      <text x="450" y="315" class="text text-sm">• カスタムエディタ</text>
+    </g>
+    
+    <!-- Appearance タブ -->
+    <g class="appearance-tab">
+      <rect x="620" y="210" width="160" height="120" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="700" y="235" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎨 Appearance</text>
+      
+      <text x="630" y="255" class="text text-sm" style="font-weight: 600;">Theme:</text>
+      <text x="630" y="270" class="text text-sm">• Light</text>
+      <text x="630" y="285" class="text text-sm">• Dark</text>
+      <text x="630" y="300" class="text text-sm">• System</text>
+      
+      <text x="630" y="320" class="text text-sm">• Font Size</text>
+    </g>
+  </g>
+  
+  <!-- 詳細設定 -->
+  <g class="advanced-settings">
+    <text x="400" y="365" text-anchor="middle" class="text text-md">詳細設定オプション</text>
+    
+    <rect x="100" y="385" width="600" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 通知設定 -->
+    <g class="notification-settings">
+      <text x="120" y="410" class="text text-sm" style="font-weight: 600;">🔔 通知設定</text>
+      <text x="120" y="430" class="text text-sm">☑️ Show notifications when operations complete</text>
+      <text x="120" y="445" class="text text-sm">☑️ Play sound when operations complete</text>
+      <text x="120" y="460" class="text text-sm">☐ Show desktop notifications for pull requests</text>
+    </g>
+    
+    <!-- プライバシー設定 -->
+    <g class="privacy-settings">
+      <text x="420" y="410" class="text text-sm" style="font-weight: 600;">🔒 プライバシー設定</text>
+      <text x="420" y="430" class="text text-sm">☐ Share usage data with GitHub</text>
+      <text x="420" y="445" class="text text-sm">☑️ Periodically submit crash reports</text>
+      <text x="420" y="460" class="text text-sm">☑️ Enable error reporting</text>
+    </g>
+    
+    <!-- その他 -->
+    <g class="other-settings">
+      <text x="120" y="485" class="text text-sm" style="font-weight: 600;">⚡ パフォーマンス設定</text>
+      <text x="420" y="485" class="text text-sm" style="font-weight: 600;">🔄 自動更新設定</text>
+    </g>
+  </g>
+  
+  <!-- Git設定の詳細 -->
+  <g class="git-config-details">
+    <text x="400" y="535" text-anchor="middle" class="text text-md">Git設定の詳細</text>
+    
+    <rect x="50" y="550" width="700" height="40" rx="8" class="primary border" opacity="0.1"/>
+    
+    <!-- 設定項目の詳細 -->
+    <text x="70" y="568" class="text text-sm" style="font-weight: 600;">📧 Email設定:</text>
+    <text x="160" y="568" class="text text-sm">コミット履歴に表示 | GitHub アカウントと一致推奨</text>
+    
+    <text x="70" y="585" class="text text-sm" style="font-weight: 600;">🛠️ エディタ設定:</text>
+    <text x="170" y="585" class="text text-sm">コミットメッセージ編集 | マージ競合解決 | 外部エディタとの連携</text>
+  </g>
+</svg>

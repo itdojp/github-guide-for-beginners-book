@@ -1,0 +1,169 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+    
+    <marker id="arrow-up" viewBox="0 0 10 10" refX="3" refY="9" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L6,0 L3,9 z" class="success"/>
+    </marker>
+    
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="3" refY="0" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,9 L6,9 L3,0 z" class="warning"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>Push・Pull・同期操作</title>
+  <desc>GitHub Desktopでのリモートリポジトリとの同期操作</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Push・Pull・同期操作</text>
+  
+  <!-- リモートとローカルの関係 -->
+  <g class="remote-local-relationship">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">リモートとローカルの同期</text>
+    
+    <!-- ローカルリポジトリ -->
+    <g class="local-repository">
+      <rect x="150" y="95" width="200" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="250" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💻 ローカルリポジトリ</text>
+      <text x="250" y="140" text-anchor="middle" class="text text-sm">あなたのPC</text>
+      
+      <!-- コミット -->
+      <g class="local-commits">
+        <rect x="170" y="150" width="30" height="20" rx="2" class="primary"/>
+        <text x="185" y="165" text-anchor="middle" class="text text-sm">A</text>
+        
+        <rect x="210" y="150" width="30" height="20" rx="2" class="primary"/>
+        <text x="225" y="165" text-anchor="middle" class="text text-sm">B</text>
+        
+        <rect x="250" y="150" width="30" height="20" rx="2" class="primary"/>
+        <text x="265" y="165" text-anchor="middle" class="text text-sm">C</text>
+        
+        <rect x="290" y="150" width="30" height="20" rx="2" class="warning border"/>
+        <text x="305" y="165" text-anchor="middle" class="text text-sm">D</text>
+      </g>
+      
+      <text x="250" y="185" text-anchor="middle" class="text text-sm">最新: コミットD（未Push）</text>
+    </g>
+    
+    <!-- Push 矢印 -->
+    <line x1="250" y1="205" x2="250" y2="240" class="success-stroke" stroke-width="3" marker-end="url(#arrow-up)"/>
+    <text x="270" y="225" class="text text-sm" style="font-weight: 600;">📤 Push</text>
+    
+    <!-- リモートリポジトリ -->
+    <g class="remote-repository">
+      <rect x="450" y="250" width="200" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="550" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ リモートリポジトリ</text>
+      <text x="550" y="295" text-anchor="middle" class="text text-sm">GitHub.com</text>
+      
+      <!-- コミット -->
+      <g class="remote-commits">
+        <rect x="470" y="305" width="30" height="20" rx="2" class="success"/>
+        <text x="485" y="320" text-anchor="middle" class="text text-sm">A</text>
+        
+        <rect x="510" y="305" width="30" height="20" rx="2" class="success"/>
+        <text x="525" y="320" text-anchor="middle" class="text text-sm">B</text>
+        
+        <rect x="550" y="305" width="30" height="20" rx="2" class="success"/>
+        <text x="565" y="320" text-anchor="middle" class="text text-sm">C</text>
+        
+        <rect x="590" y="305" width="30" height="20" rx="2" class="warning border"/>
+        <text x="605" y="320" text-anchor="middle" class="text text-sm">E</text>
+      </g>
+      
+      <text x="550" y="340" text-anchor="middle" class="text text-sm">最新: コミットE（他の人が追加）</text>
+    </g>
+    
+    <!-- Pull 矢印 -->
+    <line x1="450" y1="295" x2="380" y2="240" class="warning-stroke" stroke-width="3" marker-end="url(#arrow-down)"/>
+    <text x="385" y="265" class="text text-sm" style="font-weight: 600;">📥 Pull</text>
+  </g>
+  
+  <!-- 同期操作UI -->
+  <g class="sync-operations-ui">
+    <text x="400" y="395" text-anchor="middle" class="text text-md">GitHub Desktop の同期操作UI</text>
+    
+    <!-- Fetch -->
+    <g class="fetch-operation">
+      <rect x="80" y="415" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="150" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 Fetch Origin</text>
+      <text x="150" y="460" text-anchor="middle" class="text text-sm">リモートの変更を</text>
+      <text x="150" y="475" text-anchor="middle" class="text text-sm">確認（取得のみ）</text>
+      <text x="150" y="490" text-anchor="middle" class="text text-sm">安全な確認操作</text>
+    </g>
+    
+    <!-- Pull -->
+    <g class="pull-operation">
+      <rect x="240" y="415" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="310" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📥 Pull Origin</text>
+      <text x="310" y="460" text-anchor="middle" class="text text-sm">リモートの変更を</text>
+      <text x="310" y="475" text-anchor="middle" class="text text-sm">ローカルに統合</text>
+      <text x="310" y="490" text-anchor="middle" class="text text-sm">Fetch + Merge</text>
+    </g>
+    
+    <!-- Push -->
+    <g class="push-operation">
+      <rect x="400" y="415" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="470" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📤 Push Origin</text>
+      <text x="470" y="460" text-anchor="middle" class="text text-sm">ローカルの変更を</text>
+      <text x="470" y="475" text-anchor="middle" class="text text-sm">リモートに送信</text>
+      <text x="470" y="490" text-anchor="middle" class="text text-sm">共有・バックアップ</text>
+    </g>
+    
+    <!-- Sync -->
+    <g class="sync-operation">
+      <rect x="560" y="415" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="630" y="440" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 Sync</text>
+      <text x="630" y="460" text-anchor="middle" class="text text-sm">Pull + Push の</text>
+      <text x="630" y="475" text-anchor="middle" class="text text-sm">組み合わせ操作</text>
+      <text x="630" y="490" text-anchor="middle" class="text text-sm">双方向同期</text>
+    </g>
+  </g>
+  
+  <!-- 同期の流れ -->
+  <g class="sync-workflow">
+    <text x="400" y="525" text-anchor="middle" class="text text-md">推奨同期ワークフロー</text>
+    
+    <rect x="50" y="540" width="700" height="50" rx="8" class="bg-alt border"/>
+    
+    <!-- ワークフローステップ -->
+    <text x="70" y="560" class="text text-sm" style="font-weight: 600;">1️⃣ Fetch:</text>
+    <text x="130" y="560" class="text text-sm">リモート確認</text>
+    
+    <text x="220" y="560" class="text text-sm" style="font-weight: 600;">2️⃣ Pull:</text>
+    <text x="270" y="560" class="text text-sm">最新を取得</text>
+    
+    <text x="340" y="560" class="text text-sm" style="font-weight: 600;">3️⃣ Edit:</text>
+    <text x="390" y="560" class="text text-sm">ローカル編集</text>
+    
+    <text x="460" y="560" class="text text-sm" style="font-weight: 600;">4️⃣ Commit:</text>
+    <text x="520" y="560" class="text text-sm">変更確定</text>
+    
+    <text x="580" y="560" class="text text-sm" style="font-weight: 600;">5️⃣ Push:</text>
+    <text x="630" y="560" class="text text-sm">共有</text>
+    
+    <text x="70" y="580" class="text text-sm" style="font-weight: 600;">⚠️ 注意:</text>
+    <text x="130" y="580" class="text text-sm">作業前の Pull で競合を防止 | 定期的な Push でバックアップ | チーム作業時は頻繁な同期</text>
+  </g>
+</svg>

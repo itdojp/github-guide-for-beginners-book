@@ -1,0 +1,150 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>インストール・セットアップ</title>
+  <desc>GitHub Desktopのダウンロードからセットアップまでの手順</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">インストール・セットアップ</text>
+  
+  <!-- システム要件 -->
+  <g class="system-requirements">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">システム要件</text>
+    
+    <!-- Windows -->
+    <g class="windows-requirements">
+      <rect x="120" y="95" width="200" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="220" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🪟 Windows</text>
+      <text x="220" y="140" text-anchor="middle" class="text text-sm">Windows 10 以降（64-bit）</text>
+      <text x="220" y="155" text-anchor="middle" class="text text-sm">メモリ: 4GB 以上</text>
+      <text x="220" y="170" text-anchor="middle" class="text text-sm">ディスク: 1GB 以上</text>
+      <text x="220" y="185" text-anchor="middle" class="text text-sm">Git 2.17 以降</text>
+    </g>
+    
+    <!-- macOS -->
+    <g class="macos-requirements">
+      <rect x="340" y="95" width="200" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="440" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🍎 macOS</text>
+      <text x="440" y="140" text-anchor="middle" class="text text-sm">macOS 10.15 以降</text>
+      <text x="440" y="155" text-anchor="middle" class="text text-sm">Intel/Apple Silicon</text>
+      <text x="440" y="170" text-anchor="middle" class="text text-sm">メモリ: 4GB 以上</text>
+      <text x="440" y="185" text-anchor="middle" class="text text-sm">Git（自動インストール）</text>
+    </g>
+  </g>
+  
+  <!-- インストール手順 -->
+  <g class="installation-steps">
+    <text x="400" y="235" text-anchor="middle" class="text text-md">インストール手順</text>
+    
+    <!-- ステップ1: ダウンロード -->
+    <g class="step-1">
+      <rect x="80" y="255" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
+      <text x="150" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ ダウンロード</text>
+      <text x="150" y="295" text-anchor="middle" class="text text-sm">desktop.github.com</text>
+      <text x="150" y="310" text-anchor="middle" class="text text-sm">からダウンロード</text>
+      <text x="150" y="325" text-anchor="middle" class="text text-sm">OS自動判定</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="220" y1="295" x2="260" y2="295" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ2: インストール -->
+    <g class="step-2">
+      <rect x="280" y="255" width="140" height="80" rx="8" class="success border" opacity="0.1"/>
+      <text x="350" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ インストール</text>
+      <text x="350" y="295" text-anchor="middle" class="text text-sm">インストーラー実行</text>
+      <text x="350" y="310" text-anchor="middle" class="text text-sm">管理者権限必要</text>
+      <text x="350" y="325" text-anchor="middle" class="text text-sm">（Windows のみ）</text>
+    </g>
+    
+    <!-- 矢印 -->
+    <line x1="420" y1="295" x2="460" y2="295" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- ステップ3: 起動 -->
+    <g class="step-3">
+      <rect x="480" y="255" width="140" height="80" rx="8" class="warning border" opacity="0.1"/>
+      <text x="550" y="275" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 初回起動</text>
+      <text x="550" y="295" text-anchor="middle" class="text text-sm">アプリケーション</text>
+      <text x="550" y="310" text-anchor="middle" class="text text-sm">起動</text>
+      <text x="550" y="325" text-anchor="middle" class="text text-sm">セットアップ開始</text>
+    </g>
+  </g>
+  
+  <!-- セットアップ手順 -->
+  <g class="setup-process">
+    <text x="400" y="370" text-anchor="middle" class="text text-md">初期セットアップ手順</text>
+    
+    <rect x="100" y="390" width="600" height="140" rx="8" class="bg-alt border"/>
+    
+    <!-- セットアップステップ -->
+    <g class="setup-steps">
+      <!-- GitHub サインイン -->
+      <g class="github-signin">
+        <rect x="120" y="410" width="130" height="90" rx="4" class="primary border" opacity="0.1"/>
+        <text x="185" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔐 GitHub サインイン</text>
+        <text x="185" y="450" text-anchor="middle" class="text text-sm">GitHub.com</text>
+        <text x="185" y="465" text-anchor="middle" class="text text-sm">アカウントで</text>
+        <text x="185" y="480" text-anchor="middle" class="text text-sm">認証</text>
+        <text x="185" y="495" text-anchor="middle" class="text text-sm">（必須）</text>
+      </g>
+      
+      <!-- Git 設定 -->
+      <g class="git-config">
+        <rect x="270" y="410" width="130" height="90" rx="4" class="success border" opacity="0.1"/>
+        <text x="335" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ Git 設定</text>
+        <text x="335" y="450" text-anchor="middle" class="text text-sm">名前とメール</text>
+        <text x="335" y="465" text-anchor="middle" class="text text-sm">アドレス設定</text>
+        <text x="335" y="480" text-anchor="middle" class="text text-sm">（コミット用）</text>
+      </g>
+      
+      <!-- 使用統計 -->
+      <g class="usage-stats">
+        <rect x="420" y="410" width="130" height="90" rx="4" class="warning border" opacity="0.1"/>
+        <text x="485" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 使用統計</text>
+        <text x="485" y="450" text-anchor="middle" class="text text-sm">匿名データ</text>
+        <text x="485" y="465" text-anchor="middle" class="text text-sm">送信設定</text>
+        <text x="485" y="480" text-anchor="middle" class="text text-sm">（任意）</text>
+      </g>
+      
+      <!-- 完了 -->
+      <g class="setup-complete">
+        <rect x="570" y="410" width="110" height="90" rx="4" class="neutral border" opacity="0.1"/>
+        <text x="625" y="430" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ 完了</text>
+        <text x="625" y="450" text-anchor="middle" class="text text-sm">メイン画面</text>
+        <text x="625" y="465" text-anchor="middle" class="text text-sm">表示</text>
+        <text x="625" y="480" text-anchor="middle" class="text text-sm">使用開始</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- トラブルシューティング -->
+  <g class="troubleshooting">
+    <text x="400" y="560" text-anchor="middle" class="text text-md">よくある問題と対処法</text>
+    
+    <rect x="50" y="575" width="700" height="20" rx="4" class="error border" opacity="0.1"/>
+    <text x="60" y="590" class="text text-sm" style="font-weight: 600;">⚠️ インストール失敗:</text>
+    <text x="180" y="590" class="text text-sm">管理者権限確認 | ウイルス対策無効化 | 旧バージョン削除 | 再起動後再試行</text>
+  </g>
+</svg>

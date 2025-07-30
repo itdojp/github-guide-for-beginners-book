@@ -1,0 +1,154 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .warning { fill: var(--svg-warning); }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>マージ競合解決（GUI）</title>
+  <desc>GitHub Desktopでのマージ競合の発生から解決までのプロセス</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">マージ競合解決（GUI）</text>
+  
+  <!-- 競合発生状況 -->
+  <g class="conflict-scenario">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">競合が発生する状況</text>
+    
+    <!-- 分岐前 -->
+    <g class="before-diverge">
+      <circle cx="200" cy="105" r="12" class="primary"/>
+      <text x="200" y="110" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">A</text>
+      <text x="200" y="130" text-anchor="middle" class="text text-sm">共通祖先</text>
+    </g>
+    
+    <!-- 分岐 -->
+    <line x1="212" y1="105" x2="280" y2="85" class="primary-stroke"/>
+    <line x1="212" y1="105" x2="280" y2="125" class="primary-stroke"/>
+    
+    <!-- mainブランチ -->
+    <g class="main-branch">
+      <circle cx="300" cy="85" r="12" class="success"/>
+      <text x="300" y="90" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">B</text>
+      <text x="300" y="110" text-anchor="middle" class="text text-sm">main branch</text>
+      
+      <line x1="312" y1="85" x2="380" y2="85" class="success-stroke"/>
+      <circle cx="400" cy="85" r="12" class="success"/>
+      <text x="400" y="90" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">D</text>
+    </g>
+    
+    <!-- featureブランチ -->
+    <g class="feature-branch">
+      <circle cx="300" cy="125" r="12" class="warning"/>
+      <text x="300" y="130" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">C</text>
+      <text x="300" y="150" text-anchor="middle" class="text text-sm">feature branch</text>
+      
+      <line x1="312" y1="125" x2="380" y2="125" class="warning-stroke"/>
+      <circle cx="400" cy="125" r="12" class="warning"/>
+      <text x="400" y="130" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">E</text>
+    </g>
+    
+    <!-- 競合発生 -->
+    <g class="conflict-point">
+      <line x1="400" y1="97" x2="400" y2="113" class="error-stroke" stroke-width="3"/>
+      <text x="450" y="105" class="text text-sm error" style="font-weight: 600;">⚠️ 同じファイルの同じ箇所を変更</text>
+    </g>
+  </g>
+  
+  <!-- GitHub Desktop での競合表示 -->
+  <g class="conflict-display">
+    <text x="400" y="190" text-anchor="middle" class="text text-md">GitHub Desktop での競合表示</text>
+    
+    <rect x="100" y="210" width="600" height="160" rx="8" class="error border" opacity="0.1"/>
+    
+    <!-- 競合警告 -->
+    <g class="conflict-warning">
+      <rect x="120" y="230" width="560" height="30" rx="4" class="error border"/>
+      <text x="400" y="250" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ Merge conflicts detected in 2 files</text>
+    </g>
+    
+    <!-- 競合ファイルリスト -->
+    <g class="conflict-files">
+      <text x="120" y="280" class="text text-sm" style="font-weight: 600;">🚨 Conflicted Files:</text>
+      
+      <!-- ファイル1 -->
+      <rect x="120" y="290" width="250" height="25" rx="4" class="error border" opacity="0.1"/>
+      <text x="130" y="308" class="text text-sm">📄 index.html</text>
+      <text x="220" y="308" class="text text-sm error">2 conflicts</text>
+      
+      <!-- ファイル2 -->
+      <rect x="120" y="320" width="250" height="25" rx="4" class="error border" opacity="0.1"/>
+      <text x="130" y="338" class="text text-sm">📄 script.js</text>
+      <text x="220" y="338" class="text text-sm error">1 conflict</text>
+    </g>
+    
+    <!-- 解決方法ボタン -->
+    <g class="resolution-buttons">
+      <rect x="400" y="290" width="120" height="30" rx="4" class="primary border"/>
+      <text x="460" y="310" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🛠️ Resolve in Editor</text>
+      
+      <rect x="540" y="290" width="120" height="30" rx="4" class="success border"/>
+      <text x="600" y="310" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📝 Open in External</text>
+      
+      <rect x="400" y="330" width="260" height="25" rx="4" class="neutral border"/>
+      <text x="530" y="348" text-anchor="middle" class="text text-sm">Continue merge after resolving conflicts</text>
+    </g>
+  </g>
+  
+  <!-- 競合解決エディタ -->
+  <g class="conflict-editor">
+    <text x="400" y="400" text-anchor="middle" class="text text-md">競合解決エディタ</text>
+    
+    <rect x="150" y="420" width="500" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- 競合マーカー表示 -->
+    <g class="conflict-markers">
+      <text x="160" y="440" class="text text-sm" style="font-family: monospace; font-weight: 600;">conflict-markers.js</text>
+      
+      <!-- HEAD部分 -->
+      <rect x="160" y="450" width="470" height="15" rx="2" class="success border" opacity="0.1"/>
+      <text x="165" y="462" class="text text-sm" style="font-family: monospace;">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)</text>
+      
+      <rect x="160" y="467" width="470" height="15" rx="2" class="success border" opacity="0.1"/>
+      <text x="165" y="479" class="text text-sm" style="font-family: monospace;">const title = "Current Branch Title";</text>
+      
+      <!-- 区切り -->
+      <rect x="160" y="484" width="470" height="15" rx="2" class="neutral border" opacity="0.1"/>
+      <text x="165" y="496" class="text text-sm" style="font-family: monospace;">======= (Separator)</text>
+      
+      <!-- incoming部分 -->
+      <rect x="160" y="501" width="470" height="15" rx="2" class="warning border" opacity="0.1"/>
+      <text x="165" y="513" class="text text-sm" style="font-family: monospace;">const title = "Feature Branch Title";</text>
+      
+      <rect x="160" y="518" width="470" height="15" rx="2" class="warning border" opacity="0.1"/>
+      <text x="165" y="530" class="text text-sm" style="font-family: monospace;">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/new-title (Incoming Change)</text>
+    </g>
+  </g>
+  
+  <!-- 解決手順 -->
+  <g class="resolution-steps">
+    <text x="400" y="565" text-anchor="middle" class="text text-md">解決手順</text>
+    
+    <rect x="50" y="575" width="700" height="20" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="590" class="text text-sm" style="font-weight: 600;">📋 手順:</text>
+    <text x="120" y="590" class="text text-sm">1. 競合箇所を確認 → 2. 適切なコードを選択/編集 → 3. マーカー削除 → 4. ファイル保存 → 5. Commit merge</text>
+  </g>
+</svg>
