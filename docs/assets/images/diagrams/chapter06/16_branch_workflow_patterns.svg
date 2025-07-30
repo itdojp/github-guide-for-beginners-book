@@ -1,0 +1,205 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: var(--svg-bg); }
+      .bg-alt { fill: var(--svg-bg-alt); }
+      .text { fill: var(--svg-text); font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: var(--svg-border); fill: none; stroke-width: 1; }
+      .primary { fill: var(--svg-primary); }
+      .primary-stroke { stroke: var(--svg-primary); stroke-width: 2; }
+      .success { fill: var(--svg-success); }
+      .success-stroke { stroke: var(--svg-success); stroke-width: 2; }
+      .warning { fill: var(--svg-warning); }
+      .warning-stroke { stroke: var(--svg-warning); stroke-width: 2; }
+      .error { fill: var(--svg-error); }
+      .neutral { fill: var(--svg-neutral); }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>ブランチワークフローパターン</title>
+  <desc>様々なプロジェクトタイプに適したブランチワークフローの選択指針</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">ブランチワークフローパターン</text>
+  
+  <!-- ワークフローパターンの概要 -->
+  <g class="workflow-patterns-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">プロジェクトタイプ別ワークフロー選択</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🎯 チームサイズ・リリース頻度・複雑さに応じた最適化</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">プロジェクトの特性を理解してワークフローを選択することが成功の鍵</text>
+  </g>
+  
+  <!-- 4つの主要パターン -->
+  <g class="main-patterns">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">4つの主要パターン</text>
+    
+    <!-- パターン1: Centralized -->
+    <g class="centralized-pattern">
+      <rect x="50" y="200" width="160" height="140" rx="8" class="success border" opacity="0.1"/>
+      <text x="130" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏛️ Centralized</text>
+      
+      <!-- 簡単な図解 -->
+      <g class="centralized-diagram">
+        <circle cx="130" cy="245" r="4" class="success"/>
+        <line x1="134" y1="245" x2="156" y2="245" class="success-stroke"/>
+        <circle cx="160" cy="245" r="4" class="success"/>
+        <line x1="164" y1="245" x2="186" y2="245" class="success-stroke"/>
+        <circle cx="190" cy="245" r="4" class="success"/>
+        
+        <text x="80" y="260" class="text text-sm" style="font-size: 10px;">main</text>
+      </g>
+      
+      <text x="60" y="280" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="60" y="295" class="text text-sm">• 単一mainブランチ</text>
+      <text x="60" y="310" class="text text-sm">• 直接コミット</text>
+      
+      <text x="60" y="330" class="text text-sm" style="font-weight: 600;">適用:</text>
+      <text x="60" y="345" class="text text-sm">個人・小規模チーム</text>
+    </g>
+    
+    <!-- パターン2: Feature Branch -->
+    <g class="feature-branch-pattern">
+      <rect x="230" y="200" width="160" height="140" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌿 Feature Branch</text>
+      
+      <!-- 簡単な図解 -->
+      <g class="feature-diagram">
+        <circle cx="260" cy="245" r="4" class="success"/>
+        <line x1="264" y1="245" x2="286" y2="245" class="success-stroke"/>
+        <circle cx="290" cy="245" r="4" class="success"/>
+        
+        <line x1="264" y1="245" x2="274" y2="260" class="primary-stroke"/>
+        <circle cx="280" cy="265" r="4" class="primary"/>
+        <line x1="284" y1="265" x2="290" y2="255" class="primary-stroke"/>
+        
+        <text x="240" y="280" class="text text-sm" style="font-size: 10px;">main</text>
+        <text x="300" y="280" class="text text-sm" style="font-size: 10px;">feature</text>
+      </g>
+      
+      <text x="240" y="295" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="240" y="310" class="text text-sm">• 機能別ブランチ</text>
+      <text x="240" y="325" class="text text-sm">• PRでマージ</text>
+      
+      <text x="240" y="340" class="text text-sm" style="font-weight: 600;">適用:</text>
+      <text x="240" y="355" class="text text-sm">中規模チーム・Web開発</text>
+    </g>
+    
+    <!-- パターン3: Git-flow -->
+    <g class="gitflow-pattern">
+      <rect x="410" y="200" width="160" height="140" rx="8" class="warning border" opacity="0.1"/>
+      <text x="490" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🏢 Git-flow</text>
+      
+      <!-- 簡単な図解 -->
+      <g class="gitflow-diagram">
+        <text x="420" y="245" class="text text-sm" style="font-size: 10px;">main</text>
+        <line x1="450" y1="245" x2="530" y2="245" class="success-stroke"/>
+        
+        <text x="420" y="260" class="text text-sm" style="font-size: 10px;">develop</text>
+        <line x1="450" y1="260" x2="530" y2="260" class="primary-stroke"/>
+        
+        <text x="420" y="275" class="text text-sm" style="font-size: 10px;">feature</text>
+        <line x1="450" y1="275" x2="480" y2="275" class="warning-stroke"/>
+        
+        <text x="420" y="290" class="text text-sm" style="font-size: 10px;">release</text>
+        <line x1="450" y1="290" x2="500" y2="290" class="neutral"/>
+      </g>
+      
+      <text x="420" y="310" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="420" y="325" class="text text-sm">• 複数永続ブランチ</text>
+      <text x="420" y="340" class="text text-sm">• 計画的リリース</text>
+      
+      <text x="420" y="355" class="text text-sm" style="font-weight: 600;">適用:</text>
+      <text x="490" y="355" class="text text-sm">大規模・企業</text>
+    </g>
+    
+    <!-- パターン4: GitHub Flow -->
+    <g class="github-flow-pattern">
+      <rect x="590" y="200" width="160" height="140" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="670" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🚀 GitHub Flow</text>
+      
+      <!-- 簡単な図解 -->
+      <g class="github-flow-diagram">
+        <circle cx="620" cy="245" r="4" class="success"/>
+        <line x1="624" y1="245" x2="646" y2="245" class="success-stroke"/>
+        <circle cx="650" cy="245" r="4" class="success"/>
+        
+        <line x1="624" y1="245" x2="634" y2="260" class="primary-stroke"/>
+        <circle cx="640" cy="265" r="4" class="primary"/>
+        <line x1="644" y1="265" x2="650" y2="255" class="primary-stroke"/>
+        
+        <text x="680" y="250" class="text text-sm" style="font-size: 10px;">Deploy</text>
+        
+        <text x="600" y="280" class="text text-sm" style="font-size: 10px;">main</text>
+      </g>
+      
+      <text x="600" y="295" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="600" y="310" class="text text-sm">• シンプル軽量</text>
+      <text x="600" y="325" class="text text-sm">• 継続デプロイ</text>
+      
+      <text x="600" y="340" class="text text-sm" style="font-weight: 600;">適用:</text>
+      <text x="600" y="355" class="text text-sm">スタートアップ・SaaS</text>
+    </g>
+  </g>
+  
+  <!-- 選択指針 -->
+  <g class="selection-guidelines">
+    <text x="400" y="385" text-anchor="middle" class="text text-md">プロジェクト特性別選択指針</text>
+    
+    <rect x="50" y="405" width="700" height="120" rx="8" class="bg-alt border"/>
+    
+    <!-- チームサイズ軸 -->
+    <g class="team-size-axis">
+      <text x="70" y="430" class="text text-sm" style="font-weight: 600;">👥 チームサイズ:</text>
+      
+      <text x="70" y="450" class="text text-sm success">個人（1人）</text>
+      <text x="170" y="450" class="text text-sm">→ Centralized</text>
+      
+      <text x="70" y="470" class="text text-sm primary">小中規模（2-10人）</text>
+      <text x="200" y="470" class="text text-sm">→ Feature Branch / GitHub Flow</text>
+      
+      <text x="70" y="490" class="text text-sm warning">大規模（10人以上）</text>
+      <text x="180" y="490" class="text text-sm">→ Git-flow</text>
+    </g>
+    
+    <!-- リリース頻度軸 -->
+    <g class="release-frequency-axis">
+      <text x="420" y="430" class="text text-sm" style="font-weight: 600;">📅 リリース頻度:</text>
+      
+      <text x="420" y="450" class="text text-sm success">高頻度（日次・週次）</text>
+      <text x="580" y="450" class="text text-sm">→ GitHub Flow</text>
+      
+      <text x="420" y="470" class="text text-sm primary">中頻度（月次・四半期）</text>
+      <text x="580" y="470" class="text text-sm">→ Feature Branch</text>
+      
+      <text x="420" y="490" class="text text-sm warning">低頻度（年次・計画的）</text>
+      <text x="580" y="490" class="text text-sm">→ Git-flow</text>
+    </g>
+    
+    <!-- 複雑さ軸 -->
+    <g class="complexity-considerations">
+      <rect x="70" y="505" width="660" height="15" rx="4" class="primary border" opacity="0.1"/>
+      <text x="80" y="517" class="text text-sm" style="font-weight: 600;">🎯 考慮点:</text>
+      <text x="140" y="517" class="text text-sm">学習コスト | 自動化レベル | 品質要件 | コンプライアンス要件 | チーム習熟度</text>
+    </g>
+  </g>
+  
+  <!-- 移行戦略 -->
+  <g class="migration-strategy">
+    <text x="400" y="555" text-anchor="middle" class="text text-md">ワークフロー移行戦略</text>
+    
+    <rect x="50" y="570" width="700" height="25" rx="4" class="success border" opacity="0.1"/>
+    <text x="60" y="588" class="text text-sm" style="font-weight: 600;">📈 段階的移行:</text>
+    <text x="150" y="588" class="text text-sm">現状評価→目標設定→段階的導入→チーム教育→継続改善。急激な変更は避け、チーム合意を重視</text>
+  </g>
+</svg>
