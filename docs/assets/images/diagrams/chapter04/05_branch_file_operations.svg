@@ -17,7 +17,7 @@
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
             markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" class="primary" fill="none"/>
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
     </marker>
   </defs>
   
@@ -52,7 +52,7 @@
     <!-- feature/loginブランチ -->
     <g class="feature-branch">
       <path d="M 250 100 Q 270 130 290 160 L 480 160 Q 500 130 520 100" 
-            fill="none" class="primary" stroke-width="3"/>
+            fill="none" stroke="#2563eb" stroke-width="3"/>
       <text x="80" y="165" text-anchor="end" class="text text-sm primary" style="font-weight: 600;">feature/login</text>
       
       <!-- featureのコミット -->
@@ -69,7 +69,7 @@
     <!-- hotfix/bugfixブランチ -->
     <g class="hotfix-branch">
       <path d="M 400 100 Q 420 70 440 40 L 540 40 Q 560 70 580 100" 
-            fill="none" class="error" stroke-width="3"/>
+            fill="none" stroke="#ef4444" stroke-width="3"/>
       <text x="80" y="45" text-anchor="end" class="text text-sm error" style="font-weight: 600;">hotfix/bugfix</text>
       
       <!-- hotfixのコミット -->
