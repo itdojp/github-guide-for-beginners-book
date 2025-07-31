@@ -36,7 +36,7 @@
   <g class="quality-gate-layers">
     <text x="400" y="180" text-anchor="middle" class="text text-md">多層の品質チェック</text>
     
-    <rect x="50" y="200" width="700" height="280" rx="8" class="bg-alt border"/>
+    <rect x="50" y="200" width="700" height="330" rx="8" class="bg-alt border"/>
     
     <!-- 自動チェック層 -->
     <g class="automated-checks">
@@ -148,20 +148,20 @@
   
   <!-- 品質基準設定 -->
   <g class="quality-criteria">
-    <text x="400" y="510" text-anchor="middle" class="text text-md">品質基準の設定例</text>
+    <text x="400" y="560" text-anchor="middle" class="text text-md">品質基準の設定例</text>
     
     <!-- 必須基準 -->
     <g class="mandatory-criteria">
-      <rect x="80" y="525" width="300" height="50" rx="8" class="error border" opacity="0.1"/>
-      <text x="100" y="545" class="text text-sm" style="font-weight: 600;">🚫 必須基準:</text>
-      <text x="100" y="560" class="text text-sm">テスト成功率100% | セキュリティチェックパス | 2名以上承認</text>
+      <rect x="80" y="575" width="300" height="50" rx="8" class="error border" opacity="0.1"/>
+      <text x="100" y="595" class="text text-sm" style="font-weight: 600;">🚫 必須基準:</text>
+      <text x="100" y="610" class="text text-sm">テスト成功率100% | セキュリティチェックパス | 2名以上承認</text>
     </g>
     
     <!-- 推奨基準 -->
     <g class="recommended-criteria">
-      <rect x="400" y="525" width="300" height="50" rx="8" class="success border" opacity="0.1"/>
-      <text x="420" y="545" class="text text-sm" style="font-weight: 600;">✅ 推奨基準:</text>
-      <text x="420" y="560" class="text text-sm">カバレッジ80%以上 | 複雑度10以下 | パフォーマンス劣化なし</text>
+      <rect x="400" y="575" width="300" height="50" rx="8" class="success border" opacity="0.1"/>
+      <text x="420" y="595" class="text text-sm" style="font-weight: 600;">✅ 推奨基準:</text>
+      <text x="420" y="610" class="text text-sm">カバレッジ80%以上 | 複雑度10以下 | パフォーマンス劣化なし</text>
     </g>
   </g>
 </svg>
