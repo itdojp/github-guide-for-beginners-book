@@ -1,0 +1,196 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .bg-alt { fill: #f8fafc; }
+      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text-sm { font-size: 12px; }
+      .text-md { font-size: 14px; font-weight: 500; }
+      .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-stroke { stroke: #2563eb; stroke-width: 2; }
+      .success { fill: #10b981; }
+      .warning { fill: #f59e0b; }
+      .error { fill: #ef4444; }
+      .neutral { fill: #64748b; }
+    </style>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    
+    <marker id="arrow-success" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+    </marker>
+    
+    <marker id="arrow-warning" viewBox="0 0 10 10" refX="9" refY="3" 
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <title>マージの流れ - 統合戦略とプロセス</title>
+  <desc>異なるマージ手法とPull Request を通じた統合プロセス</desc>
+  
+  <!-- タイトル -->
+  <text x="400" y="40" text-anchor="middle" class="text text-md">マージの流れ - 統合戦略とプロセス</text>
+  
+  <!-- マージの概要 -->
+  <g class="merge-overview">
+    <text x="400" y="75" text-anchor="middle" class="text text-md">マージとは</text>
+    
+    <rect x="150" y="90" width="500" height="60" rx="8" class="success border" opacity="0.1"/>
+    <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔀 異なるブランチの変更を統合し、一つの履歴にまとめる操作</text>
+    <text x="400" y="135" text-anchor="middle" class="text text-sm">Pull Request を通じて、レビューと品質確保を行いながら安全に統合</text>
+  </g>
+  
+  <!-- Pull Request プロセス -->
+  <g class="pull-request-process">
+    <text x="400" y="180" text-anchor="middle" class="text text-md">Pull Request によるマージプロセス</text>
+    
+    <!-- ステップ1: PR作成 -->
+    <g class="step-1-pr-create">
+      <rect x="50" y="200" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
+      <text x="120" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ PR作成</text>
+      
+      <text x="60" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
+      <text x="60" y="260" class="text text-sm">• 変更概要</text>
+      <text x="60" y="275" class="text text-sm">• テスト結果</text>
+      <text x="60" y="290" class="text text-sm">• レビュー依頼</text>
+    </g>
+    
+    <!-- ステップ2: レビュー -->
+    <g class="step-2-review">
+      <rect x="210" y="200" width="140" height="100" rx="8" class="warning border" opacity="0.1"/>
+      <text x="280" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ コードレビュー</text>
+      
+      <text x="220" y="245" class="text text-sm" style="font-weight: 600;">確認:</text>
+      <text x="220" y="260" class="text text-sm">• コード品質</text>
+      <text x="220" y="275" class="text text-sm">• 設計整合性</text>
+      <text x="220" y="290" class="text text-sm">• テスト網羅性</text>
+    </g>
+    
+    <!-- ステップ3: 承認 -->
+    <g class="step-3-approval">
+      <rect x="370" y="200" width="140" height="100" rx="8" class="success border" opacity="0.1"/>
+      <text x="440" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ 承認・修正</text>
+      
+      <text x="380" y="245" class="text text-sm" style="font-weight: 600;">結果:</text>
+      <text x="380" y="260" class="text text-sm">• Approved</text>
+      <text x="380" y="275" class="text text-sm">• Changes requested</text>
+      <text x="380" y="290" class="text text-sm">• Comment</text>
+    </g>
+    
+    <!-- ステップ4: マージ実行 -->
+    <g class="step-4-merge">
+      <rect x="530" y="200" width="140" height="100" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="600" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ マージ実行</text>
+      
+      <text x="540" y="245" class="text text-sm" style="font-weight: 600;">方法選択:</text>
+      <text x="540" y="260" class="text text-sm">• Merge commit</text>
+      <text x="540" y="275" class="text text-sm">• Squash and merge</text>
+      <text x="540" y="290" class="text text-sm">• Rebase and merge</text>
+    </g>
+    
+    <!-- プロセス矢印 -->
+    <line x1="190" y1="250" x2="210" y2="250" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="350" y1="250" x2="370" y2="250" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="510" y1="250" x2="530" y2="250" class="primary-stroke" marker-end="url(#arrow)"/>
+    
+    <!-- フィードバックループ -->
+    <path d="M 440 200 Q 325 170 280 200" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-warning)"/>
+    <text x="360" y="180" text-anchor="middle" class="text text-sm warning">修正要求</text>
+  </g>
+  
+  <!-- マージ戦略の比較 -->
+  <g class="merge-strategies">
+    <text x="400" y="340" text-anchor="middle" class="text text-md">マージ戦略の比較</text>
+    
+    <!-- Merge Commit -->
+    <g class="merge-commit-strategy">
+      <rect x="80" y="360" width="200" height="120" rx="8" class="primary border" opacity="0.1"/>
+      <text x="180" y="385" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔀 Merge Commit</text>
+      
+      <!-- 図解 -->
+      <line x1="100" y1="400" x2="180" y2="400" class="success" stroke-width="2"/>
+      <path d="M 130 400 Q 150 420 170 440 L 200 440 Q 220 420 240 400" 
+            fill="none" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="440" x2="180" y2="400" stroke="#f59e0b" stroke-width="2"/>
+      
+      <text x="90" y="460" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="90" y="475" class="text text-sm">履歴保持・マージコミット作成</text>
+    </g>
+    
+    <!-- Squash and Merge -->
+    <g class="squash-merge-strategy">
+      <rect x="300" y="360" width="200" height="120" rx="8" class="success border" opacity="0.1"/>
+      <text x="400" y="385" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📦 Squash and Merge</text>
+      
+      <!-- 図解 -->
+      <line x1="320" y1="400" x2="400" y2="400" class="success" stroke-width="2"/>
+      <path d="M 350 400 Q 370 420 390 440 L 420 440 Q 440 420 460 400" 
+            fill="none" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="420" cy="400" r="4" class="success"/>
+      
+      <text x="310" y="460" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="310" y="475" class="text text-sm">コミット統合・クリーンな履歴</text>
+    </g>
+    
+    <!-- Rebase and Merge -->
+    <g class="rebase-merge-strategy">
+      <rect x="520" y="360" width="200" height="120" rx="8" class="warning border" opacity="0.1"/>
+      <text x="620" y="385" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📏 Rebase and Merge</text>
+      
+      <!-- 図解 -->
+      <line x1="540" y1="400" x2="700" y2="400" class="success" stroke-width="2"/>
+      <circle cx="580" cy="400" r="3" class="primary"/>
+      <circle cx="620" cy="400" r="3" class="primary"/>
+      <circle cx="660" cy="400" r="3" class="primary"/>
+      
+      <text x="530" y="460" class="text text-sm" style="font-weight: 600;">特徴:</text>
+      <text x="530" y="475" class="text text-sm">線形履歴・リベース後統合</text>
+    </g>
+  </g>
+  
+  <!-- 競合解決プロセス -->
+  <g class="conflict-resolution">
+    <text x="400" y="510" text-anchor="middle" class="text text-md">競合発生時の解決フロー</text>
+    
+    <!-- 競合検出 -->
+    <g class="conflict-detection">
+      <rect x="80" y="525" width="120" height="50" rx="8" class="error border" opacity="0.1"/>
+      <text x="140" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚠️ 競合検出</text>
+      <text x="140" y="565" text-anchor="middle" class="text text-sm">自動マージ失敗</text>
+    </g>
+    
+    <!-- 手動解決 -->
+    <g class="manual-resolution">
+      <rect x="220" y="525" width="120" height="50" rx="8" class="warning border" opacity="0.1"/>
+      <text x="280" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 手動解決</text>
+      <text x="280" y="565" text-anchor="middle" class="text text-sm">ファイル編集</text>
+    </g>
+    
+    <!-- テスト実行 -->
+    <g class="testing-verification">
+      <rect x="360" y="525" width="120" height="50" rx="8" class="primary border" opacity="0.1"/>
+      <text x="420" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🧪 テスト実行</text>
+      <text x="420" y="565" text-anchor="middle" class="text text-sm">動作確認</text>
+    </g>
+    
+    <!-- マージ完了 -->
+    <g class="merge-completion">
+      <rect x="500" y="525" width="120" height="50" rx="8" class="success border" opacity="0.1"/>
+      <text x="560" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✅ マージ完了</text>
+      <text x="560" y="565" text-anchor="middle" class="text text-sm">統合成功</text>
+    </g>
+    
+    <!-- 解決フロー矢印 -->
+    <line x1="200" y1="550" x2="220" y2="550" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="340" y1="550" x2="360" y2="550" class="primary-stroke" marker-end="url(#arrow)"/>
+    <line x1="480" y1="550" x2="500" y2="550" class="primary-stroke" marker-end="url(#arrow)"/>
+  </g>
+</svg>
