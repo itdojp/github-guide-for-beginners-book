@@ -17,7 +17,7 @@
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
             markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" class="primary"/>
+      <path d="M0,0 L0,6 L9,3 z" class="primary" fill="none"/>
     </marker>
     
     <marker id="arrow-up" viewBox="0 0 10 10" refX="3" refY="9" 
