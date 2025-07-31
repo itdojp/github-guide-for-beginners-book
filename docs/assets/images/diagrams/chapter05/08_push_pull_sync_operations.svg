@@ -13,6 +13,8 @@
       .warning { fill: #f59e0b; }
       .error { fill: #ef4444; }
       .neutral { fill: #64748b; }
+      .success-stroke { stroke: #10b981; stroke-width: 2; }
+      .warning-stroke { stroke: #f59e0b; stroke-width: 2; }
     </style>
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
@@ -68,8 +70,9 @@
     </g>
     
     <!-- Push 矢印 -->
-    <line x1="250" y1="205" x2="250" y2="240" class="success-stroke" stroke-width="3" marker-end="url(#arrow-up)"/>
-    <text x="270" y="225" class="text text-sm" style="font-weight: 600;">📤 Push</text>
+    <line x1="350" y1="180" x2="450" y2="270" class="success-stroke" stroke-width="3" marker-end="url(#arrow-up)"/>
+    <text x="370" y="225" class="text text-sm" style="font-weight: 600;">📤 Push</text>
+    <text x="365" y="240" class="text text-sm">ローカル→リモート</text>
     
     <!-- リモートリポジトリ -->
     <g class="remote-repository">
@@ -96,8 +99,9 @@
     </g>
     
     <!-- Pull 矢印 -->
-    <line x1="450" y1="295" x2="380" y2="240" class="warning-stroke" stroke-width="3" marker-end="url(#arrow-down)"/>
-    <text x="385" y="265" class="text text-sm" style="font-weight: 600;">📥 Pull</text>
+    <line x1="450" y1="295" x2="350" y2="180" class="warning-stroke" stroke-width="3" marker-end="url(#arrow-down)"/>
+    <text x="375" y="265" class="text text-sm" style="font-weight: 600;">📥 Pull</text>
+    <text x="365" y="280" class="text text-sm">リモート→ローカル</text>
   </g>
   
   <!-- 同期操作UI -->

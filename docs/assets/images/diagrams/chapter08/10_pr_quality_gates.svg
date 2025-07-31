@@ -36,7 +36,7 @@
   <g class="quality-gate-layers">
     <text x="400" y="180" text-anchor="middle" class="text text-md">多層の品質チェック</text>
     
-    <rect x="50" y="200" width="700" height="280" rx="8" class="bg-alt border"/>
+    <rect x="50" y="200" width="700" height="320" rx="8" class="bg-alt border"/>
     
     <!-- 自動チェック層 -->
     <g class="automated-checks">

@@ -113,19 +113,19 @@
     
     <!-- アクションボタン -->
     <g class="action-buttons">
-      <rect x="580" y="460" width="80" height="25" rx="4" class="success"/>
-      <text x="620" y="477" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">Commit new file</text>
+      <rect x="580" y="450" width="80" height="25" rx="4" class="success"/>
+      <text x="620" y="467" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">Commit new file</text>
       
-      <rect x="580" y="490" width="80" height="20" rx="4" class="neutral border"/>
-      <text x="620" y="503" text-anchor="middle" class="text text-sm">Cancel</text>
+      <rect x="580" y="480" width="80" height="20" rx="4" class="neutral border"/>
+      <text x="620" y="493" text-anchor="middle" class="text text-sm">Cancel</text>
     </g>
   </g>
   
   <!-- エディタ機能説明 -->
   <g class="editor-features">
-    <text x="400" y="570" text-anchor="middle" class="text text-md">エディタの主要機能</text>
+    <text x="400" y="550" text-anchor="middle" class="text text-md">エディタの主要機能</text>
     
-    <rect x="50" y="580" width="700" height="15" rx="2" class="bg-alt border"/>
-    <text x="60" y="592" class="text text-sm">💡 シンタックスハイライト | 自動補完 | プレビュー機能 | ファイルタイプ自動検出 | 行番号表示 | 検索・置換</text>
+    <rect x="50" y="565" width="700" height="15" rx="2" class="bg-alt border"/>
+    <text x="60" y="577" class="text text-sm">💡 シンタックスハイライト | 自動補完 | プレビュー機能 | ファイルタイプ自動検出 | 行番号表示 | 検索・置換</text>
   </g>
 </svg>
