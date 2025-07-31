@@ -68,8 +68,9 @@
     </g>
     
     <!-- Push 矢印 -->
-    <line x1="250" y1="205" x2="250" y2="240" class="success-stroke" stroke-width="3" marker-end="url(#arrow-up)"/>
-    <text x="270" y="225" class="text text-sm" style="font-weight: 600;">📤 Push</text>
+    <line x1="280" y1="195" x2="480" y2="255" class="success" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="380" y="215" text-anchor="middle" class="text text-sm success" style="font-weight: 600;">📤 Push（ローカル→リモート）</text>
+    <text x="380" y="230" text-anchor="middle" class="text text-sm success">変更をリモートに送信</text>
     
     <!-- リモートリポジトリ -->
     <g class="remote-repository">
@@ -96,8 +97,9 @@
     </g>
     
     <!-- Pull 矢印 -->
-    <line x1="450" y1="295" x2="380" y2="240" class="warning-stroke" stroke-width="3" marker-end="url(#arrow-down)"/>
-    <text x="385" y="265" class="text text-sm" style="font-weight: 600;">📥 Pull</text>
+    <line x1="450" y1="315" x2="280" y2="240" class="warning" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="365" y="285" text-anchor="middle" class="text text-sm warning" style="font-weight: 600;">📥 Pull（リモート→ローカル）</text>
+    <text x="365" y="300" text-anchor="middle" class="text text-sm warning">最新変更を取得</text>
   </g>
   
   <!-- 同期操作UI -->
