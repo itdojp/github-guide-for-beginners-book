@@ -17,7 +17,7 @@
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
             markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" class="primary" fill="none"/>
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
     </marker>
   </defs>
   
@@ -43,7 +43,7 @@
     
     <!-- featureブランチ -->
     <path d="M 120 120 Q 140 140 160 160 L 240 160" 
-          fill="none" class="primary" stroke-width="3"/>
+          fill="none" stroke="#2563eb" stroke-width="3"/>
     <text x="30" y="165" text-anchor="end" class="text text-sm primary" style="font-weight: 600;">feature</text>
     
     <circle cx="180" cy="160" r="5" class="primary"/>
@@ -72,7 +72,7 @@
     
     <!-- マージされたfeatureブランチ -->
     <path d="M 520 120 Q 540 140 560 160 L 620 160" 
-          fill="none" class="primary" stroke-width="3"/>
+          fill="none" stroke="#2563eb" stroke-width="3"/>
     
     <circle cx="580" cy="160" r="5" class="primary"/>
     <circle cx="620" cy="160" r="5" class="primary"/>
@@ -122,12 +122,12 @@
       <!-- Before -->
       <text x="310" y="305" class="text text-sm" style="font-weight: 600;">マージ前:</text>
       <line x1="310" y1="315" x2="360" y2="315" class="success" stroke-width="2"/>
-      <path d="M 340 315 L 370 325 L 420 325" fill="none" class="primary" stroke-width="2"/>
+      <path d="M 340 315 L 370 325 L 420 325" fill="none" stroke="#2563eb" stroke-width="2"/>
       
       <!-- After -->
       <text x="310" y="345" class="text text-sm" style="font-weight: 600;">マージ後:</text>
       <line x1="310" y1="355" x2="450" y2="355" class="success" stroke-width="2"/>
-      <path d="M 340 355 L 370 365 L 420 365 L 450 355" fill="none" class="primary" stroke-width="2"/>
+      <path d="M 340 355 L 370 365 L 420 365 L 450 355" fill="none" stroke="#2563eb" stroke-width="2"/>
       
       <text x="400" y="375" text-anchor="middle" class="text text-sm">マージコミット作成</text>
     </g>
@@ -140,7 +140,7 @@
       <!-- Before -->
       <text x="530" y="305" class="text text-sm" style="font-weight: 600;">マージ前:</text>
       <line x1="530" y1="315" x2="580" y2="315" class="success" stroke-width="2"/>
-      <path d="M 560 315 L 590 325 L 640 325" fill="none" class="primary" stroke-width="2"/>
+      <path d="M 560 315 L 590 325 L 640 325" fill="none" stroke="#2563eb" stroke-width="2"/>
       <circle cx="610" cy="325" r="2" class="primary"/>
       <circle cx="625" cy="325" r="2" class="primary"/>
       
