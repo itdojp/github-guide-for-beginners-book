@@ -17,7 +17,7 @@
     
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="3" 
             markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" class="primary" fill="none"/>
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
     </marker>
   </defs>
   
@@ -145,11 +145,11 @@
     <!-- 同期の矢印 -->
     <g class="sync-arrows">
       <!-- Push -->
-      <path d="M 300 420 Q 350 400 500 420" fill="none" class="primary-stroke" marker-end="url(#arrow)"/>
+      <path d="M 300 420 Q 350 400 500 420" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
       <text x="400" y="410" text-anchor="middle" class="text text-sm primary">Push</text>
       
       <!-- Pull -->
-      <path d="M 500 460 Q 450 480 300 460" fill="none" class="success" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M 500 460 Q 450 480 300 460" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
       <text x="400" y="490" text-anchor="middle" class="text text-sm success">Pull</text>
     </g>
   </g>
