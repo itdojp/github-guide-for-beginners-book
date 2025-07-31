@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+<svg viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
   <defs>
     <style>
       .bg { fill: #ffffff; }
@@ -91,7 +91,7 @@
   <g class="pr-description">
     <text x="400" y="335" text-anchor="middle" class="text text-md">PR記述の重要要素</text>
     
-    <rect x="80" y="355" width="640" height="160" rx="8" class="bg-alt border"/>
+    <rect x="80" y="355" width="640" height="180" rx="8" class="bg-alt border"/>
     
     <!-- タイトル -->
     <g class="pr-title">
@@ -127,30 +127,30 @@
   
   <!-- レビュー促進のコツ -->
   <g class="review-tips">
-    <text x="400" y="545" text-anchor="middle" class="text text-md">レビュー促進のコツ</text>
+    <text x="400" y="565" text-anchor="middle" class="text text-md">レビュー促進のコツ</text>
     
     <!-- 小さな単位 -->
     <g class="small-changes">
-      <rect x="80" y="565" width="140" height="30" rx="8" class="success border" opacity="0.1"/>
-      <text x="150" y="585" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔬 小さな変更</text>
+      <rect x="80" y="585" width="140" height="30" rx="8" class="success border" opacity="0.1"/>
+      <text x="150" y="605" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔬 小さな変更</text>
     </g>
     
     <!-- 明確な説明 -->
     <g class="clear-explanation">
-      <rect x="240" y="565" width="140" height="30" rx="8" class="primary border" opacity="0.1"/>
-      <text x="310" y="585" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 明確な説明</text>
+      <rect x="240" y="585" width="140" height="30" rx="8" class="primary border" opacity="0.1"/>
+      <text x="310" y="605" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 明確な説明</text>
     </g>
     
     <!-- スクリーンショット -->
     <g class="screenshots">
-      <rect x="400" y="565" width="140" height="30" rx="8" class="warning border" opacity="0.1"/>
-      <text x="470" y="585" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📸 視覚的資料</text>
+      <rect x="400" y="585" width="140" height="30" rx="8" class="warning border" opacity="0.1"/>
+      <text x="470" y="605" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📸 視覚的資料</text>
     </g>
     
     <!-- 迅速対応 -->
     <g class="quick-response">
-      <rect x="560" y="565" width="140" height="30" rx="8" class="neutral border" opacity="0.1"/>
-      <text x="630" y="585" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 迅速な対応</text>
+      <rect x="560" y="585" width="140" height="30" rx="8" class="neutral border" opacity="0.1"/>
+      <text x="630" y="605" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚡ 迅速な対応</text>
     </g>
   </g>
 </svg>

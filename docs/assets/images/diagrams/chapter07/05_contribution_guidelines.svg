@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+<svg viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
   <defs>
     <style>
       .bg { fill: #ffffff; }
@@ -181,10 +181,10 @@
   
   <!-- 品質基準 -->
   <g class="quality-standards">
-    <text x="400" y="580" text-anchor="middle" class="text text-md">品質基準</text>
+    <text x="400" y="590" text-anchor="middle" class="text text-md">品質基準</text>
     
-    <rect x="50" y="590" width="700" height="15" rx="4" class="primary border" opacity="0.1"/>
-    <text x="60" y="602" class="text text-sm" style="font-weight: 600;">🎯 基準:</text>
-    <text x="110" y="602" class="text text-sm">適切なテスト | 明確なコミット | ドキュメント更新 | コーディング規約準拠 | レビュー協力</text>
+    <rect x="50" y="605" width="700" height="25" rx="4" class="primary border" opacity="0.1"/>
+    <text x="60" y="620" class="text text-sm" style="font-weight: 600;">🎯 基準:</text>
+    <text x="110" y="620" class="text text-sm">適切なテスト | 明確なコミット | ドキュメント更新 | コーディング規約準拠 | レビュー協力</text>
   </g>
 </svg>
