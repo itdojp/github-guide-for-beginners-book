@@ -26,10 +26,10 @@
   
   <!-- 中央のGitHub -->
   <g class="github-core">
-    <circle cx="400" cy="300" r="80" class="primary" opacity="0.2"/>
+    <circle cx="400" cy="300" r="80" class="primary" opacity="0.8"/>
     <circle cx="400" cy="300" r="80" class="primary-stroke"/>
-    <text x="400" y="295" text-anchor="middle" class="text text-md">GitHub</text>
-    <text x="400" y="315" text-anchor="middle" class="text text-sm">コードホスティング</text>
+    <text x="400" y="295" text-anchor="middle" class="text text-md" fill="white" style="font-weight: 600;">GitHub</text>
+    <text x="400" y="315" text-anchor="middle" class="text text-sm" fill="white">コードホスティング</text>
   </g>
   
   <!-- 周辺ツール群 -->
