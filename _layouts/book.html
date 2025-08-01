@@ -127,7 +127,7 @@
     <!-- Overlay for mobile sidebar (CSS-only close trigger) -->
     <label for="sidebar-toggle-checkbox" class="book-sidebar-overlay" id="sidebar-overlay" aria-label="Close sidebar"></label>
 
-    <!-- Emergency fix: Disable heavy JavaScript causing page freeze -->
-    <!-- <script async src="{{ '/assets/js/code-copy.js' | relative_url }}"></script> -->
+    <!-- Lightweight code copy - no MutationObserver to prevent freeze -->
+    <script async src="{{ '/assets/js/code-copy-lightweight.js' | relative_url }}"></script>
 </body>
 </html>
