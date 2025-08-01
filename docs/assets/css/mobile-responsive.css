@@ -38,6 +38,8 @@
     background-color: #f9fafb;
     border-right: 1px solid #e5e7eb;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    pointer-events: auto;
+    z-index: 1000;
   }
 
   /* Dark mode background when sidebar is open */
@@ -84,16 +86,25 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 950;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
   }
 
-  /* Overlay visible when sidebar is open */
+  /* Overlay visible when sidebar is open - behind sidebar but clickable */
   .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Ensure sidebar content is always clickable when open */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
+    pointer-events: auto;
+    position: relative;
+    z-index: 1001;
   }
 
   /* Show hamburger menu on mobile */
