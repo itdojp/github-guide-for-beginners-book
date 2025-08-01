@@ -1,5 +1,8 @@
 /* Main CSS for Book Template */
 
+/* Import CSS-only responsive sidebar implementation */
+@import url('./mobile-responsive.css');
+
 /* CSS Variables */
 :root {
     /* Colors */
@@ -40,54 +43,6 @@
     
     /* Transitions */
     --transition: all 0.2s ease;
-    
-    /* SVG Variables */
-    --svg-bg: #ffffff;
-    --svg-bg-alt: #f8fafc;
-    --svg-text: #1e293b;
-    --svg-border: #e2e8f0;
-    --svg-primary: #2563eb;
-    --svg-success: #10b981;
-    --svg-warning: #f59e0b;
-    --svg-error: #ef4444;
-    --svg-neutral: #64748b;
-}
-
-/* SVG Diagram Styles - Direct fallback for reliability */
-svg .bg, .page-content svg .bg { 
-    fill: var(--svg-bg, #ffffff) !important; 
-}
-svg .bg-alt, .page-content svg .bg-alt { 
-    fill: var(--svg-bg-alt, #f8fafc) !important; 
-}
-svg .text, .page-content svg .text { 
-    fill: var(--svg-text, #1e293b) !important; 
-    font-family: system-ui, sans-serif !important; 
-}
-svg .border, .page-content svg .border { 
-    stroke: var(--svg-border, #e2e8f0) !important; 
-    fill: none !important; 
-    stroke-width: 1 !important; 
-}
-svg .primary, .page-content svg .primary { 
-    fill: var(--svg-primary, #2563eb) !important; 
-}
-svg .primary-stroke, .page-content svg .primary-stroke { 
-    stroke: var(--svg-primary, #2563eb) !important; 
-    stroke-width: 2 !important; 
-    fill: none !important;
-}
-svg .success, .page-content svg .success { 
-    fill: var(--svg-success, #10b981) !important; 
-}
-svg .warning, .page-content svg .warning { 
-    fill: var(--svg-warning, #f59e0b) !important; 
-}
-svg .error, .page-content svg .error { 
-    fill: var(--svg-error, #ef4444) !important; 
-}
-svg .neutral, .page-content svg .neutral { 
-    fill: var(--svg-neutral, #64748b) !important; 
 }
 
 /* Dark Theme */
@@ -110,40 +65,6 @@ svg .neutral, .page-content svg .neutral {
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-    
-    /* SVG Variables for Dark Theme */
-    --svg-bg: #0f172a;
-    --svg-bg-alt: #1e293b;
-    --svg-text: #f1f5f9;
-    --svg-border: #334155;
-    --svg-primary: #3b82f6;
-    --svg-success: #10b981;
-    --svg-warning: #f59e0b;
-    --svg-error: #ef4444;
-    --svg-neutral: #94a3b8;
-}
-
-/* Dark Theme SVG Overrides */
-[data-theme="dark"] svg .bg, [data-theme="dark"] .page-content svg .bg { 
-    fill: var(--svg-bg, #0f172a) !important; 
-}
-[data-theme="dark"] svg .bg-alt, [data-theme="dark"] .page-content svg .bg-alt { 
-    fill: var(--svg-bg-alt, #1e293b) !important; 
-}
-[data-theme="dark"] svg .text, [data-theme="dark"] .page-content svg .text { 
-    fill: var(--svg-text, #f1f5f9) !important; 
-}
-[data-theme="dark"] svg .border, [data-theme="dark"] .page-content svg .border { 
-    stroke: var(--svg-border, #334155) !important; 
-}
-[data-theme="dark"] svg .primary, [data-theme="dark"] .page-content svg .primary { 
-    fill: var(--svg-primary, #3b82f6) !important; 
-}
-[data-theme="dark"] svg .primary-stroke, [data-theme="dark"] .page-content svg .primary-stroke { 
-    stroke: var(--svg-primary, #3b82f6) !important; 
-}
-[data-theme="dark"] svg .neutral, [data-theme="dark"] .page-content svg .neutral { 
-    fill: var(--svg-neutral, #94a3b8) !important; 
 }
 
 /* Base Styles */
@@ -480,60 +401,6 @@ a:hover {
 
 .edit-link:hover {
     color: var(--primary-color);
-}
-
-/* Chapter and Appendix Number Styles */
-.chapter-number,
-.appendix-label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2.5rem;
-    height: 1.5rem;
-    margin-right: 0.75rem;
-    padding: 0 0.5rem;
-    background: var(--primary-color);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border-radius: 0.375rem;
-    flex-shrink: 0;
-}
-
-.appendix-label {
-    background: var(--secondary-color);
-}
-
-.toc-link:hover .chapter-number,
-.toc-link:hover .appendix-label {
-    background: var(--primary-hover);
-}
-
-.toc-link:hover .appendix-label {
-    background: var(--text-secondary);
-}
-
-.toc-link.active .chapter-number,
-.toc-link.active .appendix-label {
-    background: var(--primary-hover);
-}
-
-.chapter-title,
-.appendix-title {
-    flex: 1;
-    display: block;
-}
-
-.toc-chapter .toc-link,
-.toc-item .toc-link {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-}
-
-/* Progress indicator placeholder */
-.progress-indicator {
-    display: none; /* Will be implemented later if needed */
 }
 
 /* Mobile Styles */
