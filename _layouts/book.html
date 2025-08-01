@@ -32,70 +32,13 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
     <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     
-    <!-- Theme Detection Script -->
+    <!-- Optimized theme detection - minimal inline script -->
     <script>
-        // Detect system theme preference and apply immediately to prevent flash
-        (function() {
-            const theme = localStorage.getItem('theme') || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', theme);
-        })();
+        const t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+        document.documentElement.setAttribute('data-theme',t);
     </script>
     
-    <!-- Critical CSS for mobile sidebar transparency fix -->
-    <style>
-        /* Critical inline CSS override - transparent by default, solid when open */
-        @media (max-width: 767px) {
-            .book-sidebar {
-                background: transparent !important;
-                box-shadow: none !important;
-            }
-            
-            /* Override when sidebar is open - FORCE HARDCODED COLORS */
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-                background: #f9fafb !important;
-                background-color: #f9fafb !important;
-                box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
-                border-right: 1px solid #e5e7eb !important;
-            }
-            
-            /* Text colors when sidebar is open */
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-                color: #111827 !important;
-                opacity: 1 !important;
-            }
-            
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-                color: #6b7280 !important;
-                opacity: 1 !important;
-            }
-            
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover,
-            .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
-                background-color: #3b82f6 !important;
-                color: #ffffff !important;
-            }
-            
-            /* Dark mode override */
-            @media (prefers-color-scheme: dark) {
-                .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-                    background: #1f2937 !important;
-                    background-color: #1f2937 !important;
-                    border-right: 1px solid #374151 !important;
-                }
-                
-                .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
-                .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-                    color: #f9fafb !important;
-                }
-                
-                .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-                    color: #d1d5db !important;
-                }
-            }
-        }
-    </style>
+    <!-- Performance optimized - inline CSS moved to mobile-responsive.css -->
 </head>
 <body>
     <!-- CSS-only sidebar toggle (hidden checkbox for state management) -->
@@ -184,7 +127,7 @@
     <!-- Overlay for mobile sidebar (CSS-only close trigger) -->
     <label for="sidebar-toggle-checkbox" class="book-sidebar-overlay" id="sidebar-overlay" aria-label="Close sidebar"></label>
 
-    <!-- CSS-only implementation - minimal JavaScript -->
-    <script src="{{ '/assets/js/code-copy.js' | relative_url }}"></script>
+    <!-- Performance optimized - async JavaScript loading -->
+    <script async src="{{ '/assets/js/code-copy.js' | relative_url }}"></script>
 </body>
 </html>
