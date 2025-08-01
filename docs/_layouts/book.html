@@ -32,10 +32,15 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
     <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     
-    <!-- Optimized theme detection - minimal inline script -->
+    <!-- Optimized theme detection and sidebar reset - minimal inline script -->
     <script>
         const t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
         document.documentElement.setAttribute('data-theme',t);
+        // Reset sidebar checkbox on page load to prevent stuck open state
+        document.addEventListener('DOMContentLoaded',()=>{
+            const cb=document.getElementById('sidebar-toggle-checkbox');
+            if(cb)cb.checked=false;
+        });
     </script>
     
     <!-- Performance optimized - inline CSS moved to mobile-responsive.css -->

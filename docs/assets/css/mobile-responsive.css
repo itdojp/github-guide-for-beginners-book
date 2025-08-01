@@ -11,6 +11,39 @@
 }
 
 /* ============================================
+   Desktop View (768px and above) - Reset mobile styles
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Reset sidebar to normal desktop behavior */
+  .book-sidebar {
+    position: fixed !important;
+    transform: translateX(0) !important;
+    background: var(--bg-primary) !important;
+    border-right: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Hide hamburger menu on desktop */
+  .sidebar-toggle {
+    display: none !important;
+  }
+  
+  /* Hide overlay on desktop */
+  .book-sidebar-overlay {
+    display: none !important;
+  }
+  
+  /* Reset checkbox effect on desktop */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
+    transform: translateX(0) !important;
+    background: var(--bg-primary) !important;
+  }
+}
+
+/* ============================================
    Mobile Responsive Design (767px and below)
    ============================================ */
 
@@ -122,9 +155,9 @@
     z-index: 1002 !important;
   }
 
-  /* Show hamburger menu on mobile */
+  /* Show hamburger menu on mobile only */
   .sidebar-toggle {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     background: none;
