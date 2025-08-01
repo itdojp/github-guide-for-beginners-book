@@ -14,11 +14,20 @@
 @media (max-width: 1024px) {
   .book-main {
     margin-left: 0;
+    width: 100%;
   }
   
   /* Show hamburger menu on mobile/tablet */
   .sidebar-toggle {
     display: flex !important;
+  }
+  
+  /* Prioritize content width over left space */
+  .book-content {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
