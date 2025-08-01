@@ -289,7 +289,7 @@ a:hover {
 
 .book-content {
     max-width: var(--content-max-width);
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem 3rem;
 }
 
