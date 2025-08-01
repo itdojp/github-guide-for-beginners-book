@@ -1,6 +1,6 @@
 /* ============================================
    CSS-only Responsive Sidebar Implementation
-   Based on book-formatter Issue #24
+   Simple Binary Layout Approach (like competitive programming book)
    ============================================ */
 
 /* Hide the checkbox completely */
@@ -10,193 +10,48 @@
   opacity: 0;
 }
 
-/* ============================================
-   Tablet View (768px - 1024px) - Use hamburger menu
-   ============================================ */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* Tablet: Use hamburger menu like mobile */
+/* Remove sidebar margin for mobile/tablet - single breakpoint approach */
+@media (max-width: 1024px) {
+  .book-main {
+    margin-left: 0;
+  }
   
-  /* Show hamburger menu on tablet */
+  /* Show hamburger menu on mobile/tablet */
   .sidebar-toggle {
     display: flex !important;
   }
-  
-  /* Tablet sidebar - default hidden state */
-  .book-sidebar {
-    position: fixed !important;
-    top: var(--header-height, 60px) !important;
-    left: 0 !important;
-    width: 280px !important;
-    height: calc(100vh - var(--header-height, 60px)) !important;
-    background: transparent !important;
-    border-right: none !important;
-    padding: 1rem !important;
-    overflow-y: auto !important;
-    z-index: 1000 !important;
-    transform: translateX(-100%) !important;
-    transition: transform 0.3s ease-in-out !important;
-    opacity: 0.3 !important;
-    pointer-events: none !important;
-  }
-  
-  /* Tablet sidebar when opened via :checked state */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0) !important;
-    background: #f9fafb !important;
-    background-color: #f9fafb !important;
-    border-right: 1px solid #e5e7eb !important;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
-    pointer-events: auto !important;
-    z-index: 1000 !important;
-    opacity: 1 !important;
-  }
-  
-  /* Remove sidebar margin from main content on tablet */
-  .book-main {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  /* Show overlay on tablet */
-  .book-sidebar-overlay {
-    display: block !important;
-    visibility: visible !important;
-  }
-  
-  /* Ensure tablet content fits screen width */
-  .book-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 1.5rem !important;
-    margin: 0 !important;
-  }
-  
-  .page-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 1.5rem !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
 }
 
-/* ============================================
-   Desktop View (1025px and above) - Normal sidebar
-   ============================================ */
-
+/* Desktop view - keep default main.css sidebar behavior */
 @media (min-width: 1025px) {
-  /* Force sidebar to normal desktop behavior */
-  .book-sidebar {
-    position: fixed !important;
-    transform: translateX(0) !important;
-    background: var(--bg-primary) !important;
-    border-right: 1px solid var(--border-color) !important;
-    box-shadow: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    display: block !important;
-  }
-  
   /* Hide hamburger menu on desktop */
   .sidebar-toggle {
     display: none !important;
   }
-  
-  /* Hide overlay on desktop */
-  .book-sidebar-overlay {
-    display: none !important;
-    visibility: hidden !important;
-  }
-  
-  /* Force checkbox effect to have no impact on desktop */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0) !important;
-    background: var(--bg-primary) !important;
-    opacity: 1 !important;
-  }
-  
-  /* Ensure main content has proper sidebar margin on desktop */
-  .book-main {
-    margin-left: var(--sidebar-width) !important;
-  }
 }
 
 /* ============================================
-   Mobile Responsive Design (767px and below)
+   Mobile Sidebar Implementation (767px and below)
    ============================================ */
 
 @media (max-width: 767px) {
-  /* Mobile sidebar - FORCE hidden state by default */
+  /* Mobile sidebar - hidden by default, overlay when opened */
   .book-sidebar {
-    display: block !important;
-    position: fixed !important;
-    top: var(--header-height, 60px) !important;
-    left: 0 !important;
-    width: 280px !important;
-    height: calc(100vh - var(--header-height, 60px)) !important;
-    background: transparent !important;
-    border-right: none !important;
-    padding: 1rem !important;
-    overflow-y: auto !important;
-    z-index: 1000 !important;
-    transform: translateX(-100%) !important;
-    transition: transform 0.3s ease-in-out !important;
-    opacity: 0.3 !important;
-    pointer-events: none !important;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 280px;
+    height: calc(100vh - var(--header-height));
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
   }
 
-  /* Sidebar when opened via :checked state */
+  /* Show sidebar when checkbox is checked */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0) !important;
-    background: #f9fafb !important;
-    background-color: #f9fafb !important;
-    border-right: 1px solid #e5e7eb !important;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
-    pointer-events: auto !important;
-    z-index: 1000 !important;
-    opacity: 1 !important;
-  }
-
-  /* Dark mode background when sidebar is open */
-  @media (prefers-color-scheme: dark) {
-    .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-      background: #1f2937 !important;
-      background-color: #1f2937 !important;
-      border-right: 1px solid #374151 !important;
-    }
-  }
-
-  /* Sidebar content styling when open */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-    color: #111827 !important;
-    opacity: 1 !important;
-  }
-
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-    color: #6b7280 !important;
-    opacity: 1 !important;
-  }
-
-  /* Dark mode text colors when sidebar is open */
-  @media (prefers-color-scheme: dark) {
-    .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
-    .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-      color: #f9fafb !important;
-    }
-
-    .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-      color: #d1d5db !important;
-    }
-  }
-
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover,
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
-    background-color: #3b82f6 !important;
-    color: white !important;
-    pointer-events: auto !important;
+    transform: translateX(0);
   }
 
   /* Overlay for mobile */
@@ -210,248 +65,23 @@
     z-index: 950;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease;
     pointer-events: none;
   }
 
-  /* Overlay visible when sidebar is open - behind sidebar but clickable */
+  /* Show overlay when sidebar is open */
   .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
-  /* Ensure sidebar content is always clickable when open */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
-    pointer-events: auto !important;
-    position: relative !important;
-    z-index: 1001 !important;
-  }
-
-  /* Force all interactive elements in sidebar to be clickable */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar a,
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar button,
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-    pointer-events: auto !important;
-    cursor: pointer !important;
-    z-index: 1002 !important;
-  }
-
-  /* Show hamburger menu on mobile only */
-  .sidebar-toggle {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    color: #374151;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    transition: background-color 0.2s ease;
-  }
-
-  .sidebar-toggle:hover {
-    background-color: #f3f4f6;
-  }
-
-  .sidebar-toggle:focus {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-  }
-
-  /* Dark mode hamburger menu */
-  @media (prefers-color-scheme: dark) {
-    .sidebar-toggle {
-      color: #d1d5db;
-    }
-    
-    .sidebar-toggle:hover {
-      background-color: #374151;
-    }
-  }
-
-  /* Content area adjustments for mobile */
+  /* Content optimization for mobile */
   .book-content {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Mobile content width optimization */
-  .book-content {
-    max-width: 100% !important;
-    padding: 1rem !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  
-  /* Page content mobile optimization */
-  .page-content {
-    padding: 0.75rem 1rem !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Ensure all child elements respect container width */
-  .page-content > * {
-    max-width: 100% !important;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  }
-
-  /* Responsive images and tables */
-  .page-content img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
-    margin: 1rem auto;
-  }
-
-  .page-content table {
-    font-size: 0.875rem;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 1rem 0;
-  }
-
-  .page-content pre {
-    overflow-x: auto;
-    font-size: 0.8rem;
     padding: 1rem;
-    margin: 1rem 0;
-  }
-}
-
-/* ============================================
-   Desktop Design (768px and above)
-   ============================================ */
-
-@media (min-width: 768px) {
-  /* Hide hamburger menu on desktop */
-  .sidebar-toggle {
-    display: none;
-  }
-
-  /* Desktop sidebar - always visible, reset mobile styles */
-  .book-sidebar {
-    display: block !important;
-    position: static !important;
-    transform: none !important;
-    width: auto !important;
-    height: auto !important;
-    top: auto !important;
-    left: auto !important;
-    border-right: none;
-    padding: 0;
-    z-index: auto;
-  }
-
-  /* Hide overlay on desktop */
-  .book-sidebar-overlay {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-
-  /* Page navigation layout */
-  .page-navigation {
-    flex-wrap: nowrap;
-  }
-
-  .page-nav-link {
-    min-width: 120px;
-  }
-}
-
-/* ============================================
-   Print Styles
-   ============================================ */
-
-@media print {
-  /* Hide interactive elements when printing */
-  .book-header,
-  .book-footer,
-  .book-sidebar,
-  .mobile-menu-toggle,
-  .page-navigation {
-    display: none;
-  }
-
-  .book-main {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .book-content {
-    max-width: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Fix main content width for mobile - remove sidebar margin */
-  .book-main {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Ensure content fits mobile screen width */
-  .book-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 1rem !important;
-    margin: 0 !important;
-  }
-
-  /* Ensure page content fits mobile */
-  .page-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 1rem !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Fix any container width issues */
-  .book-layout,
-  .book-main,
-  .book-content,
-  article,
-  section,
-  div {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .book-header,
-  .book-sidebar,
-  .edit-page,
-  .page-navigation {
-    display: none;
   }
   
-  .book-main {
-    margin: 0;
-  }
-  
-  .book-content {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
   .page-content {
-    font-size: 12pt;
-    line-height: 1.4;
-    color: black;
-    background: white;
+    padding: 1rem;
   }
 }
