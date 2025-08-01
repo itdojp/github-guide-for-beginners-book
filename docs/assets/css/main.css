@@ -403,35 +403,7 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* Mobile Styles */
-.sidebar-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 850;
-}
-
-@media (max-width: 1024px) {
-    .book-sidebar {
-        transform: translateX(-100%);
-    }
-    
-    .book-sidebar.active {
-        transform: translateX(0);
-    }
-    
-    .book-main {
-        margin-left: 0;
-    }
-    
-    .sidebar-overlay.active {
-        display: block;
-    }
-}
+/* Legacy mobile styles removed - using CSS-only implementation in mobile-responsive.css */
 
 @media (max-width: 768px) {
     .book-content {

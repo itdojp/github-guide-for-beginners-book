@@ -34,48 +34,54 @@
 
   /* Sidebar when opened via :checked state */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0);
-    background-color: #f9fafb;
-    border-right: 1px solid #e5e7eb;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
-    pointer-events: auto;
-    z-index: 1000;
+    transform: translateX(0) !important;
+    background: #f9fafb !important;
+    background-color: #f9fafb !important;
+    border-right: 1px solid #e5e7eb !important;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
+    pointer-events: auto !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
   }
 
   /* Dark mode background when sidebar is open */
   @media (prefers-color-scheme: dark) {
     .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-      background-color: #1f2937;
-      border-right: 1px solid #374151;
+      background: #1f2937 !important;
+      background-color: #1f2937 !important;
+      border-right: 1px solid #374151 !important;
     }
   }
 
   /* Sidebar content styling when open */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-    color: #111827;
+    color: #111827 !important;
+    opacity: 1 !important;
   }
 
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-    color: #6b7280;
+    color: #6b7280 !important;
+    opacity: 1 !important;
   }
 
   /* Dark mode text colors when sidebar is open */
   @media (prefers-color-scheme: dark) {
     .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .book-title,
     .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-section-title {
-      color: #f9fafb;
+      color: #f9fafb !important;
     }
 
     .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-      color: #d1d5db;
+      color: #d1d5db !important;
     }
   }
 
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover,
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #3b82f6 !important;
+    color: white !important;
+    pointer-events: auto !important;
   }
 
   /* Overlay for mobile */
@@ -102,9 +108,18 @@
 
   /* Ensure sidebar content is always clickable when open */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
-    pointer-events: auto;
-    position: relative;
-    z-index: 1001;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1001 !important;
+  }
+
+  /* Force all interactive elements in sidebar to be clickable */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar a,
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar button,
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
   }
 
   /* Show hamburger menu on mobile */
