@@ -11,26 +11,6 @@
 }
 
 /* ============================================
-   Force remove all default margins - Universal Reset
-   ============================================ */
-
-/* Remove all left margins by default - will be added back only for large desktop */
-.book-main {
-  margin-left: 0 !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-}
-
-.book-content {
-  margin-left: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  box-sizing: border-box !important;
-}
-
-/* ============================================
    Tablet View (768px - 1024px) - Use hamburger menu
    ============================================ */
 
@@ -137,19 +117,9 @@
     opacity: 1 !important;
   }
   
-  /* ONLY on large desktop: Add sidebar margin */
+  /* Ensure main content has proper sidebar margin on desktop */
   .book-main {
     margin-left: var(--sidebar-width) !important;
-    width: calc(100% - var(--sidebar-width)) !important;
-    max-width: calc(100vw - var(--sidebar-width)) !important;
-  }
-  
-  .book-content {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: var(--content-max-width) !important;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
   }
 }
 
