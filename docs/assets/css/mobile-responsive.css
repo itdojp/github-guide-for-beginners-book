@@ -11,11 +11,83 @@
 }
 
 /* ============================================
-   Desktop View (768px and above) - Reset mobile styles
+   Tablet View (768px - 1024px) - Use hamburger menu
    ============================================ */
 
-@media (min-width: 768px) {
-  /* Force sidebar to normal desktop behavior - override all mobile styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet: Use hamburger menu like mobile */
+  
+  /* Show hamburger menu on tablet */
+  .sidebar-toggle {
+    display: flex !important;
+  }
+  
+  /* Tablet sidebar - default hidden state */
+  .book-sidebar {
+    position: fixed !important;
+    top: var(--header-height, 60px) !important;
+    left: 0 !important;
+    width: 280px !important;
+    height: calc(100vh - var(--header-height, 60px)) !important;
+    background: transparent !important;
+    border-right: none !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Tablet sidebar when opened via :checked state */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
+    transform: translateX(0) !important;
+    background: #f9fafb !important;
+    background-color: #f9fafb !important;
+    border-right: 1px solid #e5e7eb !important;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
+    pointer-events: auto !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+  }
+  
+  /* Remove sidebar margin from main content on tablet */
+  .book-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Show overlay on tablet */
+  .book-sidebar-overlay {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Ensure tablet content fits screen width */
+  .book-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
+  }
+  
+  .page-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ============================================
+   Desktop View (1025px and above) - Normal sidebar
+   ============================================ */
+
+@media (min-width: 1025px) {
+  /* Force sidebar to normal desktop behavior */
   .book-sidebar {
     position: fixed !important;
     transform: translateX(0) !important;
@@ -43,6 +115,11 @@
     transform: translateX(0) !important;
     background: var(--bg-primary) !important;
     opacity: 1 !important;
+  }
+  
+  /* Ensure main content has proper sidebar margin on desktop */
+  .book-main {
+    margin-left: var(--sidebar-width) !important;
   }
 }
 
