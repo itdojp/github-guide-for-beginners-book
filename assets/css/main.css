@@ -173,7 +173,7 @@ a:hover {
     font-weight: 600;
 }
 
-/* Sidebar */
+/* Sidebar - Desktop default, mobile overridden by mobile-responsive.css */
 .book-sidebar {
     position: fixed;
     top: var(--header-height);
@@ -184,7 +184,7 @@ a:hover {
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
     z-index: 900;
-    transform: translateX(0);
+    /* Remove fixed transform to allow mobile-responsive.css control */
     transition: transform 0.3s ease;
 }
 

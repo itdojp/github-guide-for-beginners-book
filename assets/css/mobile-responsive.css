@@ -15,7 +15,7 @@
    ============================================ */
 
 @media (min-width: 768px) {
-  /* Reset sidebar to normal desktop behavior */
+  /* Force sidebar to normal desktop behavior - override all mobile styles */
   .book-sidebar {
     position: fixed !important;
     transform: translateX(0) !important;
@@ -24,6 +24,7 @@
     box-shadow: none !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+    display: block !important;
   }
   
   /* Hide hamburger menu on desktop */
@@ -34,12 +35,14 @@
   /* Hide overlay on desktop */
   .book-sidebar-overlay {
     display: none !important;
+    visibility: hidden !important;
   }
   
-  /* Reset checkbox effect on desktop */
+  /* Force checkbox effect to have no impact on desktop */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
     transform: translateX(0) !important;
     background: var(--bg-primary) !important;
+    opacity: 1 !important;
   }
 }
 
@@ -48,21 +51,23 @@
    ============================================ */
 
 @media (max-width: 767px) {
-  /* Mobile sidebar - default hidden state */
+  /* Mobile sidebar - FORCE hidden state by default */
   .book-sidebar {
-    display: block;
-    position: fixed;
-    top: var(--header-height, 60px);
-    left: 0;
-    width: 280px;
-    height: calc(100vh - var(--header-height, 60px));
-    background: transparent;
-    border-right: none;
-    padding: 1rem;
-    overflow-y: auto;
-    z-index: 1000;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    display: block !important;
+    position: fixed !important;
+    top: var(--header-height, 60px) !important;
+    left: 0 !important;
+    width: 280px !important;
+    height: calc(100vh - var(--header-height, 60px)) !important;
+    background: transparent !important;
+    border-right: none !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
   }
 
   /* Sidebar when opened via :checked state */
