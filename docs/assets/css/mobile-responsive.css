@@ -10,23 +10,37 @@
   opacity: 0;
 }
 
+/* Prevent page jumping when clicking hamburger menu */
+.sidebar-toggle:focus {
+  outline: none;
+}
+
+/* Prevent scroll behavior change */
+html {
+  scroll-behavior: auto;
+}
+
 /* Mobile/tablet responsive implementation - expanded range to include tablets */
 @media (max-width: 1024px) {
-  /* Force main content to use full width */
-  .book-main {
-    margin-left: 0;
-    width: 100%;
+  /* Force main content to use full width with highest specificity */
+  .book-layout .book-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   /* Show hamburger menu on mobile/tablet */
   .sidebar-toggle {
-    display: flex;
+    display: flex !important;
   }
   
-  /* Content uses full width with proper margins */
-  .book-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  /* Content uses full width with proper margins - high specificity */
+  .book-layout .book-main .book-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
   /* Mobile sidebar - hidden by default, overlay when opened */
@@ -46,30 +60,37 @@
 
   /* Show sidebar when checkbox is checked - working selector pattern */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    background: var(--bg-primary) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 1000 !important;
   }
   
   /* Ensure all sidebar content is interactive when shown */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
-    opacity: 1;
-    pointer-events: auto;
-    color: inherit;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    color: inherit !important;
   }
   
   /* Ensure navigation links are fully functional */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
-    color: var(--text-secondary);
-    cursor: pointer;
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
   }
   
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover {
-    background: var(--bg-secondary);
-    color: var(--text-primary);
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
   }
   
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
-    background: var(--bg-tertiary);
-    color: var(--primary-color);
+    background: var(--bg-tertiary) !important;
+    color: var(--primary-color) !important;
   }
   
   /* Overlay for mobile */
