@@ -10,8 +10,8 @@
   opacity: 0;
 }
 
-/* Mobile/tablet responsive implementation - simplified approach */
-@media (max-width: 767px) {
+/* Mobile/tablet responsive implementation - expanded range to include tablets */
+@media (max-width: 1024px) {
   /* Force main content to use full width */
   .book-main {
     margin-left: 0;
@@ -47,6 +47,29 @@
   /* Show sidebar when checkbox is checked - working selector pattern */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
     transform: translateX(0);
+  }
+  
+  /* Ensure all sidebar content is interactive when shown */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
+    opacity: 1;
+    pointer-events: auto;
+    color: inherit;
+  }
+  
+  /* Ensure navigation links are fully functional */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
+    background: var(--bg-tertiary);
+    color: var(--primary-color);
   }
   
   /* Overlay for mobile */
