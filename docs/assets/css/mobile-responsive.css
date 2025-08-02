@@ -28,7 +28,8 @@ html {
   
   .book-layout .book-main .book-content {
     margin: 0 !important;
-    padding: 2rem 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
   /* Show hamburger menu */
