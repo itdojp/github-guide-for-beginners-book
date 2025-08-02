@@ -15,6 +15,7 @@
   .book-main {
     margin-left: 0;
     width: 100%;
+    transition: margin-left 0.3s ease, width 0.3s ease;
   }
   
   /* Show hamburger menu on mobile/tablet */
@@ -22,12 +23,53 @@
     display: flex !important;
   }
   
-  /* Prioritize content width over left space */
+  /* Default: Prioritize content width over left space when sidebar is hidden */
   .book-content {
     max-width: 100%;
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  
+  /* Tablet/mobile sidebar - hidden by default, overlay when opened */
+  .book-sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 280px;
+    height: calc(100vh - var(--header-height));
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  /* Show sidebar when checkbox is checked */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
+    transform: translateX(0);
+  }
+  
+  /* Overlay for tablet/mobile */
+  .book-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 950;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  /* Show overlay when sidebar is open */
+  .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -57,58 +99,3 @@
   }
 }
 
-/* ============================================
-   Mobile Sidebar Implementation (767px and below)
-   ============================================ */
-
-@media (max-width: 767px) {
-  /* Mobile sidebar - hidden by default, overlay when opened */
-  .book-sidebar {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: 280px;
-    height: calc(100vh - var(--header-height));
-    background: var(--bg-primary);
-    border-right: 1px solid var(--border-color);
-    z-index: 1000;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-
-  /* Show sidebar when checkbox is checked */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0);
-  }
-
-  /* Overlay for mobile */
-  .book-sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 950;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-
-  /* Show overlay when sidebar is open */
-  .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
-  /* Content optimization for mobile */
-  .book-content {
-    padding: 1rem;
-  }
-  
-  .page-content {
-    padding: 1rem;
-  }
-}
