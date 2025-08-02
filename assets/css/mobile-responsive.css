@@ -49,6 +49,24 @@
   }
 }
 
+/* Progressive margin reduction for medium desktop screens (1100-1600px) */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .book-main {
+    margin-left: calc(var(--sidebar-width) * 0.8); /* Reduce to 192px */
+  }
+  
+  .book-content {
+    padding-left: 2rem; /* Reduce left padding */
+  }
+}
+
+/* Smaller margin reduction for larger screens (1600-1900px) */
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .book-main {
+    margin-left: calc(var(--sidebar-width) * 0.9); /* Reduce to 216px */
+  }
+}
+
 /* ============================================
    Mobile Sidebar Implementation (767px and below)
    ============================================ */
