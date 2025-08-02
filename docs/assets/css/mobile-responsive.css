@@ -1,49 +1,43 @@
 /* ============================================
    CSS-only Responsive Sidebar Implementation
-   Based on successful competitive programming book implementation
    ============================================ */
 
-/* Hide the checkbox completely */
+/* Hidden checkbox for state management */
 .sidebar-toggle-checkbox {
   position: absolute;
   left: -9999px;
   opacity: 0;
 }
 
-/* Prevent page jumping when clicking hamburger menu */
+/* Prevent page jumping and unwanted focus */
 .sidebar-toggle:focus {
   outline: none;
 }
 
-/* Prevent scroll behavior change */
 html {
   scroll-behavior: auto;
 }
 
-/* Mobile/tablet responsive implementation - expanded range to include tablets */
+/* Mobile/Tablet Implementation (≤1024px) */
 @media (max-width: 1024px) {
-  /* Force main content to use full width with highest specificity */
+  /* Full-width content layout */
   .book-layout .book-main {
     margin-left: 0 !important;
     width: 100% !important;
-    max-width: 100% !important;
   }
   
-  /* Show hamburger menu on mobile/tablet */
-  .sidebar-toggle {
-    display: flex !important;
-  }
-  
-  /* Content uses full width with proper margins - high specificity */
   .book-layout .book-main .book-content {
-    max-width: 100% !important;
-    width: 100% !important;
     margin: 0 !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
   
-  /* Mobile sidebar - hidden by default, overlay when opened */
+  /* Show hamburger menu */
+  .sidebar-toggle {
+    display: flex !important;
+  }
+  
+  /* Overlay sidebar */
   .book-sidebar {
     position: fixed;
     top: var(--header-height);
@@ -52,33 +46,20 @@ html {
     height: calc(100vh - var(--header-height));
     background: var(--bg-primary);
     border-right: 1px solid var(--border-color);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
   }
 
-  /* Show sidebar when checkbox is checked - working selector pattern */
+  /* Show sidebar when toggled */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
     transform: translateX(0) !important;
-    background: var(--bg-primary) !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    z-index: 1000 !important;
   }
   
-  /* Ensure all sidebar content is interactive when shown */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    color: inherit !important;
-  }
-  
-  /* Ensure navigation links are fully functional */
+  /* Ensure sidebar content is interactive */
   .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
     color: var(--text-secondary) !important;
-    background: transparent !important;
-    opacity: 1 !important;
     pointer-events: auto !important;
     cursor: pointer !important;
   }
@@ -93,13 +74,10 @@ html {
     color: var(--primary-color) !important;
   }
   
-  /* Overlay for mobile */
+  /* Background overlay */
   .book-sidebar-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 950;
     opacity: 0;
@@ -108,7 +86,6 @@ html {
     pointer-events: none;
   }
 
-  /* Show overlay when sidebar is open */
   .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
     opacity: 1;
     visibility: visible;
