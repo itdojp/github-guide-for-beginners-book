@@ -1,6 +1,6 @@
 /* ============================================
    CSS-only Responsive Sidebar Implementation
-   Simple Binary Layout Approach (like competitive programming book)
+   Based on successful competitive programming book implementation
    ============================================ */
 
 /* Hide the checkbox completely */
@@ -10,32 +10,26 @@
   opacity: 0;
 }
 
-/* Complete overlay implementation for mobile/tablet - no sidebar space reservation */
-@media (max-width: 1024px) {
-  /* Force main content to use full width with high specificity */
-  .book-layout .book-main {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    /* Remove transition as main content should never change width */
+/* Mobile/tablet responsive implementation - simplified approach */
+@media (max-width: 767px) {
+  /* Force main content to use full width */
+  .book-main {
+    margin-left: 0;
+    width: 100%;
   }
   
   /* Show hamburger menu on mobile/tablet */
   .sidebar-toggle {
-    display: flex !important;
+    display: flex;
   }
   
-  /* Content always uses full width with proper margins - high specificity */
-  .book-layout .book-main .book-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    /* Content width never changes regardless of sidebar state */
+  /* Content uses full width with proper margins */
+  .book-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
-  /* Tablet/mobile sidebar - hidden by default, overlay when opened */
+  /* Mobile sidebar - hidden by default, overlay when opened */
   .book-sidebar {
     position: fixed;
     top: var(--header-height);
@@ -47,44 +41,15 @@
     z-index: 1000;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
   }
 
-  /* Show sidebar when checkbox is checked - correct HTML structure: checkbox ~ .book-layout ~ .book-sidebar */
-  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar {
-    transform: translateX(0) !important;
-    background: var(--bg-primary) !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    z-index: 1000 !important;
+  /* Show sidebar when checkbox is checked - working selector pattern */
+  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
+    transform: translateX(0);
   }
   
-  /* Ensure all sidebar content is visible and clickable when open */
-  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar * {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    color: inherit !important;
-  }
-  
-  /* Ensure navigation links are fully functional */
-  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link {
-    color: var(--text-secondary) !important;
-    background: transparent !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    cursor: pointer !important;
-  }
-  
-  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link:hover {
-    background: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-  }
-  
-  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link.active {
-    background: var(--bg-tertiary) !important;
-    color: var(--primary-color) !important;
-  }
-  
-  /* Overlay for tablet/mobile */
+  /* Overlay for mobile */
   .book-sidebar-overlay {
     position: fixed;
     top: 0;
@@ -99,7 +64,7 @@
     pointer-events: none;
   }
 
-  /* Show overlay when sidebar is open - overlay is sibling after .book-layout */
+  /* Show overlay when sidebar is open */
   .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
     opacity: 1;
     visibility: visible;
