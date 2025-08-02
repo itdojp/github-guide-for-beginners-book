@@ -10,12 +10,12 @@
   opacity: 0;
 }
 
-/* Remove sidebar margin for mobile/tablet - single breakpoint approach */
+/* Complete overlay implementation for mobile/tablet - no sidebar space reservation */
 @media (max-width: 1024px) {
   .book-main {
-    margin-left: 0;
-    width: 100%;
-    transition: margin-left 0.3s ease, width 0.3s ease;
+    margin-left: 0 !important;
+    width: 100% !important;
+    /* Remove transition as main content should never change width */
   }
   
   /* Show hamburger menu on mobile/tablet */
@@ -23,12 +23,14 @@
     display: flex !important;
   }
   
-  /* Default: Prioritize content width over left space when sidebar is hidden */
+  /* Content always uses full width with proper margins */
   .book-content {
-    max-width: 100%;
-    width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    /* Content width never changes regardless of sidebar state */
   }
   
   /* Tablet/mobile sidebar - hidden by default, overlay when opened */
