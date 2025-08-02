@@ -49,23 +49,24 @@
     transition: transform 0.3s ease;
   }
 
-  /* Show sidebar when checkbox is checked */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar {
-    transform: translateX(0);
+  /* Show sidebar when checkbox is checked - correct HTML structure: checkbox ~ .book-layout ~ .book-sidebar */
+  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar {
+    transform: translateX(0) !important;
     background: var(--bg-primary) !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+    z-index: 1000 !important;
   }
   
   /* Ensure all sidebar content is visible and clickable when open */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar * {
+  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar * {
     opacity: 1 !important;
     pointer-events: auto !important;
     color: inherit !important;
   }
   
   /* Ensure navigation links are fully functional */
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link {
+  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link {
     color: var(--text-secondary) !important;
     background: transparent !important;
     opacity: 1 !important;
@@ -73,12 +74,12 @@
     cursor: pointer !important;
   }
   
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link:hover {
+  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link:hover {
     background: var(--bg-secondary) !important;
     color: var(--text-primary) !important;
   }
   
-  .sidebar-toggle-checkbox:checked ~ .book-layout .book-sidebar .toc-link.active {
+  .sidebar-toggle-checkbox:checked ~ .book-layout ~ .book-sidebar .toc-link.active {
     background: var(--bg-tertiary) !important;
     color: var(--primary-color) !important;
   }
@@ -98,7 +99,7 @@
     pointer-events: none;
   }
 
-  /* Show overlay when sidebar is open */
+  /* Show overlay when sidebar is open - overlay is sibling after .book-layout */
   .sidebar-toggle-checkbox:checked ~ .book-sidebar-overlay {
     opacity: 1;
     visibility: visible;
