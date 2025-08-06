@@ -1,6 +1,11 @@
 ---
-title: "GitHub初心者ガイド - バージョン管理の基礎から実践まで"
 layout: book
+order: 1
+title: "GitHub初心者ガイド"
+description: "プログラミング初心者向けGit/GitHub完全習得書 - バージョン管理の基礎から実践まで"
+author: "株式会社アイティードゥ"
+version: "1.0.0"
+permalink: /
 ---
 
 # GitHub初心者ガイド
@@ -76,6 +81,9 @@ layout: book
 
 ---
 
-**🎉 GitとGitHubの学習を始めましょう！**
+---
 
-[第1章「はじめに」から学習を開始 →]({{ '/src/chapter-introduction/' | relative_url }})
+**📧 著者:** ITDO Inc. <knowledge@itdo.jp>  
+**📅 最終更新:** 2025年8月6日
+
+Built with [Book Publishing Template v3.0](https://github.com/itdojp/book-publishing-template2)
