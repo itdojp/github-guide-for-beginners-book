@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <title>Gitブランチング戦略</title>
+  <desc>Git Flow、GitHub Flow、GitLab Flowの比較とブランチ管理のベストプラクティス</desc>
+  <defs>
+    <style>
+      :root {
+        --svg-bg: #FFFFFF;
+        --svg-bg-alt: #F8F9FA;
+        --svg-text: #1A1A1A;
+        --svg-text-secondary: #666666;
+        --svg-border: #E0E0E0;
+        --svg-primary: #0066CC;
+        --svg-success: #059669;
+        --svg-warning: #D97706;
+        --svg-error: #DC2626;
+        --svg-neutral: #6B7280;
+      }
+      .title-text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 600; fill: var(--svg-text); }
+      .flow-title { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500; fill: white; }
+      .branch-text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 400; fill: var(--svg-text); }
+      .label-text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 10px; font-weight: 400; fill: var(--svg-text-secondary); }
+      .main-branch { stroke: var(--svg-primary); stroke-width: 3; fill: none; }
+      .develop-branch { stroke: var(--svg-success); stroke-width: 2; fill: none; }
+      .feature-branch { stroke: var(--svg-warning); stroke-width: 2; fill: none; stroke-dasharray: 5,3; }
+      .release-branch { stroke: var(--svg-error); stroke-width: 2; fill: none; }
+      .hotfix-branch { stroke: var(--svg-error); stroke-width: 2; fill: none; stroke-dasharray: 3,2; }
+      .commit-point { fill: var(--svg-primary); stroke: white; stroke-width: 2; }
+      .merge-arrow { stroke: var(--svg-neutral); stroke-width: 1; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="var(--svg-neutral)"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" class="title-text" text-anchor="middle">Gitブランチング戦略</text>
+
+  <!-- Git Flow -->
+  <g id="git-flow">
+    <rect x="40" y="60" width="720" height="140" fill="var(--svg-primary)" fill-opacity="0.05" stroke="var(--svg-primary)" stroke-width="2" rx="4"/>
+    <text x="400" y="80" class="branch-text" text-anchor="middle" font-weight="500">Git Flow - 計画的リリースモデル</text>
+    
+    <!-- Main Branch -->
+    <line x1="60" y1="100" x2="740" y2="100" class="main-branch"/>
+    <text x="60" y="95" class="label-text">main</text>
+    <circle cx="100" cy="100" r="4" class="commit-point"/>
+    <circle cx="300" cy="100" r="4" class="commit-point"/>
+    <circle cx="500" cy="100" r="4" class="commit-point"/>
+    <circle cx="700" cy="100" r="4" class="commit-point"/>
+    
+    <!-- Develop Branch -->
+    <path d="M 100 100 L 120 130 L 680 130 L 700 100" class="develop-branch"/>
+    <text x="120" y="125" class="label-text">develop</text>
+    <circle cx="200" cy="130" r="3" fill="var(--svg-success)"/>
+    <circle cx="400" cy="130" r="3" fill="var(--svg-success)"/>
+    <circle cx="600" cy="130" r="3" fill="var(--svg-success)"/>
+    
+    <!-- Feature Branches -->
+    <path d="M 200 130 L 220 160 L 280 160 L 300 130" class="feature-branch"/>
+    <text x="220" y="155" class="label-text">feature/A</text>
+    
+    <path d="M 400 130 L 420 160 L 480 160 L 500 130" class="feature-branch"/>
+    <text x="420" y="155" class="label-text">feature/B</text>
+    
+    <!-- Release Branch -->
+    <path d="M 500 130 L 520 100 L 580 100" class="release-branch"/>
+    <text x="520" y="95" class="label-text">release/1.0</text>
+    
+    <!-- Hotfix Branch -->
+    <path d="M 300 100 L 320 160 L 380 160 L 400 130" class="hotfix-branch"/>
+    <text x="320" y="180" class="label-text">hotfix/critical</text>
+  </g>
+
+  <!-- GitHub Flow -->
+  <g id="github-flow">
+    <rect x="40" y="220" width="720" height="120" fill="var(--svg-success)" fill-opacity="0.05" stroke="var(--svg-success)" stroke-width="2" rx="4"/>
+    <text x="400" y="240" class="branch-text" text-anchor="middle" font-weight="500">GitHub Flow - シンプル継続デプロイ</text>
+    
+    <!-- Main Branch -->
+    <line x1="60" y1="260" x2="740" y2="260" class="main-branch"/>
+    <text x="60" y="255" class="label-text">main</text>
+    <circle cx="100" cy="260" r="4" class="commit-point"/>
+    <circle cx="250" cy="260" r="4" class="commit-point"/>
+    <circle cx="400" cy="260" r="4" class="commit-point"/>
+    <circle cx="550" cy="260" r="4" class="commit-point"/>
+    <circle cx="700" cy="260" r="4" class="commit-point"/>
+    
+    <!-- Feature Branches with PR -->
+    <path d="M 100 260 L 120 300 L 230 300 L 250 260" class="feature-branch"/>
+    <text x="120" y="295" class="label-text">feature-1</text>
+    <text x="170" y="315" class="label-text">PR→Review→Merge</text>
+    
+    <path d="M 250 260 L 270 300 L 380 300 L 400 260" class="feature-branch"/>
+    <text x="270" y="295" class="label-text">feature-2</text>
+    
+    <path d="M 400 260 L 420 300 L 530 300 L 550 260" class="feature-branch"/>
+    <text x="420" y="295" class="label-text">feature-3</text>
+    
+    <path d="M 550 260 L 570 300 L 680 300 L 700 260" class="feature-branch"/>
+    <text x="570" y="295" class="label-text">feature-4</text>
+    
+    <!-- Deploy Tags -->
+    <text x="250" y="250" class="label-text" text-anchor="middle">↑Deploy</text>
+    <text x="400" y="250" class="label-text" text-anchor="middle">↑Deploy</text>
+    <text x="550" y="250" class="label-text" text-anchor="middle">↑Deploy</text>
+    <text x="700" y="250" class="label-text" text-anchor="middle">↑Deploy</text>
+  </g>
+
+  <!-- GitLab Flow -->
+  <g id="gitlab-flow">
+    <rect x="40" y="360" width="720" height="140" fill="var(--svg-warning)" fill-opacity="0.05" stroke="var(--svg-warning)" stroke-width="2" rx="4"/>
+    <text x="400" y="380" class="branch-text" text-anchor="middle" font-weight="500">GitLab Flow - 環境ブランチモデル</text>
+    
+    <!-- Main Branch -->
+    <line x1="60" y1="400" x2="740" y2="400" class="main-branch"/>
+    <text x="60" y="395" class="label-text">main</text>
+    <circle cx="100" cy="400" r="4" class="commit-point"/>
+    <circle cx="250" cy="400" r="4" class="commit-point"/>
+    <circle cx="400" cy="400" r="4" class="commit-point"/>
+    <circle cx="550" cy="400" r="4" class="commit-point"/>
+    
+    <!-- Environment Branches -->
+    <line x1="250" y1="430" x2="740" y2="430" stroke="var(--svg-success)" stroke-width="2" fill="none"/>
+    <text x="250" y="425" class="label-text">staging</text>
+    <circle cx="300" cy="430" r="3" fill="var(--svg-success)"/>
+    <circle cx="450" cy="430" r="3" fill="var(--svg-success)"/>
+    <circle cx="600" cy="430" r="3" fill="var(--svg-success)"/>
+    
+    <line x1="400" y1="460" x2="740" y2="460" stroke="var(--svg-error)" stroke-width="2" fill="none"/>
+    <text x="400" y="455" class="label-text">production</text>
+    <circle cx="500" cy="460" r="3" fill="var(--svg-error)"/>
+    <circle cx="650" cy="460" r="3" fill="var(--svg-error)"/>
+    
+    <!-- Merge Arrows -->
+    <path d="M 250 405 L 250 425" class="merge-arrow"/>
+    <path d="M 400 405 L 400 425" class="merge-arrow"/>
+    <path d="M 450 435 L 450 455" class="merge-arrow"/>
+    <path d="M 600 435 L 600 455" class="merge-arrow"/>
+    
+    <!-- Feature Branches -->
+    <path d="M 100 400 L 120 370 L 230 370 L 250 400" class="feature-branch"/>
+    <text x="120" y="365" class="label-text">feature/new</text>
+  </g>
+
+  <!-- Best Practices -->
+  <g id="best-practices">
+    <rect x="40" y="520" width="720" height="60" fill="var(--svg-bg-alt)" stroke="var(--svg-border)" stroke-width="2" rx="4"/>
+    <text x="400" y="540" class="branch-text" text-anchor="middle" font-weight="500">ブランチング戦略選択ガイド</text>
+    
+    <rect x="60" y="545" width="160" height="25" fill="white" stroke="var(--svg-primary)" stroke-width="1" rx="4"/>
+    <text x="140" y="560" class="label-text" text-anchor="middle">Git Flow: 大規模・計画的</text>
+    
+    <rect x="240" y="545" width="160" height="25" fill="white" stroke="var(--svg-success)" stroke-width="1" rx="4"/>
+    <text x="320" y="560" class="label-text" text-anchor="middle">GitHub Flow: アジャイル・CI/CD</text>
+    
+    <rect x="420" y="545" width="160" height="25" fill="white" stroke="var(--svg-warning)" stroke-width="1" rx="4"/>
+    <text x="500" y="560" class="label-text" text-anchor="middle">GitLab Flow: 環境別管理</text>
+    
+    <rect x="600" y="545" width="140" height="25" fill="white" stroke="var(--svg-error)" stroke-width="1" rx="4"/>
+    <text x="670" y="560" class="label-text" text-anchor="middle">Trunk-Based: 継続的統合</text>
+  </g>
+</svg>
