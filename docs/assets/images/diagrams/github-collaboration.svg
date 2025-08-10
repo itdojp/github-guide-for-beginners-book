@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: bold; fill: #2c3e50; }
+      .section-title { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50; }
+      .process-title { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: bold; fill: #fff; }
+      .text-content { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; fill: #2c3e50; }
+      .small-text { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #7f8c8d; }
+      .code-text { font-family: 'Courier New', monospace; font-size: 10px; fill: #2c3e50; }
+      .fork-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .clone-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .pr-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .review-box { fill: #f39c12; stroke: #e67e22; stroke-width: 2; }
+      .merge-box { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .user-box { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .component { fill: #fff; stroke: #95a5a6; stroke-width: 1; }
+      .flow-arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .sync-arrow { stroke: #3498db; stroke-width: 2; stroke-dasharray: 5,3; fill: none; marker-end: url(#arrowhead-blue); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3498db"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" class="title" text-anchor="middle">GitHubコラボレーションワークフロー</text>
+
+  <!-- Fork & Clone Workflow -->
+  <g id="fork-clone">
+    <text x="450" y="70" class="section-title" text-anchor="middle">Fork & Pull Requestワークフロー</text>
+    
+    <!-- Original Repository -->
+    <rect x="50" y="100" width="160" height="80" class="user-box" rx="10"/>
+    <text x="130" y="125" class="process-title" text-anchor="middle">オリジナル</text>
+    <text x="130" y="145" class="process-title" text-anchor="middle">リポジトリ</text>
+    <text x="130" y="165" class="small-text" text-anchor="middle">upstream</text>
+    
+    <!-- Fork -->
+    <rect x="280" y="100" width="160" height="80" class="fork-box" rx="10"/>
+    <text x="360" y="125" class="process-title" text-anchor="middle">Fork</text>
+    <text x="360" y="145" class="process-title" text-anchor="middle">自分のリポジトリ</text>
+    <text x="360" y="165" class="small-text" text-anchor="middle">origin</text>
+    
+    <!-- Local Clone -->
+    <rect x="510" y="100" width="160" height="80" class="clone-box" rx="10"/>
+    <text x="590" y="125" class="process-title" text-anchor="middle">Clone</text>
+    <text x="590" y="145" class="process-title" text-anchor="middle">ローカル環境</text>
+    <text x="590" y="165" class="small-text" text-anchor="middle">local</text>
+    
+    <!-- Work & Commit -->
+    <rect x="710" y="100" width="140" height="80" class="review-box" rx="10"/>
+    <text x="780" y="125" class="process-title" text-anchor="middle">作業</text>
+    <text x="780" y="145" class="process-title" text-anchor="middle">コミット</text>
+    <text x="780" y="165" class="small-text" text-anchor="middle">push</text>
+    
+    <!-- Flow arrows -->
+    <path d="M 210 140 L 280 140" class="flow-arrow"/>
+    <text x="245" y="130" class="small-text" text-anchor="middle">Fork</text>
+    
+    <path d="M 440 140 L 510 140" class="flow-arrow"/>
+    <text x="475" y="130" class="small-text" text-anchor="middle">Clone</text>
+    
+    <path d="M 670 140 L 710 140" class="flow-arrow"/>
+    <text x="690" y="130" class="small-text" text-anchor="middle">Edit</text>
+    
+    <!-- Push back -->
+    <path d="M 780 180 Q 780 210 590 210 Q 360 210 360 180" class="flow-arrow"/>
+    <text x="570" y="225" class="small-text" text-anchor="middle">Push</text>
+    
+    <!-- Pull Request -->
+    <path d="M 360 100 Q 360 60 130 60 Q 130 100 130 100" class="pr-box" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="245" y="55" class="small-text" text-anchor="middle">Pull Request</text>
+  </g>
+
+  <!-- Pull Request Process -->
+  <g id="pr-process">
+    <text x="450" y="260" class="section-title" text-anchor="middle">Pull Requestプロセス</text>
+    
+    <!-- Create PR -->
+    <rect x="50" y="280" width="140" height="100" class="pr-box" rx="10"/>
+    <text x="120" y="305" class="process-title" text-anchor="middle">PR作成</text>
+    <rect x="65" y="315" width="110" height="25" class="component" rx="3"/>
+    <text x="120" y="332" class="text-content" text-anchor="middle">タイトル記入</text>
+    <rect x="65" y="345" width="110" height="25" class="component" rx="3"/>
+    <text x="120" y="362" class="text-content" text-anchor="middle">説明追加</text>
+    
+    <!-- Code Review -->
+    <rect x="220" y="280" width="140" height="100" class="review-box" rx="10"/>
+    <text x="290" y="305" class="process-title" text-anchor="middle">コードレビュー</text>
+    <rect x="235" y="315" width="110" height="25" class="component" rx="3"/>
+    <text x="290" y="332" class="text-content" text-anchor="middle">レビュー依頼</text>
+    <rect x="235" y="345" width="110" height="25" class="component" rx="3"/>
+    <text x="290" y="362" class="text-content" text-anchor="middle">フィードバック</text>
+    
+    <!-- CI/CD Check -->
+    <rect x="390" y="280" width="140" height="100" class="clone-box" rx="10"/>
+    <text x="460" y="305" class="process-title" text-anchor="middle">自動チェック</text>
+    <rect x="405" y="315" width="110" height="25" class="component" rx="3"/>
+    <text x="460" y="332" class="text-content" text-anchor="middle">テスト実行</text>
+    <rect x="405" y="345" width="110" height="25" class="component" rx="3"/>
+    <text x="460" y="362" class="text-content" text-anchor="middle">ビルド確認</text>
+    
+    <!-- Approval -->
+    <rect x="560" y="280" width="140" height="100" class="fork-box" rx="10"/>
+    <text x="630" y="305" class="process-title" text-anchor="middle">承認</text>
+    <rect x="575" y="315" width="110" height="25" class="component" rx="3"/>
+    <text x="630" y="332" class="text-content" text-anchor="middle">Approve</text>
+    <rect x="575" y="345" width="110" height="25" class="component" rx="3"/>
+    <text x="630" y="362" class="text-content" text-anchor="middle">LGTM</text>
+    
+    <!-- Merge -->
+    <rect x="730" y="280" width="120" height="100" class="merge-box" rx="10"/>
+    <text x="790" y="305" class="process-title" text-anchor="middle">マージ</text>
+    <rect x="745" y="315" width="90" height="25" class="component" rx="3"/>
+    <text x="790" y="332" class="text-content" text-anchor="middle">Merge</text>
+    <rect x="745" y="345" width="90" height="25" class="component" rx="3"/>
+    <text x="790" y="362" class="text-content" text-anchor="middle">Close PR</text>
+    
+    <!-- Process flow -->
+    <path d="M 190 330 L 220 330" class="flow-arrow"/>
+    <path d="M 360 330 L 390 330" class="flow-arrow"/>
+    <path d="M 530 330 L 560 330" class="flow-arrow"/>
+    <path d="M 700 330 L 730 330" class="flow-arrow"/>
+  </g>
+
+  <!-- Issue Management -->
+  <g id="issues">
+    <rect x="50" y="410" width="400" height="230" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="250" y="435" class="section-title" text-anchor="middle">Issue管理</text>
+    
+    <!-- Issue Types -->
+    <text x="70" y="460" class="text-content" font-weight="bold">Issueの種類:</text>
+    <rect x="70" y="470" width="80" height="30" fill="#e74c3c" stroke="#c0392b" rx="3"/>
+    <text x="110" y="490" class="process-title" text-anchor="middle">Bug</text>
+    
+    <rect x="160" y="470" width="80" height="30" fill="#2ecc71" stroke="#27ae60" rx="3"/>
+    <text x="200" y="490" class="process-title" text-anchor="middle">Feature</text>
+    
+    <rect x="250" y="470" width="80" height="30" fill="#3498db" stroke="#2980b9" rx="3"/>
+    <text x="290" y="490" class="process-title" text-anchor="middle">Docs</text>
+    
+    <rect x="340" y="470" width="90" height="30" fill="#f39c12" stroke="#e67e22" rx="3"/>
+    <text x="385" y="490" class="process-title" text-anchor="middle">Question</text>
+    
+    <!-- Issue Lifecycle -->
+    <text x="70" y="530" class="text-content" font-weight="bold">Issueライフサイクル:</text>
+    <text x="70" y="550" class="small-text">1. Open - Issue作成</text>
+    <text x="70" y="565" class="small-text">2. Assigned - 担当者割り当て</text>
+    <text x="70" y="580" class="small-text">3. In Progress - 作業中</text>
+    <text x="70" y="595" class="small-text">4. Review - レビュー中</text>
+    <text x="70" y="610" class="small-text">5. Closed - 完了</text>
+    
+    <!-- Issue Template -->
+    <text x="250" y="530" class="text-content" font-weight="bold">Issueテンプレート:</text>
+    <rect x="250" y="540" width="180" height="80" fill="#fff" stroke="#95a5a6" rx="3"/>
+    <text x="260" y="555" class="code-text">## 概要</text>
+    <text x="260" y="570" class="code-text">## 再現手順</text>
+    <text x="260" y="585" class="code-text">## 期待される動作</text>
+    <text x="260" y="600" class="code-text">## 実際の動作</text>
+    <text x="260" y="615" class="code-text">## 環境</text>
+  </g>
+
+  <!-- GitHub Actions -->
+  <g id="actions">
+    <rect x="470" y="410" width="380" height="230" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="660" y="435" class="section-title" text-anchor="middle">GitHub Actions</text>
+    
+    <!-- Workflow Triggers -->
+    <text x="490" y="460" class="text-content" font-weight="bold">トリガーイベント:</text>
+    <text x="490" y="480" class="small-text">• push - コードプッシュ時</text>
+    <text x="490" y="495" class="small-text">• pull_request - PR作成/更新時</text>
+    <text x="490" y="510" class="small-text">• schedule - 定期実行</text>
+    <text x="490" y="525" class="small-text">• workflow_dispatch - 手動実行</text>
+    <text x="490" y="540" class="small-text">• release - リリース作成時</text>
+    
+    <!-- Common Actions -->
+    <text x="490" y="570" class="text-content" font-weight="bold">よく使うアクション:</text>
+    <rect x="490" y="580" width="160" height="45" fill="#e6f3ff" stroke="#3498db" rx="3"/>
+    <text x="570" y="595" class="text-content" text-anchor="middle">テスト自動化</text>
+    <text x="500" y="610" class="code-text">actions/checkout@v3</text>
+    <text x="500" y="620" class="code-text">actions/setup-node@v3</text>
+    
+    <rect x="670" y="580" width="160" height="45" fill="#e6ffe6" stroke="#2ecc71" rx="3"/>
+    <text x="750" y="595" class="text-content" text-anchor="middle">デプロイ自動化</text>
+    <text x="680" y="610" class="code-text">actions/deploy-pages@v2</text>
+    <text x="680" y="620" class="code-text">docker/build-push@v4</text>
+  </g>
+</svg>

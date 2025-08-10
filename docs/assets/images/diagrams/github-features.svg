@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: bold; fill: #2c3e50; }
+      .feature-title { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: bold; fill: #fff; }
+      .section-title { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: bold; fill: #2c3e50; }
+      .text-content { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; fill: #2c3e50; }
+      .small-text { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #7f8c8d; }
+      .repo-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .project-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .wiki-box { fill: #f39c12; stroke: #e67e22; stroke-width: 2; }
+      .security-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .insights-box { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .pages-box { fill: #1abc9c; stroke: #16a085; stroke-width: 2; }
+      .component { fill: #fff; stroke: #95a5a6; stroke-width: 1; }
+      .connection-line { stroke: #34495e; stroke-width: 1; stroke-dasharray: 3,2; fill: none; }
+      .center-circle { fill: #2c3e50; stroke: #34495e; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" class="title" text-anchor="middle">GitHub主要機能マップ</text>
+
+  <!-- Central GitHub Logo/Circle -->
+  <circle cx="450" cy="350" r="60" class="center-circle"/>
+  <text x="450" y="345" class="feature-title" text-anchor="middle">GitHub</text>
+  <text x="450" y="365" class="feature-title" text-anchor="middle">リポジトリ</text>
+
+  <!-- Repository Features -->
+  <g id="repository">
+    <rect x="100" y="100" width="160" height="100" class="repo-box" rx="10"/>
+    <text x="180" y="125" class="feature-title" text-anchor="middle">コード管理</text>
+    <rect x="115" y="135" width="130" height="25" class="component" rx="3"/>
+    <text x="180" y="152" class="text-content" text-anchor="middle">ブランチ管理</text>
+    <rect x="115" y="165" width="130" height="25" class="component" rx="3"/>
+    <text x="180" y="182" class="text-content" text-anchor="middle">バージョン管理</text>
+    <line x1="260" y1="150" x2="390" y2="320" class="connection-line"/>
+  </g>
+
+  <!-- Projects -->
+  <g id="projects">
+    <rect x="300" y="80" width="160" height="100" class="project-box" rx="10"/>
+    <text x="380" y="105" class="feature-title" text-anchor="middle">Projects</text>
+    <rect x="315" y="115" width="130" height="25" class="component" rx="3"/>
+    <text x="380" y="132" class="text-content" text-anchor="middle">カンバンボード</text>
+    <rect x="315" y="145" width="130" height="25" class="component" rx="3"/>
+    <text x="380" y="162" class="text-content" text-anchor="middle">タスク管理</text>
+    <line x1="380" y1="180" x2="430" y2="290" class="connection-line"/>
+  </g>
+
+  <!-- Wiki -->
+  <g id="wiki">
+    <rect x="500" y="100" width="160" height="100" class="wiki-box" rx="10"/>
+    <text x="580" y="125" class="feature-title" text-anchor="middle">Wiki</text>
+    <rect x="515" y="135" width="130" height="25" class="component" rx="3"/>
+    <text x="580" y="152" class="text-content" text-anchor="middle">ドキュメント</text>
+    <rect x="515" y="165" width="130" height="25" class="component" rx="3"/>
+    <text x="580" y="182" class="text-content" text-anchor="middle">ガイド作成</text>
+    <line x1="560" y1="200" x2="490" y2="300" class="connection-line"/>
+  </g>
+
+  <!-- Security -->
+  <g id="security">
+    <rect x="680" y="160" width="160" height="100" class="security-box" rx="10"/>
+    <text x="760" y="185" class="feature-title" text-anchor="middle">Security</text>
+    <rect x="695" y="195" width="130" height="25" class="component" rx="3"/>
+    <text x="760" y="212" class="text-content" text-anchor="middle">脆弱性スキャン</text>
+    <rect x="695" y="225" width="130" height="25" class="component" rx="3"/>
+    <text x="760" y="242" class="text-content" text-anchor="middle">Dependabot</text>
+    <line x1="680" y1="210" x2="510" y2="320" class="connection-line"/>
+  </g>
+
+  <!-- Insights -->
+  <g id="insights">
+    <rect x="700" y="320" width="160" height="100" class="insights-box" rx="10"/>
+    <text x="780" y="345" class="feature-title" text-anchor="middle">Insights</text>
+    <rect x="715" y="355" width="130" height="25" class="component" rx="3"/>
+    <text x="780" y="372" class="text-content" text-anchor="middle">統計情報</text>
+    <rect x="715" y="385" width="130" height="25" class="component" rx="3"/>
+    <text x="780" y="402" class="text-content" text-anchor="middle">貢献者グラフ</text>
+    <line x1="700" y1="370" x2="510" y2="350" class="connection-line"/>
+  </g>
+
+  <!-- GitHub Pages -->
+  <g id="pages">
+    <rect x="650" y="460" width="160" height="100" class="pages-box" rx="10"/>
+    <text x="730" y="485" class="feature-title" text-anchor="middle">GitHub Pages</text>
+    <rect x="665" y="495" width="130" height="25" class="component" rx="3"/>
+    <text x="730" y="512" class="text-content" text-anchor="middle">静的サイト</text>
+    <rect x="665" y="525" width="130" height="25" class="component" rx="3"/>
+    <text x="730" y="542" class="text-content" text-anchor="middle">自動デプロイ</text>
+    <line x1="650" y1="510" x2="500" y2="390" class="connection-line"/>
+  </g>
+
+  <!-- Additional Features Grid -->
+  <g id="additional-features">
+    <rect x="50" y="250" width="280" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="190" y="275" class="section-title" text-anchor="middle">コラボレーション機能</text>
+    
+    <text x="70" y="300" class="text-content" font-weight="bold">Pull Request:</text>
+    <text x="70" y="315" class="small-text">• コードレビュー</text>
+    <text x="70" y="330" class="small-text">• ディスカッション</text>
+    <text x="70" y="345" class="small-text">• 自動マージ</text>
+    
+    <text x="70" y="370" class="text-content" font-weight="bold">Issues:</text>
+    <text x="70" y="385" class="small-text">• バグトラッキング</text>
+    <text x="70" y="400" class="small-text">• 機能リクエスト</text>
+    <text x="70" y="415" class="small-text">• ラベル管理</text>
+    
+    <text x="200" y="300" class="text-content" font-weight="bold">Discussions:</text>
+    <text x="200" y="315" class="small-text">• Q&amp;A</text>
+    <text x="200" y="330" class="small-text">• アイデア共有</text>
+    <text x="200" y="345" class="small-text">• アナウンス</text>
+    
+    <text x="200" y="370" class="text-content" font-weight="bold">Teams:</text>
+    <text x="200" y="385" class="small-text">• アクセス管理</text>
+    <text x="200" y="400" class="small-text">• 権限設定</text>
+    <text x="200" y="415" class="small-text">• メンション</text>
+  </g>
+
+  <!-- Automation Features -->
+  <g id="automation">
+    <rect x="50" y="450" width="280" height="200" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="190" y="475" class="section-title" text-anchor="middle">自動化機能</text>
+    
+    <text x="70" y="500" class="text-content" font-weight="bold">GitHub Actions:</text>
+    <text x="70" y="515" class="small-text">• CI/CD パイプライン</text>
+    <text x="70" y="530" class="small-text">• 自動テスト</text>
+    <text x="70" y="545" class="small-text">• 自動デプロイ</text>
+    <text x="70" y="560" class="small-text">• スケジュール実行</text>
+    
+    <text x="70" y="585" class="text-content" font-weight="bold">Webhooks:</text>
+    <text x="70" y="600" class="small-text">• イベント通知</text>
+    <text x="70" y="615" class="small-text">• 外部連携</text>
+    <text x="70" y="630" class="small-text">• 自動トリガー</text>
+    
+    <text x="200" y="500" class="text-content" font-weight="bold">Branch Protection:</text>
+    <text x="200" y="515" class="small-text">• レビュー必須化</text>
+    <text x="200" y="530" class="small-text">• ステータスチェック</text>
+    <text x="200" y="545" class="small-text">• 自動マージ</text>
+    
+    <text x="200" y="585" class="text-content" font-weight="bold">Templates:</text>
+    <text x="200" y="600" class="small-text">• Issue テンプレート</text>
+    <text x="200" y="615" class="small-text">• PR テンプレート</text>
+    <text x="200" y="630" class="small-text">• リポジトリテンプレート</text>
+  </g>
+
+  <!-- Settings & Admin -->
+  <g id="settings">
+    <rect x="360" y="470" width="260" height="160" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="490" y="495" class="section-title" text-anchor="middle">設定と管理</text>
+    
+    <text x="380" y="520" class="text-content" font-weight="bold">リポジトリ設定:</text>
+    <text x="380" y="535" class="small-text">• 公開/非公開</text>
+    <text x="380" y="550" class="small-text">• コラボレーター管理</text>
+    <text x="380" y="565" class="small-text">• デフォルトブランチ</text>
+    <text x="380" y="580" class="small-text">• マージ戦略</text>
+    
+    <text x="500" y="520" class="text-content" font-weight="bold">統合:</text>
+    <text x="500" y="535" class="small-text">• Slack連携</text>
+    <text x="500" y="550" class="small-text">• JIRA連携</text>
+    <text x="500" y="565" class="small-text">• CI/CDツール</text>
+    <text x="500" y="580" class="small-text">• IDE連携</text>
+    
+    <text x="380" y="605" class="text-content" font-weight="bold">セキュリティ:</text>
+    <text x="380" y="620" class="small-text">• 2FA認証・SSH鍵・アクセストークン・監査ログ</text>
+  </g>
+</svg>
