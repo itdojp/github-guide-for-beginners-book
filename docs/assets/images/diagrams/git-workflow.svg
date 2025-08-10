@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: bold; fill: #2c3e50; }
+      .stage-title { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: bold; fill: #fff; }
+      .branch-text { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; fill: #2c3e50; font-weight: bold; }
+      .command-text { font-family: 'Courier New', monospace; font-size: 10px; fill: #2c3e50; }
+      .small-text { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #7f8c8d; }
+      .workspace-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .staging-box { fill: #f39c12; stroke: #e67e22; stroke-width: 2; }
+      .local-repo-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .remote-repo-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .branch-main { stroke: #2c3e50; stroke-width: 3; fill: none; }
+      .branch-feature { stroke: #3498db; stroke-width: 2; fill: none; }
+      .branch-hotfix { stroke: #e74c3c; stroke-width: 2; fill: none; stroke-dasharray: 5,3; }
+      .commit-node { fill: #fff; stroke: #34495e; stroke-width: 2; }
+      .merge-node { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .component { fill: #fff; stroke: #95a5a6; stroke-width: 1; }
+      .flow-arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" class="title" text-anchor="middle">Gitワークフローとブランチ戦略</text>
+
+  <!-- Git Areas -->
+  <g id="git-areas">
+    <text x="450" y="70" class="branch-text" text-anchor="middle">Gitの4つの領域</text>
+    
+    <!-- Working Directory -->
+    <rect x="50" y="90" width="180" height="100" class="workspace-box" rx="10"/>
+    <text x="140" y="115" class="stage-title" text-anchor="middle">作業ディレクトリ</text>
+    <text x="140" y="135" class="stage-title" text-anchor="middle">Working Directory</text>
+    <rect x="65" y="145" width="150" height="30" class="component" rx="3"/>
+    <text x="140" y="165" class="command-text" text-anchor="middle">ファイル編集</text>
+    
+    <!-- Staging Area -->
+    <rect x="260" y="90" width="180" height="100" class="staging-box" rx="10"/>
+    <text x="350" y="115" class="stage-title" text-anchor="middle">ステージングエリア</text>
+    <text x="350" y="135" class="stage-title" text-anchor="middle">Staging Area</text>
+    <rect x="275" y="145" width="150" height="30" class="component" rx="3"/>
+    <text x="350" y="165" class="command-text" text-anchor="middle">git add</text>
+    
+    <!-- Local Repository -->
+    <rect x="470" y="90" width="180" height="100" class="local-repo-box" rx="10"/>
+    <text x="560" y="115" class="stage-title" text-anchor="middle">ローカルリポジトリ</text>
+    <text x="560" y="135" class="stage-title" text-anchor="middle">Local Repository</text>
+    <rect x="485" y="145" width="150" height="30" class="component" rx="3"/>
+    <text x="560" y="165" class="command-text" text-anchor="middle">git commit</text>
+    
+    <!-- Remote Repository -->
+    <rect x="680" y="90" width="180" height="100" class="remote-repo-box" rx="10"/>
+    <text x="770" y="115" class="stage-title" text-anchor="middle">リモートリポジトリ</text>
+    <text x="770" y="135" class="stage-title" text-anchor="middle">Remote Repository</text>
+    <rect x="695" y="145" width="150" height="30" class="component" rx="3"/>
+    <text x="770" y="165" class="command-text" text-anchor="middle">git push/pull</text>
+  </g>
+
+  <!-- Flow arrows between areas -->
+  <path d="M 230 140 L 260 140" class="flow-arrow"/>
+  <path d="M 440 140 L 470 140" class="flow-arrow"/>
+  <path d="M 650 140 L 680 140" class="flow-arrow"/>
+
+  <!-- Git Flow -->
+  <g id="git-flow">
+    <text x="450" y="230" class="branch-text" text-anchor="middle">Git Flow ブランチモデル</text>
+    
+    <!-- Main branch -->
+    <text x="50" y="260" class="branch-text">main</text>
+    <line x1="100" y1="260" x2="800" y2="260" class="branch-main"/>
+    <circle cx="150" cy="260" r="6" class="commit-node"/>
+    <circle cx="350" cy="260" r="6" class="merge-node"/>
+    <circle cx="550" cy="260" r="6" class="merge-node"/>
+    <circle cx="750" cy="260" r="6" class="commit-node"/>
+    
+    <!-- Develop branch -->
+    <text x="50" y="320" class="branch-text">develop</text>
+    <path d="M 150 260 Q 180 280 200 320" class="branch-feature"/>
+    <line x1="200" y1="320" x2="700" y2="320" class="branch-feature"/>
+    <path d="M 700 320 Q 730 280 750 260" class="branch-feature"/>
+    <circle cx="250" cy="320" r="6" class="commit-node"/>
+    <circle cx="450" cy="320" r="6" class="commit-node"/>
+    <circle cx="650" cy="320" r="6" class="commit-node"/>
+    
+    <!-- Feature branch -->
+    <text x="50" y="380" class="branch-text">feature</text>
+    <path d="M 250 320 Q 280 340 300 380" class="branch-feature"/>
+    <line x1="300" y1="380" x2="500" y2="380" class="branch-feature"/>
+    <path d="M 500 380 Q 530 340 550 320" class="branch-feature"/>
+    <circle cx="350" cy="380" r="6" class="commit-node"/>
+    <circle cx="450" cy="380" r="6" class="commit-node"/>
+    
+    <!-- Hotfix branch -->
+    <text x="50" y="440" class="branch-text">hotfix</text>
+    <path d="M 350 260 Q 380 280 400 320" class="branch-hotfix"/>
+    <line x1="400" y1="320" x2="500" y2="320" class="branch-hotfix" stroke-dasharray="5,3"/>
+    <path d="M 500 320 Q 530 280 550 260" class="branch-hotfix"/>
+    <circle cx="450" cy="320" r="6" fill="#e74c3c"/>
+  </g>
+
+  <!-- Common Git Commands -->
+  <g id="commands">
+    <rect x="50" y="480" width="800" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="450" y="505" class="branch-text" text-anchor="middle">よく使うGitコマンド</text>
+    
+    <!-- Basic Commands -->
+    <rect x="70" y="520" width="180" height="120" fill="#e6f3ff" stroke="#3498db" stroke-width="1" rx="3"/>
+    <text x="160" y="540" class="branch-text" text-anchor="middle">基本操作</text>
+    <text x="80" y="560" class="command-text">git init</text>
+    <text x="80" y="575" class="command-text">git clone [url]</text>
+    <text x="80" y="590" class="command-text">git status</text>
+    <text x="80" y="605" class="command-text">git add .</text>
+    <text x="80" y="620" class="command-text">git commit -m ""</text>
+    <text x="80" y="635" class="command-text">git push origin main</text>
+    
+    <!-- Branch Commands -->
+    <rect x="270" y="520" width="180" height="120" fill="#ffe6e6" stroke="#e74c3c" stroke-width="1" rx="3"/>
+    <text x="360" y="540" class="branch-text" text-anchor="middle">ブランチ操作</text>
+    <text x="280" y="560" class="command-text">git branch</text>
+    <text x="280" y="575" class="command-text">git branch [name]</text>
+    <text x="280" y="590" class="command-text">git checkout [branch]</text>
+    <text x="280" y="605" class="command-text">git checkout -b [new]</text>
+    <text x="280" y="620" class="command-text">git merge [branch]</text>
+    <text x="280" y="635" class="command-text">git branch -d [name]</text>
+    
+    <!-- Remote Commands -->
+    <rect x="470" y="520" width="180" height="120" fill="#e6ffe6" stroke="#2ecc71" stroke-width="1" rx="3"/>
+    <text x="560" y="540" class="branch-text" text-anchor="middle">リモート操作</text>
+    <text x="480" y="560" class="command-text">git remote -v</text>
+    <text x="480" y="575" class="command-text">git fetch origin</text>
+    <text x="480" y="590" class="command-text">git pull origin main</text>
+    <text x="480" y="605" class="command-text">git push -u origin</text>
+    <text x="480" y="620" class="command-text">git remote add [name]</text>
+    <text x="480" y="635" class="command-text">git push --tags</text>
+    
+    <!-- History Commands -->
+    <rect x="670" y="520" width="160" height="120" fill="#fff3cd" stroke="#f39c12" stroke-width="1" rx="3"/>
+    <text x="750" y="540" class="branch-text" text-anchor="middle">履歴操作</text>
+    <text x="680" y="560" class="command-text">git log --oneline</text>
+    <text x="680" y="575" class="command-text">git diff</text>
+    <text x="680" y="590" class="command-text">git show [commit]</text>
+    <text x="680" y="605" class="command-text">git reset --soft</text>
+    <text x="680" y="620" class="command-text">git revert [commit]</text>
+    <text x="680" y="635" class="command-text">git stash</text>
+  </g>
+</svg>
