@@ -46,4 +46,6 @@ defaults:
 # 日本語対応
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: rougepermalink: pretty
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
