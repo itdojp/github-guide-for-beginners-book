@@ -49,3 +49,5 @@ kramdown:
   syntax_highlighter: rougepermalink: pretty
   - jekyll-relative-links
   - jekyll-optional-front-matter
+
+permalink: pretty
