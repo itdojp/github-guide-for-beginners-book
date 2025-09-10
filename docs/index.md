@@ -35,13 +35,13 @@ permalink: /
 
 1. **[はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
 2. **[Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
-3. **[GitHubアカウント作成と初期設定]({{ '/src/chapter-github-account/' | relative_url }})**
+3. **[GitHubアカウント作成と初期設定]({{ '/src/chapter-github-account-setup/' | relative_url }})**
 4. **[基本操作 - push、pull、clone]({{ '/src/chapter-basic-operations/' | relative_url }})**
 
 ### 第2部: 実践編
 
 5. **[リポジトリ管理の実践]({{ '/src/chapter-repository-management/' | relative_url }})**
-6. **[チーム開発入門 - ブランチとマージ]({{ '/src/chapter-team-development/' | relative_url }})**
+6. **[チーム開発入門 - ブランチとマージ]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
 7. **[プルリクエストによるコードレビュー]({{ '/src/chapter-pull-requests/' | relative_url }})**
 8. **[Issues活用による課題管理]({{ '/src/chapter-issue-management/' | relative_url }})**
 
@@ -76,7 +76,7 @@ permalink: /
 
 1. **順番に読み進める** - 各章は前章の内容を前提に構成されています
 2. **実際に手を動かす** - サンプルコードは必ず実行してみましょう
-3. **実習を活用する** - [examples/]({{ '/examples/' | relative_url }}) フォルダの実習用コードで練習
+3. **実習を活用する** - examples/ フォルダの実習用コードで練習
 4. **コミュニティに参加** - 分からないことは積極的に質問しましょう
 
 ## 📄 ライセンス
