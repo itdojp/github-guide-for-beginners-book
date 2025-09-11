@@ -5,22 +5,32 @@ version: "1.0.0"
 lang: "ja"
 
 # GitHub Pages settings
-baseurl: "/github-guide-for-beginners-book"
 url: "https://itdojp.github.io"
+baseurl: "/github-guide-for-beginners-book"
 repository: "itdojp/github-guide-for-beginners-book"
 
-# Jekyll設定
+# Jekyll settings
 markdown: kramdown
 highlighter: rouge
+permalink: pretty
+
+# Theme
 theme: minima
 
-# プラグイン
+# Plugins (GitHub Pages supported)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
 
-# 除外ファイル
+# Kramdown configuration
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Excludes
 exclude:
   - node_modules/
   - package.json
@@ -34,20 +44,3 @@ exclude:
   - book-config.json
   - BOOK-PROPOSAL.md
   - tech-book-writing-6phases.md
-
-# デフォルトレイアウト
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "book"
-
-# 日本語対応
-kramdown:
-  input: GFM
-  syntax_highlighter: rougepermalink: pretty
-  - jekyll-relative-links
-  - jekyll-optional-front-matter
-
-permalink: pretty
