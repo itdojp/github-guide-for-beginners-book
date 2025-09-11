@@ -97,3 +97,4 @@ Email: [knowledge@itdo.jp](mailto:knowledge@itdo.jp)
 
 Built with [Book Publishing Template v3.0](https://github.com/itdojp/book-publishing-template2)
 {% include page-navigation.html %}
+\n<!-- trigger rebuild -->
