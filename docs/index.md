@@ -35,22 +35,22 @@ permalink: /
 
 1. **[はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
 2. **[Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
-3. **[GitHubアカウント作成と初期設定]({{ '/src/chapter-github-account-setup/' | relative_url }})**
-4. **[基本操作 - push、pull、clone]({{ '/src/chapter-basic-operations/' | relative_url }})**
+3. **[初めてのリポジトリ作成]({{ '/src/chapter-github-account-setup/' | relative_url }})**
+4. **[アカウントセキュリティの基本]({{ '/src/chapter-basic-operations/' | relative_url }})**
 
 ### 第2部: 実践編
 
-5. **[リポジトリ管理の実践]({{ '/src/chapter-repository-management/' | relative_url }})**
-6. **[チーム開発入門 - ブランチとマージ]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
-7. **[プルリクエストによるコードレビュー]({{ '/src/chapter-pull-requests/' | relative_url }})**
-8. **[Issues活用による課題管理]({{ '/src/chapter-issue-management/' | relative_url }})**
+5. **[ファイルのアップロードと管理]({{ '/src/chapter-repository-management/' | relative_url }})**
+6. **[GitHub Desktop の活用]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
+7. **[ブランチの基本操作]({{ '/src/chapter-pull-requests/' | relative_url }})**
+8. **[Issue管理とプロジェクト管理]({{ '/src/chapter-issue-management/' | relative_url }})**
 
 ### 第3部: 自動化・高度活用編
 
 9. **[GitHub Actions入門 - 自動化の基礎]({{ '/src/chapter-github-actions/' | relative_url }})**
 10. **[セキュリティのベストプラクティス]({{ '/src/chapter-security-best-practices/' | relative_url }})**
-11. **[実践的な活用法]({{ '/src/chapter-advanced-features/' | relative_url }})**
-12. **[よくある問題と解決方法]({{ '/src/chapter-troubleshooting/' | relative_url }})**
+11. **[高度な機能活用]({{ '/src/chapter-advanced-features/' | relative_url }})**
+12. **[トラブルシューティング]({{ '/src/chapter-troubleshooting/' | relative_url }})**
 
 ### 付録
 
@@ -97,4 +97,4 @@ Email: [knowledge@itdo.jp](mailto:knowledge@itdo.jp)
 
 Built with [Book Publishing Template v3.0](https://github.com/itdojp/book-publishing-template2)
 {% include page-navigation.html %}
-\n<!-- trigger rebuild -->
+<!-- trigger rebuild -->
