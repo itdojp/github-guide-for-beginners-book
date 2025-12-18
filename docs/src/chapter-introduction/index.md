@@ -23,7 +23,7 @@ order: 0
 
 多くの人が経験する光景：
 
-```
+```text
 プロジェクト/
 ├── index.html
 ├── index_修正版.html
@@ -52,8 +52,8 @@ order: 0
 
 これらの問題を根本的に解決するのがGit（ギット）とGitHub（ギットハブ）です。
 
-**Git**: 分散バージョン管理システム。ファイルの変更履歴を効率的に記録・管理
-**GitHub**: Gitリポジトリをクラウドで管理し、チーム開発を支援するWebサービス
+- **Git**: 分散バージョン管理システム。ファイルの変更履歴を効率的に記録・管理
+- **GitHub**: Gitリポジトリをクラウドで管理し、チーム開発を支援するWebサービス
 
 ![バージョン管理の進化]({{ '/assets/images/diagrams/chapter01/01_version_control_evolution.svg' | relative_url }})
 
@@ -81,7 +81,7 @@ order: 0
 
 ### 協調開発のワークフロー
 
-GitHubは単なるコード保存場所ではありません。チーム開発を効率化する様々な機能が統合されたプラットフォームです。
+GitHubは単なるコード保存場所ではありません。チーム開発を効率化するさまざまな機能が統合されたプラットフォームです。
 
 ![協調フロー]({{ '/assets/images/diagrams/chapter01/05_collaboration_flow.svg' | relative_url }})
 
@@ -104,7 +104,7 @@ GitHubは単なるコード保存場所ではありません。チーム開発�
 
 ### 必要な環境
 - インターネット接続可能なコンピュータ（Windows、macOS、Linux）
-- Webブラウザ（Google Chrome、Safari、Edge等）
+- Webブラウザ（Google Chrome、Safari、Edge など）
 - テキストエディタ（推奨：Visual Studio Code）
 
 ### GitHubアカウント

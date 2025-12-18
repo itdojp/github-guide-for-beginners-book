@@ -31,7 +31,7 @@ Gitは、ファイルの変更を3つの段階で管理します。この概念�
 
 ### 3つのエリアの関係
 
-```
+```text
 Working Directory → Staging Area → Repository
     （編集）        （git add）    （git commit）
 ```
@@ -129,7 +129,7 @@ Working Directory → Staging Area → Repository
 - 3行目以降：詳細な説明（必要に応じて）
 
 **良い例：**
-```
+```text
 Add navigation menu to header
 
 - Add responsive navigation bar
@@ -138,7 +138,7 @@ Add navigation menu to header
 ```
 
 **悪い例：**
-```
+```text
 Update files
 ```
 
