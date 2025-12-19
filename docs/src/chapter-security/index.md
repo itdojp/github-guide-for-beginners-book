@@ -88,14 +88,14 @@ order: 999
 **パスワード作成の実践的な方法：**
 
 **パスフレーズ方式**
-```
+```text
 例：Coffee-Laptop-Sunny-2024!
 意味：コーヒー、ラップトップ、晴れ、2024年
 覚えやすく、長くて安全
 ```
 
 **頭文字方式**
-```
+```text
 文章：「I love GitHub and coding for 5 years since 2019!」
 パスワード：「IlGac4y5ys2019!」
 ```
@@ -135,7 +135,7 @@ order: 999
 4. 「Enable」をクリック
 
 **Step 3: リカバリーコードの保存**
-```
+```text
 GitHub Recovery Codes
 保存日：2024-01-15
 
@@ -240,7 +240,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
    - Scopes: 必要最小限の権限を選択
 
 **主要なスコープの説明：**
-```
+```text
 repo: リポジトリへのフルアクセス
   - repo:status: コミットステータスの読み書き
   - repo_deployment: デプロイメントの管理
@@ -461,7 +461,7 @@ console.log(process.env.DATABASE_URL);
 3. 「New repository secret」をクリック
 
 **よく使用されるシークレット例：**
-```
+```text
 AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 DATABASE_URL=postgresql://username:password@host:port/database
