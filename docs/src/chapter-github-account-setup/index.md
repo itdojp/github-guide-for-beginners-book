@@ -22,7 +22,7 @@ order: 2
 **学校のプロジェクトフォルダ**
 学校で「文化祭のWebサイトを作る」プロジェクトがあったとします。このプロジェクトのために、以下のようなフォルダを作成するでしょう：
 
-```
+```text
 文化祭Webサイト/
 ├── 企画書.docx
 ├── index.html
@@ -239,7 +239,7 @@ README.md ファイルは「Markdown」という記法で書かれています�
 ```
 
 **コードブロック（Code Blocks）**
-```markdown
+````markdown
 インライン コードは `バッククォート` で囲む
 
 ```javascript
@@ -248,7 +248,7 @@ function hello() {
     console.log("Hello, World!");
 }
 ```
-```
+````
 
 **画像（Images）**
 ```markdown
@@ -260,7 +260,7 @@ function hello() {
 
 **基本的な構成テンプレート：**
 
-```markdown
+````markdown
 # プロジェクト名
 
 簡潔なプロジェクトの説明（1-2行）
@@ -316,13 +316,13 @@ cd repository-name
 ## ライセンス
 
 MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照してください。
-```
+````
 
 ### 実際のREADME作成例
 
 **初心者向けの実例：**
 
-```markdown
+````markdown
 # 私の最初のWebサイト
 
 HTML とCSS を学習するために作成した個人的なWebサイトです。
@@ -340,7 +340,7 @@ HTML とCSS を学習するために作成した個人的なWebサイトです�
 
 ## ファイル構成
 
-```
+```text
 my-first-website/
 ├── index.html      # メインページ
 ├── style.css       # スタイルシート
@@ -377,7 +377,7 @@ my-first-website/
 - GitHub: [@tanaka-taro](https://github.com/tanaka-taro)
 - 学習開始: 2024年1月
 - 目標: フロントエンドエンジニア
-```
+````
 
 ---
 
@@ -448,13 +448,15 @@ my-first-website/
 ```
 
 **コードブロックが表示されない**
-```markdown
+````markdown
 ❌ 間違い
 `（バッククォート1つでブロック作成を試行）
 
 ✅ 正しい
-```（バッククォート3つでブロック作成）
+```text
+（ここにコードを書く）
 ```
+````
 
 ### ファイル権限とアクセス管理
 
