@@ -1,5 +1,5 @@
 ---
-title: "GitHub Desktop の活用"
+title: "第5章：GitHub Desktop の活用"
 layout: book
 order: 5
 ---
@@ -372,5 +372,4 @@ GitHub Desktopでよく発生する問題とその解決方法を理解してお
 □ 変更内容を適切にcommitできる  
 □ Push、Pull、Syncの違いを理解し、使い分けられる  
 □ 基本的なコンフリクトに対処できる
-
 

@@ -1,5 +1,5 @@
 ---
-title: "初めてのリポジトリ作成"
+title: "第2章：初めてのリポジトリ作成"
 layout: book
 order: 2
 ---
