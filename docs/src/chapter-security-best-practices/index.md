@@ -107,7 +107,7 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 
 ### 依存関係の脆弱性チェック
 
-GitHubの自動セキュリティアラート：
+GitHubの自動セキュリティアラートには、次のものがあります。
 - Dependabot alerts
 - Security advisories
 - 依存関係の自動更新
@@ -177,5 +177,4 @@ git gc --prune=now --aggressive
 - 定期的なセキュリティ監査
 
 次の章では、これらのセキュリティ知識を活用した実践的なプロジェクト運用方法について学習します。
-
 
