@@ -1,5 +1,5 @@
 ---
-title: "学習リソースと参考文献"
+title: "付録C：学習リソースと参考文献"
 layout: book
 order: 102
 ---

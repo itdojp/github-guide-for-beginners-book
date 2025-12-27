@@ -1,5 +1,5 @@
 ---
-title: "GitHubショートカット集"
+title: "付録B：GitHubショートカット集"
 layout: book
 order: 101
 ---

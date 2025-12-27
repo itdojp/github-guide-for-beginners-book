@@ -1,5 +1,5 @@
 ---
-title: "Gitコマンドリファレンス"
+title: "付録A：Gitコマンドリファレンス"
 layout: book
 order: 100
 ---
