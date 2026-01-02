@@ -72,14 +72,14 @@ Working Directory → Staging Area → Repository
 **Step 3: リポジトリの基本情報を入力**
 
 **Repository name（リポジトリ名）**
-良い名前の例：
+良い名前の例は次のとおりです。
 - `my-first-website`（私の最初のWebサイト）
 - `learning-html-css`（HTML・CSS学習用）
 - `personal-portfolio`（個人ポートフォリオ）
 - `javascript-practice`（JavaScript練習用）
 
 **Description（説明文）**
-例：
+例は次のとおりです。
 - "My first HTML/CSS website for learning web development"
 - "Personal portfolio website showcasing my projects"
 - "Practice repository for JavaScript fundamentals"
@@ -114,7 +114,7 @@ Working Directory → Staging Area → Repository
 
 ### コミットとは何か
 
-コミットは「プロジェクトの特定時点でのスナップショット」です。以下の情報が記録されます：
+コミットは「プロジェクトの特定時点でのスナップショット」です。以下の情報が記録されます。
 
 - **変更内容**：どのファイルが、どのように変更されたか
 - **変更者**：誰が変更したか
@@ -203,7 +203,7 @@ git checkout main
 
 ### 実習課題
 
-以下の手順で、あなたの最初のリポジトリを作成してください：
+以下の手順で、あなたの最初のリポジトリを作成してください。
 
 1. **リポジトリ名**：`my-github-learning`
 2. **説明文**：「Learning GitHub basics step by step」
@@ -227,7 +227,7 @@ git checkout main
 
 ## まとめ
 
-この章では、Gitの基本概念について学習しました：
+この章では、Gitの基本概念について学習しました。
 
 - **3つのエリア**：Working Directory、Staging Area、Repository
 - **コミット**：変更履歴の記録単位
