@@ -30,7 +30,7 @@
 ### 視覚的洗練度
 ```
 - Use rounded corners (4px radius) for modern appearance
-- Implement subtle gradients for depth (10-15% opacity difference)
+- Implement subtle gradients for depth (10〜15% opacity difference)
 - Apply consistent stroke weights (1px, 2px, 3px hierarchy)
 - Maintain optical balance over mathematical centering
 - Ensure visual breathing room between elements
