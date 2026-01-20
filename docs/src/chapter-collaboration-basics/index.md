@@ -1,17 +1,17 @@
 ---
-title: "第5章：GitHub Desktop の活用"
+title: "第6章：GitHub Desktop の活用"
 layout: book
-order: 5
+order: 6
 ---
 
-# 第5章：GitHub Desktop の活用
+# 第6章：GitHub Desktop の活用
 
 ## 学習目標
 この章を読み終える頃には、GitHub Desktopアプリをインストール・設定し、ローカル環境（手元のPC）でより効率的にGitHub作業ができるようになります。Web画面での基本操作に加えて、デスクトップアプリでの快適な作業環境を手に入れましょう。
 
 ---
 
-## 5.1 GitHub Desktop のインストールと設定
+## 6.1 GitHub Desktop のインストールと設定
 
 ### なぜGitHub Desktop を使うのか
 
@@ -113,7 +113,7 @@ GitHubがアプリ改善のために使用データを収集するかどうか�
 
 ---
 
-## 5.2 Clone（複製）の基本操作
+## 6.2 Clone（複製）の基本操作
 
 ### Clone とは何か
 
@@ -158,7 +158,7 @@ Clone されたリポジトリは、「Local Path」という場所に保存さ�
 
 ---
 
-## 5.3 デスクトップでのファイル編集とCommit
+## 6.3 デスクトップでのファイル編集とCommit
 
 ### ローカルでのファイル編集
 
@@ -227,7 +227,7 @@ GitHub Desktop では、変更されたファイルの中から、commitに含�
 
 ---
 
-## 5.4 Push、Pull、Syncの理解と実践
+## 6.4 Push、Pull、Syncの理解と実践
 
 ### Push - ローカルの変更をGitHubに送信
 
@@ -372,4 +372,3 @@ GitHub Desktopでよく発生する問題とその解決方法を理解してお
 □ 変更内容を適切にcommitできる  
 □ Push、Pull、Syncの違いを理解し、使い分けられる  
 □ 基本的なコンフリクトに対処できる
-

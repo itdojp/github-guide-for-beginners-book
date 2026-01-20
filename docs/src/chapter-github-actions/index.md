@@ -1,7 +1,7 @@
 ---
-title: "GitHub Actions入門 - 自動化の基礎"
+title: "第9章：GitHub Actions入門 - 自動化の基礎"
 layout: book
-order: 8
+order: 9
 ---
 
 # 第9章：GitHub Actions入門 - 自動化の基礎
@@ -760,4 +760,3 @@ jobs:
 □ 自動テストとビルドを実装できる  
 □ 自動デプロイメントを設定できる  
 □ シークレットや環境変数を適切に管理できる
-

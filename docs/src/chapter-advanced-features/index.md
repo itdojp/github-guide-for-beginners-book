@@ -1,7 +1,7 @@
 ---
 title: "第11章：高度な機能活用"
 layout: book
-order: 10
+order: 11
 ---
 
 # 第11章：高度な機能活用
@@ -1254,4 +1254,3 @@ async function sendEmailNotification(event, data) {
 □ GitHub CLIで効率的なコマンドライン操作を実行できる  
 □ Webhooksを使って外部システムとの連携を実装できる  
 □ 自動化によって開発プロセスを最適化できる
-
