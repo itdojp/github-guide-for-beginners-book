@@ -403,6 +403,42 @@ jobs:
       uses: actions/deploy-pages@v4
 ```
 
+### Pages公開を「文書運用」の導線にする（運用設計）
+
+GitHub Pages は、静的サイトを公開する機能です。文書運用（Docs-as-Code）と組み合わせると、次の導線が作れます。
+
+- Issue で「何を変えるか」を決める
+- Pull Request で文書を改訂し、レビューで合意する
+- マージをトリガに、Pages へ自動デプロイして「公開版」を更新する
+
+#### 公開範囲のモデル（例）
+
+Pages を使う前に、**何を公開対象にするか**（公開/非公開の境界）を決めてください。
+
+- **public docs**：外部公開してよい利用者向け文書（例：手順書、仕様の公開版）
+- **private docs**：組織/チーム内だけに共有する文書（例：社内向けナレッジ、限定公開の手順）
+- **internal docs**：運用手順・Runbook など、公開運用に載せない文書（例：障害対応、秘密情報を前提にする手順）
+- **mixed**：public と internal が混在する場合は、ディレクトリを分けて「公開対象だけをビルドする」設計にする
+
+※ internal docs には、機密情報（トークン/鍵/社内URLなど）を書かない運用が前提です。必要な場合は、別の保管場所（社内Wikiなど）を検討してください。
+
+#### ディレクトリ構成とビルド出力の注意
+
+Pages は、次の 2 パターンで運用されることが多いです。
+
+- **Deploy from a branch**：`main` ブランチの `/docs` を公開する（最小構成）
+- **GitHub Actions で build → deploy**：ビルド成果物を Pages にアップロードする（柔軟だが設定は増える）
+
+GitHub Actions で build → deploy する場合は、ビルド成果物のパス（例：`./dist`）を指定します。これはプロジェクト構成によって異なります。
+
+- Jekyll の場合：`_site/` が出力先になることが多い（要確認）
+- Node/Vite などの場合：`dist/` が出力先になることが多い（要確認）
+
+このリポジトリの Docs-as-Code 例（推奨構成・テンプレ）は、次の章と `examples/` を参照してください。
+
+- Docs-as-Code：{{ '/src/chapter-docs-as-code/' | relative_url }}
+- 実習サンプル（examples）：{{ '/examples/' | relative_url }}
+
 ### 環境変数とシークレットの管理
 
 **シークレットの設定手順：**
