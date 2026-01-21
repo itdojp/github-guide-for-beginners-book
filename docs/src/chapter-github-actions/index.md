@@ -169,6 +169,24 @@ jobs:
       run: npm run build
 ```
 
+### ドキュメント品質ゲート（lint / link check）を最小構成で入れる
+
+ドキュメント（READMEや手順書）も、コードと同様に「レビューされ、壊れない状態」を作ると運用が安定します。特に AI 支援で文章を作る場合は、誤リンクや書式崩れが混ざりやすいため、**最小の自動チェック**を入れておくと効果的です。
+
+このリポジトリには例として、`docs/` 配下の変更があるときだけチェックするワークフロー（`Docs Quality Gate`）を `.github/workflows/docs-quality-gate.yml` に同梱しています。
+
+**やりすぎない範囲（例）**
+- Markdownの最低限のlint（崩れやすい書式を検知）
+- 内部ファイルリンクの存在チェック（誤リンクを検知）
+
+ローカルで同等のチェックを回す場合は、次のコマンドを使えます。
+
+```bash
+npm run docs:quality-gate
+```
+
+※ `npm ci` は `package-lock.json` がある場合に使えます。ない場合は `npm install` を使います（プロジェクトの方針に合わせて選んでください）。
+
 ### ベストプラクティス総括
 
 ![PRベストプラクティス総括]({{ '/assets/images/diagrams/chapter08/14_pr_best_practices_summary.svg' | relative_url }})
