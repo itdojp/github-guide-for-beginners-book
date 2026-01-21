@@ -34,7 +34,7 @@
     
     /* Layout */
     --header-height: 64px;
-    --sidebar-width: 280px;
+    --sidebar-width: 240px;
     --content-max-width: 900px;
     
     /* Typography */
@@ -290,7 +290,7 @@ a:hover {
 .book-content {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
 }
 
 .page-content {
@@ -438,13 +438,19 @@ a:hover {
 
 /* Legacy mobile styles removed - using CSS-only implementation in mobile-responsive.css */
 
+@media (max-width: 1400px) {
+    .book-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .page-content {
+        padding: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .book-content {
         padding: 1.5rem 1rem;
-    }
-    
-    .page-content {
-        padding: 1.5rem;
     }
     
     .header-center {
