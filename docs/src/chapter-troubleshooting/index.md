@@ -222,6 +222,17 @@ git push --force origin main
 
 ![ネットワーク接続問題]({{ '/assets/images/diagrams/chapter10/03_network_connection_issues.svg' | relative_url }})
 
+**文書公開運用（Docs-as-Code + Pages）でのよくあるミス**
+
+- 公開対象（public docs / internal docs）の境界が曖昧で、意図しない情報まで公開してしまう
+- ビルド出力ディレクトリ（`_site` / `dist` など）がプロジェクト構成と合っていない
+- `baseurl` の設定がリポジトリ名と一致しておらず、リンクが 404 になる
+
+公開運用の考え方は、次の章も参照してください。
+
+- Docs-as-Code：{{ '/src/chapter-docs-as-code/' | relative_url }}
+- GitHub Actions（Pagesデプロイ）：{{ '/src/chapter-github-actions/' | relative_url }}
+
 **404エラーの診断と解決**
 
 **よくある原因と解決方法：**
@@ -232,7 +243,7 @@ git push --force origin main
 1. Repository → Settings → Pages
 2. Source: Deploy from a branch
 3. Branch: main (または gh-pages)
-4. Folder: / (root) または /docs
+4. Folder: /docs（docs/ でサイトを管理する場合）または / (root)
 ```
 
 **2. ファイル構造の確認**

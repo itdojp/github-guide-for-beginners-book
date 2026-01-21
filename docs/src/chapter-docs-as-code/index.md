@@ -158,6 +158,21 @@ git push -u origin docs/add-templates
 
 ---
 
+## 品質ゲートとAI支援（任意）
+
+文書は、リンク切れや表記ゆれが増えると「読めるが信用できない状態」になりやすいです。最低限の自動チェック（品質ゲート）を入れておくと、運用の安定性が上がります。
+
+- docs品質ゲート（例）：`.github/workflows/docs-quality-gate.yml`
+- ローカル実行（例）：`npm run docs:quality-gate`
+
+また、AI 支援を使う場合は、機密情報の取り扱いと検証観点をルール化しておくと、事故を減らせます。
+
+- AI利用ポリシー（テンプレ）：https://github.com/{{ site.repository }}/blob/main/AI_USAGE_POLICY.md
+
+関連する章：
+
+- GitHub Actions：{{ '/src/chapter-github-actions/' | relative_url }}
+
 ## まとめ
 
 - Docs-as-Code は「文書を Pull Request でレビューして保守する」ための運用です。
