@@ -148,7 +148,7 @@ Issue と Pull Request の基本操作は、以下の章も参照してくださ
 
 ```bash
 mkdir -p docs/templates
-git checkout -b docs/add-templates
+git switch -c docs/add-templates
 git add docs/
 git commit -m "docs: add templates"
 git push -u origin docs/add-templates
