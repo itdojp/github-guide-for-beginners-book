@@ -207,6 +207,24 @@ GitHub上では無数のオープンソースプロジェクトが公開され�
 - `needs review`：レビュー待ち
 - `blocked`：他の課題に依存
 
+### ラベル設計のガイド（増えすぎ対策）
+
+ラベルは増やしすぎると運用コストが上がり、逆に「分類できない」状態になります。初心者向けの最小指針は次のとおりです。
+
+- **軸を決める**：種類（type）/優先度（priority）/担当領域（area）など、役割が違うラベルを混ぜない
+- **プレフィックスで揃える**：例：`type: docs`、`priority: high`、`area: docs`
+- **定義を明文化する**：ラベル名だけで判断できない場合は、CONTRIBUTING などに運用ルールを書く
+- **増えすぎを防ぐ**：使われていないラベルは定期的に整理する（四半期点検など）
+
+**最小セットの例（文書運用を含む）**
+
+- 種類：`type: bug` / `type: docs` / `type: feature` / `type: question`
+- 優先度：`priority: high` / `priority: medium` / `priority: low`
+- 担当領域：`area: docs` / `area: ci` / `area: security`（必要な範囲だけ）
+- 状態：`status: in progress` / `status: needs review` / `status: blocked`
+
+※ 既存の標準ラベル（`bug` / `documentation` など）を使う運用でも問題ありません。重要なのは「粒度」と「増えすぎ対策」です。
+
 ### 貢献ガイドライン
 
 ![貢献ガイドライン]({{ '/assets/images/diagrams/chapter07/05_contribution_guidelines.svg' | relative_url }})
@@ -507,3 +525,17 @@ Done:
 □ プロジェクトボードでタスクを視覚的に管理できる  
 □ チーム開発でのIssue活用方法を理解している  
 □ 継続的な改善プロセスを実践できる
+
+---
+
+## 次の一手（文書運用に繋げる）
+
+文書運用（Docs-as-Code）に繋げる場合は、次の 2 ステップを推奨します。
+
+1. 「文書変更」の Issue を 1 件起票する（目的・完了条件を明記する）
+2. 起票した Issue を起点に PR を作成し、レビュー→マージまで完了する（第7章）
+
+参照：
+
+- Docs-as-Code：{{ '/src/chapter-docs-as-code/' | relative_url }}
+- Pull Request：{{ '/src/chapter-pull-requests/' | relative_url }}
