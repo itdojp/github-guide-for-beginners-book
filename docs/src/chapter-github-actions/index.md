@@ -806,6 +806,18 @@ jobs:
 
 次の章では、セキュリティ対策について学び、安全なGitHub利用方法を身につけます。
 
+---
+
+## 次の一手（文書公開に繋げる）
+
+Docs-as-Code の運用に「公開（Pages）」を組み込みたい場合は、次の順で進めることを推奨します。
+
+1. 公開範囲（public docs / private docs / internal）を決める
+2. Pages の公開方式を選ぶ（Deploy from a branch / GitHub Actions で build → deploy）
+3. PR を起点に文書を更新し、マージで公開版が更新される導線を作る
+
+運用方針（更新頻度・破壊的変更時の扱い）は `UPDATE_POLICY.md` を参照してください。
+
 ![PRベストプラクティスサマリー]({{ '/assets/images/diagrams/chapter08/14_pr_best_practices_summary.svg' | relative_url }})
 
 **理解度確認：**

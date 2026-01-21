@@ -54,12 +54,24 @@ jobs:
               return paths
           def discover():
               paths=[]
+              # book-formatter系（introduction/chapters/appendices/...）
               for seg in ['introduction','chapters','appendices','afterword']:
                   d = Path('docs')/seg
                   if d.is_dir():
                       for child in sorted(d.iterdir()):
-                          if child.is_dir():
+                          if child.is_dir() and (child / 'index.md').exists():
                               paths.append(f'/{seg}/{child.name}/')
+
+              # 本リポジトリ（docs/src/**）
+              src_root = Path('docs') / 'src'
+              if src_root.is_dir():
+                  for child in sorted(src_root.iterdir()):
+                      if child.is_dir() and (child / 'index.md').exists():
+                          paths.append(f'/src/{child.name}/')
+
+              # examples（docs/examples/index.md）
+              if (Path('docs') / 'examples' / 'index.md').exists():
+                  paths.append('/examples/')
               return paths
           paths = read_nav() or discover() or ['/']
           # Always include index
