@@ -168,15 +168,9 @@ Update files
 
 ### 基本的なブランチ操作
 
-**新しいブランチの作成：**
+**新しいブランチの作成と切り替え（推奨）：**
 ```bash
-git branch feature-new-design
-git checkout feature-new-design
-```
-
-**または、作成と切り替えを同時に：**
-```bash
-git checkout -b feature-new-design
+git switch -c feature-new-design
 ```
 
 **ブランチの一覧確認：**
@@ -186,8 +180,10 @@ git branch
 
 **メインブランチに戻る：**
 ```bash
-git checkout main
+git switch main
 ```
+
+※ 古い解説では `git checkout` を使う例もあります。現在はブランチ切り替えに `git switch`、ファイル復元に `git restore` を使うと意図が伝わりやすくなります（付録Aも参照してください）。
 
 ### ブランチの活用例
 

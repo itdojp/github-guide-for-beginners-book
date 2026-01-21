@@ -89,18 +89,20 @@ git commit --amend -m "新しいメッセージ"
 ### ファイルの取り消し・復元
 
 ```bash
-# ワーキングディレクトリの変更を取り消し
-git checkout -- <ファイル名>
+# ワーキングツリーの変更を取り消し（推奨）
+git restore <ファイル名>
 
-# ステージングから除外（変更は保持）
-git reset HEAD <ファイル名>
+# ステージングから除外（変更は保持）（推奨）
+git restore --staged <ファイル名>
 
-# 最新コミットから特定ファイルを復元
-git checkout HEAD -- <ファイル名>
+# 最新コミット（HEAD）から特定ファイルを復元（推奨）
+git restore --source HEAD -- <ファイル名>
 
-# 指定コミットから特定ファイルを復元
-git checkout <コミットハッシュ> -- <ファイル名>
+# 指定コミットから特定ファイルを復元（推奨）
+git restore --source <コミットハッシュ> -- <ファイル名>
 ```
+
+※ 古い解説では `git checkout -- <ファイル名>` の形式を見かけることがあります。現在は「ブランチ切り替え」は `git switch`、「ファイル復元」は `git restore` に分けると意図が伝わりやすくなります。
 
 ---
 
@@ -112,19 +114,17 @@ git checkout <コミットハッシュ> -- <ファイル名>
 # 新しいブランチを作成
 git branch <ブランチ名>
 
-# ブランチを作成して切り替え
-git checkout -b <ブランチ名>
+# ブランチを作成して切り替え（推奨）
+git switch -c <ブランチ名>
 
-# リモートブランチベースで作成・切り替え
-git checkout -b <ローカルブランチ名> origin/<リモートブランチ名>
+# リモートブランチベースで作成・切り替え（推奨）
+git switch -c <ローカルブランチ名> origin/<リモートブランチ名>
 
-# ブランチの切り替え
-git checkout <ブランチ名>
-
-# Git 2.23以降の新しい構文
+# 既存ブランチの切り替え（推奨）
 git switch <ブランチ名>
-git switch -c <新しいブランチ名>
 ```
+
+※ 古い解説では `git checkout -b` や `git checkout <ブランチ名>` を使う例もあります。いずれも動作しますが、本書では `git switch` を推奨形として扱います。
 
 ### ブランチの管理
 
@@ -496,7 +496,7 @@ git pull && git status
 git add -A && git commit -m "機能実装完了" && git push
 
 # ブランチ切り替え前の安全確認
-git status && git stash && git checkout main
+git status && git stash && git switch main
 ```
 
 ### デバッグ・調査用
