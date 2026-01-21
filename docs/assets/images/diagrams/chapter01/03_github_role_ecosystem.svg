@@ -25,7 +25,7 @@
   <text x="400" y="40" text-anchor="middle" class="text text-md">GitHubの役割とエコシステム</text>
   
   <!-- 中央のGitHub -->
-  <g class="central-github">
+  <g class="central-github" transform="translate(0, 15)">
     <circle cx="400" cy="220" r="70" class="primary" opacity="0.2"/>
     <circle cx="400" cy="220" r="70" class="primary-stroke" fill="none"/>
     <text x="400" y="205" text-anchor="middle" class="text text-md" style="font-weight: 600;">GitHub</text>

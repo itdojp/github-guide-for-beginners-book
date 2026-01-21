@@ -74,7 +74,7 @@ display ToC titles even when order falls back to site.pages.
 {% endif %}
 
 {% if nav_items == nil or nav_items.size == 0 %}
-  {%- assign ordered_pages = site.pages | where: "layout", "book" | where_exp: "p", "p.order" | sort: "order" -%}
+  {%- assign ordered_pages = site.pages | where: "layout", "book" | where_exp: "p", "p.order and p.url contains '/src/'" | sort: "order" -%}
   {% if ordered_pages and ordered_pages.size > 0 %}
     {% assign nav_items = ordered_pages %}
   {% endif %}
