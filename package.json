@@ -10,7 +10,7 @@
     "lint": "markdownlint src/**/*.md",
     "check-links": "markdown-link-check src/**/*.md",
     "docs:lint": "markdownlint 'docs/**/*.md'",
-    "docs:check-internal-links": "python3 scripts/check_markdown_internal_links.py $(git ls-files 'docs/**/*.md')",
+    "docs:check-internal-links": "git ls-files docs | grep -E '\\.md$' | xargs python3 scripts/check_markdown_internal_links.py",
     "docs:quality-gate": "npm run docs:lint && npm run docs:check-internal-links",
     "deploy": "gh-pages -d _site"
   },

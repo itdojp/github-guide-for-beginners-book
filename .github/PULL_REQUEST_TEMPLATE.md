@@ -18,7 +18,7 @@
 - 失敗時の戻し方：
 
 ## 関連Issue
-- Closes #
+- Closes #（対応するIssue番号。Issueがない場合は行を削除）
 
 ## AI支援の開示（任意）
 - AI支援：有 / 無

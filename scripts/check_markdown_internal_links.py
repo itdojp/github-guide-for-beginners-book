@@ -51,7 +51,7 @@ def _should_ignore(target: str) -> bool:
 def _is_probably_file_path(target: str) -> bool:
     # Only check paths that look like files (have an extension).
     # We intentionally do not try to resolve Jekyll permalinks like `/src/chapter/.../`.
-    return bool(re.search(r"\\.[a-zA-Z0-9]{1,6}$", target))
+    return bool(re.search(r"\.[a-zA-Z0-9]{1,6}$", target))
 
 
 def find_links(markdown_file: Path) -> list[LinkFinding]:

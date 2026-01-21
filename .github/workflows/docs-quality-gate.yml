@@ -47,7 +47,19 @@ jobs:
             head="${GITHUB_SHA}"
           fi
 
-          git diff --name-only "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
+          invalid_base=false
+          if [ -z "${base}" ] || [ "${base}" = "0000000000000000000000000000000000000000" ]; then
+            invalid_base=true
+          elif ! git cat-file -e "${base}^{commit}" 2>/dev/null; then
+            invalid_base=true
+          fi
+
+          if [ "${invalid_base}" = true ]; then
+            echo "Base SHA is invalid or unavailable; falling back to all tracked docs markdown files."
+            git ls-files docs | grep -E '\.md$' > changed-docs-md.txt || true
+          else
+            git diff --name-only "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
+          fi
 
           echo "Changed docs markdown files:"
           if [ -s changed-docs-md.txt ]; then
