@@ -1,0 +1,77 @@
+name: Docs Quality Gate
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - ".github/**"
+      - "scripts/**"
+      - "package.json"
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/**"
+      - "scripts/**"
+      - "package.json"
+  workflow_dispatch: {}
+
+jobs:
+  docs-quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci --no-fund --no-audit
+
+      - name: Collect changed Markdown files (docs/)
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+            head="${{ github.event.pull_request.head.sha }}"
+          else
+            base="${{ github.event.before }}"
+            head="${GITHUB_SHA}"
+          fi
+
+          git diff --name-only "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
+
+          echo "Changed docs markdown files:"
+          if [ -s changed-docs-md.txt ]; then
+            cat changed-docs-md.txt
+          else
+            echo "(none)"
+          fi
+
+      - name: Markdown lint (changed only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -s changed-docs-md.txt ]; then
+            echo "Skip: no docs markdown changes."
+            exit 0
+          fi
+          cat changed-docs-md.txt | xargs -r npx markdownlint
+
+      - name: Internal link check (changed only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -s changed-docs-md.txt ]; then
+            echo "Skip: no docs markdown changes."
+            exit 0
+          fi
+          cat changed-docs-md.txt | xargs -r python3 scripts/check_markdown_internal_links.py

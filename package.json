@@ -9,6 +9,9 @@
     "test": "npm run lint && npm run check-links",
     "lint": "markdownlint src/**/*.md",
     "check-links": "markdown-link-check src/**/*.md",
+    "docs:lint": "markdownlint 'docs/**/*.md'",
+    "docs:check-internal-links": "python3 scripts/check_markdown_internal_links.py $(git ls-files 'docs/**/*.md')",
+    "docs:quality-gate": "npm run docs:lint && npm run docs:check-internal-links",
     "deploy": "gh-pages -d _site"
   },
   "keywords": [

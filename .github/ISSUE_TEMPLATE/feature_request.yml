@@ -1,0 +1,51 @@
+name: 改善提案（機能/内容の追加）
+description: 章の追加、説明の改善、テンプレ追加などの提案を行います
+title: "[Enhancement] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        「誰のどんな課題を解決するか」が分かるように書くと、検討が進みやすくなります。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 課題（何が困っていますか）
+      placeholder: 例）非エンジニアが文書管理の導線で迷う / PRレビュー観点が揃わない など
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案（どうしたいですか）
+      placeholder: 例）第X章に「Docs-as-Code」章を追加し、実習とテンプレを同梱する など
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 対象範囲（章/ページ/ファイル）
+      placeholder: 例）docs/src/chapter-xxx/index.md / examples/ / .github/ISSUE_TEMPLATE など
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案（あれば）
+      placeholder: 例）新章ではなく既存章の節追加で対応する など
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足（任意）
+      description: 参考リンク、画面例、関連Issue/PRなど
+    validations:
+      required: false
+

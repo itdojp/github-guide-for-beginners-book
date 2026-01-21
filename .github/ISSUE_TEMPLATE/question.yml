@@ -1,0 +1,30 @@
+name: 質問（使い方/読み方/学習）
+description: 本書の内容や学習の進め方に関する質問をします
+title: "[Question] "
+labels:
+  - question
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問
+      placeholder: 例）第X章のこの手順はどの画面ですか？ / どの章から読むべきですか？ など
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: ここまで試したこと（任意）
+      placeholder: 例）公式ドキュメントを読んだ / 設定を確認した / エラー内容 など
+    validations:
+      required: false
+
+  - type: input
+    id: related
+    attributes:
+      label: 関連ページ（URL or ファイルパス）
+      placeholder: 例）docs/src/chapter-xxx/index.md
+    validations:
+      required: false
+

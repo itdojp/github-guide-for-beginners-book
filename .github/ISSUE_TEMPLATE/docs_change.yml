@@ -1,0 +1,43 @@
+name: ドキュメント改善（誤字/表現/図/リンク）
+description: 本文の修正・追記・図の差し替えなどを提案します
+title: "[Docs] "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        変更対象のページ（URL/ファイル）と、修正理由が分かると対応が早くなります。
+
+  - type: input
+    id: target
+    attributes:
+      label: 対象ページ（URL or ファイルパス）
+      placeholder: 例）https://itdojp.github.io/github-guide-for-beginners-book/src/chapter-issue-management/  または  docs/src/chapter-issue-management/index.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状（問題点）
+      placeholder: 例）用語が未定義 / UI表現が古い / リンク切れ など
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: 改善案（どう直したいか）
+      placeholder: 例）初出で用語定義を追加 / 公式ドキュメントへの参照に寄せる など
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足（任意）
+      description: スクリーンショット、関連Issue/PR、参考リンクなど
+    validations:
+      required: false
+

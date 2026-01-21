@@ -3,5 +3,12 @@
 /book-formatter-contrib/**            @itdojp/book-formatter
 /docs/_includes/page-navigation.html  @itdojp/book-formatter
 
+# 本文（GitHub Pages）
+/docs/src/**                          @itdojp/book-editors
+/docs/index.md                        @itdojp/book-editors
+
+# 書籍の元原稿（必要なら運用）
+/src/**                               @itdojp/book-editors
+
 # 上記以外（コンテンツ/設定/CI含む全般）
 *                                     @itdojp/book-editors
