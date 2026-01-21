@@ -1,6 +1,6 @@
 ---
 layout: book
-order: 1
+order: 0
 title: "GitHub初心者ガイド"
 description: "プログラミング初心者向けGit/GitHub完全習得書 - バージョン管理の基礎から実践まで"
 author: "株式会社アイティードゥ"
@@ -47,24 +47,24 @@ permalink: /
 
 ### 第1部: 基礎編
 
-1. **[はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
-2. **[Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
-3. **[初めてのリポジトリ作成]({{ '/src/chapter-github-account-setup/' | relative_url }})**
-4. **[アカウントセキュリティの基本]({{ '/src/chapter-basic-operations/' | relative_url }})**
+1. **[第1章：はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
+2. **[第2章：Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
+3. **[第3章：初めてのリポジトリ作成]({{ '/src/chapter-github-account-setup/' | relative_url }})**
+4. **[第4章：アカウントセキュリティの基本]({{ '/src/chapter-basic-operations/' | relative_url }})**
 
 ### 第2部: 実践編
 
-5. **[ファイルのアップロードと管理]({{ '/src/chapter-repository-management/' | relative_url }})**
-6. **[GitHub Desktop の活用]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
-7. **[ブランチの基本操作]({{ '/src/chapter-pull-requests/' | relative_url }})**
-8. **[Issue管理とプロジェクト管理]({{ '/src/chapter-issue-management/' | relative_url }})**
+5. **[第5章：ファイルのアップロードと管理]({{ '/src/chapter-repository-management/' | relative_url }})**
+6. **[第6章：GitHub Desktop の活用]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
+7. **[第7章：ブランチの基本操作]({{ '/src/chapter-pull-requests/' | relative_url }})**
+8. **[第8章：Issue管理とプロジェクト管理]({{ '/src/chapter-issue-management/' | relative_url }})**
 
 ### 第3部: 自動化・高度活用編
 
-9. **[GitHub Actions入門 - 自動化の基礎]({{ '/src/chapter-github-actions/' | relative_url }})**
-10. **[セキュリティのベストプラクティス]({{ '/src/chapter-security-best-practices/' | relative_url }})**
-11. **[高度な機能活用]({{ '/src/chapter-advanced-features/' | relative_url }})**
-12. **[トラブルシューティング]({{ '/src/chapter-troubleshooting/' | relative_url }})**
+9. **[第9章：GitHub Actions入門 - 自動化の基礎]({{ '/src/chapter-github-actions/' | relative_url }})**
+10. **[第10章：セキュリティのベストプラクティス]({{ '/src/chapter-security-best-practices/' | relative_url }})**
+11. **[第11章：高度な機能活用]({{ '/src/chapter-advanced-features/' | relative_url }})**
+12. **[第12章：トラブルシューティング]({{ '/src/chapter-troubleshooting/' | relative_url }})**
 
 ### 付録
 

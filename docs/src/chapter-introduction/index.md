@@ -1,10 +1,10 @@
 ---
-title: "はじめに - なぜGitHubを学ぶのか"
+title: "第1章：はじめに - なぜGitHubを学ぶのか"
 layout: book
-order: 0
+order: 1
 ---
 
-# はじめに - なぜGitHubを学ぶのか
+# 第1章：はじめに - なぜGitHubを学ぶのか
 
 ## 学習目標
 

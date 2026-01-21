@@ -1,7 +1,7 @@
 ---
 title: "第8章：Issue管理とプロジェクト管理"
 layout: book
-order: 7
+order: 8
 ---
 
 # 第8章：Issue管理とプロジェクト管理
@@ -15,7 +15,7 @@ order: 7
 
 ### Issue機能の目的と価値
 
-![Issueライフサイクル]({{ '/assets/images/diagrams/chapter07/01_issue_lifecycle.svg' | relative_url }})
+![Issueライフサイクル]({{ '/assets/images/diagrams/chapter08/01_issue_lifecycle.svg' | relative_url }})
 
 「Issue」は、プロジェクトの課題、タスク、バグ、機能要求などを記録・管理するGitHubの中核機能です。
 
@@ -33,7 +33,7 @@ order: 7
 
 ### Issueで管理できる内容
 
-![プロジェクト管理]({{ '/assets/images/diagrams/chapter07/02_project_management.svg' | relative_url }})
+![プロジェクト管理]({{ '/assets/images/diagrams/chapter08/02_project_management.svg' | relative_url }})
 
 **バグ報告**
 - 「スマートフォンでメニューが表示されない」
