@@ -13,14 +13,14 @@
 
 ## 第1部: 基礎編（`docs/index.md` の目次順）
 
-### 1. はじめに - なぜGitHubを学ぶのか（`docs/src/chapter-introduction/`）
+### 1. はじめに - なぜGitHubを学ぶのか（`manuscript/chapter-introduction/`）
 
 - 章の狙い / 主なトピック
   - 本書の目的、バージョン管理が必要な理由、Git/GitHub の基本概念、学習アプローチ、準備、全体ワークフローを提示する。
 - 章頭に書かれている学習目標
   - 記載なし（章冒頭に「学習目標」セクションがない）
 
-### 2. Git基礎 - バージョン管理の仕組み（`docs/src/chapter-git-basics/`）
+### 2. Git基礎 - バージョン管理の仕組み（`manuscript/chapter-git-basics/`）
 
 - 章の狙い / 主なトピック
   - Git の基本概念（3つのエリア、コミット、ブランチ）を説明し、最初のリポジトリ作成までを扱う。
@@ -28,7 +28,7 @@
 - 章頭に書かれている学習目標
   - 「Git の基本概念を理解し、バージョン管理とは何かを明確にする」「GitHub でリポジトリを作成し基本設定を完了する」旨の記載あり。
 
-### 3. （目次表示）GitHubアカウント作成と初期設定（`docs/src/chapter-github-account-setup/`）
+### 3. （目次表示）GitHubアカウント作成と初期設定（`manuscript/chapter-github-account-setup/`）
 
 - 章（ページ）タイトル: 初めてのリポジトリ作成
 - 章の狙い / 主なトピック
@@ -37,7 +37,7 @@
 - 章頭に書かれている学習目標
   - リポジトリ作成と README 作成を到達点として明示（学習目標セクションあり）。
 
-### 4. （目次表示）基本操作 - push、pull、clone（`docs/src/chapter-basic-operations/`）
+### 4. （目次表示）基本操作 - push、pull、clone（`manuscript/chapter-basic-operations/`）
 
 - 章（ページ）タイトル: アカウントセキュリティの基本
 - 章の狙い / 主なトピック
@@ -47,7 +47,7 @@
 
 ## 第2部: 実践編（`docs/index.md` の目次順）
 
-### 5. （目次表示）リポジトリ管理の実践（`docs/src/chapter-repository-management/`）
+### 5. （目次表示）リポジトリ管理の実践（`manuscript/chapter-repository-management/`）
 
 - 章（ページ）タイトル: ファイルのアップロードと管理
 - 章の狙い / 主なトピック
@@ -55,7 +55,7 @@
 - 章頭に書かれている学習目標
   - Web UI を使ったファイル管理と commit 操作を到達点として明示（学習目標セクションあり）。
 
-### 6. （目次表示）チーム開発入門 - ブランチとマージ（`docs/src/chapter-collaboration-basics/`）
+### 6. （目次表示）チーム開発入門 - ブランチとマージ（`manuscript/chapter-collaboration-basics/`）
 
 - 章（ページ）タイトル: GitHub Desktop の活用
 - 章の狙い / 主なトピック
@@ -64,7 +64,7 @@
 - 章頭に書かれている学習目標
   - GitHub Desktop を使った基本操作の習得を到達点として明示（学習目標セクションあり）。
 
-### 7. （目次表示）プルリクエストによるコードレビュー（`docs/src/chapter-pull-requests/`）
+### 7. （目次表示）プルリクエストによるコードレビュー（`manuscript/chapter-pull-requests/`）
 
 - 章（ページ）タイトル: ブランチの基本操作
 - 章の狙い / 主なトピック
@@ -73,7 +73,7 @@
 - 章頭に書かれている学習目標
   - ブランチ操作とコンフリクト対処を到達点として明示（学習目標セクションあり）。
 
-### 8. Issues活用による課題管理（`docs/src/chapter-issue-management/`）
+### 8. Issues活用による課題管理（`manuscript/chapter-issue-management/`）
 
 - 章（ページ）タイトル: Issue管理とプロジェクト管理
 - 章の狙い / 主なトピック
@@ -83,21 +83,21 @@
 
 ## 第3部: 自動化・高度活用編（`docs/index.md` の目次順）
 
-### 9. GitHub Actions入門 - 自動化の基礎（`docs/src/chapter-github-actions/`）
+### 9. GitHub Actions入門 - 自動化の基礎（`manuscript/chapter-github-actions/`）
 
 - 章の狙い / 主なトピック
   - Actions の基礎、ワークフロー作成、デプロイ自動化、高度機能を扱う。
 - 章頭に書かれている学習目標
   - Actions の基本理解と、最小の自動化導入を到達点として明示（学習目標セクションあり）。
 
-### 10. セキュリティのベストプラクティス（`docs/src/chapter-security-best-practices/`）
+### 10. セキュリティのベストプラクティス（`manuscript/chapter-security-best-practices/`）
 
 - 章の狙い / 主なトピック
   - 機密情報管理、アクセス権限、セキュリティ機能活用、脅威対策、インシデント対応を扱う。
 - 章頭に書かれている学習目標
   - 安全なコード管理と保護策の実践を到達点として明示（学習目標セクションあり）。
 
-### 11. 実践的な活用法（`docs/src/chapter-advanced-features/`）
+### 11. 実践的な活用法（`manuscript/chapter-advanced-features/`）
 
 - 章（ページ）タイトル: 高度な機能活用
 - 章の狙い / 主なトピック
@@ -105,7 +105,7 @@
 - 章頭に書かれている学習目標
   - 高度機能の概要理解と、適用判断の材料を得ることを到達点として明示（学習目標セクションあり）。
 
-### 12. よくある問題と解決方法（`docs/src/chapter-troubleshooting/`）
+### 12. よくある問題と解決方法（`manuscript/chapter-troubleshooting/`）
 
 - 章の狙い / 主なトピック
   - 典型的な問題、パフォーマンス、デバッグとログ分析、コミュニティサポート、予防策を扱う。
@@ -114,11 +114,11 @@
 
 ## 付録（`docs/index.md` の目次順）
 
-- Gitコマンドリファレンス（`docs/src/appendix-git-commands-reference/`）
+- Gitコマンドリファレンス（`manuscript/appendix-git-commands-reference/`）
   - 狙い / 主なトピック: 基本〜高度な Git コマンドの辞書。
-- GitHubショートカット集（`docs/src/appendix-github-shortcuts/`）
+- GitHubショートカット集（`manuscript/appendix-github-shortcuts/`）
   - 狙い / 主なトピック: 操作の効率化に寄与するショートカットの辞書。
-- 学習リソースと参考文献（`docs/src/appendix-resources/`）
+- 学習リソースと参考文献（`manuscript/appendix-resources/`）
   - 狙い / 主なトピック: 公式・学習・実践・コミュニティを含む参考リンク集。
 
 # 3. 構成上の気になる点（候補）
@@ -135,7 +135,7 @@
 - 第7章（プルリクエスト章）で話題が混在している可能性
   - ブランチ/マージ/コンフリクト（チーム開発基礎）と、Pull Request/レビュー（協働プロセス）が同一章内に混在している。
   - 章の役割が不明確になり、読者が復習・参照しにくい。
-- `docs/src/` 配下に、目次に出てこないページが存在する
+- `manuscript/` 配下に、目次に出てこないページが存在する
   - `chapter-security/`（index.md）や `chapter-*-account/`（index.html）等、ナビゲーションから参照されていないファイルが混在している（用途は要確認）。
   - 初学者向けの「どれを読めばよいか」が曖昧になり、メンテナンス観点でも負債化しやすい。
 - ライセンス表記が一貫していない
@@ -147,7 +147,7 @@
 
 - 目次表示と本文ページタイトル/内容を一致させる
   - 【案A】`docs/index.md` と `docs/_includes/sidebar-nav.html` の章名を、現状の本文ページタイトルに合わせて更新する（最小差分）。
-  - 【案B】本文側（`docs/src/chapter-*/index.md`）のタイトル・章番号を、目次の意図（章で扱う内容）に合わせて見直す（差分は大きいが、学習曲線が安定する）。
+  - 【案B】本文側（`manuscript/chapter-*/index.md`）のタイトル・章番号を、目次の意図（章で扱う内容）に合わせて見直す（差分は大きいが、学習曲線が安定する）。
 - 章番号・節番号の方針を決めて統一する
   - 「はじめに」は序章扱いで番号なし、以降を第1章〜とする／あるいは通し番号で第1章〜とする、などを決め、`order:` と本文見出しの整合を取る。
 - 第1章（はじめに）に「学習目標」「まとめ」を追加する
@@ -155,7 +155,7 @@
 - 第7章のスコープ分割を検討する
   - ブランチ/マージ/コンフリクト（基礎）と Pull Request/レビュー（協働）を、章または節単位で切り分ける。
     - 例: 「ブランチとマージ」を第6章、「Pull Request によるレビュー」を第7章として独立させる（現状資産の移動で対応可能か要確認）。
-- `docs/src/` の未参照ページを整理する
+- `manuscript/` の未参照ページを整理する
   - 目次に出す／削除する／`draft/` のようなディレクトリへ退避する、のいずれかに寄せる（公開物の一貫性を優先）。
 - ライセンス表記を統一する
   - `README.md` / `docs/index.md` / LICENSE 系ファイルの整合を取り、読者・利用者が迷わない形にする（本リポジトリとしての正式方針は要確認）。
