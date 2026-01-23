@@ -58,7 +58,8 @@ jobs:
             echo "Base SHA is invalid or unavailable; falling back to all tracked docs markdown files."
             git ls-files docs | grep -E '\.md$' > changed-docs-md.txt || true
           else
-            git diff --name-only "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
+            # Exclude deleted files (e.g., moves out of docs/) to avoid lint/link-check failures on missing paths.
+            git diff --name-only --diff-filter=ACMRT "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
           fi
 
           echo "Changed docs markdown files:"
