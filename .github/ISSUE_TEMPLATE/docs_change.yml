@@ -13,7 +13,7 @@ body:
     id: target
     attributes:
       label: 対象ページ（URL or ファイルパス）
-      placeholder: 例）https://itdojp.github.io/github-guide-for-beginners-book/src/chapter-issue-management/  または  docs/src/chapter-issue-management/index.md
+      placeholder: 例）https://itdojp.github.io/github-guide-for-beginners-book/src/chapter-issue-management/  または  manuscript/chapter-issue-management/index.md
     validations:
       required: true
 
