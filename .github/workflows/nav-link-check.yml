@@ -62,7 +62,7 @@ jobs:
                           if child.is_dir() and (child / 'index.md').exists():
                               paths.append(f'/{seg}/{child.name}/')
 
-              # 本リポジトリ（manuscript/**）
+              # 本リポジトリ（docs/src/**, legacy）
               src_root = Path('docs') / 'src'
               if src_root.is_dir():
                   for child in sorted(src_root.iterdir()):
