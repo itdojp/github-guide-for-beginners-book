@@ -1,7 +1,7 @@
 {
-  "name": "github\u521d\u5fc3\u8005\u30ac\u30a4\u30c9-\u30d0\u30fc\u30b8\u30e7\u30f3\u7ba1\u7406\u306e\u57fa\u790e\u304b\u3089\u5b9f\u8df5\u307e\u3067",
+  "name": "github初心者ガイド-バージョン管理の基礎から実践まで",
   "version": "1.0.0",
-  "description": "Git\u3068github\u306e\u57fa\u672c\u64cd\u4f5c\u304b\u3089\u5b9f\u8df5\u7684\u306a\u904b\u7528\u307e\u3067\u3001\u521d\u5fc3\u8005\u304c\u6bb5\u968e\u7684\u306b\u5b66\u3079\u308b\u5b9f\u7528\u30ac\u30a4\u30c9",
+  "description": "Gitとgithubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド",
   "main": "index.md",
   "scripts": {
     "start": "jekyll serve --livereload",
