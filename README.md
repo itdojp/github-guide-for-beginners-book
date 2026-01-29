@@ -139,44 +139,10 @@ Issuesを使用してバグ報告や改善提案をお願いします。
 
 ## 📄 ライセンス
 
-この書籍は [MIT License](LICENSE) の下で公開されています。
+この書籍は **Creative Commons BY-NC-SA 4.0**（非営利利用は自由、商用利用は別途契約）で提供されています。詳細は `LICENSE.md` を参照してください。
 
 ### 利用について
 
-- **個人学習**: 自由に利用可能
-- **企業研修**: 社内研修での利用可能（要クレジット表記）
-- **改変・再配布**: ライセンス条項に従って可能
-
-## 📞 お問い合わせ
-
-### 著者情報
-
-**ITDO Inc.**（株式会社アイティードゥ）
-- Website: https://itdo.jp
-- Email: knowledge@itdo.jp
-- GitHub: [@itdojp](https://github.com/itdojp)
-
-### サポート
-
-- **技術的な質問**: GitHubのIssuesをご利用ください
-- **商用利用の相談**: メールにてお問い合わせください
-- **研修・セミナー**: 企業向け研修サービスも提供しています
-
-## 🔗 関連リソース
-
-### ITDO Inc. の他の技術書籍
-
-- [実践Linux インフラエンジニア入門](https://itdojp.github.io/linux-infra-textbook/)
-- [理論計算機科学教科書](https://itdojp.github.io/theoretical-computer-science-textbook/)
-- [Supabaseアーキテクチャパターン実践技術書](https://itdojp.github.io/supabase-architecture-patterns-book/)
-
-### 学習リソース
-
-- [IT Engineer Knowledge Architecture](https://itdojp.github.io/it-engineer-knowledge-architecture/) - ITエンジニア学習ロードマップ
-- [ITDO Inc. 技術ブログ](https://itdo.jp/blog/)
-
----
-
-**🌟 この書籍が役に立ったら、ぜひStarをお願いします！**
-
-最新の更新情報は、このリポジトリをWatchしてください。
+- **個人学習/教育/研究（非営利）**: 自由に利用可能
+- **法人・営利目的での利用（商用）**: 事前の商用ライセンス契約が必要
+- **改変・再配布**: CC BY-NC-SA 4.0 の条件（表示/非営利/継承）に従って可能
