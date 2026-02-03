@@ -17,6 +17,14 @@ permalink: pretty
 # Theme
 theme: minima
 
+# Default layout for markdown pages under docs/
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "book"
+
 # Plugins (GitHub Pages supported)
 plugins:
   - jekyll-feed

@@ -46,40 +46,41 @@ permalink: /
 - 自動化やセキュリティに関心が高い読者は、第9〜11章を重点的に読み、付録（Gitコマンドリファレンス・ショートカット集・参考リソース）を手元の辞書として使うことを想定している。
 
 ## 所要時間
-（所要時間の目安を記載してください）
+- 通読（現時点の公開範囲）: 約0.5時間（本文量ベース概算。400〜600文字/分換算）
+- 手を動かして学習する場合は、Git/GitHub の実操作や演習の進度により変動します。
 
 ## 目次
 
 ### 第1部: 基礎編
 
-1. **[第1章：はじめに - なぜGitHubを学ぶのか]({{ '/src/chapter-introduction/' | relative_url }})**
-2. **[第2章：Git基礎 - バージョン管理の仕組み]({{ '/src/chapter-git-basics/' | relative_url }})**
-3. **[第3章：初めてのリポジトリ作成]({{ '/src/chapter-github-account-setup/' | relative_url }})**
-4. **[第4章：アカウントセキュリティの基本]({{ '/src/chapter-basic-operations/' | relative_url }})**
+1. **[第1章：はじめに - なぜGitHubを学ぶのか]({{ '/chapters/chapter-introduction/' | relative_url }})**
+2. **[第2章：Git基礎 - バージョン管理の仕組み]({{ '/chapters/chapter-git-basics/' | relative_url }})**
+3. **[第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-github-account-setup/' | relative_url }})**
+4. **[第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-basic-operations/' | relative_url }})**
 
 ### 第2部: 実践編
 
-5. **[第5章：ファイルのアップロードと管理]({{ '/src/chapter-repository-management/' | relative_url }})**
-6. **[第6章：GitHub Desktop の活用]({{ '/src/chapter-collaboration-basics/' | relative_url }})**
-7. **[第7章：ブランチの基本操作]({{ '/src/chapter-pull-requests/' | relative_url }})**
-8. **[第8章：Issue管理とプロジェクト管理]({{ '/src/chapter-issue-management/' | relative_url }})**
+5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-repository-management/' | relative_url }})**
+6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-collaboration-basics/' | relative_url }})**
+7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-pull-requests/' | relative_url }})**
+8. **[第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
 
 ### 特別編: Docs-as-Code（文書運用編）
 
-- **[特別編：Docs-as-Code - GitHubをドキュメント管理・ナレッジ基盤として使う]({{ '/src/chapter-docs-as-code/' | relative_url }})**
+- **[特別編：Docs-as-Code - GitHubをドキュメント管理・ナレッジ基盤として使う]({{ '/chapters/chapter-docs-as-code/' | relative_url }})**
 
 ### 第3部: 自動化・高度活用編
 
-9. **[第9章：GitHub Actions入門 - 自動化の基礎]({{ '/src/chapter-github-actions/' | relative_url }})**
-10. **[第10章：セキュリティのベストプラクティス]({{ '/src/chapter-security-best-practices/' | relative_url }})**
-11. **[第11章：高度な機能活用]({{ '/src/chapter-advanced-features/' | relative_url }})**
-12. **[第12章：トラブルシューティング]({{ '/src/chapter-troubleshooting/' | relative_url }})**
+9. **[第9章：GitHub Actions入門 - 自動化の基礎]({{ '/chapters/chapter-github-actions/' | relative_url }})**
+10. **[第10章：セキュリティのベストプラクティス]({{ '/chapters/chapter-security-best-practices/' | relative_url }})**
+11. **[第11章：高度な機能活用]({{ '/chapters/chapter-advanced-features/' | relative_url }})**
+12. **[第12章：トラブルシューティング]({{ '/chapters/chapter-troubleshooting/' | relative_url }})**
 
 ### 付録
 
-- **[Gitコマンドリファレンス]({{ '/src/appendix-git-commands-reference/' | relative_url }})**
-- **[GitHubショートカット集]({{ '/src/appendix-github-shortcuts/' | relative_url }})**
-- **[学習リソースと参考文献]({{ '/src/appendix-resources/' | relative_url }})**
+- **[Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }})**
+- **[GitHubショートカット集]({{ '/appendices/appendix-github-shortcuts/' | relative_url }})**
+- **[学習リソースと参考文献]({{ '/appendices/appendix-resources/' | relative_url }})**
 
 ## 🛠️ 実習環境
 
