@@ -1,25 +1,35 @@
 chapters:
 - title: はじめに - なぜGitHubを学ぶのか
-  path: /src/chapter-introduction/
+  path: /chapters/chapter-introduction/
 - title: Git基礎 - バージョン管理の仕組み
-  path: /src/chapter-git-basics/
+  path: /chapters/chapter-git-basics/
 - title: GitHubアカウント作成と初期設定
-  path: /src/chapter-github-account-setup/
+  path: /chapters/chapter-github-account-setup/
 - title: 基本操作 - push、pull、clone
-  path: /src/chapter-basic-operations/
+  path: /chapters/chapter-basic-operations/
 - title: リポジトリ管理の実践
-  path: /src/chapter-repository-management/
+  path: /chapters/chapter-repository-management/
 - title: チーム開発入門 - ブランチとマージ
-  path: /src/chapter-collaboration-basics/
+  path: /chapters/chapter-collaboration-basics/
 - title: プルリクエストによるコードレビュー
-  path: /src/chapter-pull-requests/
+  path: /chapters/chapter-pull-requests/
 - title: Issues活用による課題管理
-  path: /src/chapter-issue-management/
+  path: /chapters/chapter-issue-management/
+- title: Docs-as-Code - GitHubをドキュメント管理・ナレッジ基盤として使う
+  path: /chapters/chapter-docs-as-code/
 - title: GitHub Actions入門 - 自動化の基礎
-  path: /src/chapter-github-actions/
+  path: /chapters/chapter-github-actions/
 - title: セキュリティのベストプラクティス
-  path: /src/chapter-security-best-practices/
+  path: /chapters/chapter-security-best-practices/
 - title: 実践的な活用法
-  path: /src/chapter-advanced-features/
+  path: /chapters/chapter-advanced-features/
 - title: よくある問題と解決方法
-  path: /src/chapter-troubleshooting/
+  path: /chapters/chapter-troubleshooting/
+
+appendices:
+- title: Gitコマンドリファレンス
+  path: /appendices/appendix-git-commands-reference/
+- title: GitHubショートカット集
+  path: /appendices/appendix-github-shortcuts/
+- title: 学習リソースと参考文献
+  path: /appendices/appendix-resources/
