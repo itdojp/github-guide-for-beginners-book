@@ -34,7 +34,7 @@
     
     /* Layout */
     --header-height: 64px;
-    --sidebar-width: 240px;
+    --sidebar-width: 280px;
     --content-max-width: 900px;
     
     /* Typography */
@@ -43,6 +43,48 @@
     
     /* Transitions */
     --transition: all 0.2s ease;
+}
+
+/* Footer */
+.book-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.book-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.book-footer-license {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.book-footer-links {
+    display: flex;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+}
+
+.book-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.book-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .book-footer-inner {
+        flex-direction: column;
+    }
 }
 
 /* Dark Theme */
@@ -290,7 +332,7 @@ a:hover {
 .book-content {
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
 }
 
 .page-content {
@@ -438,19 +480,13 @@ a:hover {
 
 /* Legacy mobile styles removed - using CSS-only implementation in mobile-responsive.css */
 
-@media (max-width: 1400px) {
-    .book-content {
-        padding: 2rem 1.5rem;
-    }
-
-    .page-content {
-        padding: 1.5rem;
-    }
-}
-
 @media (max-width: 768px) {
     .book-content {
         padding: 1.5rem 1rem;
+    }
+    
+    .page-content {
+        padding: 1.5rem;
     }
     
     .header-center {
@@ -497,4 +533,32 @@ a:hover {
         box-shadow: none;
         padding: 0;
     }
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.external-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.external-link {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.external-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }

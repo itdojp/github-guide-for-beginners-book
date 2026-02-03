@@ -1,163 +1,138 @@
-<!-- Sidebar Navigation - GitHub Beginners Guide -->
+<!-- Sidebar Navigation (data-driven) -->
+{% assign navigation = site.data.navigation %}
+
 <div class="sidebar-content">
-    <!-- Book Info -->
     <div class="book-info">
-        <h2 class="book-title">📚 GitHub初心者ガイド</h2>
-        
-        <p class="book-subtitle">バージョン管理の基礎から実践まで - プログラミング初心者向けGit/GitHub完全習得書</p>
-        
+        <h2 class="book-title">{{ site.title | escape }}</h2>
+        {% if site.subtitle %}
+        <p class="book-subtitle">{{ site.subtitle | escape }}</p>
+        {% elsif site.description %}
+        <p class="book-subtitle">{{ site.description | escape }}</p>
+        {% endif %}
     </div>
 
-    <!-- Table of Contents -->
     <div class="toc">
         <h3 class="toc-title">目次</h3>
-        
-        <!-- Introduction -->
+
         <div class="toc-section">
             <ul class="toc-list">
                 <li class="toc-item">
                     <a href="{{ '/' | relative_url }}" class="toc-link {% if page.url == '/' %}active{% endif %}">
-                        🏠 目次
+                        はじめに
                     </a>
                 </li>
             </ul>
         </div>
 
-        <!-- Part I: 基礎編 -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">📖 Part I: 基礎編</h3>
-            <ul class="toc-list">
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-introduction/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-introduction' %}active{% endif %}">
-                        <span class="chapter-number">第1章：</span>はじめに - なぜGitHubを学ぶのか
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-git-basics/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-git-basics' %}active{% endif %}">
-                        <span class="chapter-number">第2章：</span>Git基礎 - バージョン管理の仕組み
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-github-account-setup/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-github-account-setup' %}active{% endif %}">
-                        <span class="chapter-number">第3章：</span>初めてのリポジトリ作成
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-basic-operations/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-basic-operations' %}active{% endif %}">
-                        <span class="chapter-number">第4章：</span>アカウントセキュリティの基本
-                    </a>
-                </li>
-            </ul>
-        </div>
+        {% if navigation %}
+            {% if navigation.introduction %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">導入</h4>
+                <ul class="toc-list">
+                    {% for item in navigation.introduction %}
+                    <li class="toc-item">
+                        <a href="{{ item.path | relative_url }}" class="toc-link {% if page.url == item.path %}active{% endif %}" {% if page.url == item.path %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
 
-        <!-- Part II: 実践編 -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">🛠️ Part II: 実践編</h3>
-            <ul class="toc-list">
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-repository-management/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-repository-management' %}active{% endif %}">
-                        <span class="chapter-number">第5章：</span>ファイルのアップロードと管理
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-collaboration-basics/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-collaboration-basics' %}active{% endif %}">
-                        <span class="chapter-number">第6章：</span>GitHub Desktop の活用
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-pull-requests/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-pull-requests' %}active{% endif %}">
-                        <span class="chapter-number">第7章：</span>ブランチの基本操作
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-issue-management/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-issue-management' %}active{% endif %}">
-                        <span class="chapter-number">第8章：</span>Issue管理とプロジェクト管理
-                    </a>
-                </li>
-            </ul>
-        </div>
+            {% if navigation.chapters %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">本編</h4>
+                <ul class="toc-list">
+                    {% for chapter in navigation.chapters %}
+                    <li class="toc-item toc-chapter">
+                        <a href="{{ chapter.path | relative_url }}" class="toc-link {% if page.url == chapter.path or page.url contains chapter.path %}active{% endif %}" {% if page.url == chapter.path or page.url contains chapter.path %}aria-current="page"{% endif %}>
+                            {{ chapter.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
 
-        <!-- Special: Docs-as-Code -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">📄 Docs-as-Code（文書運用編）</h3>
-            <ul class="toc-list">
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-docs-as-code/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-docs-as-code' %}active{% endif %}">
-                        特別編：Docs-as-Code - 文書管理・ナレッジ基盤
-                    </a>
-                </li>
-            </ul>
-        </div>
+            {% if navigation.additional %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">追加</h4>
+                <ul class="toc-list">
+                    {% for item in navigation.additional %}
+                    <li class="toc-item">
+                        <a href="{{ item.path | relative_url }}" class="toc-link {% if page.url == item.path or page.url contains item.path %}active{% endif %}" {% if page.url == item.path or page.url contains item.path %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
 
-        <!-- Part III: 自動化・高度活用編 -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">🚀 Part III: 高度活用編</h3>
-            <ul class="toc-list">
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-github-actions/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-github-actions' %}active{% endif %}">
-                        <span class="chapter-number">第9章：</span>GitHub Actions入門 - 自動化の基礎
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-security-best-practices/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-security-best-practices' %}active{% endif %}">
-                        <span class="chapter-number">第10章：</span>セキュリティのベストプラクティス
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-advanced-features/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-advanced-features' %}active{% endif %}">
-                        <span class="chapter-number">第11章：</span>高度な機能活用
-                    </a>
-                </li>
-                <li class="toc-item toc-chapter">
-                    <a href="{{ '/src/chapter-troubleshooting/' | relative_url }}" class="toc-link {% if page.url contains 'chapter-troubleshooting' %}active{% endif %}">
-                        <span class="chapter-number">第12章：</span>トラブルシューティング
-                    </a>
-                </li>
-            </ul>
-        </div>
+            {% if navigation.resources %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">リソース</h4>
+                <ul class="toc-list">
+                    {% for item in navigation.resources %}
+                    <li class="toc-item">
+                        <a href="{{ item.path | relative_url }}" class="toc-link {% if page.url == item.path or page.url contains item.path %}active{% endif %}" {% if page.url == item.path or page.url contains item.path %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
 
-        <!-- Appendices -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">📋 付録</h3>
-            <ul class="toc-list">
-                <li class="toc-item">
-                    <a href="{{ '/src/appendix-git-commands-reference/' | relative_url }}" class="toc-link {% if page.url contains 'appendix-git-commands-reference' %}active{% endif %}">
-                        付録A: Gitコマンドリファレンス
-                    </a>
-                </li>
-                <li class="toc-item">
-                    <a href="{{ '/src/appendix-github-shortcuts/' | relative_url }}" class="toc-link {% if page.url contains 'appendix-github-shortcuts' %}active{% endif %}">
-                        付録B: GitHubショートカット集
-                    </a>
-                </li>
-                <li class="toc-item">
-                    <a href="{{ '/src/appendix-resources/' | relative_url }}" class="toc-link {% if page.url contains 'appendix-resources' %}active{% endif %}">
-                        付録C: 学習リソースと参考文献
-                    </a>
-                </li>
-            </ul>
-        </div>
+            {% if navigation.appendices %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">付録</h4>
+                <ul class="toc-list">
+                    {% for item in navigation.appendices %}
+                    <li class="toc-item">
+                        <a href="{{ item.path | relative_url }}" class="toc-link {% if page.url == item.path or page.url contains item.path %}active{% endif %}" {% if page.url == item.path or page.url contains item.path %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
 
-        <!-- Additional Resources -->
-        <div class="toc-section">
-            <h3 class="toc-section-title">📚 リソース</h3>
-            <ul class="toc-list">
-                <li class="toc-item">
-                    <a href="https://github.com/itdojp/github-guide-for-beginners-book" class="toc-link" target="_blank" rel="noopener">
-                        💾 GitHubリポジトリ
-                    </a>
-                </li>
-                <li class="toc-item">
-                    <a href="https://itdojp.github.io/it-engineer-knowledge-architecture/" class="toc-link" target="_blank" rel="noopener">
-                        📚 書籍一覧
-                    </a>
-                </li>
-                <li class="toc-item">
-                    <a href="https://itdo.jp" class="toc-link" target="_blank" rel="noopener">
-                        🏢 株式会社アイティードゥ
-                    </a>
-                </li>
-            </ul>
+            {% if navigation.afterword %}
+            <div class="toc-section">
+                <h4 class="toc-section-title">あとがき</h4>
+                <ul class="toc-list">
+                    {% for item in navigation.afterword %}
+                    <li class="toc-item">
+                        <a href="{{ item.path | relative_url }}" class="toc-link {% if page.url == item.path or page.url contains item.path %}active{% endif %}" {% if page.url == item.path or page.url contains item.path %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <div class="sidebar-footer">
+        {% assign repo_url = repo_url | default: site.github.repository_url | default: site.repository_url | default: site.repository.github | default: site.repository %}
+        {% if repo_url and repo_url != '' %}
+            {% unless repo_url contains 'http' %}
+                {% assign repo_url = 'https://github.com/' | append: repo_url %}
+            {% endunless %}
+        {% endif %}
+
+        <div class="external-links">
+            {% if repo_url %}
+            <a href="{{ repo_url }}" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            {% endif %}
+            {% if site.contact.email %}
+            <a href="mailto:{{ site.contact.email | escape }}" class="external-link">Contact</a>
+            {% endif %}
         </div>
     </div>
 </div>
+
