@@ -11,4 +11,6 @@
 /src/**                               @itdojp/book-editors
 
 # 上記以外（コンテンツ/設定/CI含む全般）
+
+/.book-formatter/**                   @itdojp/book-formatter
 *                                     @itdojp/book-editors
