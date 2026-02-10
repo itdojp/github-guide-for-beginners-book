@@ -210,7 +210,7 @@ jobs:
 
 ```dockerfile
 # Dockerfile
-FROM node:18-alpine
+FROM node:22-alpine
 
 # 作業ディレクトリの設定
 WORKDIR /app
@@ -239,7 +239,7 @@ CMD ["npm", "start"]
 
 ```dockerfile
 # マルチステージビルドの例
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 COPY package*.json ./
@@ -248,7 +248,7 @@ COPY . .
 RUN npm run build
 
 # 本番用ステージ
-FROM node:18-alpine AS production
+FROM node:22-alpine AS production
 
 WORKDIR /app
 COPY package*.json ./
@@ -350,7 +350,7 @@ jobs:
 // .devcontainer/devcontainer.json
 {
   "name": "Node.js & TypeScript Development",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   
   // Features (追加ツールの自動インストール)
   "features": {
@@ -424,7 +424,7 @@ jobs:
 
 ```dockerfile
 # .devcontainer/Dockerfile
-FROM mcr.microsoft.com/devcontainers/typescript-node:18
+FROM mcr.microsoft.com/devcontainers/typescript-node:22
 
 # 追加のツールをインストール
 RUN apt-get update && apt-get install -y \
