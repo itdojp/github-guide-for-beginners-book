@@ -181,8 +181,8 @@
     <text x="490" y="570" class="text-content" font-weight="bold">よく使うアクション:</text>
     <rect x="490" y="580" width="160" height="45" fill="#e6f3ff" stroke="#3498db" rx="3"/>
     <text x="570" y="595" class="text-content" text-anchor="middle">テスト自動化</text>
-    <text x="500" y="610" class="code-text">actions/checkout@v3</text>
-    <text x="500" y="620" class="code-text">actions/setup-node@v3</text>
+    <text x="500" y="610" class="code-text">actions/checkout@v4</text>
+    <text x="500" y="620" class="code-text">actions/setup-node@v4</text>
     
     <rect x="670" y="580" width="160" height="45" fill="#e6ffe6" stroke="#2ecc71" rx="3"/>
     <text x="750" y="595" class="text-content" text-anchor="middle">デプロイ自動化</text>
