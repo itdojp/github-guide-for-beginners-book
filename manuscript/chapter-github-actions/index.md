@@ -387,7 +387,7 @@ jobs:
       uses: actions/configure-pages@v4
     
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: './dist'
   
@@ -719,7 +719,7 @@ jobs:
     
     # Node.jsの依存関係キャッシュ
     - name: Cache node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -728,7 +728,7 @@ jobs:
     
     # ビルド成果物のキャッシュ
     - name: Cache build output
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ./dist
         key: build-${{ github.sha }}
