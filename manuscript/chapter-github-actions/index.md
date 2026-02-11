@@ -151,7 +151,7 @@ jobs:
     
     # Node.js環境のセットアップ
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '20'
         cache: 'npm'
@@ -256,7 +256,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
 ```
@@ -299,7 +299,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '20'
         cache: 'npm'
@@ -372,7 +372,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '20'
         cache: 'npm'
@@ -734,7 +734,7 @@ jobs:
           key: build-${{ github.sha }}
     
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '20'
           cache: 'npm'

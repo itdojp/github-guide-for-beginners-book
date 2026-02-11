@@ -183,7 +183,7 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '20'
         registry-url: 'https://npm.pkg.github.com'
@@ -517,7 +517,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '20'
         cache: 'npm'
