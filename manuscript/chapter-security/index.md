@@ -716,7 +716,7 @@ jobs:
     
     # Snyk による脆弱性スキャン
     - name: Run Snyk security scan
-      uses: snyk/actions/node@master
+      uses: snyk/actions/node@v1
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
