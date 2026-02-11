@@ -384,10 +384,10 @@ jobs:
       run: npm run build
     
     - name: Setup Pages
-      uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v5
     
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: './dist'
   
@@ -715,29 +715,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
     
     # Node.jsの依存関係キャッシュ
-    - name: Cache node modules
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
     
     # ビルド成果物のキャッシュ
-    - name: Cache build output
-      uses: actions/cache@v3
-      with:
-        path: ./dist
-        key: build-${{ github.sha }}
+      - name: Cache build output
+        uses: actions/cache@v4
+        with:
+          path: ./dist
+          key: build-${{ github.sha }}
     
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 ```
 
 **並列実行の活用：**
@@ -748,28 +748,28 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm ci && npm run lint
+      - uses: actions/checkout@v4
+      - run: npm ci && npm run lint
   
   test-unit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm ci && npm run test:unit
+      - uses: actions/checkout@v4
+      - run: npm ci && npm run test:unit
   
   test-integration:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm ci && npm run test:integration
+      - uses: actions/checkout@v4
+      - run: npm ci && npm run test:integration
   
   # 上記のジョブが全て成功したら実行
   deploy:
     needs: [lint, test-unit, test-integration]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm ci && npm run deploy
+      - uses: actions/checkout@v4
+      - run: npm ci && npm run deploy
 ```
 
 ---
