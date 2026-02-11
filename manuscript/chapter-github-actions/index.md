@@ -329,7 +329,7 @@ jobs:
       
     # テストカバレッジレポート
     - name: Upload coverage reports
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v5
       with:
         file: ./coverage/lcov.info
         fail_ci_if_error: true
