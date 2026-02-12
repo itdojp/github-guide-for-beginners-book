@@ -43,7 +43,7 @@
   --svg-error: #EF4444;
   --svg-neutral: #9CA3AF;
 }
-```text
+```
 
 ### 認知負荷軽減原則
 - **色数制限**: 基本5色のみ使用
@@ -198,20 +198,20 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ## ファイル管理
 
 ### 命名規則
-```
+```text
 {章番号}_{図番号}_{図表名}.svg
 例: 03_02_database_architecture.svg
-```text
+```
 
 ### ディレクトリ構造
-```
+```text
 /assets/
   /images/
     /diagrams/
       /chapter01/
       /chapter02/
       /common/
-```text
+```
 
 ### 最適化
 - SVGO使用（設定ファイル提供）
@@ -266,7 +266,7 @@ function toggleTheme() {
 const savedTheme = localStorage.getItem('theme') || 
   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', savedTheme);
-```text
+```
 
 ### レスポンシブ埋め込み
 ```html
