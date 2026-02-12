@@ -22,7 +22,7 @@ chapter: introduction
 
 多くの人が経験する光景：
 
-```
+```text
 プロジェクト/
 ├── index.html
 ├── index_修正版.html

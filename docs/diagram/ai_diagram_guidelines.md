@@ -3,7 +3,7 @@
 ## プロンプト構成原則
 
 ### 基本構造
-```
+```text
 1. 図表種別の明確化
 2. 技術仕様の指定
 3. 美的要求の定義
@@ -12,14 +12,14 @@
 ```
 
 ### 必須前置詞
-```
+```text
 "Create a clean, professional SVG diagram that follows modern technical documentation standards."
 ```
 
 ## 美的品質指示
 
 ### デザイン原則
-```
+```text
 - Minimalist design with generous white space
 - Consistent geometric proportions using golden ratio (1.618)
 - Professional typography with clear hierarchy
@@ -28,7 +28,7 @@
 ```
 
 ### 視覚的洗練度
-```
+```text
 - Use rounded corners (4px radius) for modern appearance
 - Implement subtle gradients for depth (10〜15% opacity difference)
 - Apply consistent stroke weights (1px, 2px, 3px hierarchy)
@@ -39,7 +39,7 @@
 ## 色彩指示テンプレート
 
 ### 基本指示
-```
+```text
 Use this exact color palette:
 - Primary: #3B82F6 (blue)
 - Success: #10B981 (green) 
@@ -54,7 +54,7 @@ Apply colors semantically, not decoratively.
 ```
 
 ### グラデーション指示
-```
+```text
 For depth, use subtle gradients:
 - Start: base color at 100% opacity
 - End: base color at 85% opacity
@@ -66,7 +66,7 @@ For depth, use subtle gradients:
 ## レイアウト問題防止策
 
 ### 要素重複防止
-```
+```text
 Strict layout requirements:
 - Calculate exact coordinates for each element
 - Maintain minimum 16px clearance between all elements
@@ -76,7 +76,7 @@ Strict layout requirements:
 ```
 
 ### 文字はみ出し防止
-```
+```text
 Text containment rules:
 - Text elements must fit within parent container with 8px padding
 - Use text-anchor="middle" for centered alignment
@@ -87,7 +87,7 @@ Text containment rules:
 ```
 
 ### 座標計算指示
-```
+```text
 Use explicit coordinate calculation:
 - Define grid: 800x600 viewBox with 40px margins
 - Working area: 720x520 pixels
@@ -99,7 +99,7 @@ Use explicit coordinate calculation:
 ## 厳密配置テンプレート
 
 ### 水平配置（3要素例）
-```
+```text
 For 3 elements in 720px width:
 - Element width: 200px
 - Spacing: 60px  
@@ -109,7 +109,7 @@ For 3 elements in 720px width:
 ```
 
 ### 垂直配置（4要素例）
-```
+```text
 For 4 elements in 520px height:
 - Element height: 80px
 - Spacing: 40px
@@ -119,7 +119,7 @@ For 4 elements in 520px height:
 ```
 
 ### テキスト配置計算
-```
+```text
 For text in rectangular container:
 - Container: width=120px, height=60px
 - Text position: x=60 (center), y=35 (vertical center + font-size/2)
@@ -131,7 +131,7 @@ For text in rectangular container:
 ## タイポグラフィ指示
 
 ### フォント指定
-```
+```text
 Use system fonts only:
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif
 
@@ -143,7 +143,7 @@ Size hierarchy:
 ```
 
 ### テキスト配置
-```
+```text
 - Use sentence case, not ALL CAPS
 - Align text to 8px baseline grid
 - Maintain 1.4 line height
@@ -154,7 +154,7 @@ Size hierarchy:
 ## 図表種別テンプレート
 
 ### アーキテクチャ図
-```
+```text
 Create a system architecture diagram with:
 - Rectangular components with 4px rounded corners
 - Hierarchical layout showing data flow
@@ -165,7 +165,7 @@ Create a system architecture diagram with:
 ```
 
 ### フローチャート
-```
+```text
 Generate a flowchart using:
 - Start/End: rounded rectangles (rx="20")
 - Process: rectangles with 4px radius
@@ -176,7 +176,7 @@ Generate a flowchart using:
 ```
 
 ### シーケンス図
-```
+```text
 Design a sequence diagram featuring:
 - Vertical lifelines with 3px dashed strokes
 - Activation boxes as subtle rectangles
@@ -186,7 +186,7 @@ Design a sequence diagram featuring:
 ```
 
 ### データフロー図
-```
+```text
 Create a data flow diagram including:
 - Circular data stores
 - Rectangular processes
@@ -198,7 +198,7 @@ Create a data flow diagram including:
 ## 品質強化指示
 
 ### 詳細度レベル
-```
+```text
 Level 1 (Concept): Basic shapes, minimal detail
 Level 2 (Design): Refined shapes, proper spacing
 Level 3 (Production): Full styling, shadows, gradients
@@ -207,7 +207,7 @@ Default to Level 2 unless specified.
 ```
 
 ### 洗練度チェック
-```
+```text
 Ensure the diagram meets these criteria:
 - Would this appear professional in a technical presentation?
 - Are visual relationships immediately clear?
@@ -219,7 +219,7 @@ Ensure the diagram meets these criteria:
 ## プロンプト例
 
 ### 基本テンプレート
-```
+```text
 Create a clean, professional SVG diagram of [DIAGRAM_TYPE] showing [CONTENT_DESCRIPTION].
 
 Requirements:
@@ -240,12 +240,12 @@ Viewport: 800x600 or appropriate aspect ratio
 ## 問題回避プロンプト例
 
 ### 改良前（問題発生しやすい）
-```
+```text
 ❌ "Create a diagram with boxes and arrows showing the system flow"
 ```
 
 ### 改良後（問題回避）
-```
+```text
 ✅ "Create an SVG diagram (viewBox="0 0 800 600") with exactly 3 rectangular boxes:
 
 Box 1: x=50, y=100, width=180, height=80, containing text 'Frontend'
@@ -265,7 +265,7 @@ Verify no overlapping elements and all content within margins."
 ```
 
 ### システム図の厳密指示例
-```
+```text
 Create a microservices architecture SVG (viewBox="0 0 800 600"):
 
 Layout calculation:
@@ -304,7 +304,7 @@ Verification checklist:
 ## 検証指示の強化
 
 ### 必須検証項目
-```
+```text
 Before outputting SVG, verify:
 1. Bounding box check: all elements x+width ≤ viewBox width
 2. Collision detection: no element overlaps another  
@@ -315,7 +315,7 @@ Before outputting SVG, verify:
 ```
 
 ### デバッグ指示
-```
+```text
 Include calculation comments in SVG:
 <!-- Element positions calculated:
      Box1: 50px + 180px + 20px spacing = 250px
@@ -324,7 +324,7 @@ Include calculation comments in SVG:
 ```
 
 ### エラー回避チェックリスト
-```
+```text
 Common issues to prevent:
 □ Text longer than container width
 □ Elements positioned outside viewBox
@@ -339,7 +339,7 @@ Common issues to prevent:
 ## 失敗パターンと対策
 
 ### パターン1: 文字はみ出し
-```
+```text
 ❌ Problem: <text x="50" y="30">Very Long Service Name</text>
 ✅ Solution: 
    - Calculate: 20 chars × 7px = 140px width needed
@@ -348,19 +348,19 @@ Common issues to prevent:
 ```
 
 ### パターン2: 要素重複
-```
+```text
 ❌ Problem: Box1(x=100, width=200) + Box2(x=250, width=200) = overlap
 ✅ Solution: Box2.x = Box1.x + Box1.width + spacing = 100 + 200 + 20 = 320
 ```
 
 ### パターン3: 領域はみ出し
-```
+```text
 ❌ Problem: Element at x=700, width=200 in viewBox width=800
 ✅ Solution: Max x = 800 - 200 - 40(margin) = 560px
 ```
 
 ### パターン4: 接続線の問題
-```
+```text
 ❌ Problem: Arrow from center to center crosses other elements
 ✅ Solution: Calculate edge-to-edge connection points
    - From: (box1.x + box1.width, box1.y + box1.height/2)
@@ -370,7 +370,7 @@ Common issues to prevent:
 ## 避けるべき要素
 
 ### デザイン面
-```
+```text
 - 過度な装飾や不要なエフェクト
 - 3D効果やドロップシャドウの乱用
 - 原色の多用や彩度の高い色
@@ -379,7 +379,7 @@ Common issues to prevent:
 ```
 
 ### 技術面
-```
+```text
 - インライン style属性の使用
 - 固定サイズの指定
 - 複雑すぎるパス定義
@@ -390,7 +390,7 @@ Common issues to prevent:
 ## AI特有の注意点
 
 ### Claude向け
-```
+```text
 - 具体的な寸法を数値で指定
 - 色は16進数コードで明示
 - レイアウトは座標で詳細指定
@@ -399,7 +399,7 @@ Common issues to prevent:
 ```
 
 ### 一般的AI向け
-```
+```text
 - "professional" "clean" "modern"等の形容詞を多用
 - 具体的なピクセル値で指定
 - フォントはシステムフォントに限定

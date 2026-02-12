@@ -43,7 +43,7 @@
   --svg-error: #EF4444;
   --svg-neutral: #9CA3AF;
 }
-```
+```text
 
 ### 認知負荷軽減原則
 - **色数制限**: 基本5色のみ使用
@@ -59,7 +59,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ```
 
 ### サイズ階層
-```
+```text
 タイトル: 16px (font-weight: 600)
 ラベル: 12px (font-weight: 400)
 注釈: 10px (font-weight: 400)
@@ -68,28 +68,28 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ## モバイル対応仕様
 
 ### ビューポート設計
-```
+```text
 最小表示幅: 320px
 推奨最大幅: 800px
 アスペクト比: 16:9または4:3に統一
 ```
 
 ### タッチインターフェース
-```
+```text
 最小タップ領域: 44px × 44px
 要素間余白: 最低8px
 ホバー効果: タッチでは非表示
 ```
 
 ### フォントサイズ（モバイル）
-```
+```text
 タイトル: 14px (最小), 18px (推奨)
 ラベル: 12px (最小), 14px (推奨)  
 注釈: 11px (最小), 12px (推奨)
 ```
 
 ### 認知負荷軽減設計
-```
+```text
 情報階層: 3層まで
 同時表示要素: 7±2個まで
 線種パターン: 実線・破線・点線の3種のみ
@@ -141,7 +141,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   
   <!-- コンテンツ -->
 </svg>
-```
+```text
 
 ### シンプルなコンポーネント例
 ```xml
@@ -175,7 +175,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   values="0,0; 100,0" 
   dur="2s" 
   repeatCount="indefinite"/>
-```
+```text
 
 ## アクセシビリティ
 
@@ -188,7 +188,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ### ARIA対応
 ```xml
 <svg role="img" aria-labelledby="title" aria-describedby="desc">
-```
+```text
 
 ### 代替手段
 - テキスト形式の説明併記
@@ -201,7 +201,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ```
 {章番号}_{図番号}_{図表名}.svg
 例: 03_02_database_architecture.svg
-```
+```text
 
 ### ディレクトリ構造
 ```
@@ -211,7 +211,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
       /chapter01/
       /chapter02/
       /common/
-```
+```text
 
 ### 最適化
 - SVGO使用（設定ファイル提供）
@@ -266,7 +266,7 @@ function toggleTheme() {
 const savedTheme = localStorage.getItem('theme') || 
   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', savedTheme);
-```
+```text
 
 ### レスポンシブ埋め込み
 ```html
@@ -288,7 +288,7 @@ document.documentElement.setAttribute('data-theme', savedTheme);
 4. **色使い最小化**: 基本4色+グレーのみ
 
 ### 視覚的単純化
-```
+```text
 線種: 実線（主要）、破線（補助）、点線（関連）
 太さ: 1px（通常）、2px（強調）、3px（最重要）
 図形: 矩形、円、菱形の3種のみ
@@ -296,7 +296,7 @@ document.documentElement.setAttribute('data-theme', savedTheme);
 ```
 
 ### テキスト最適化
-```
+```text
 文字数: ラベル最大12文字
 行数: 1要素につき最大2行
 言語: 英数混在時は半角統一
@@ -304,7 +304,7 @@ document.documentElement.setAttribute('data-theme', savedTheme);
 ```
 
 ### レイアウト原則
-```
+```text
 余白: 要素の50%以上確保
 整列: グリッドベース配置
 グルーピング: 近接による関連性表現
