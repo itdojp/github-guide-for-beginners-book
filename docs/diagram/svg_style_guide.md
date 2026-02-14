@@ -141,7 +141,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   
   <!-- コンテンツ -->
 </svg>
-```text
+```
 
 ### シンプルなコンポーネント例
 ```xml
@@ -175,7 +175,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   values="0,0; 100,0" 
   dur="2s" 
   repeatCount="indefinite"/>
-```text
+```
 
 ## アクセシビリティ
 
@@ -188,7 +188,7 @@ font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 ### ARIA対応
 ```xml
 <svg role="img" aria-labelledby="title" aria-describedby="desc">
-```text
+```
 
 ### 代替手段
 - テキスト形式の説明併記
