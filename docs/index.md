@@ -124,6 +124,6 @@ Email: [knowledge@itdo.jp](mailto:knowledge@itdo.jp)
 **📧 著者:** ITDO Inc. <knowledge@itdo.jp>  
 **📅 最終更新:** 2025年8月6日
 
-Built with [Book Publishing Template v3.0](https://github.com/itdojp/book-publishing-template2)
+Built with [book-formatter](https://github.com/itdojp/book-formatter)
 {% include page-navigation.html %}
 <!-- trigger rebuild -->
