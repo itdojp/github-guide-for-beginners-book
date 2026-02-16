@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -83,7 +83,7 @@
       
       <!-- URL入力フィールド -->
       <rect x="80" y="325" width="120" height="15" rx="2" class="border"/>
-      <text x="90" y="337" class="text text-sm" style="font-family: monospace; font-size: 10px;">github.com/user/repo</text>
+      <text x="90" y="337" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; font-size: 10px;">github.com/user/repo</text>
       
       <text x="140" y="355" text-anchor="middle" class="text text-sm">• HTTPS URL</text>
       <text x="140" y="370" text-anchor="middle" class="text text-sm">• SSH URL</text>
@@ -100,7 +100,7 @@
       
       <!-- パス表示 -->
       <rect x="260" y="325" width="120" height="15" rx="2" class="border"/>
-      <text x="270" y="337" class="text text-sm" style="font-family: monospace; font-size: 10px;">/Users/name/GitHub/</text>
+      <text x="270" y="337" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; font-size: 10px;">/Users/name/GitHub/</text>
       
       <text x="320" y="355" text-anchor="middle" class="text text-sm">• ローカルパス</text>
       <text x="320" y="370" text-anchor="middle" class="text text-sm">• フォルダ名</text>
@@ -152,17 +152,17 @@
       <!-- 名前 -->
       <text x="170" y="505" class="text text-sm" style="font-weight: 600;">Name:</text>
       <rect x="220" y="495" width="150" height="15" rx="2" class="border"/>
-      <text x="225" y="507" class="text text-sm" style="font-family: monospace;">my-new-project</text>
+      <text x="225" y="507" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">my-new-project</text>
       
       <!-- 説明 -->
       <text x="170" y="525" class="text text-sm" style="font-weight: 600;">Description:</text>
       <rect x="250" y="515" width="180" height="15" rx="2" class="border"/>
-      <text x="255" y="527" class="text text-sm" style="font-family: monospace;">Project description</text>
+      <text x="255" y="527" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">Project description</text>
       
       <!-- パス -->
       <text x="170" y="545" class="text text-sm" style="font-weight: 600;">Local path:</text>
       <rect x="240" y="535" width="200" height="15" rx="2" class="border"/>
-      <text x="245" y="547" class="text text-sm" style="font-family: monospace;">/Users/name/Documents/</text>
+      <text x="245" y="547" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">/Users/name/Documents/</text>
       
       <!-- オプション -->
       <text x="470" y="505" class="text text-sm">☑️ Initialize with README</text>

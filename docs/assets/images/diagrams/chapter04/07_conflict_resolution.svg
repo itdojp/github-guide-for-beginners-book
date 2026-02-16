@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -40,18 +40,18 @@
       <text x="205" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">main ブランチの変更</text>
       
       <rect x="90" y="125" width="230" height="40" rx="2" class="bg-alt border"/>
-      <text x="95" y="138" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
-      <text x="95" y="152" class="text text-sm" style="font-family: monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
-      <text x="95" y="166" class="text text-sm" style="font-family: monospace;">}</text>
+      <text x="95" y="138" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">function greet(name) {</text>
+      <text x="95" y="152" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
+      <text x="95" y="166" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">}</text>
       
       <!-- featureブランチの変更 -->
       <rect x="470" y="95" width="250" height="80" rx="8" class="primary border" opacity="0.1"/>
       <text x="595" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">feature ブランチの変更</text>
       
       <rect x="480" y="125" width="230" height="40" rx="2" class="bg-alt border"/>
-      <text x="485" y="138" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
-      <text x="485" y="152" class="text text-sm" style="font-family: monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
-      <text x="485" y="166" class="text text-sm" style="font-family: monospace;">}</text>
+      <text x="485" y="138" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">function greet(name) {</text>
+      <text x="485" y="152" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
+      <text x="485" y="166" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">}</text>
       
       <!-- 競合マーク -->
       <text x="400" y="145" text-anchor="middle" class="text text-md error" style="font-weight: 600;">⚡ 同じ行を異なる内容に変更</text>
@@ -67,12 +67,12 @@
     
     <!-- コンフリクト内容 -->
     <rect x="170" y="265" width="460" height="75" rx="2" class="bg-alt border"/>
-    <text x="175" y="278" class="text text-sm" style="font-family: monospace;">function greet(name) {</text>
-    <text x="175" y="292" class="text text-sm" style="font-family: monospace; color: #dc3545;">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
-    <text x="175" y="306" class="text text-sm" style="font-family: monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
-    <text x="175" y="320" class="text text-sm" style="font-family: monospace; color: #6c757d;">=======</text>
-    <text x="175" y="334" class="text text-sm" style="font-family: monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
-    <text x="175" y="348" class="text text-sm" style="font-family: monospace; color: #dc3545;">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/greeting</text>
+    <text x="175" y="278" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">function greet(name) {</text>
+    <text x="175" y="292" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #dc3545;">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+    <text x="175" y="306" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #28a745;">  return `Hello, ${name}!`;</text>
+    <text x="175" y="320" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #6c757d;">=======</text>
+    <text x="175" y="334" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #007bff;">  return `Hi there, ${name}!`;</text>
+    <text x="175" y="348" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; color: #dc3545;">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/greeting</text>
   </g>
   
   <!-- 解決プロセス -->
@@ -129,7 +129,7 @@
     <text x="400" y="545" text-anchor="middle" class="text text-sm" style="font-weight: 600;">resolved-file.js</text>
     
     <rect x="270" y="555" width="260" height="15" rx="2" class="bg-alt border"/>
-    <text x="275" y="565" class="text text-sm" style="font-family: monospace;">  return `Hello there, ${name}!`;</text>
+    <text x="275" y="565" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">  return `Hello there, ${name}!`;</text>
   </g>
   
   <!-- 解決のコツ -->

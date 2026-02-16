@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -84,13 +84,13 @@
       
       <!-- サマリー -->
       <rect x="90" y="245" width="280" height="20" rx="2" class="bg-alt border"/>
-      <text x="95" y="258" class="text text-sm" style="font-family: monospace; font-weight: 600;">feat: Add user authentication system</text>
+      <text x="95" y="258" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; font-weight: 600;">feat: Add user authentication system</text>
       
       <!-- 詳細 -->
       <rect x="90" y="270" width="280" height="50" rx="2" class="bg-alt border"/>
-      <text x="95" y="283" class="text text-sm" style="font-family: monospace;">- Implement login/logout functionality</text>
-      <text x="95" y="296" class="text text-sm" style="font-family: monospace;">- Add password validation</text>
-      <text x="95" y="309" class="text text-sm" style="font-family: monospace;">- Include session management</text>
+      <text x="95" y="283" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">- Implement login/logout functionality</text>
+      <text x="95" y="296" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">- Add password validation</text>
+      <text x="95" y="309" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">- Include session management</text>
     </g>
     
     <!-- 悪い例 -->
@@ -100,16 +100,16 @@
       
       <!-- 悪いメッセージ例 -->
       <rect x="430" y="245" width="280" height="15" rx="2" class="bg-alt border"/>
-      <text x="435" y="255" class="text text-sm" style="font-family: monospace;">fix</text>
+      <text x="435" y="255" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">fix</text>
       
       <rect x="430" y="265" width="280" height="15" rx="2" class="bg-alt border"/>
-      <text x="435" y="275" class="text text-sm" style="font-family: monospace;">update</text>
+      <text x="435" y="275" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">update</text>
       
       <rect x="430" y="285" width="280" height="15" rx="2" class="bg-alt border"/>
-      <text x="435" y="295" class="text text-sm" style="font-family: monospace;">WIP</text>
+      <text x="435" y="295" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">WIP</text>
       
       <rect x="430" y="305" width="280" height="15" rx="2" class="bg-alt border"/>
-      <text x="435" y="315" class="text text-sm" style="font-family: monospace;">asdlfkjsldfkj</text>
+      <text x="435" y="315" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">asdlfkjsldfkj</text>
     </g>
   </g>
   

@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -134,8 +134,8 @@
   <!-- コマンド例 -->
   <g class="command-examples">
     <rect x="100" y="380" width="600" height="25" rx="2" class="bg-alt border"/>
-    <text x="110" y="395" class="text text-sm" style="font-family: monospace;">git clone https://github.com/user/repo.git</text>
-    <text x="450" y="395" class="text text-sm" style="font-family: monospace;">git push origin main</text>
-    <text x="650" y="395" class="text text-sm" style="font-family: monospace;">git pull origin main</text>
+    <text x="110" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git clone https://github.com/user/repo.git</text>
+    <text x="450" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git push origin main</text>
+    <text x="650" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git pull origin main</text>
   </g>
 </svg>

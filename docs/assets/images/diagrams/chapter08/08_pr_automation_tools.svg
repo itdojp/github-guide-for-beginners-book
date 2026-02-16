@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -104,12 +104,12 @@
       <text x="100" y="395" class="text text-sm" style="font-weight: 600;">🔧 典型的なPRワークフロー</text>
       
       <rect x="100" y="405" width="600" height="100" rx="4" class="border"/>
-      <text x="110" y="420" class="text text-sm" style="font-family: monospace;">name: PR Quality Check</text>
-      <text x="110" y="435" class="text text-sm" style="font-family: monospace;">on: pull_request</text>
-      <text x="110" y="450" class="text text-sm" style="font-family: monospace;">jobs:</text>
-      <text x="110" y="465" class="text text-sm" style="font-family: monospace;">  test: runs-on: ubuntu-latest</text>
-      <text x="110" y="480" class="text text-sm" style="font-family: monospace;">    steps: - lint - test - security-scan</text>
-      <text x="110" y="495" class="text text-sm" style="font-family: monospace;">  auto-merge: needs: test, if: author == 'dependabot'</text>
+      <text x="110" y="420" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">name: PR Quality Check</text>
+      <text x="110" y="435" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">on: pull_request</text>
+      <text x="110" y="450" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">jobs:</text>
+      <text x="110" y="465" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">  test: runs-on: ubuntu-latest</text>
+      <text x="110" y="480" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">    steps: - lint - test - security-scan</text>
+      <text x="110" y="495" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">  auto-merge: needs: test, if: author == 'dependabot'</text>
     </g>
   </g>
   
