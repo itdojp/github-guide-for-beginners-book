@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -159,13 +159,13 @@
     
     <!-- 削除行 -->
     <rect x="90" y="530" width="620" height="12" rx="0" class="error" opacity="0.2"/>
-    <text x="95" y="540" class="text text-sm" style="font-family: monospace;">- const Button = () => {</text>
+    <text x="95" y="540" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">- const Button = () => {</text>
     
     <!-- 追加行 -->
     <rect x="90" y="545" width="620" height="12" rx="0" class="success" opacity="0.2"/>
-    <text x="95" y="555" class="text text-sm" style="font-family: monospace;">+ const Button = ({ children, onClick }) => {</text>
+    <text x="95" y="555" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">+ const Button = ({ children, onClick }) => {</text>
     
     <!-- 変更なし -->
-    <text x="95" y="570" class="text text-sm" style="font-family: monospace;">    return &lt;button&gt;{children}&lt;/button&gt;;</text>
+    <text x="95" y="570" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">    return &lt;button&gt;{children}&lt;/button&gt;;</text>
   </g>
 </svg>

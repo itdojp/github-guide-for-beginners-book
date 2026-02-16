@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -31,22 +31,22 @@
     
     <!-- コミット1 -->
     <rect x="70" y="110" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="80" y="125" class="text text-sm" style="font-family: monospace;">feat: Add user authentication system</text>
+    <text x="80" y="125" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">feat: Add user authentication system</text>
     <text x="80" y="135" class="text text-sm">• 機能追加を明確に表現</text>
     
     <!-- コミット2 -->
     <rect x="70" y="150" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="80" y="165" class="text text-sm" style="font-family: monospace;">fix: Resolve memory leak in image processing</text>
+    <text x="80" y="165" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">fix: Resolve memory leak in image processing</text>
     <text x="80" y="175" class="text text-sm">• 問題と解決内容が具体的</text>
     
     <!-- コミット3 -->
     <rect x="70" y="190" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="80" y="205" class="text text-sm" style="font-family: monospace;">docs: Update API documentation for v2.0</text>
+    <text x="80" y="205" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">docs: Update API documentation for v2.0</text>
     <text x="80" y="215" class="text text-sm">• 変更種別と対象が明確</text>
     
     <!-- コミット4 -->
     <rect x="70" y="230" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="80" y="245" class="text text-sm" style="font-family: monospace;">refactor: Extract validation logic to utils</text>
+    <text x="80" y="245" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">refactor: Extract validation logic to utils</text>
     <text x="80" y="255" class="text text-sm">• リファクタリング目的が明確</text>
   </g>
   
@@ -57,22 +57,22 @@
     
     <!-- コミット1 -->
     <rect x="450" y="110" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="460" y="125" class="text text-sm" style="font-family: monospace;">fix</text>
+    <text x="460" y="125" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">fix</text>
     <text x="460" y="135" class="text text-sm">• 何を修正したか不明</text>
     
     <!-- コミット2 -->
     <rect x="450" y="150" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="460" y="165" class="text text-sm" style="font-family: monospace;">Update multiple files for new feature</text>
+    <text x="460" y="165" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">Update multiple files for new feature</text>
     <text x="460" y="175" class="text text-sm">• 変更内容が曖昧で広すぎる</text>
     
     <!-- コミット3 -->
     <rect x="450" y="190" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="460" y="205" class="text text-sm" style="font-family: monospace;">WIP: trying to fix bug</text>
+    <text x="460" y="205" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">WIP: trying to fix bug</text>
     <text x="460" y="215" class="text text-sm">• 作業中コミットは避ける</text>
     
     <!-- コミット4 -->
     <rect x="450" y="230" width="280" height="30" rx="4" class="bg-alt border"/>
-    <text x="460" y="245" class="text text-sm" style="font-family: monospace;">asdflkjweoriuqwer</text>
+    <text x="460" y="245" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">asdflkjweoriuqwer</text>
     <text x="460" y="255" class="text text-sm">• 意味のないメッセージ</text>
   </g>
   

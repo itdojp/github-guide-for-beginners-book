@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -99,11 +99,11 @@
       <text x="475" y="220" text-anchor="middle" class="text text-sm" style="font-weight: 600;">差分表示エリア</text>
       
       <!-- コード例 -->
-      <text x="280" y="250" class="text text-sm" style="font-family: monospace;">- const oldValue = 'old';</text>
-      <text x="280" y="270" class="text text-sm" style="font-family: monospace;">+ const newValue = 'new';</text>
-      <text x="280" y="290" class="text text-sm" style="font-family: monospace;">  function example() {</text>
-      <text x="280" y="310" class="text text-sm" style="font-family: monospace;">    return 'sample';</text>
-      <text x="280" y="330" class="text text-sm" style="font-family: monospace;">  }</text>
+      <text x="280" y="250" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">- const oldValue = 'old';</text>
+      <text x="280" y="270" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">+ const newValue = 'new';</text>
+      <text x="280" y="290" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">  function example() {</text>
+      <text x="280" y="310" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">    return 'sample';</text>
+      <text x="280" y="330" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">  }</text>
       
       <!-- 統計情報 -->
       <rect x="270" y="420" width="410" height="60" rx="4" class="success border" opacity="0.1"/>

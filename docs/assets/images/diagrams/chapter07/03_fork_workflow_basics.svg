@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -101,11 +101,11 @@
       <text x="400" y="410" text-anchor="middle" class="text text-sm" style="font-weight: 600;">リポジトリ間の関係</text>
       
       <rect x="80" y="425" width="180" height="15" rx="2" class="bg border"/>
-      <text x="85" y="437" class="text text-sm" style="font-family: monospace;">git remote add upstream</text>
+      <text x="85" y="437" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git remote add upstream</text>
       <text x="270" y="437" class="text text-sm">元リポジトリ追加</text>
       
       <rect x="440" y="425" width="180" height="15" rx="2" class="bg border"/>
-      <text x="445" y="437" class="text text-sm" style="font-family: monospace;">git fetch upstream</text>
+      <text x="445" y="437" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git fetch upstream</text>
       <text x="630" y="437" class="text text-sm">最新取得</text>
     </g>
   </g>

@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -143,11 +143,11 @@
       <text x="200" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コミットメッセージ</text>
       
       <rect x="110" y="440" width="180" height="20" rx="2" class="bg-alt border"/>
-      <text x="115" y="454" class="text text-sm" style="font-family: monospace;">Add user authentication</text>
+      <text x="115" y="454" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">Add user authentication</text>
       
       <text x="110" y="475" class="text text-sm" style="font-weight: 600;">詳細説明（任意）:</text>
       <rect x="110" y="480" width="180" height="15" rx="2" class="bg-alt border"/>
-      <text x="115" y="492" class="text text-sm" style="font-family: monospace;">Login functionality...</text>
+      <text x="115" y="492" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">Login functionality...</text>
     </g>
     
     <!-- ブランチ選択 -->

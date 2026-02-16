@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -147,16 +147,16 @@
       <text x="90" y="465" class="text text-sm" style="font-weight: 600;">主要コマンド:</text>
       
       <rect x="90" y="475" width="150" height="15" rx="2" class="border"/>
-      <text x="95" y="487" class="text text-sm" style="font-family: monospace;">git fetch upstream</text>
+      <text x="95" y="487" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git fetch upstream</text>
       
       <rect x="260" y="475" width="150" height="15" rx="2" class="border"/>
-      <text x="265" y="487" class="text text-sm" style="font-family: monospace;">git merge upstream/main</text>
+      <text x="265" y="487" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git merge upstream/main</text>
       
       <rect x="430" y="475" width="150" height="15" rx="2" class="border"/>
-      <text x="435" y="487" class="text text-sm" style="font-family: monospace;">git add resolved-file</text>
+      <text x="435" y="487" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git add resolved-file</text>
       
       <rect x="600" y="475" width="120" height="15" rx="2" class="border"/>
-      <text x="605" y="487" class="text text-sm" style="font-family: monospace;">git commit</text>
+      <text x="605" y="487" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">git commit</text>
     </g>
   </g>
   

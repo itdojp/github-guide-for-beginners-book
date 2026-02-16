@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -43,10 +43,10 @@
       <text x="150" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📄 具体的ファイル</text>
       
       <rect x="90" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="95" y="247" class="text text-sm" style="font-family: monospace;">config.json</text>
+      <text x="95" y="247" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">config.json</text>
       
       <rect x="90" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="95" y="267" class="text text-sm" style="font-family: monospace;">secret.key</text>
+      <text x="95" y="267" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">secret.key</text>
     </g>
     
     <!-- ワイルドカード -->
@@ -55,10 +55,10 @@
       <text x="310" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌟 ワイルドカード</text>
       
       <rect x="250" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="255" y="247" class="text text-sm" style="font-family: monospace;">*.log</text>
+      <text x="255" y="247" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.log</text>
       
       <rect x="250" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="255" y="267" class="text text-sm" style="font-family: monospace;">temp_*</text>
+      <text x="255" y="267" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">temp_*</text>
     </g>
     
     <!-- ディレクトリ -->
@@ -67,10 +67,10 @@
       <text x="470" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📁 ディレクトリ</text>
       
       <rect x="410" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="415" y="247" class="text text-sm" style="font-family: monospace;">node_modules/</text>
+      <text x="415" y="247" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">node_modules/</text>
       
       <rect x="410" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="415" y="267" class="text text-sm" style="font-family: monospace;">build/</text>
+      <text x="415" y="267" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">build/</text>
     </g>
     
     <!-- 再帰パターン -->
@@ -79,10 +79,10 @@
       <text x="630" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔄 再帰パターン</text>
       
       <rect x="570" y="235" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="575" y="247" class="text text-sm" style="font-family: monospace;">**/debug.log</text>
+      <text x="575" y="247" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">**/debug.log</text>
       
       <rect x="570" y="255" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="575" y="267" class="text text-sm" style="font-family: monospace;">src/**/*.tmp</text>
+      <text x="575" y="267" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">src/**/*.tmp</text>
     </g>
   </g>
   
@@ -95,10 +95,10 @@
       <rect x="80" y="340" width="150" height="100" rx="8" class="success border" opacity="0.1"/>
       <text x="155" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📗 Node.js</text>
       
-      <text x="90" y="380" class="text text-sm" style="font-family: monospace;">node_modules/</text>
-      <text x="90" y="395" class="text text-sm" style="font-family: monospace;">npm-debug.log*</text>
-      <text x="90" y="410" class="text text-sm" style="font-family: monospace;">.env</text>
-      <text x="90" y="425" class="text text-sm" style="font-family: monospace;">dist/</text>
+      <text x="90" y="380" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">node_modules/</text>
+      <text x="90" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">npm-debug.log*</text>
+      <text x="90" y="410" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">.env</text>
+      <text x="90" y="425" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">dist/</text>
     </g>
     
     <!-- Python -->
@@ -106,10 +106,10 @@
       <rect x="250" y="340" width="150" height="100" rx="8" class="primary border" opacity="0.1"/>
       <text x="325" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🐍 Python</text>
       
-      <text x="260" y="380" class="text text-sm" style="font-family: monospace;">__pycache__/</text>
-      <text x="260" y="395" class="text text-sm" style="font-family: monospace;">*.pyc</text>
-      <text x="260" y="410" class="text text-sm" style="font-family: monospace;">.pytest_cache/</text>
-      <text x="260" y="425" class="text text-sm" style="font-family: monospace;">venv/</text>
+      <text x="260" y="380" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">__pycache__/</text>
+      <text x="260" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.pyc</text>
+      <text x="260" y="410" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">.pytest_cache/</text>
+      <text x="260" y="425" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">venv/</text>
     </g>
     
     <!-- Java -->
@@ -117,10 +117,10 @@
       <rect x="420" y="340" width="150" height="100" rx="8" class="warning border" opacity="0.1"/>
       <text x="495" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☕ Java</text>
       
-      <text x="430" y="380" class="text text-sm" style="font-family: monospace;">*.class</text>
-      <text x="430" y="395" class="text text-sm" style="font-family: monospace;">target/</text>
-      <text x="430" y="410" class="text text-sm" style="font-family: monospace;">*.jar</text>
-      <text x="430" y="425" class="text text-sm" style="font-family: monospace;">.gradle/</text>
+      <text x="430" y="380" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.class</text>
+      <text x="430" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">target/</text>
+      <text x="430" y="410" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.jar</text>
+      <text x="430" y="425" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">.gradle/</text>
     </g>
     
     <!-- 共通パターン -->
@@ -128,10 +128,10 @@
       <rect x="590" y="340" width="150" height="100" rx="8" class="neutral border" opacity="0.1"/>
       <text x="665" y="365" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🌐 共通</text>
       
-      <text x="600" y="380" class="text text-sm" style="font-family: monospace;">.DS_Store</text>
-      <text x="600" y="395" class="text text-sm" style="font-family: monospace;">Thumbs.db</text>
-      <text x="600" y="410" class="text text-sm" style="font-family: monospace;">*.log</text>
-      <text x="600" y="425" class="text text-sm" style="font-family: monospace;">*.tmp</text>
+      <text x="600" y="380" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">.DS_Store</text>
+      <text x="600" y="395" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">Thumbs.db</text>
+      <text x="600" y="410" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.log</text>
+      <text x="600" y="425" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.tmp</text>
     </g>
   </g>
   
@@ -143,16 +143,16 @@
     <g class="negation">
       <rect x="120" y="490" width="160" height="60" rx="4" class="error border" opacity="0.1"/>
       <text x="200" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">❗ 否定パターン</text>
-      <text x="130" y="525" class="text text-sm" style="font-family: monospace;">*.log</text>
-      <text x="130" y="540" class="text text-sm" style="font-family: monospace;">!important.log</text>
+      <text x="130" y="525" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.log</text>
+      <text x="130" y="540" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">!important.log</text>
     </g>
     
     <!-- コメント -->
     <g class="comments">
       <rect x="300" y="490" width="160" height="60" rx="4" class="primary border" opacity="0.1"/>
       <text x="380" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">💬 コメント</text>
-      <text x="310" y="525" class="text text-sm" style="font-family: monospace;"># ログファイル</text>
-      <text x="310" y="540" class="text text-sm" style="font-family: monospace;">*.log</text>
+      <text x="310" y="525" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;"># ログファイル</text>
+      <text x="310" y="540" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">*.log</text>
     </g>
     
     <!-- 空行の意味 -->

@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -47,16 +47,16 @@
       
       <!-- ファイル例 -->
       <rect x="90" y="230" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="100" y="242" class="text text-sm" style="font-family: monospace;">README.md</text>
+      <text x="100" y="242" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">README.md</text>
       
       <rect x="90" y="250" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="100" y="262" class="text text-sm" style="font-family: monospace;">src/main.js</text>
+      <text x="100" y="262" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">src/main.js</text>
       
       <rect x="90" y="270" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="100" y="282" class="text text-sm" style="font-family: monospace;">package.json</text>
+      <text x="100" y="282" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">package.json</text>
       
       <rect x="90" y="290" width="120" height="15" rx="2" class="bg-alt border"/>
-      <text x="100" y="302" class="text text-sm" style="font-family: monospace;">docs/</text>
+      <text x="100" y="302" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">docs/</text>
     </g>
     
     <!-- 履歴エリア -->

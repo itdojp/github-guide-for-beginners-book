@@ -3,7 +3,7 @@
     <style>
       .bg { fill: #ffffff; }
       .bg-alt { fill: #f8fafc; }
-      .text { fill: #1e293b; font-family: system-ui, sans-serif; }
+      .text { fill: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
       .text-sm { font-size: 12px; }
       .text-md { font-size: 14px; font-weight: 500; }
       .border { stroke: #e2e8f0; fill: none; stroke-width: 1; }
@@ -130,13 +130,13 @@
       <text x="540" y="310" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 Diff View</text>
       
       <!-- コード差分 -->
-      <text x="410" y="330" class="text text-sm" style="font-family: monospace;">1  &lt;html&gt;</text>
-      <text x="410" y="345" class="text text-sm" style="font-family: monospace;">2- &lt;title&gt;Old Title&lt;/title&gt;</text>
-      <text x="410" y="360" class="text text-sm" style="font-family: monospace;">3+ &lt;title&gt;New Title&lt;/title&gt;</text>
-      <text x="410" y="375" class="text text-sm" style="font-family: monospace;">4  &lt;body&gt;</text>
-      <text x="410" y="390" class="text text-sm" style="font-family: monospace;">5+   &lt;p&gt;Added content&lt;/p&gt;</text>
-      <text x="410" y="405" class="text text-sm" style="font-family: monospace;">6  &lt;/body&gt;</text>
-      <text x="410" y="420" class="text text-sm" style="font-family: monospace;">7  &lt;/html&gt;</text>
+      <text x="410" y="330" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">1  &lt;html&gt;</text>
+      <text x="410" y="345" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">2- &lt;title&gt;Old Title&lt;/title&gt;</text>
+      <text x="410" y="360" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">3+ &lt;title&gt;New Title&lt;/title&gt;</text>
+      <text x="410" y="375" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">4  &lt;body&gt;</text>
+      <text x="410" y="390" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">5+   &lt;p&gt;Added content&lt;/p&gt;</text>
+      <text x="410" y="405" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">6  &lt;/body&gt;</text>
+      <text x="410" y="420" class="text text-sm" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;">7  &lt;/html&gt;</text>
     </g>
   </g>
   
