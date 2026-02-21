@@ -26,7 +26,7 @@ order: 10
 
 ### AI/エージェント利用時の注意（機密・権限・Secrets）
 
-生成AIや自動化エージェントを使う場合は、「入力した情報が外部に出る可能性がある」前提で扱います。Issue / Pull Request / チャットに、機密情報や個人情報を貼り付けないでください。
+生成AIや自動化エージェントを使う場合は、「入力した情報が外部に出る可能性がある」前提で扱います。Issue / プルリクエスト（PR） / チャットに、機密情報や個人情報を貼り付けないでください。
 
 **貼ってはいけない情報の例**
 - トークン（例：`ghp_...` / `github_pat_...` など）
@@ -42,8 +42,14 @@ order: 10
 
 ```yaml
 # .github/workflows/example.yml（一例）
-env:
-  API_KEY: ${{ secrets.API_KEY }}
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use API key
+        env: # 必要なステップにだけ Secrets を渡す
+          API_KEY: ${{ secrets.API_KEY }}
+        run: echo "APIキーを使用します"
 ```
 
 #### PR/Issue でのログの扱い
@@ -114,7 +120,8 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 
 - リポジトリ権限は Read/Write/Admin の順に強くなります。最初は Read から検討します。
 - Token は必要なスコープだけ付与し、不要になったら削除します。
-- GitHub Actions の Secrets 参照範囲（環境・ジョブ）も必要最小限にします。
+- GitHub Actions の Secrets は、リポジトリや Environment などのスコープを適切に分けて管理します。
+- ワークフロー内では、その Secrets を本当に必要なジョブ/ステップにだけ `env` などで渡し、露出範囲を最小限にします。
 
 ## セキュリティ機能の活用
 
