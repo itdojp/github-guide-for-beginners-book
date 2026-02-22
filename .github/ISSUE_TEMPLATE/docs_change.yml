@@ -34,10 +34,42 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance
+    attributes:
+      label: 受入基準（DoD）
+      description: 変更が完了したと判断できる条件を、チェック可能な形で箇条書きにしてください
+      placeholder: |
+        - [ ] （例）誤字が修正されている
+        - [ ] （例）リンク先が有効で、意図したページに到達する
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 制約・変更禁止領域（任意）
+      description: 触ってはいけないファイル/設定や、変更方針の制約があれば明記してください
+      placeholder: |
+        - 変更してよい:
+        - 変更してはいけない:
+    validations:
+      required: false
+
+  - type: textarea
+    id: test
+    attributes:
+      label: テスト方法（任意）
+      description: 最低限の確認コマンドや手動確認手順（例：CI/リンク確認）を書いてください
+      placeholder: |
+        - コマンド:
+        - 手動確認:
+    validations:
+      required: false
+
+  - type: textarea
     id: additional
     attributes:
       label: 補足（任意）
       description: スクリーンショット、関連Issue/PR、参考リンクなど
     validations:
       required: false
-

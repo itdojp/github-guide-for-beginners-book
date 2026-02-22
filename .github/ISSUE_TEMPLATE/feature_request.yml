@@ -26,6 +26,51 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance
+    attributes:
+      label: 受入基準（DoD）
+      description: 変更が完了したと判断できる条件を、チェック可能な形で箇条書きにしてください
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: nonfunctional
+    attributes:
+      label: 非機能要件（任意）
+      description: 性能/セキュリティ/互換性など、必要があれば記載してください
+      placeholder: |
+        - セキュリティ:
+        - 互換性:
+        - 性能:
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 制約・変更禁止領域（任意）
+      description: 触ってはいけないファイル/設定や、変更方針の制約があれば明記してください
+      placeholder: |
+        - 変更してよい:
+        - 変更してはいけない:
+    validations:
+      required: false
+
+  - type: textarea
+    id: test
+    attributes:
+      label: テスト方法（任意）
+      description: 最低限の確認コマンドや手動確認手順を書いてください
+      placeholder: |
+        - コマンド:
+        - 手動確認:
+    validations:
+      required: false
+
+  - type: textarea
     id: scope
     attributes:
       label: 対象範囲（章/ページ/ファイル）
@@ -48,4 +93,3 @@ body:
       description: 参考リンク、画面例、関連Issue/PRなど
     validations:
       required: false
-

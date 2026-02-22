@@ -204,7 +204,7 @@ Pull Requestの作成からマージまでの一連の流れを理解し、効�
 
 ---
 
-## 7.4 コンフリクト（競合）の理解と解決
+## 7.4 PRレビューと運用（テンプレート / CODEOWNERS）
 
 ### PRテンプレートの構造
 
@@ -228,6 +228,18 @@ AI 支援の運用ルール（機密入力の禁止、確認観点など）は�
 
 - AI利用ポリシー（テンプレ）：https://github.com/{{ site.repository }}/blob/main/AI_USAGE_POLICY.md
 
+### PRレビュー状態
+
+![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
+
+Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
+
+### PRディスカッション管理
+
+![PRディスカッション管理]({{ '/assets/images/diagrams/chapter08/06_pr_discussion_management.svg' | relative_url }})
+
+Pull Requestでのディスカッションを効果的に管理することで、チーム全体のコミュニケーション品質と開発効率を向上させましょう。
+
 ### AI生成PRのレビュー観点（最小セット）
 
 AI生成のPull Requestは「速く作れる」一方で、意図・検証・安全性が省略されがちです。レビューでは「AIが作ったか」ではなく、次の観点で確認すると、主観ではなく手順として運用できます。
@@ -248,16 +260,38 @@ AI生成のPull Requestは「速く作れる」一方で、意図・検証・安
 - 設定ファイル: `.github/CODEOWNERS`
 - できること: 特定のパス（例：`docs/`）の変更が入ったときに、担当者（ユーザー/チーム）へレビュー依頼を自動化できる
 
-このリポジトリでは、`manuscript/**`（本文）と `src/**`（元原稿）を例として `CODEOWNERS` に記載しています。自分のプロジェクトで使う場合は、まずは **「docs/ は文書担当」** だけ決めると運用しやすくなります。
+このリポジトリでは、例として `manuscript/**`（本文）・`docs/**`（公開サイト）・`src/**`（元原稿）を `CODEOWNERS` に記載しています。自分のプロジェクトで使う場合は、まずは **「docs/ は文書担当」** だけ決めると運用しやすくなります。
+
+また、`CODEOWNERS` は **パターンの順序が重要**で、複数マッチする場合は「最後にマッチした行」が優先されます。
 
 **レビューが詰まるときの対処（例）**
 - 代替担当（バックアップ）を決め、CODEOWNERSに追加する
 - ローテーション（当番表）で担当を回す（人に依存しない）
 - 必須レビュー数や必須チェック（CI）と組み合わせ、例外運用の手順も決める
 
-### コンフリクトが発生する原因
+### PRマージ戦略
+
+![PRマージ戦略]({{ '/assets/images/diagrams/chapter08/07_pr_merge_strategies.svg' | relative_url }})
+
+Pull Requestをマージする際には、様々な戦略があります。プロジェクトのポリシーや履歴管理の方針に応じて、適切なマージ戦略を選択しましょう。
+
+### PR自動化ツール
+
+![PR自動化ツール]({{ '/assets/images/diagrams/chapter08/08_pr_automation_tools.svg' | relative_url }})
+
+効率的なチーム開発のために、PRプロセスの一部を自動化することができます。CI/CD、自動テスト、コード品質チェックなどのツールを活用しましょう。
+
+### ブランチワークフローパターン（参考）
+
+![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
+
+---
+
+## 7.5 コンフリクト（競合）の理解と解決
 
 コンフリクト（競合）は、同じファイルの同じ箇所が、異なるブランチで別々の内容に変更された場合に発生します。
+
+### コンフリクトが発生する原因
 
 **発生例：**
 ```text
@@ -326,18 +360,6 @@ Welcome to Our Website (mainブランチの内容)
 - GitHub Desktopで「Mark as resolved」
 - 「Continue merge」でマージ完了
 
-### PRレビュー状態
-
-![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
-
-Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
-
-### PRディスカッション管理
-
-![PRディスカッション管理]({{ '/assets/images/diagrams/chapter08/06_pr_discussion_management.svg' | relative_url }})
-
-Pull Requestでのディスカッションを効果的に管理することで、チーム全体のコミュニケーション品質と開発効率を向上させましょう。
-
 ### コンフリクト予防のベストプラクティス
 
 **1. 頻繁なマージ**
@@ -355,20 +377,6 @@ Pull Requestでのディスカッションを効果的に管理することで�
 **4. ファイル構成の工夫**
 - 機能ごとにファイルを分離
 - 共通部分の変更は慎重に
-
-### PRマージ戦略
-
-![PRマージ戦略]({{ '/assets/images/diagrams/chapter08/07_pr_merge_strategies.svg' | relative_url }})
-
-Pull Requestをマージする際には、様々な戦略があります。プロジェクトのポリシーや履歴管理の方針に応じて、適切なマージ戦略を選択しましょう。
-
-### PR自動化ツール
-
-![PR自動化ツール]({{ '/assets/images/diagrams/chapter08/08_pr_automation_tools.svg' | relative_url }})
-
-効率的なチーム開発のために、PRプロセスの一部を自動化することができます。CI/CD、自動テスト、コード品質チェックなどのツールを活用しましょう。
-
-![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
 
 ---
 

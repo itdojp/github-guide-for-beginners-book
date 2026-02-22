@@ -1,16 +1,21 @@
-# CODEOWNERS (standardized for book repos)
-# 共同フォーマッタ資産・下部ナビ共通インクルード
-/book-formatter-contrib/**            @itdojp/book-formatter
-/docs/_includes/page-navigation.html  @itdojp/book-formatter
+# CODEOWNERS
+#
+# NOTE:
+# - Order matters. The last matching pattern takes precedence.
+# - 本文の正（Single Source of Truth）は `manuscript/**`。
 
-# 本文（GitHub Pages）
-/docs/src/**                          @itdojp/book-editors
-/docs/index.md                        @itdojp/book-editors
-
-# 書籍の元原稿（必要なら運用）
-/src/**                               @itdojp/book-editors
-
-# 上記以外（コンテンツ/設定/CI含む全般）
-
-/.book-formatter/**                   @itdojp/book-formatter
+# Default owners (repo-wide)
 *                                     @itdojp/book-editors
+
+# GitHub Pages（公開サイト）
+/docs/**                               @itdojp/book-editors
+
+# 共同フォーマッタ資産・下部ナビ共通インクルード
+/.book-formatter/**                    @itdojp/book-formatter
+/docs/_includes/page-navigation.html   @itdojp/book-formatter
+
+# 本文（正）
+/manuscript/**                         @itdojp/book-editors
+
+# 書籍の元原稿（互換/残骸。必要な場合のみ運用）
+/src/**                                @itdojp/book-editors

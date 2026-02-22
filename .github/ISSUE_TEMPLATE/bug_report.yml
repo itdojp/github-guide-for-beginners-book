@@ -48,6 +48,39 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance
+    attributes:
+      label: 受入基準（任意）
+      description: 修正が完了したと判断できる条件（チェック可能な形）を記載してください
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 制約・変更禁止領域（任意）
+      description: 触ってはいけないファイル/設定や制約があれば明記してください
+      placeholder: |
+        - 変更してよい:
+        - 変更してはいけない:
+    validations:
+      required: false
+
+  - type: textarea
+    id: test
+    attributes:
+      label: テスト方法（任意）
+      description: 最低限の確認コマンドや手動確認手順を書いてください
+      placeholder: |
+        - コマンド:
+        - 手動確認:
+    validations:
+      required: false
+
+  - type: textarea
     id: environment
     attributes:
       label: 環境情報（わかる範囲で）
@@ -67,4 +100,3 @@ body:
       description: スクリーンショット、関連リンク、原因の見当など
     validations:
       required: false
-
