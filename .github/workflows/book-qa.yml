@@ -16,6 +16,9 @@ jobs:
       - name: Checkout book
         uses: actions/checkout@v4
 
+      - name: Bidi/hidden Unicode check (tracked files)
+        run: python3 scripts/check_bidi_unicode.py
+
       - name: Checkout book-formatter (pinned)
         uses: actions/checkout@v4
         with:
