@@ -99,7 +99,9 @@ Issueテンプレートが用意されているリポジトリでは、作成時
 - **トリアージがしやすい**：`bug` / `documentation` / `question` など、分類と初動が揃う
 - **やりとりの往復が減る**：「情報が足りないので聞き返す」回数が減り、解決が早くなる
 
-このリポジトリでは例として、`bug` / `enhancement` / `documentation` / `question` のIssue Formsを `.github/ISSUE_TEMPLATE/` に同梱しています。自分のプロジェクトで使う場合は、まずは「バグ報告」と「ドキュメント改善」だけ導入するのがおすすめです。
+このリポジトリでは例として、`bug` / `enhancement` / `documentation` / `question` に対応する Issue Forms を `.github/ISSUE_TEMPLATE/` に同梱しています（例：`bug_report.yml` / `feature_request.yml` / `docs_change.yml` / `question.yml`）。
+
+AI/エージェント支援で PR を作る前提の場合は、Issue の情報不足が運用事故や手戻りに直結します。最低限、**受入基準（DoD）**・**制約（変更禁止領域）**・**テスト方法** を埋める運用にすると安全です（本リポジトリのフォームにも同観点の欄を入れています）。
 
 **Step 2: タイトルの設定**
 
@@ -128,6 +130,9 @@ Issueテンプレートが用意されているリポジトリでは、作成時
 
 ## 期待する動作
 メニューが画面内に収まって表示される
+
+## 実際の動作
+メニューが画面外にはみ出し、右端が見切れる
 
 ## 環境情報
 - デバイス: iPhone 12

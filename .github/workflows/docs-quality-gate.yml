@@ -4,16 +4,28 @@ on:
   pull_request:
     paths:
       - "docs/**"
+      - "manuscript/**"
       - ".github/**"
       - "scripts/**"
       - "package.json"
+      - "AI_USAGE_POLICY.md"
+      - "AGENTS.md"
+      - "CONTRIBUTING.md"
+      - "UPDATE_POLICY.md"
+      - "README.md"
   push:
     branches: [main]
     paths:
       - "docs/**"
+      - "manuscript/**"
       - ".github/**"
       - "scripts/**"
       - "package.json"
+      - "AI_USAGE_POLICY.md"
+      - "AGENTS.md"
+      - "CONTRIBUTING.md"
+      - "UPDATE_POLICY.md"
+      - "README.md"
   workflow_dispatch: {}
 
 jobs:
@@ -33,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-fund --no-audit
 
-      - name: Collect changed Markdown files (docs/)
+      - name: Collect changed Markdown files (docs/manuscript/etc)
         id: changes
         shell: bash
         run: |
@@ -55,16 +67,16 @@ jobs:
           fi
 
           if [ "${invalid_base}" = true ]; then
-            echo "Base SHA is invalid or unavailable; falling back to all tracked docs markdown files."
-            git ls-files docs | grep -E '\.md$' > changed-docs-md.txt || true
+            echo "Base SHA is invalid or unavailable; falling back to all tracked markdown files under target paths."
+            git ls-files docs manuscript .github AI_USAGE_POLICY.md AGENTS.md CONTRIBUTING.md UPDATE_POLICY.md README.md | grep -E '\.md$' > changed-md.txt || true
           else
-            # Exclude deleted files (e.g., moves out of docs/) to avoid lint/link-check failures on missing paths.
-            git diff --name-only --diff-filter=ACMRT "$base" "$head" -- docs | grep -E '\.md$' > changed-docs-md.txt || true
+            # Exclude deleted files to avoid lint/link-check failures on missing paths.
+            git diff --name-only --diff-filter=ACMRT "$base" "$head" -- docs manuscript .github AI_USAGE_POLICY.md AGENTS.md CONTRIBUTING.md UPDATE_POLICY.md README.md | grep -E '\.md$' > changed-md.txt || true
           fi
 
-          echo "Changed docs markdown files:"
-          if [ -s changed-docs-md.txt ]; then
-            cat changed-docs-md.txt
+          echo "Changed markdown files:"
+          if [ -s changed-md.txt ]; then
+            cat changed-md.txt
           else
             echo "(none)"
           fi
@@ -73,18 +85,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -s changed-docs-md.txt ]; then
-            echo "Skip: no docs markdown changes."
+          if [ ! -s changed-md.txt ]; then
+            echo "Skip: no markdown changes."
             exit 0
           fi
-          cat changed-docs-md.txt | xargs -r npx markdownlint
+          cat changed-md.txt | xargs -r npx markdownlint
 
       - name: Internal link check (changed only)
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -s changed-docs-md.txt ]; then
-            echo "Skip: no docs markdown changes."
+          if [ ! -s changed-md.txt ]; then
+            echo "Skip: no markdown changes."
             exit 0
           fi
-          cat changed-docs-md.txt | xargs -r python3 scripts/check_markdown_internal_links.py
+          cat changed-md.txt | xargs -r python3 scripts/check_markdown_internal_links.py
