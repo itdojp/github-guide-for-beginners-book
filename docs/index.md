@@ -4,7 +4,7 @@ order: 0
 title: "GitHub初心者ガイド"
 description: "プログラミング初心者向けGit/GitHub完全習得書 - バージョン管理の基礎から実践まで"
 author: "株式会社アイティードゥ"
-version: "1.0.0"
+version: "1.1.0"
 permalink: /
 ---
 
@@ -46,8 +46,8 @@ permalink: /
 - 自動化やセキュリティに関心が高い読者は、第9〜11章を重点的に読み、付録（Gitコマンドリファレンス・ショートカット集・参考リソース）を手元の辞書として使うことを想定している。
 
 ## 所要時間
-- 通読（現時点の公開範囲）: 約0.5時間（本文量ベース概算。400〜600文字/分換算）
-- 手を動かして学習する場合は、Git/GitHub の実操作や演習の進度により変動します。
+- 通読: 約6〜12時間（本文量ベース概算。400〜600文字/分換算）
+- 演習込み: 約12〜24時間（Git/GitHub の実操作・環境構築の進度により変動）
 
 ## 目次
 
@@ -78,9 +78,9 @@ permalink: /
 
 ### 付録
 
-- **[Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }})**
-- **[GitHubショートカット集]({{ '/appendices/appendix-github-shortcuts/' | relative_url }})**
-- **[学習リソースと参考文献]({{ '/appendices/appendix-resources/' | relative_url }})**
+- **[付録A：Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }})**
+- **[付録B：GitHubショートカット集]({{ '/appendices/appendix-github-shortcuts/' | relative_url }})**
+- **[付録C：学習リソースと参考文献]({{ '/appendices/appendix-resources/' | relative_url }})**
 
 ## 🛠️ 実習環境
 
@@ -122,7 +122,7 @@ Email: [knowledge@itdo.jp](mailto:knowledge@itdo.jp)
 ---
 
 **📧 著者:** ITDO Inc. <knowledge@itdo.jp>  
-**📅 最終更新:** 2025年8月6日
+**📅 最終更新:** 2026年2月25日
 
 Built with [book-formatter](https://github.com/itdojp/book-formatter)
 {% include page-navigation.html %}
