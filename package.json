@@ -1,6 +1,6 @@
 {
   "name": "github初心者ガイド-バージョン管理の基礎から実践まで",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gitとgithubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド",
   "main": "index.md",
   "scripts": {
