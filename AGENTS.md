@@ -57,11 +57,11 @@ CI の基準（必須）:
 | --- | ---: | --- |
 | `manuscript/chapter-introduction/` | 1 | 第1章：はじめに - なぜGitHubを学ぶのか |
 | `manuscript/chapter-git-basics/` | 2 | 第2章：Git基礎 - バージョン管理の仕組み |
-| `manuscript/chapter-github-account-setup/` | 3 | 第3章：初めてのリポジトリ作成 |
-| `manuscript/chapter-basic-operations/` | 4 | 第4章：アカウントセキュリティの基本 |
-| `manuscript/chapter-repository-management/` | 5 | 第5章：ファイルのアップロードと管理 |
-| `manuscript/chapter-collaboration-basics/` | 6 | 第6章：GitHub Desktop の活用 |
-| `manuscript/chapter-pull-requests/` | 7 | 第7章：ブランチの基本操作 |
+| `manuscript/chapter-repository-creation/` | 3 | 第3章：初めてのリポジトリ作成 |
+| `manuscript/chapter-account-security/` | 4 | 第4章：アカウントセキュリティの基本 |
+| `manuscript/chapter-file-management/` | 5 | 第5章：ファイルのアップロードと管理 |
+| `manuscript/chapter-github-desktop/` | 6 | 第6章：GitHub Desktop の活用 |
+| `manuscript/chapter-branch-operations/` | 7 | 第7章：ブランチの基本操作 |
 | `manuscript/chapter-issue-management/` | 8 | 第8章：Issue管理とプロジェクト管理 |
 | `manuscript/chapter-github-actions/` | 9 | 第9章：GitHub Actions入門 - 自動化の基礎 |
 | `manuscript/chapter-security-best-practices/` | 10 | 第10章：セキュリティのベストプラクティス |
@@ -73,4 +73,4 @@ CI の基準（必須）:
 | `manuscript/appendix-resources/` | 102 | 付録C：学習リソースと参考文献 |
 | `manuscript/chapter-security/` | 999 | 第10章：セキュリティ対策と安全なGitHub利用（互換/残骸。原則編集しない） |
 
-slug 改名（ディレクトリ名変更）を行う場合は、公開サイトの既存 URL 互換（リダイレクト/リンク更新）と外部参照への影響を評価し、別 Issue で計画して段階的に実施します。
+slug 改名（ディレクトリ名変更）を行う場合は、公開サイトの既存 URL 互換（旧URL誘導/リンク更新）と外部参照への影響を評価し、Issue で計画して段階的に実施します。
