@@ -230,8 +230,8 @@ git push --force origin main
 
 公開運用の考え方は、次の章も参照してください。
 
-- Docs-as-Code：{{ '/src/chapter-docs-as-code/' | relative_url }}
-- GitHub Actions（Pagesデプロイ）：{{ '/src/chapter-github-actions/' | relative_url }}
+- Docs-as-Code：{{ '/chapters/chapter-docs-as-code/' | relative_url }}
+- GitHub Actions（Pagesデプロイ）：{{ '/chapters/chapter-github-actions/' | relative_url }}
 
 **404エラーの診断と解決**
 
