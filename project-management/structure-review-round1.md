@@ -28,7 +28,7 @@
 - 章頭に書かれている学習目標
   - 「Git の基本概念を理解し、バージョン管理とは何かを明確にする」「GitHub でリポジトリを作成し基本設定を完了する」旨の記載あり。
 
-### 3. （目次表示）GitHubアカウント作成と初期設定（`manuscript/chapter-github-account-setup/`）
+### 3. （目次表示）GitHubアカウント作成と初期設定（`manuscript/chapter-repository-creation/`）
 
 - 章（ページ）タイトル: 初めてのリポジトリ作成
 - 章の狙い / 主なトピック
@@ -37,7 +37,7 @@
 - 章頭に書かれている学習目標
   - リポジトリ作成と README 作成を到達点として明示（学習目標セクションあり）。
 
-### 4. （目次表示）基本操作 - push、pull、clone（`manuscript/chapter-basic-operations/`）
+### 4. （目次表示）基本操作 - push、pull、clone（`manuscript/chapter-account-security/`）
 
 - 章（ページ）タイトル: アカウントセキュリティの基本
 - 章の狙い / 主なトピック
@@ -47,7 +47,7 @@
 
 ## 第2部: 実践編（`docs/index.md` の目次順）
 
-### 5. （目次表示）リポジトリ管理の実践（`manuscript/chapter-repository-management/`）
+### 5. （目次表示）リポジトリ管理の実践（`manuscript/chapter-file-management/`）
 
 - 章（ページ）タイトル: ファイルのアップロードと管理
 - 章の狙い / 主なトピック
@@ -55,7 +55,7 @@
 - 章頭に書かれている学習目標
   - Web UI を使ったファイル管理と commit 操作を到達点として明示（学習目標セクションあり）。
 
-### 6. （目次表示）チーム開発入門 - ブランチとマージ（`manuscript/chapter-collaboration-basics/`）
+### 6. （目次表示）チーム開発入門 - ブランチとマージ（`manuscript/chapter-github-desktop/`）
 
 - 章（ページ）タイトル: GitHub Desktop の活用
 - 章の狙い / 主なトピック
@@ -64,7 +64,7 @@
 - 章頭に書かれている学習目標
   - GitHub Desktop を使った基本操作の習得を到達点として明示（学習目標セクションあり）。
 
-### 7. （目次表示）プルリクエストによるコードレビュー（`manuscript/chapter-pull-requests/`）
+### 7. （目次表示）プルリクエストによるコードレビュー（`manuscript/chapter-branch-operations/`）
 
 - 章（ページ）タイトル: ブランチの基本操作
 - 章の狙い / 主なトピック

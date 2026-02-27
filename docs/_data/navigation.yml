@@ -4,15 +4,15 @@ chapters:
 - title: 第2章：Git基礎 - バージョン管理の仕組み
   path: /chapters/chapter-git-basics/
 - title: 第3章：初めてのリポジトリ作成
-  path: /chapters/chapter-github-account-setup/
+  path: /chapters/chapter-repository-creation/
 - title: 第4章：アカウントセキュリティの基本
-  path: /chapters/chapter-basic-operations/
+  path: /chapters/chapter-account-security/
 - title: 第5章：ファイルのアップロードと管理
-  path: /chapters/chapter-repository-management/
+  path: /chapters/chapter-file-management/
 - title: 第6章：GitHub Desktop の活用
-  path: /chapters/chapter-collaboration-basics/
+  path: /chapters/chapter-github-desktop/
 - title: 第7章：ブランチの基本操作
-  path: /chapters/chapter-pull-requests/
+  path: /chapters/chapter-branch-operations/
 - title: 第8章：Issue管理とプロジェクト管理
   path: /chapters/chapter-issue-management/
 - title: 特別編：Docs-as-Code - GitHubをドキュメント管理・ナレッジ基盤として使う

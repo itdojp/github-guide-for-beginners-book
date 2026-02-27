@@ -55,14 +55,14 @@ permalink: /
 
 1. **[第1章：はじめに - なぜGitHubを学ぶのか]({{ '/chapters/chapter-introduction/' | relative_url }})**
 2. **[第2章：Git基礎 - バージョン管理の仕組み]({{ '/chapters/chapter-git-basics/' | relative_url }})**
-3. **[第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-github-account-setup/' | relative_url }})**
-4. **[第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-basic-operations/' | relative_url }})**
+3. **[第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-repository-creation/' | relative_url }})**
+4. **[第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-account-security/' | relative_url }})**
 
 ### 第2部: 実践編
 
-5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-repository-management/' | relative_url }})**
-6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-collaboration-basics/' | relative_url }})**
-7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-pull-requests/' | relative_url }})**
+5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})**
+6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-github-desktop/' | relative_url }})**
+7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }})**
 8. **[第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
 
 ### 特別編: Docs-as-Code（文書運用編）
