@@ -538,4 +538,4 @@ Done:
 参照：
 
 - Docs-as-Code：{{ '/chapters/chapter-docs-as-code/' | relative_url }}
-- Pull Request：{{ '/chapters/chapter-branch-operations/' | relative_url }}
+- 第7章（ブランチ/Pull Request）：{{ '/chapters/chapter-branch-operations/' | relative_url }}
