@@ -13,6 +13,14 @@ title: 実習サンプル（examples/）
 
 ## 収録内容
 
+### GitHub Actions（最短入門）
+
+- 最小CI（push / Pull Request で自動実行）
+- 手動実行（workflow_dispatch）
+- `npm ci` / `npm test` が通る最小 Node.js サンプル
+
+該当パス：`examples/github-actions-min/`
+
 ### Docs-as-Code（文書運用）サンプル
 
 - 推奨ディレクトリ構成（`docs/`）
