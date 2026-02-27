@@ -7,8 +7,9 @@ layout: book
   window.location.replace("{{ '/chapters/chapter-file-management/' | relative_url }}");
 </script>
 
-# 移動しました
+# このページは移動しました
 
-この章のURLは変更されました。自動で移動しない場合は、次のリンクを開いてください。
+第5章は次のURLへ移動しました。
 
+- 新しいURL：{{ '/chapters/chapter-file-management/' | relative_url }}
 - [第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})

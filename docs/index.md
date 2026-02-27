@@ -62,7 +62,7 @@ permalink: /
 
 5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})**
 6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-github-desktop/' | relative_url }})**
-7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-basics/' | relative_url }})**
+7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }})**
 8. **[第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
 
 ### 特別編: Docs-as-Code（文書運用編）

@@ -190,7 +190,7 @@ Issue/Project のラベル体系は、タスク管理だけでなく **情報分
 
 Issue と Pull Request の基本操作は、以下の章も参照してください。
 
-- 第7章（ブランチ/Pull Request）：{{ '/chapters/chapter-branch-basics/' | relative_url }}
+- 第7章（ブランチ/Pull Request）：{{ '/chapters/chapter-branch-operations/' | relative_url }}
 - Issue / Projects：{{ '/chapters/chapter-issue-management/' | relative_url }}
 
 ### 手順（エンジニア向け：ローカルで Git を使う）

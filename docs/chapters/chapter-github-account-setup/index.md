@@ -7,8 +7,9 @@ layout: book
   window.location.replace("{{ '/chapters/chapter-repository-creation/' | relative_url }}");
 </script>
 
-# 移動しました
+# このページは移動しました
 
-この章のURLは変更されました。自動で移動しない場合は、次のリンクを開いてください。
+第3章は次のURLへ移動しました。
 
+- 新しいURL：{{ '/chapters/chapter-repository-creation/' | relative_url }}
 - [第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-repository-creation/' | relative_url }})
