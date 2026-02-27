@@ -13,4 +13,3 @@ layout: book
 
 - 新しいURL：{{ '/chapters/chapter-branch-operations/' | relative_url }}
 - [第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }})
-
