@@ -40,7 +40,7 @@ permalink: /
 ## 読み方ガイド
 
 - Git と GitHub を初めて学ぶ読者は、第1部（第1〜4章）を順番に読み進めることで、バージョン管理の基礎と基本操作を一通り身につけることを推奨する。
-- 非エンジニアとして「文書管理・タスク管理」を最短で掴みたい読者は、第1章で全体像を把握したうえで、特別編（Docs-as-Code）→第8章（Issue/Projects）→第7章（Pull Request）を読むと、文書をPRで回す導線を早期に体験できる。
+- 非エンジニアとして「文書管理・タスク管理」を最短で掴みたい読者は、第1章で全体像を把握したうえで、特別編（Docs-as-Code）→第8章（Issue/Projects）→第7章（ブランチ/Pull Request）を読むと、文書をPRで回す導線を早期に体験できる。
 - すでに Git の基礎をある程度知っている読者は、第1章をざっと確認したうえで、第2章と第4章を中心に復習し、その後第2部のチーム開発・リポジトリ運用に進む読み方も有効である。
 - チーム開発のフローを急ぎ把握したい読者は、第5〜8章（リポジトリ管理・ブランチ運用・Pull Request・Issues）を先に読み、実務のイメージがついたところで基礎章に戻る読み方も有効である。
 - 自動化やセキュリティに関心が高い読者は、第9〜11章を重点的に読み、付録（Gitコマンドリファレンス・ショートカット集・参考リソース）を手元の辞書として使うことを想定している。
@@ -55,14 +55,14 @@ permalink: /
 
 1. **[第1章：はじめに - なぜGitHubを学ぶのか]({{ '/chapters/chapter-introduction/' | relative_url }})**
 2. **[第2章：Git基礎 - バージョン管理の仕組み]({{ '/chapters/chapter-git-basics/' | relative_url }})**
-3. **[第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-github-account-setup/' | relative_url }})**
-4. **[第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-basic-operations/' | relative_url }})**
+3. **[第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-repository-creation/' | relative_url }})**
+4. **[第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-account-security/' | relative_url }})**
 
 ### 第2部: 実践編
 
-5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-repository-management/' | relative_url }})**
-6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-collaboration-basics/' | relative_url }})**
-7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-pull-requests/' | relative_url }})**
+5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})**
+6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-github-desktop/' | relative_url }})**
+7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-basics/' | relative_url }})**
 8. **[第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
 
 ### 特別編: Docs-as-Code（文書運用編）
