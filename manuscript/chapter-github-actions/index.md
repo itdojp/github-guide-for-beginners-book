@@ -143,7 +143,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print input
-        run: echo "message=${{ inputs.message }}"
+        env:
+          MESSAGE: ${{ inputs.message }}
+        run: |
+          printf '%s\n' "message=$MESSAGE"
 ```
 
 Actions タブから workflow を選び、**Run workflow** を押して入力を変えて実行すると、ログに反映されます。
