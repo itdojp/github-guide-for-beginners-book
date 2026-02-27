@@ -3,7 +3,9 @@ title: "移動しました：第6章：GitHub Desktop の活用"
 layout: book
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/chapters/chapter-github-desktop/' | relative_url }}">
+<script>
+  window.location.replace("{{ '/chapters/chapter-github-desktop/' | relative_url }}");
+</script>
 
 # 移動しました
 

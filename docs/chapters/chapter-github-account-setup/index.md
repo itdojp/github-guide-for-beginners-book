@@ -3,7 +3,9 @@ title: "移動しました：第3章：初めてのリポジトリ作成"
 layout: book
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/chapters/chapter-repository-creation/' | relative_url }}">
+<script>
+  window.location.replace("{{ '/chapters/chapter-repository-creation/' | relative_url }}");
+</script>
 
 # 移動しました
 
