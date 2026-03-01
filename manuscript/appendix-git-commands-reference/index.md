@@ -57,8 +57,9 @@ git add <ファイル名>
 # すべての変更ファイルを追加
 git add .
 
-# 追跡中ファイルの変更（削除含む）を追加
+# 追跡中ファイルの変更（削除含む）のみを追加（新規/リネーム後のファイルは含まれない）
 git add -u
+# 新規/リネーム後のファイルは別途 git add <ファイル名> などで追加する
 
 # インタラクティブに追加
 git add -i
@@ -492,8 +493,8 @@ git fetch && git merge origin/main
 # 作業開始前の準備
 git pull && git status
 
-# 作業完了後の一連の流れ（新規ファイルは明示的に追加）
-git status && git add -u && git add <新規ファイル...> && git commit -m "機能実装完了" && git push
+# 作業完了後の一連の流れ（新規/リネームファイルは明示的に追加）
+git status && git add -u && git add <新規/リネームファイル...> && git commit -m "機能実装完了" && git push
 
 # ブランチ切り替え前の安全確認
 git status && git stash && git switch main
