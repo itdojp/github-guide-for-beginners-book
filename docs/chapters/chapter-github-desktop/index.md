@@ -17,7 +17,7 @@ order: 6
 
 ![GitHub Desktop概要]({{ '/assets/images/diagrams/chapter05/01_github_desktop_overview.svg' | relative_url }})
 
-第4章では、GitHubのWebサイト上でファイルの編集や管理を行いました。この方法でも基本的な作業は可能ですが、以下のような場面では少し不便です：
+第5章では、GitHubのWebサイト上でファイルの編集や管理を行いました。この方法でも基本的な作業は可能ですが、以下のような場面では少し不便です：
 
 **Web画面での制約**
 - 大きなファイルや複数のファイルを一度に編集するのが大変
