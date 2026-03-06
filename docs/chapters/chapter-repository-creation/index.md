@@ -416,7 +416,7 @@ my-first-website/
 **エラー3: "You have reached your limit of private repositories"**
 
 **原因：**
-無料アカウントでのプライベートリポジトリ数制限に達している
+利用状況やプランにより、新規作成が制限されている可能性がある
 
 **対処法：**
 - Publicリポジトリとして作成
