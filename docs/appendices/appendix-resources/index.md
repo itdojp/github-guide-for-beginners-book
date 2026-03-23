@@ -301,6 +301,18 @@ order: 102
 
 ---
 
+## C.13 シリーズ内の次の一冊
+
+外部リソースに進む前に、ITDO の関連書籍で次のテーマを補強する選択肢もあります。
+
+| 次に読みたいテーマ | 書籍 | URL | 活用場面 |
+|---|---|---|---|
+| GitHub を使った日常運用の標準化 | GitHub Workflow実践ガイド | https://itdojp.github.io/github-workflow-book/ | ブランチ運用、レビュー、リリース運用を整理したいとき |
+| Issue / PR ベースの仕事の進め方 | Issue駆動仕事術 | https://itdojp.github.io/issue-driven-work-book/ | タスク分解、進捗可視化、非同期コラボレーションを強化したいとき |
+| README / Runbook / 手順書の整備 | エンジニアのためのドキュメント設計入門 | https://itdojp.github.io/engineering-documentation-book/ | Docs-as-Code をチーム文書運用へ広げたいとき |
+
+---
+
 この学習リソース集を活用して、GitHub の理解と実践スキルを継続的に向上させてください。技術は常に進歩しているため、定期的な学習と実践を通じて最新の知識とスキルを身につけることが重要です。
 
 **継続学習のコツ：**

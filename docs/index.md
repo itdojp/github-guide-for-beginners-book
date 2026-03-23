@@ -45,6 +45,17 @@ permalink: /
 - チーム開発のフローを急ぎ把握したい読者は、第5〜8章（リポジトリ管理・ブランチ運用・Pull Request・Issues）を先に読み、実務のイメージがついたところで基礎章に戻る読み方も有効である。
 - 自動化やセキュリティに関心が高い読者は、第9〜11章を重点的に読み、付録（Gitコマンドリファレンス・ショートカット集・参考リソース）を手元の辞書として使うことを想定している。
 
+## 課題別の最短ルート
+
+- **Git と GitHub を最短で一周したい**  
+  [第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第2章]({{ '/chapters/chapter-git-basics/' | relative_url }}) → [第3章]({{ '/chapters/chapter-repository-creation/' | relative_url }}) → [付録A]({{ '/appendices/appendix-git-commands-reference/' | relative_url }})
+- **文書管理や社内ナレッジ運用に使いたい**  
+  [第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) → [付録C]({{ '/appendices/appendix-resources/' | relative_url }})
+- **チーム開発の流れを先に把握したい**  
+  [第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第7章]({{ '/chapters/chapter-branch-operations/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) → [第12章]({{ '/chapters/chapter-troubleshooting/' | relative_url }})
+- **GitHub Actions とセキュリティまで早めに見たい**  
+  [第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第9章]({{ '/chapters/chapter-github-actions/' | relative_url }}) → [第10章]({{ '/chapters/chapter-security-best-practices/' | relative_url }}) → [付録C]({{ '/appendices/appendix-resources/' | relative_url }})
+
 ## 所要時間
 - 通読: 約6〜12時間（本文量ベース概算。400〜600文字/分換算）
 - 演習込み: 約12〜24時間（Git/GitHub の実操作・環境構築の進度により変動）
@@ -107,6 +118,15 @@ permalink: /
 2. **実際に手を動かす** - サンプルコードは必ず実行してみましょう
 3. **実習を活用する** - `examples/`（実習サンプル）で練習：**[実習サンプル]({{ '/examples/' | relative_url }})**
 4. **コミュニティに参加** - 分からないことは積極的に質問しましょう
+
+## シリーズ内の次の一冊
+
+- **実務の標準フローを整理したい**  
+  [GitHub Workflow実践ガイド](https://itdojp.github.io/github-workflow-book/) で、日常運用のブランチ戦略やレビュー運用を補強できます。
+- **Issue / PR ベースの進め方を深掘りしたい**  
+  [Issue駆動仕事術](https://itdojp.github.io/issue-driven-work-book/) で、Issue 分解や進捗管理を学べます。
+- **README / Runbook / 手順書の整備までつなげたい**  
+  [エンジニアのためのドキュメント設計入門](https://itdojp.github.io/engineering-documentation-book/) で、Docs-as-Code と文書運用を補強できます。
 
 ## ライセンス
 
