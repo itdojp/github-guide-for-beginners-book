@@ -147,6 +147,13 @@ GitHubを使った一般的な開発ワークフローを理解することで�
 
 難しく感じる部分があっても心配ありません。実際に操作してみることで、概念が具体的にイメージできるようになります。
 
+## 次の一歩
+
+- 標準ルートで進める場合は、[第2章：Git基礎 - バージョン管理の仕組み]({{ '/chapters/chapter-git-basics/' | relative_url }}) に進んでください。
+- 文書運用を先に試したい場合は、[特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) を先に読んでも構いません。
+- コマンドを見ながら進めたい場合は、[付録A：Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }}) を手元に開いておくと迷いにくくなります。
+- チーム開発の流れを先に見たい場合は、[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }}) と [第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }}) を参照してください。
+
 ---
 
 **学習を始める前に**：この書籍は「完璧に理解してから次に進む」必要はありません。「なんとなくわかった」程度で次の章に進み、実際の操作を通じて理解を深めていくアプローチを推奨します。
