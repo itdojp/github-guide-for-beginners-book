@@ -141,6 +141,16 @@ GitHubは世界最大のプログラマーコミュニティを擁し、オー�
 
 GitHubを使った一般的な開発ワークフローを理解することで、学習の全体像が見えてきます。最初は複雑に感じるかもしれませんが、一つずつ段階的に学んでいけば必ず身につきます。
 
+## 安全に学習するための注意
+
+学習用の操作であっても、既存のチームや企業のリポジトリに対してそのまま試すべきではありません。次の 3 点を先に固定してください。
+
+- 練習先: 最初は自分専用の練習用リポジトリで試し、本番リポジトリや共同作業中のブランチでは実行しない
+- 秘密情報: アクセストークン、パスワード、個人情報、社内文書を公開リポジトリへ置かない
+- 組織ルール: 企業や学校で使う場合は、ブランチ運用、レビュー手順、公開範囲の規定を優先する
+
+GitHub の UI や機能は更新されます。画面やボタン名が本文と異なる場合は、章の意図を先に理解し、実際の操作手順は公式ドキュメントと組織ルールで確認してください。
+
 ## 次の章への準備
 
 次の章では、Gitの基本概念とバージョン管理の仕組みについて、具体例を使って詳しく説明します。
@@ -153,6 +163,15 @@ GitHubを使った一般的な開発ワークフローを理解することで�
 - 文書運用を先に試したい場合は、[特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) を先に読んでも構いません。
 - コマンドを見ながら進めたい場合は、[付録A：Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }}) を手元に開いておくと迷いにくくなります。
 - チーム開発の流れを先に見たい場合は、[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }}) と [第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }}) を参照してください。
+
+## 利用と更新情報
+
+- 公開版: [GitHub Pages](https://itdojp.github.io/github-guide-for-beginners-book/)
+- リポジトリ: [GitHub Repository](https://github.com/itdojp/github-guide-for-beginners-book)
+- 更新方針: [UPDATE_POLICY.md](https://github.com/itdojp/github-guide-for-beginners-book/blob/main/UPDATE_POLICY.md)
+- 版差確認: [コミット履歴](https://github.com/itdojp/github-guide-for-beginners-book/commits/main/) / [Pull Requests](https://github.com/itdojp/github-guide-for-beginners-book/pulls)
+
+GitHub の UI、認証方式、Actions、Pages の仕様は変化します。実務に適用するときは、本書だけで完結させず、GitHub Docs とリポジトリの最新差分を確認してください。
 
 ---
 
