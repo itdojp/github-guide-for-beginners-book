@@ -90,7 +90,7 @@
       "troubleshootingFlow": false,
       "conceptMap": true,
       "figureIndex": false,
-      "legalNotice": false,
+      "legalNotice": true,
       "glossary": true
     }
   },
