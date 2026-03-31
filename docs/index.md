@@ -60,6 +60,18 @@ permalink: /
 - 通読: 約6〜12時間（本文量ベース概算。400〜600文字/分換算）
 - 演習込み: 約12〜24時間（Git/GitHub の実操作・環境構築の進度により変動）
 
+## 最初の15分で読む順路
+
+- Git と GitHub の全体像を最短で掴みたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第2章]({{ '/chapters/chapter-git-basics/' | relative_url }}) → [第3章]({{ '/chapters/chapter-repository-creation/' | relative_url }}) の順で読む。
+- 文書管理や社内ナレッジ運用に早くつなげたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) の順で読む。
+- ブランチ運用と Pull Request の流れだけを先に掴みたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第7章]({{ '/chapters/chapter-branch-operations/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) の順で読む。
+
+## 利用と更新情報
+
+- リポジトリ: [itdojp/github-guide-for-beginners-book](https://github.com/itdojp/github-guide-for-beginners-book)
+- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/github-guide-for-beginners-book/commits/main/) と [Pull Requests](https://github.com/itdojp/github-guide-for-beginners-book/pulls) を参照する。
+- GitHub の UI や機能名は更新されるため、画面表示やメニュー名が本文と異なる場合は、GitHub 公式ドキュメントも併読することを前提にする。
+
 ## 目次
 
 ### 第1部: 基礎編
@@ -105,7 +117,7 @@ permalink: /
 
 - GitHubアカウント（無料）
 - Git ソフトウェア
-- GitHub CLI（推奨）
+- GitHub CLI（推奨。必須ではなく、コマンド操作や自動化を試したい場合に有用）
 
 ### 安全に学習するための注意
 
