@@ -1,6 +1,6 @@
 # GitHub初心者ガイド - バージョン管理の基礎から実践まで
 
-![GitHub Guide for Beginners](https://img.shields.io/badge/Status-Draft-orange) ![License](https://img.shields.io/badge/License-MIT-blue) ![Language](https://img.shields.io/badge/Language-Japanese-red)
+![GitHub Guide for Beginners](https://img.shields.io/badge/Status-Draft-orange) ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue) ![Language](https://img.shields.io/badge/Language-Japanese-red)
 
 ## 📖 書籍について
 
@@ -23,27 +23,30 @@
 ## 📚 書籍構成
 
 ### 第1部: 基礎編
-1. **はじめに - なぜGitHubを学ぶのか**
-2. **Git基礎 - バージョン管理の仕組み**
-3. **GitHubアカウント作成と初期設定**
-4. **基本操作 - push、pull、clone**
+1. **第1章：はじめに - なぜGitHubを学ぶのか**
+2. **第2章：Git基礎 - バージョン管理の仕組み**
+3. **第3章：初めてのリポジトリ作成**
+4. **第4章：アカウントセキュリティの基本**
 
 ### 第2部: 実践編
-5. **リポジトリ管理の実践**
-6. **チーム開発入門 - ブランチとマージ**
-7. **プルリクエストによるコードレビュー**
-8. **Issues活用による課題管理**
+5. **第5章：ファイルのアップロードと管理**
+6. **第6章：GitHub Desktop の活用**
+7. **第7章：ブランチの基本操作**
+8. **第8章：Issue管理とプロジェクト管理**
 
-### 第3部: 応用編
-9. **GitHub Actions入門 - 自動化の基礎**
-10. **セキュリティのベストプラクティス**
-11. **実践的な活用法**
-12. **よくある問題と解決方法**
+### 特別編: Docs-as-Code（文書運用編）
+- **特別編：Docs-as-Code - GitHubをドキュメント管理・ナレッジ基盤として使う**
+
+### 第3部: 自動化・高度活用編
+9. **第9章：GitHub Actions入門 - 自動化の基礎**
+10. **第10章：セキュリティのベストプラクティス**
+11. **第11章：高度な機能活用**
+12. **第12章：トラブルシューティング**
 
 ### 付録
-- **A. Gitコマンドリファレンス**
-- **B. GitHubショートカット集**
-- **C. 学習リソースと参考文献**
+- **付録A：Gitコマンドリファレンス**
+- **付録B：GitHubショートカット集**
+- **付録C：学習リソースと参考文献**
 
 ## 🚀 使用方法
 
