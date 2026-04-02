@@ -67,7 +67,7 @@ permalink: /
 ## 利用と更新情報
 
 - リポジトリ: [itdojp/github-guide-for-beginners-book](https://github.com/itdojp/github-guide-for-beginners-book)
-- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/github-guide-for-beginners-book/commits/main/) と [Pull Requests](https://github.com/itdojp/github-guide-for-beginners-book/pulls) を参照する。
+- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/github-guide-for-beginners-book/commits/main/) と [PR 一覧](https://github.com/itdojp/github-guide-for-beginners-book/pulls) を参照する。
 - GitHub の UI や機能名は更新されるため、画面表示やメニュー名が本文と異なる場合は、GitHub 公式ドキュメントも併読することを前提にする。
 
 ## 目次
