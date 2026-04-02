@@ -60,6 +60,16 @@ permalink: /
 - 通読: 約6〜12時間（本文量ベース概算。400〜600文字/分換算）
 - 演習込み: 約12〜24時間（Git/GitHub の実操作・環境構築の進度により変動）
 
+## 最初の15分で読む順路
+
+上の「課題別の最短ルート」で示した 3 つの導線は、いずれも最初の 15 分で全体像を掴むための入口です。まずは自分の目的に近い 1 ルートを選び、続きは各章末のリンクや付録から広げてください。
+
+## 利用と更新情報
+
+- リポジトリ: [itdojp/github-guide-for-beginners-book](https://github.com/itdojp/github-guide-for-beginners-book)
+- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/github-guide-for-beginners-book/commits/main/) と [Pull Requests](https://github.com/itdojp/github-guide-for-beginners-book/pulls) を参照する。
+- GitHub の UI や機能名は更新されるため、画面表示やメニュー名が本文と異なる場合は、GitHub 公式ドキュメントも併読することを前提にする。
+
 ## 目次
 
 ### 第1部: 基礎編
@@ -104,8 +114,8 @@ permalink: /
 ### 準備するもの
 
 - GitHubアカウント（無料）
-- Git ソフトウェア
-- GitHub CLI（推奨）
+- Git ソフトウェア（必須）
+- GitHub CLI（任意。コマンド操作や自動化を試したい場合に推奨）
 
 ### 安全に学習するための注意
 
