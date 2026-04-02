@@ -62,9 +62,7 @@ permalink: /
 
 ## 最初の15分で読む順路
 
-- Git と GitHub の全体像を最短で掴みたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第2章]({{ '/chapters/chapter-git-basics/' | relative_url }}) → [第3章]({{ '/chapters/chapter-repository-creation/' | relative_url }}) の順で読む。
-- 文書管理や社内ナレッジ運用に早くつなげたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) の順で読む。
-- ブランチ運用と Pull Request の流れだけを先に掴みたい場合は、[第1章]({{ '/chapters/chapter-introduction/' | relative_url }}) → [第7章]({{ '/chapters/chapter-branch-operations/' | relative_url }}) → [第8章]({{ '/chapters/chapter-issue-management/' | relative_url }}) の順で読む。
+上の「課題別の最短ルート」で示した 3 つの導線は、いずれも最初の 15 分で全体像を掴むための入口です。まずは自分の目的に近い 1 ルートを選び、続きは各章末のリンクや付録から広げてください。
 
 ## 利用と更新情報
 
@@ -117,7 +115,7 @@ permalink: /
 
 - GitHubアカウント（無料）
 - Git ソフトウェア
-- GitHub CLI（推奨。必須ではなく、コマンド操作や自動化を試したい場合に有用）
+  - GitHub CLI（推奨。必須ではなく、コマンド操作や自動化を試したい場合に有用）
 
 ### 安全に学習するための注意
 
