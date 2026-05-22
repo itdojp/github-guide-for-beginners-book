@@ -136,15 +136,26 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 ### Personal Access Token
 
 **使用場面：**
+
 - API経由でのGitHub操作
 - CI/CDパイプライン
 - 自動化スクリプト
 
-**作成手順：**
-1. Settings → Developer settings
-2. Personal access tokens → Tokens (classic)
-3. Generate new token
-4. 必要な権限のみを選択
+**選び方：**
+
+| 種類 | 使う場面 | 注意点 |
+| --- | --- | --- |
+| Fine-grained personal access token | 特定リポジトリや特定権限だけで足りる操作 | まずはこちらを検討する |
+| Personal access token (classic) | fine-grained token が未対応の操作や古いツール連携 | 権限範囲が広くなりやすいため、期限と権限を厳しく絞る |
+
+**作成時の最小ルール：**
+
+1. Settings → Developer settings → Personal access tokens を開く
+2. 可能なら fine-grained token を選び、対象リポジトリを限定する
+3. 必要な権限だけを選ぶ（例: Pull requests は read/write、Contents は read など）
+4. 有効期限を設定し、使わなくなった token は削除する
+5. token を Git 管理対象のファイル、ログ、Issue、PR、AI/外部サービスに貼り付けない
+6. ローカルの `.env` で扱う場合も `.gitignore` の対象にし、共有・アップロードしない
 
 ## セキュリティ脅威への対策
 
@@ -155,12 +166,23 @@ GitHubの自動セキュリティアラートには、次のものがありま�
 - Security advisories
 - 依存関係の自動更新
 
-### コードスキャニング
+### コードスキャニングとシークレットスキャン
 
-**GitHub Advanced Security（有料プラン）：**
-- CodeQL analysis
-- Secret scanning
-- 依存関係レビュー
+GitHub のセキュリティ機能は、プランやリポジトリ種別によって利用条件が変わります。本文では細かな課金条件を固定的に覚えるのではなく、公式ドキュメントで現在の利用条件を確認する前提にします。
+
+**代表的な機能：**
+
+- CodeQL analysis / code scanning
+- Secret scanning alerts
+- Push protection
+- Dependabot alerts / Dependabot security updates
+- Dependency review
+
+**初心者が最初に確認すること：**
+
+- Public リポジトリでも secret scanning alerts の対象になる場合があるため、「公開だから検出されるはず」ではなく、Security タブで有効状態と alert を確認する。
+- secret scanning が検出しても、漏えいした token は自動的に安全になるわけではない。必ず token を失効し、再発防止を記録する。
+- 検出対象外の形式や独自秘密情報もあるため、`.gitignore`、環境変数、review、CI を併用する。
 
 ## セキュリティインシデントへの対応
 
@@ -191,9 +213,10 @@ git gc --prune=now --aggressive
 
 ### 開発フロー
 
-1. **ブランチ保護**: mainブランチへの直接プッシュを禁止
-2. **プルリクエストレビュー**: 必須レビューの設定
-3. **ステータスチェック**: CI/CDでのセキュリティテスト
+1. **ブランチ保護 / ruleset**: mainブランチへの直接プッシュを禁止し、必要に応じて ruleset で対象ブランチや tag の条件を管理する
+2. **プルリクエストレビュー**: 必須レビュー、最新 push の再レビュー、conversation resolution を設定する
+3. **ステータスチェック**: CI/CDでのテスト、lint、セキュリティチェックを必須化する
+4. **merge 後確認**: main の Actions、Pages、リリース先を確認し、Issue に証跡を残す
 
 ### チームでのセキュリティ文化
 
@@ -214,7 +237,10 @@ git gc --prune=now --aggressive
 セキュリティは「後で考える」ものではなく、開発の最初から組み込むべき重要な要素です。この章で学んだ内容を実践し、安全なコード管理習慣を身につけましょう。
 
 **重要なポイント：**
+
 - 機密情報は絶対にコミットしない
+- token は fine-grained、最小権限、期限付き、対象リポジトリ限定を基本にする
+- AI/外部サービスへログやコードを貼る前に、秘密情報・個人情報・社外秘情報を除去する
 - AI/エージェント利用時も、機密情報・個人情報を貼らない（ログ貼付を含む）
 - 適切なアクセス権限の設定
 - 二要素認証の有効化

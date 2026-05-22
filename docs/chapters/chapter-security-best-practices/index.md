@@ -24,6 +24,40 @@ order: 10
 - パスワード・秘密鍵
 - 個人情報
 
+### AI/エージェント利用時の注意（機密・権限・Secrets）
+
+生成AIや自動化エージェントを使う場合は、「入力した情報が外部に出る可能性がある」前提で扱います。Issue / プルリクエスト（PR） / チャットに、機密情報や個人情報を貼り付けないでください。
+
+**貼ってはいけない情報の例**
+- トークン（例：`ghp_...` / `github_pat_...` など）
+- 秘密鍵（例：`-----BEGIN ... PRIVATE KEY-----`）
+- 顧客情報・個人情報（氏名、メールアドレス、請求情報など）
+- 認証に使える情報（ワンタイムURL、署名付きURLなど）
+
+#### GitHub Actions Secrets と環境変数（基礎）
+
+- Secrets は GitHub 上で保管し、ワークフローから参照します（例：リポジトリの Settings → Secrets and variables → Actions）。
+- ワークフローでは `${{ secrets.API_KEY }}` のように参照し、ソースコードに埋め込みません。
+- ローカル開発で `.env` を使う場合も、`.gitignore` に入れてコミットしない運用が基本です。
+
+```yaml
+# .github/workflows/example.yml（一例）
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use API key
+        env: # 必要なステップにだけ Secrets を渡す
+          API_KEY: ${{ secrets.API_KEY }}
+        run: echo "APIキーを使用します"
+```
+
+#### PR/Issue でのログの扱い
+
+- 原則として、ログは「必要最小限」を共有します（再現手順とエラー要約を優先）。
+- ログを貼る場合は、値を `***` に置換し、機密情報が含まれないことを確認します。
+- GitHub が一部の秘密情報をマスクしても、すべてを防げるわけではありません。最終確認は人間が行います。
+
 ### .gitignoreファイルの活用
 
 ```gitignore
@@ -80,6 +114,15 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 2. **Write（書き込み）**: プッシュ・プルリクエスト可能
 3. **Admin（管理者）**: 設定変更・メンバー管理可能
 
+### 権限最小化（わからない場合は上げない）
+
+権限は高いほど、事故が起きたときの影響が大きくなります。判断に迷う場合は、まず低い権限で運用し、必要になった時点で段階的に上げる方針が安全です。
+
+- リポジトリ権限は Read/Write/Admin の順に強くなります。最初は Read から検討します。
+- Token は必要なスコープだけ付与し、不要になったら削除します。
+- GitHub Actions の Secrets は、リポジトリや Environment などのスコープを適切に分けて管理します。
+- ワークフロー内では、その Secrets を本当に必要なジョブ/ステップにだけ `env` などで渡し、露出範囲を最小限にします。
+
 ## セキュリティ機能の活用
 
 ### 二要素認証（2FA）の設定
@@ -93,15 +136,26 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 ### Personal Access Token
 
 **使用場面：**
+
 - API経由でのGitHub操作
 - CI/CDパイプライン
 - 自動化スクリプト
 
-**作成手順：**
-1. Settings → Developer settings
-2. Personal access tokens → Tokens (classic)
-3. Generate new token
-4. 必要な権限のみを選択
+**選び方：**
+
+| 種類 | 使う場面 | 注意点 |
+| --- | --- | --- |
+| Fine-grained personal access token | 特定リポジトリや特定権限だけで足りる操作 | まずはこちらを検討する |
+| Personal access token (classic) | fine-grained token が未対応の操作や古いツール連携 | 権限範囲が広くなりやすいため、期限と権限を厳しく絞る |
+
+**作成時の最小ルール：**
+
+1. Settings → Developer settings → Personal access tokens を開く
+2. 可能なら fine-grained token を選び、対象リポジトリを限定する
+3. 必要な権限だけを選ぶ（例: Pull requests は read/write、Contents は read など）
+4. 有効期限を設定し、使わなくなった token は削除する
+5. token を Git 管理対象のファイル、ログ、Issue、PR、AI/外部サービスに貼り付けない
+6. ローカルの `.env` で扱う場合も `.gitignore` の対象にし、共有・アップロードしない
 
 ## セキュリティ脅威への対策
 
@@ -112,12 +166,23 @@ GitHubの自動セキュリティアラートには、次のものがありま�
 - Security advisories
 - 依存関係の自動更新
 
-### コードスキャニング
+### コードスキャニングとシークレットスキャン
 
-**GitHub Advanced Security（有料プラン）：**
-- CodeQL analysis
-- Secret scanning
-- 依存関係レビュー
+GitHub のセキュリティ機能は、プランやリポジトリ種別によって利用条件が変わります。本文では細かな課金条件を固定的に覚えるのではなく、公式ドキュメントで現在の利用条件を確認する前提にします。
+
+**代表的な機能：**
+
+- CodeQL analysis / code scanning
+- Secret scanning alerts
+- Push protection
+- Dependabot alerts / Dependabot security updates
+- Dependency review
+
+**初心者が最初に確認すること：**
+
+- Public リポジトリでも secret scanning alerts の対象になる場合があるため、「公開だから検出されるはず」ではなく、Security タブで有効状態と alert を確認する。
+- secret scanning が検出しても、漏えいした token は自動的に安全になるわけではない。必ず token を失効し、再発防止を記録する。
+- 検出対象外の形式や独自秘密情報もあるため、`.gitignore`、環境変数、review、CI を併用する。
 
 ## セキュリティインシデントへの対応
 
@@ -148,9 +213,10 @@ git gc --prune=now --aggressive
 
 ### 開発フロー
 
-1. **ブランチ保護**: mainブランチへの直接プッシュを禁止
-2. **プルリクエストレビュー**: 必須レビューの設定
-3. **ステータスチェック**: CI/CDでのセキュリティテスト
+1. **ブランチ保護 / ruleset**: mainブランチへの直接プッシュを禁止し、必要に応じて ruleset で対象ブランチや tag の条件を管理する
+2. **プルリクエストレビュー**: 必須レビュー、最新 push の再レビュー、conversation resolution を設定する
+3. **ステータスチェック**: CI/CDでのテスト、lint、セキュリティチェックを必須化する
+4. **merge 後確認**: main の Actions、Pages、リリース先を確認し、Issue に証跡を残す
 
 ### チームでのセキュリティ文化
 
@@ -171,7 +237,11 @@ git gc --prune=now --aggressive
 セキュリティは「後で考える」ものではなく、開発の最初から組み込むべき重要な要素です。この章で学んだ内容を実践し、安全なコード管理習慣を身につけましょう。
 
 **重要なポイント：**
+
 - 機密情報は絶対にコミットしない
+- token は fine-grained、最小権限、期限付き、対象リポジトリ限定を基本にする
+- AI/外部サービスへログやコードを貼る前に、秘密情報・個人情報・社外秘情報を除去する
+- AI/エージェント利用時も、機密情報・個人情報を貼らない（ログ貼付を含む）
 - 適切なアクセス権限の設定
 - 二要素認証の有効化
 - 定期的なセキュリティ監査
