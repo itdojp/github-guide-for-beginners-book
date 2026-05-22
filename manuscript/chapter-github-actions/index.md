@@ -116,6 +116,24 @@ jobs:
 - `uses:` は「既製品（action）を呼び出す」指定です（例: `actions/checkout`）
 - `run:` は「シェルコマンドを実行する」指定です（例: `npm ci`）
 
+### `GITHUB_TOKEN` と権限の最小化
+
+workflow の各 job では、GitHub が一時的な `GITHUB_TOKEN` を自動発行します。通常の CI では、まず読み取り中心の権限から始め、必要な job だけに追加権限を与えます。
+
+```yaml
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: npm test
+```
+
+Pull Request へコメントを書く、Pages へデプロイする、packages を発行するなどの操作では追加権限が必要です。その場合も、workflow 全体へ広い権限を付けるのではなく、対象 job に必要な権限だけを付与します。
+
 ### つまずきやすい点（npm）
 
 - `npm ci` は `package-lock.json` がある前提です。ない場合は `npm install` を使うか、ロックファイルを作成してください。
@@ -167,6 +185,7 @@ YAML はインデント（空白）に敏感です。コピペ後に動かない
 
 - **Secrets をログに出さない**: `echo` や `set -x`（シェルのデバッグ出力）で漏洩しやすくなります。
 - **fork からの Pull Request**: 原則として Secrets は渡りません（安全のため）。この制約を回避しようとして危険なトリガー（例: `pull_request_target`）を安易に使わないでください。
+- **AI/外部サービスへログを貼らない**: 失敗ログにはトークン、URL、内部パス、顧客情報が混ざることがあります。共有前にマスクし、必要最小限だけ貼り付けます。
 
 ### ログの読み方（最短）
 

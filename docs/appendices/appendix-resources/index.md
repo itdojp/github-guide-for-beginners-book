@@ -17,6 +17,11 @@ order: 102
 | リソース | URL | 内容 | 推奨レベル |
 |---|---|---|---|
 | GitHub Docs | https://docs.github.com/ | 最新の公式ドキュメント | 全レベル |
+| GitHub Docs: 2FA | https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication | 2要素認証の現在仕様 | 初心者〜中級 |
+| GitHub Docs: Personal access tokens | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens | fine-grained / classic token の管理 | 中級 |
+| GitHub Docs: Branch protection / rulesets | https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets | PR必須化、status checks、ruleset | 中級 |
+| GitHub Docs: GITHUB_TOKEN | https://docs.github.com/en/actions/concepts/security/github_token | Actions の一時 token と権限 | 中級 |
+| GitHub Docs: Secret scanning | https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning | secret scanning alerts / push protection | 中級 |
 | GitHub Skills | https://skills.github.com/ | インタラクティブ学習コース | 初心者〜中級 |
 | GitHub Training | https://training.github.com/ | 公式トレーニングプログラム | 中級〜上級 |
 | GitHub Community | https://github.community/ | 公式コミュニティフォーラム | 全レベル |

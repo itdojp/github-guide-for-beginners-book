@@ -239,10 +239,25 @@ gh pr create --base <default-branch> --head feat/<topic> --title "..." --body ".
 ```
 
 ### よくある失敗と回避（最小）
+
 - `main` のまま作業してしまう: `git branch --show-current` でブランチ名を確認してから編集する
 - 意図しないファイルまでコミットする: `git status` で差分を確認し、`git add <file>` または `git add -p` を使う
 - `git push` で upstream エラーになる: 初回は `git push -u origin <branch>` を使う
 - PR が肥大化する: 目的を 1 つに絞り、無関係な整形やリファクタを混ぜない
+
+### PRをマージする前の最小ゲート
+
+Pull Request は「作ったら終わり」ではありません。初心者向けの最小ゲートとして、少なくとも次を確認してからマージします。
+
+| ゲート | 確認すること | 証跡の残し方 |
+| --- | --- | --- |
+| 目的と範囲 | PR が 1 つの目的に絞られている | PR body に概要、変更範囲、関連 Issue を書く |
+| レビュー | 指摘本文、inline comment、suggestion を全件確認した | 修正した場合は返信し、不要な場合は理由を書く |
+| conversation | 未解決の review thread が残っていない | GitHub 上で Resolve / Unresolve の状態を確認する |
+| CI | 必須チェックが成功している | Checks タブで失敗 job がないことを確認する |
+| merge 後 | main のチェックと公開先に反映された | merge 後の Actions / Pages / 動作確認を Issue に記録する |
+
+ブランチ保護や ruleset を使うと、レビュー、status checks、conversation resolution などをマージ条件として機械的に要求できます。個人学習では任意ですが、チーム開発では早めに導入すると事故を減らせます。
 
 ### 作業用ブランチの削除
 
@@ -260,7 +275,7 @@ gh pr create --base <default-branch> --head feat/<topic> --title "..." --body ".
 
 ---
 
-## 7.4 コンフリクト（競合）の理解と解決
+## 7.4 PRレビューと運用（テンプレート / CODEOWNERS）
 
 ### PRテンプレートの構造
 
@@ -284,6 +299,31 @@ AI 支援の運用ルール（機密入力の禁止、確認観点など）は�
 
 - AI利用ポリシー（テンプレ）：https://github.com/{{ site.repository }}/blob/main/AI_USAGE_POLICY.md
 
+### PRレビュー状態
+
+![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
+
+Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
+
+### PRディスカッション管理
+
+![PRディスカッション管理]({{ '/assets/images/diagrams/chapter08/06_pr_discussion_management.svg' | relative_url }})
+
+Pull Requestでのディスカッションを効果的に管理することで、チーム全体のコミュニケーション品質と開発効率を向上させましょう。
+
+### AI生成PRのレビュー観点（最小セット）
+
+AI生成のPull Requestは「速く作れる」一方で、意図・検証・安全性が省略されがちです。レビューでは「AIが作ったか」ではなく、次の観点で確認すると、主観ではなく手順として運用できます。
+
+- **変更意図の一致**：Issueの背景/目的・受入基準に一致しているか
+- **検証の証跡**：テスト結果や手動確認手順（ログ/スクリーンショット）が残っているか
+- **差分の過剰さ**：関係ないリファクタやフォーマット変更が混ざっていないか
+- **依存関係/設定変更**：更新理由と影響（リスク）が説明されているか
+- **Secrets/個人情報**：トークン・秘密鍵・顧客情報・ログの貼付がないか
+- **ロールバック可能性（例：`git revert`で戻しやすいか）**：PRが小さく、ロールバック手順が明記されているか
+
+これらは、PRテンプレート（`.github/PULL_REQUEST_TEMPLATE.md`）のチェック欄としても運用できます。
+
 ### CODEOWNERSでレビュー担当を自動で割り当てる（発展）
 
 チームで運用する場合、「誰がレビュー責任を持つか」を仕組みで決めておくと、レビューが詰まりにくくなります。その代表例が **CODEOWNERS** です。
@@ -291,16 +331,38 @@ AI 支援の運用ルール（機密入力の禁止、確認観点など）は�
 - 設定ファイル: `.github/CODEOWNERS`
 - できること: 特定のパス（例：`docs/`）の変更が入ったときに、担当者（ユーザー/チーム）へレビュー依頼を自動化できる
 
-このリポジトリでは、`manuscript/**`（本文）と `src/**`（元原稿）を例として `CODEOWNERS` に記載しています。自分のプロジェクトで使う場合は、まずは **「docs/ は文書担当」** だけ決めると運用しやすくなります。
+このリポジトリでは、例として `manuscript/**`（本文）・`docs/**`（公開サイト）・`src/**`（元原稿）を `CODEOWNERS` に記載しています。自分のプロジェクトで使う場合は、まずは **「docs/ は文書担当」** だけ決めると運用しやすくなります。
+
+また、`CODEOWNERS` は **パターンの順序が重要**で、複数マッチする場合は「最後にマッチした行」が優先されます。
 
 **レビューが詰まるときの対処（例）**
 - 代替担当（バックアップ）を決め、CODEOWNERSに追加する
 - ローテーション（当番表）で担当を回す（人に依存しない）
 - 必須レビュー数や必須チェック（CI）と組み合わせ、例外運用の手順も決める
 
-### コンフリクトが発生する原因
+### PRマージ戦略
+
+![PRマージ戦略]({{ '/assets/images/diagrams/chapter08/07_pr_merge_strategies.svg' | relative_url }})
+
+Pull Requestをマージする際には、様々な戦略があります。プロジェクトのポリシーや履歴管理の方針に応じて、適切なマージ戦略を選択しましょう。
+
+### PR自動化ツール
+
+![PR自動化ツール]({{ '/assets/images/diagrams/chapter08/08_pr_automation_tools.svg' | relative_url }})
+
+効率的なチーム開発のために、PRプロセスの一部を自動化することができます。CI/CD、自動テスト、コード品質チェックなどのツールを活用しましょう。
+
+### ブランチワークフローパターン（参考）
+
+![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
+
+---
+
+## 7.5 コンフリクト（競合）の理解と解決
 
 コンフリクト（競合）は、同じファイルの同じ箇所が、異なるブランチで別々の内容に変更された場合に発生します。
+
+### コンフリクトが発生する原因
 
 **発生例：**
 ```text
@@ -369,18 +431,6 @@ Welcome to Our Website (mainブランチの内容)
 - GitHub Desktopで「Mark as resolved」
 - 「Continue merge」でマージ完了
 
-### PRレビュー状態
-
-![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
-
-Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
-
-### PRディスカッション管理
-
-![PRディスカッション管理]({{ '/assets/images/diagrams/chapter08/06_pr_discussion_management.svg' | relative_url }})
-
-Pull Requestでのディスカッションを効果的に管理することで、チーム全体のコミュニケーション品質と開発効率を向上させましょう。
-
 ### コンフリクト予防のベストプラクティス
 
 **1. 頻繁なマージ**
@@ -398,20 +448,6 @@ Pull Requestでのディスカッションを効果的に管理することで�
 **4. ファイル構成の工夫**
 - 機能ごとにファイルを分離
 - 共通部分の変更は慎重に
-
-### PRマージ戦略
-
-![PRマージ戦略]({{ '/assets/images/diagrams/chapter08/07_pr_merge_strategies.svg' | relative_url }})
-
-Pull Requestをマージする際には、様々な戦略があります。プロジェクトのポリシーや履歴管理の方針に応じて、適切なマージ戦略を選択しましょう。
-
-### PR自動化ツール
-
-![PR自動化ツール]({{ '/assets/images/diagrams/chapter08/08_pr_automation_tools.svg' | relative_url }})
-
-効率的なチーム開発のために、PRプロセスの一部を自動化することができます。CI/CD、自動テスト、コード品質チェックなどのツールを活用しましょう。
-
-![ブランチワークフローパターン]({{ '/assets/images/diagrams/chapter06/16_branch_workflow_patterns.svg' | relative_url }})
 
 ---
 
@@ -447,7 +483,7 @@ Pull Requestをマージする際には、様々な戦略があります。プ�
 
 ![PR品質ゲート]({{ '/assets/images/diagrams/chapter08/10_pr_quality_gates.svg' | relative_url }})
 
-コード品質を維持するために、PRに品質ゲートを設定しましょう。自動テスト、コードレビュー、セキュリティチェックなどを組み合わせた包括的な品質管理が可能です。
+コード品質を維持するために、PRに品質ゲートを設定しましょう。自動テスト、コードレビュー、セキュリティチェックに加えて、未解決の review thread が 0 件であること、必須 status checks 成功、merge 後確認を組み合わせると、変更の説明責任を保ちやすくなります。
 
 ### PRメトリクス分析
 

@@ -239,10 +239,25 @@ gh pr create --base <default-branch> --head feat/<topic> --title "..." --body ".
 ```
 
 ### よくある失敗と回避（最小）
+
 - `main` のまま作業してしまう: `git branch --show-current` でブランチ名を確認してから編集する
 - 意図しないファイルまでコミットする: `git status` で差分を確認し、`git add <file>` または `git add -p` を使う
 - `git push` で upstream エラーになる: 初回は `git push -u origin <branch>` を使う
 - PR が肥大化する: 目的を 1 つに絞り、無関係な整形やリファクタを混ぜない
+
+### PRをマージする前の最小ゲート
+
+Pull Request は「作ったら終わり」ではありません。初心者向けの最小ゲートとして、少なくとも次を確認してからマージします。
+
+| ゲート | 確認すること | 証跡の残し方 |
+| --- | --- | --- |
+| 目的と範囲 | PR が 1 つの目的に絞られている | PR body に概要、変更範囲、関連 Issue を書く |
+| レビュー | 指摘本文、inline comment、suggestion を全件確認した | 修正した場合は返信し、不要な場合は理由を書く |
+| conversation | 未解決の review thread が残っていない | GitHub 上で Resolve / Unresolve の状態を確認する |
+| CI | 必須チェックが成功している | Checks タブで失敗 job がないことを確認する |
+| merge 後 | main のチェックと公開先に反映された | merge 後の Actions / Pages / 動作確認を Issue に記録する |
+
+ブランチ保護や ruleset を使うと、レビュー、status checks、conversation resolution などをマージ条件として機械的に要求できます。個人学習では任意ですが、チーム開発では早めに導入すると事故を減らせます。
 
 ### 作業用ブランチの削除
 
@@ -468,7 +483,7 @@ Welcome to Our Website (mainブランチの内容)
 
 ![PR品質ゲート]({{ '/assets/images/diagrams/chapter08/10_pr_quality_gates.svg' | relative_url }})
 
-コード品質を維持するために、PRに品質ゲートを設定しましょう。自動テスト、コードレビュー、セキュリティチェックなどを組み合わせた包括的な品質管理が可能です。
+コード品質を維持するために、PRに品質ゲートを設定しましょう。自動テスト、コードレビュー、セキュリティチェックに加えて、未解決の review thread が 0 件であること、必須 status checks 成功、merge 後確認を組み合わせると、変更の説明責任を保ちやすくなります。
 
 ### PRメトリクス分析
 
@@ -495,5 +510,5 @@ Pull Requestのメトリクスを分析することで、チームの開発効�
 
 参照：
 
-- Docs-as-Code：{{ '/src/chapter-docs-as-code/' | relative_url }}
-- Issue / Projects：{{ '/src/chapter-issue-management/' | relative_url }}
+- Docs-as-Code：{{ '/chapters/chapter-docs-as-code/' | relative_url }}
+- Issue / Projects：{{ '/chapters/chapter-issue-management/' | relative_url }}
