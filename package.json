@@ -4,10 +4,10 @@
   "description": "GitとGitHubの基本操作から実践的な運用まで、初心者が段階的に学べる実用ガイド",
   "main": "index.md",
   "scripts": {
-    "start": "jekyll serve --livereload",
+    "start": "bundle exec jekyll serve --livereload --config docs/_config.yml --source docs --destination _site",
     "build": "bundle exec jekyll build --config docs/_config.yml --source docs --destination _site",
     "test": "npm run check:metadata && npm run lint && npm run check-links",
-    "lint": "markdownlint src/**/*.md",
+    "lint": "markdownlint --config .markdownlint-src.json src/**/*.md",
     "check-links": "markdown-link-check src/**/*.md",
     "docs:lint": "markdownlint 'docs/**/*.md'",
     "docs:check-internal-links": "git ls-files docs | grep -E '\\.md$' | xargs python3 scripts/check_markdown_internal_links.py",

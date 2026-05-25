@@ -83,7 +83,7 @@ npm ci
 # 公開サイトをローカルビルドする場合のRuby依存関係
 bundle install
 
-# 開発サーバーを起動
+# 開発サーバーを起動（docs/_config.yml / docs を利用）
 npm run start
 ```
 
