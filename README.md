@@ -77,11 +77,14 @@
 git clone https://github.com/itdojp/github-guide-for-beginners-book.git
 cd github-guide-for-beginners-book
 
-# 依存関係をインストール
-npm install
+# 依存関係をインストール（package-lock.json と同期）
+npm ci
+
+# 公開サイトをローカルビルドする場合のRuby依存関係
+bundle install
 
 # 開発サーバーを起動
-npm run dev
+npm run start
 ```
 
 ### ビルド
@@ -90,8 +93,10 @@ npm run dev
 # 本番ビルド
 npm run build
 
-# GitHub Pages用ビルド
-npm run build:github-pages
+# メタデータ・ローカル品質ゲート
+npm run check:metadata
+npm test
+npm run docs:quality-gate
 ```
 
 ## 📝 執筆ガイドライン

@@ -7,6 +7,8 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-seo-tag", "~> 2.6"
+  gem "jekyll-relative-links", "~> 0.7"
+  gem "jekyll-optional-front-matter", "~> 0.3"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do

@@ -3,7 +3,7 @@ layout: book
 order: 0
 title: "GitHub初心者ガイド"
 description: "プログラミング初心者向けGit/GitHub完全習得書 - バージョン管理の基礎から実践まで"
-author: "株式会社アイティードゥ"
+author: "ITDO Inc."
 version: "1.1.0"
 permalink: /
 ---
