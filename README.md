@@ -78,6 +78,7 @@ git clone https://github.com/itdojp/github-guide-for-beginners-book.git
 cd github-guide-for-beginners-book
 
 # 依存関係をインストール（package-lock.json と同期）
+# Node.js 20.18.1+ を利用（QA依存の cheerio / undici が要求）
 npm ci
 
 # 公開サイトをローカルビルドする場合のRuby依存関係
@@ -97,6 +98,7 @@ npm run build
 npm run check:metadata
 npm test
 npm run docs:quality-gate
+npm audit
 ```
 
 ## 📝 執筆ガイドライン
