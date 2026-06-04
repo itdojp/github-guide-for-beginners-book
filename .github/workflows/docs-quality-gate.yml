@@ -8,6 +8,7 @@ on:
       - ".github/**"
       - "scripts/**"
       - "package.json"
+      - "package-lock.json"
       - "AI_USAGE_POLICY.md"
       - "AGENTS.md"
       - "CONTRIBUTING.md"
@@ -21,6 +22,7 @@ on:
       - ".github/**"
       - "scripts/**"
       - "package.json"
+      - "package-lock.json"
       - "AI_USAGE_POLICY.md"
       - "AGENTS.md"
       - "CONTRIBUTING.md"
@@ -44,9 +46,14 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20"
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --no-fund --no-audit
+
+      - name: Dependency audit
+        run: npm audit
 
       - name: Collect changed Markdown files (docs/manuscript/etc)
         id: changes
