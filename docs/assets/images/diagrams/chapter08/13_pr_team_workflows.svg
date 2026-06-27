@@ -99,7 +99,7 @@
       <rect x="100" y="405" width="140" height="80" rx="8" class="primary border" opacity="0.1"/>
       <text x="170" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👨‍💻 開発者</text>
       
-      <text x="110" y="445" class="text text-sm">• PR作成・説明</text>
+      <text x="110" y="445" class="text text-sm">• PR 作成・説明</text>
       <text x="110" y="460" class="text text-sm">• 修正対応</text>
       <text x="110" y="475" class="text text-sm">• テスト作成</text>
     </g>

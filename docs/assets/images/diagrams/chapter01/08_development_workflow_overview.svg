@@ -160,7 +160,7 @@
       <g class="step-7">
         <circle cx="600" cy="300" r="15" class="success"/>
         <text x="600" y="305" text-anchor="middle" class="text text-sm" style="fill: white; font-weight: 600;">7</text>
-        <text x="600" y="325" text-anchor="middle" class="text text-sm">PR作成</text>
+        <text x="600" y="325" text-anchor="middle" class="text text-sm">PR 作成</text>
         <text x="600" y="340" text-anchor="middle" class="text text-sm">レビュー依頼</text>
       </g>
       

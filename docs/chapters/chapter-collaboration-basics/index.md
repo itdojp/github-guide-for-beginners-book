@@ -11,5 +11,5 @@ layout: book
 
 第6章は次のURLへ移動しました。
 
-- 新しいURL：{{ '/chapters/chapter-github-desktop/' | relative_url }}
+- 新しい URL：{{ '/chapters/chapter-github-desktop/' | relative_url }}
 - [第6章：GitHub Desktop の活用]({{ '/chapters/chapter-github-desktop/' | relative_url }})

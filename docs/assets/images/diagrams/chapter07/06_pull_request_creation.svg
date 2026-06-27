@@ -38,9 +38,9 @@
     <text x="400" y="135" text-anchor="middle" class="text text-sm">適切な情報提供でメンテナーの負担を軽減し、マージ確率を向上</text>
   </g>
   
-  <!-- PR作成前の準備 -->
+  <!-- PR 作成前の準備 -->
   <g class="pr-preparation">
-    <text x="400" y="180" text-anchor="middle" class="text text-md">PR作成前の準備</text>
+    <text x="400" y="180" text-anchor="middle" class="text text-md">PR 作成前の準備</text>
     
     <!-- 自己チェック -->
     <g class="self-check">

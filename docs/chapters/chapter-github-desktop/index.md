@@ -66,7 +66,7 @@ https://desktop.github.com/ を開きます。
 
 初回起動時に、以下の設定を行います：
 
-**GitHubアカウントとの連携**
+**GitHub アカウントとの連携**
 
 1. 「Sign in to GitHub.com」をクリック
 2. ブラウザが開いてGitHubのログイン画面が表示
@@ -76,7 +76,7 @@ https://desktop.github.com/ を開きます。
 
 **ユーザー情報の設定**
 - **Name**：あなたの名前（commitに記録される）
-- **Email**：GitHubアカウントに登録したメールアドレス
+- **Email**：GitHub アカウントに登録したメールアドレス
 - これらの情報は、あなたが行ったcommitの「作者」として記録されます
 
 **使用状況データの送信設定**
@@ -86,10 +86,10 @@ GitHubがアプリ改善のために使用データを収集するかどうか�
 
 ![リポジトリクローン作成]({{ '/assets/images/diagrams/chapter05/04_repository_cloning_creation.svg' | relative_url }})
 
-設定が完了すると、あなたのGitHubアカウントのリポジトリ一覧が自動的に表示されます。第2章で作成したリポジトリが表示されていることを確認してください。
+設定が完了すると、あなたの GitHub アカウントのリポジトリ一覧が自動的に表示されます。第2章で作成したリポジトリが表示されていることを確認してください。
 
 もし表示されていない場合は、以下を確認：
-- GitHubアカウントに正しくログインできているか
+- GitHub アカウントに正しくログインできているか
 - インターネット接続が正常か
 - しばらく時間をおいてから再度確認
 
@@ -314,7 +314,7 @@ GitHub Desktopでは、プロジェクトの変更履歴を美しいタイムラ
 
 **GitHub Desktop の導入**
 - 公式アプリのインストールと初期設定
-- GitHubアカウントとの連携
+- GitHub アカウントとの連携
 - ローカル環境での快適な作業環境構築
 
 **Clone とローカル作業**
@@ -332,9 +332,9 @@ GitHub Desktopでは、プロジェクトの変更履歴を美しいタイムラ
 - Pull による最新情報の取得
 - Sync による自動同期
 
-### Pull Request作成機能
+### Pull Request 作成機能
 
-![Pull Request作成]({{ '/assets/images/diagrams/chapter05/12_pull_request_creation.svg' | relative_url }})
+![Pull Request 作成]({{ '/assets/images/diagrams/chapter05/12_pull_request_creation.svg' | relative_url }})
 
 GitHub Desktopから直接Pull Requestを作成することも可能です。ブランチでの作業が完了したら、アプリから直接Pull Requestを作成し、チームメンバーにレビューを依頼できます。
 

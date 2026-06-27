@@ -64,7 +64,7 @@
       <text x="455" y="165" text-anchor="middle" class="text text-sm" style="font-weight: 600;">⚙️ 設定エラー</text>
       
       <text x="390" y="185" class="text text-sm" style="font-weight: 600;">原因:</text>
-      <text x="390" y="200" class="text text-sm">• URL間違い</text>
+      <text x="390" y="200" class="text text-sm">• URL 間違い</text>
       <text x="390" y="215" class="text text-sm">• 認証設定不備</text>
       <text x="390" y="230" class="text text-sm">• リモート未設定</text>
       <text x="390" y="245" class="text text-sm">• 追跡ブランチなし</text>

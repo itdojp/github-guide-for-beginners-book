@@ -105,7 +105,7 @@
       <text x="330" y="340" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔧 ライブラリ</text>
       
       <text x="270" y="355" class="text text-sm">• 再利用可能</text>
-      <text x="270" y="370" class="text text-sm">• API設計力</text>
+      <text x="270" y="370" class="text text-sm">• API 設計力</text>
       <text x="270" y="385" class="text text-sm">• 抽象化思考</text>
     </g>
     
@@ -164,7 +164,7 @@
       <text x="515" y="485" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 プロジェクト管理</text>
       
       <text x="440" y="505" class="text text-sm" style="font-weight: 600;">管理要素:</text>
-      <text x="440" y="520" class="text text-sm">• Issue管理</text>
+      <text x="440" y="520" class="text text-sm">• Issue 管理</text>
       <text x="440" y="535" class="text text-sm">• マイルストーン</text>
       <text x="440" y="550" class="text text-sm">• リリースタグ</text>
       <text x="440" y="565" class="text text-sm">• 変更履歴</text>

@@ -128,7 +128,7 @@ const apiKey = process.env.API_KEY; // ✅ 環境変数から取得
 ### 二要素認証（2FA）の設定
 
 **設定手順：**
-1. GitHubアカウントのSettings
+1. GitHub アカウントの Settings
 2. Password and authentication
 3. Two-factor authentication
 4. 認証アプリまたはSMSで設定

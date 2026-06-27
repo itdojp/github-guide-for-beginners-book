@@ -52,10 +52,10 @@
   <g class="pull-request-process">
     <text x="400" y="180" text-anchor="middle" class="text text-md">Pull Request によるマージプロセス</text>
     
-    <!-- ステップ1: PR作成 -->
+    <!-- ステップ1: PR 作成 -->
     <g class="step-1-pr-create">
       <rect x="50" y="200" width="140" height="100" rx="8" class="primary border" opacity="0.1"/>
-      <text x="120" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ PR作成</text>
+      <text x="120" y="225" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣ PR 作成</text>
       
       <text x="60" y="245" class="text text-sm" style="font-weight: 600;">内容:</text>
       <text x="60" y="260" class="text text-sm">• 変更概要</text>

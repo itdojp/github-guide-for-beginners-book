@@ -82,7 +82,7 @@
     
     <!-- Create PR -->
     <rect x="50" y="280" width="140" height="100" class="pr-box" rx="10"/>
-    <text x="120" y="305" class="process-title" text-anchor="middle">PR作成</text>
+    <text x="120" y="305" class="process-title" text-anchor="middle">PR 作成</text>
     <rect x="65" y="315" width="110" height="25" class="component" rx="3"/>
     <text x="120" y="332" class="text-content" text-anchor="middle">タイトル記入</text>
     <rect x="65" y="345" width="110" height="25" class="component" rx="3"/>
@@ -130,7 +130,7 @@
   <!-- Issue Management -->
   <g id="issues">
     <rect x="50" y="410" width="400" height="230" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
-    <text x="250" y="435" class="section-title" text-anchor="middle">Issue管理</text>
+    <text x="250" y="435" class="section-title" text-anchor="middle">Issue 管理</text>
     
     <!-- Issue Types -->
     <text x="70" y="460" class="text-content" font-weight="bold">Issueの種類:</text>
@@ -172,7 +172,7 @@
     <!-- Workflow Triggers -->
     <text x="490" y="460" class="text-content" font-weight="bold">トリガーイベント:</text>
     <text x="490" y="480" class="small-text">• push - コードプッシュ時</text>
-    <text x="490" y="495" class="small-text">• pull_request - PR作成/更新時</text>
+    <text x="490" y="495" class="small-text">• pull_request - PR 作成/更新時</text>
     <text x="490" y="510" class="small-text">• schedule - 定期実行</text>
     <text x="490" y="525" class="small-text">• workflow_dispatch - 手動実行</text>
     <text x="490" y="540" class="small-text">• release - リリース作成時</text>

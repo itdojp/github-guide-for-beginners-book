@@ -123,7 +123,7 @@
       <text x="470" y="425" text-anchor="middle" class="text text-sm" style="font-weight: 600;">☁️ 外部ストレージ</text>
       <text x="470" y="445" text-anchor="middle" class="text text-sm">• CDN活用</text>
       <text x="470" y="460" text-anchor="middle" class="text text-sm">• クラウドストレージ</text>
-      <text x="470" y="475" text-anchor="middle" class="text text-sm">• URLリンクのみ</text>
+      <text x="470" y="475" text-anchor="middle" class="text text-sm">• URL リンクのみ</text>
     </g>
     
     <!-- 戦略4: Git LFS -->

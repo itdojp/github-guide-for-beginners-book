@@ -1,12 +1,12 @@
 ---
-title: "GitHubアカウント作成と初期設定"
+title: "GitHub アカウント作成と初期設定"
 chapter: github-account-setup
 ---
 
-# GitHubアカウント作成と初期設定
+# GitHub アカウント作成と初期設定
 
 
-GitHubアカウントの作成から開発環境の準備まで
+GitHub アカウントの作成から開発環境の準備まで
 
 
 ## 概要

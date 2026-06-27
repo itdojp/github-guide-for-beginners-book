@@ -118,10 +118,10 @@
     <!-- 矢印 -->
     <line x1="200" y1="425" x2="220" y2="425" class="primary-stroke" marker-end="url(#arrow)"/>
     
-    <!-- ステップ2: PR作成 -->
+    <!-- ステップ2: PR 作成 -->
     <g class="step-2-create-pr">
       <rect x="240" y="395" width="100" height="60" rx="8" class="success border" opacity="0.1"/>
-      <text x="290" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ PR作成</text>
+      <text x="290" y="415" text-anchor="middle" class="text text-sm" style="font-weight: 600;">2️⃣ PR 作成</text>
       <text x="290" y="435" text-anchor="middle" class="text text-sm">変更内容</text>
       <text x="290" y="450" text-anchor="middle" class="text text-sm">説明・提案</text>
     </g>

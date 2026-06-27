@@ -89,7 +89,7 @@
       <text x="170" y="295" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📥 クローン失敗</text>
       
       <text x="110" y="315" class="text text-sm" style="font-weight: 600;">原因:</text>
-      <text x="110" y="330" class="text text-sm">• URL間違い</text>
+      <text x="110" y="330" class="text text-sm">• URL 間違い</text>
       <text x="110" y="345" class="text text-sm">• 権限不足</text>
       <text x="110" y="360" class="text text-sm">• ネットワーク問題</text>
     </g>

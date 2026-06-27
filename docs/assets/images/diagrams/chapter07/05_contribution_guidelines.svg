@@ -134,10 +134,10 @@
       <text x="590" y="450" text-anchor="middle" class="text text-sm">静的解析</text>
     </g>
     
-    <!-- ステップ5: PR作成 -->
+    <!-- ステップ5: PR 作成 -->
     <g class="step-5-pr">
       <rect x="530" y="480" width="120" height="70" rx="8" class="success border" opacity="0.1"/>
-      <text x="590" y="505" text-anchor="middle" class="text text-sm" style="font-weight: 600;">5️⃣ PR作成</text>
+      <text x="590" y="505" text-anchor="middle" class="text text-sm" style="font-weight: 600;">5️⃣ PR 作成</text>
       <text x="590" y="525" text-anchor="middle" class="text text-sm">詳細説明</text>
       <text x="590" y="540" text-anchor="middle" class="text text-sm">レビュー待ち</text>
     </g>

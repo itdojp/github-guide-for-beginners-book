@@ -48,7 +48,7 @@
     <text x="660" y="105" text-anchor="middle" class="text text-sm" style="font-weight: 600;">👥 チーム協働</text>
     <text x="660" y="125" text-anchor="middle" class="text text-sm">• Pull Request</text>
     <text x="660" y="140" text-anchor="middle" class="text text-sm">• コードレビュー</text>
-    <text x="660" y="155" text-anchor="middle" class="text text-sm">• Issue管理</text>
+    <text x="660" y="155" text-anchor="middle" class="text text-sm">• Issue 管理</text>
   </g>
   
   <!-- プロジェクト管理 -->

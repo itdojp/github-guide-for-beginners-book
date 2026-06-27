@@ -63,10 +63,10 @@
       <text x="460" y="150" text-anchor="middle" class="text text-sm">を積み重ね</text>
     </g>
     
-    <!-- ステップ4: PR作成 -->
+    <!-- ステップ4: PR 作成 -->
     <g class="step-4">
       <rect x="560" y="95" width="120" height="60" rx="8" class="neutral border" opacity="0.1"/>
-      <text x="620" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ PR作成</text>
+      <text x="620" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">4️⃣ PR 作成</text>
       <text x="620" y="135" text-anchor="middle" class="text text-sm">Push & PR</text>
       <text x="620" y="150" text-anchor="middle" class="text text-sm">レビュー依頼</text>
     </g>

@@ -18,7 +18,7 @@
       {
         "id": "repository-creation",
         "title": "第3章：初めてのリポジトリ作成",
-        "description": "初めてのGitHubリポジトリ作成と公開設定を確認する"
+        "description": "初めての GitHub リポジトリ作成と公開設定を確認する"
       },
       {
         "id": "account-security",
@@ -42,7 +42,7 @@
       },
       {
         "id": "issue-management",
-        "title": "第8章：Issue管理とプロジェクト管理",
+        "title": "第8章：Issue 管理とプロジェクト管理",
         "description": "IssuesとProjectsを使った課題管理の基礎を理解する"
       },
       {

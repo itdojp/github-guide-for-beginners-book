@@ -23,15 +23,15 @@
   
   <rect width="100%" height="100%" class="bg"/>
   
-  <title>PR作成ワークフロー</title>
-  <desc>効果的なPull Request作成の詳細な手順とワークフロー</desc>
+  <title>PR 作成ワークフロー</title>
+  <desc>効果的なPull Request 作成の詳細な手順とワークフロー</desc>
   
   <!-- タイトル -->
-  <text x="400" y="40" text-anchor="middle" class="text text-md">PR作成ワークフロー</text>
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR 作成ワークフロー</text>
   
   <!-- 概要 -->
   <g class="workflow-overview">
-    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPR作成の手順</text>
+    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的な PR 作成の手順</text>
     
     <rect x="150" y="90" width="500" height="60" rx="8" class="primary border" opacity="0.1"/>
     <text x="400" y="115" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 計画から作成まで体系的なアプローチ</text>
@@ -144,10 +144,10 @@
       
       <line x1="360" y1="440" x2="380" y2="440" class="primary-stroke" marker-end="url(#arrow)"/>
       
-      <!-- PR作成 -->
+      <!-- PR 作成 -->
       <g class="step-11-create-pr">
         <rect x="400" y="415" width="120" height="50" rx="8" class="warning border" opacity="0.1"/>
-        <text x="460" y="435" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣1️⃣ PR作成</text>
+        <text x="460" y="435" text-anchor="middle" class="text text-sm" style="font-weight: 600;">1️⃣1️⃣ PR 作成</text>
         <text x="460" y="455" text-anchor="middle" class="text text-sm">詳細記述</text>
       </g>
       
@@ -170,7 +170,7 @@
   
   <!-- 重要なポイント -->
   <g class="important-points">
-    <text x="400" y="530" text-anchor="middle" class="text text-md">PR作成時の重要ポイント</text>
+    <text x="400" y="530" text-anchor="middle" class="text text-md">PR 作成時の重要ポイント</text>
     
     <rect x="50" y="545" width="700" height="50" rx="8" class="success border" opacity="0.1"/>
     

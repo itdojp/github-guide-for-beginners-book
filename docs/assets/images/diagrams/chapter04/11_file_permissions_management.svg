@@ -44,8 +44,8 @@
       <text x="320" y="125" text-anchor="middle" class="text text-sm" style="font-weight: 600;">✏️ Write</text>
       <text x="320" y="145" text-anchor="middle" class="text text-sm">• Read権限</text>
       <text x="320" y="160" text-anchor="middle" class="text text-sm">• Push</text>
-      <text x="320" y="175" text-anchor="middle" class="text text-sm">• PR作成・マージ</text>
-      <text x="320" y="190" text-anchor="middle" class="text text-sm">• Issue管理</text>
+      <text x="320" y="175" text-anchor="middle" class="text text-sm">• PR 作成・マージ</text>
+      <text x="320" y="190" text-anchor="middle" class="text text-sm">• Issue 管理</text>
     </g>
     
     <!-- Maintain -->
