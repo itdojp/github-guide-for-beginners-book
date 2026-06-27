@@ -182,9 +182,9 @@ Pull Requestには様々な種類があります。新機能追加、バグ修�
 - 変更内容がmainブランチに反映されていることを確認
 - コミット履歴にマージコミットが追加される
 
-### PR作成ワークフロー
+### PR 作成ワークフロー
 
-![PR作成ワークフロー]({{ '/assets/images/diagrams/chapter08/03_pr_creation_workflow.svg' | relative_url }})
+![PR 作成ワークフロー]({{ '/assets/images/diagrams/chapter08/03_pr_creation_workflow.svg' | relative_url }})
 
 Pull Requestの作成からマージまでの一連の流れを理解し、効率的なチーム開発を実現しましょう。
 
@@ -275,15 +275,15 @@ Pull Request は「作ったら終わり」ではありません。初心者向�
 
 ---
 
-## 7.4 PRレビューと運用（テンプレート / CODEOWNERS）
+## 7.4 PR レビューと運用（テンプレート / CODEOWNERS）
 
-### PRテンプレートの構造
+### PR テンプレートの構造
 
-![PRテンプレート構造]({{ '/assets/images/diagrams/chapter08/04_pr_template_structure.svg' | relative_url }})
+![PR テンプレート構造]({{ '/assets/images/diagrams/chapter08/04_pr_template_structure.svg' | relative_url }})
 
 効果的なPull Requestのために、テンプレートを活用しましょう。一貫性のある情報提供とレビュー効率の向上が期待できます。
 
-このリポジトリでは、PRテンプレート例を `.github/PULL_REQUEST_TEMPLATE.md` として同梱しています。自分のプロジェクトで使う場合は、同ファイルをコピーして「必要最小限」から始めるのがおすすめです。
+このリポジトリでは、PR テンプレート例を `.github/PULL_REQUEST_TEMPLATE.md` として同梱しています。自分のプロジェクトで使う場合は、同ファイルをコピーして「必要最小限」から始めるのがおすすめです。
 
 **最低限そろえるとよい項目（例）**
 - 目的（何を直す/追加するか）
@@ -299,9 +299,9 @@ AI 支援の運用ルール（機密入力の禁止、確認観点など）は�
 
 - AI利用ポリシー（テンプレ）：https://github.com/{{ site.repository }}/blob/main/AI_USAGE_POLICY.md
 
-### PRレビュー状態
+### PR レビュー状態
 
-![PRレビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
+![PR レビュー状態]({{ '/assets/images/diagrams/chapter08/05_pr_review_states.svg' | relative_url }})
 
 Pull Requestのレビュープロセスでは、様々な状態があります。各状態の意味を理解し、適切なアクションを取ることが重要です。
 
@@ -322,7 +322,7 @@ AI生成のPull Requestは「速く作れる」一方で、意図・検証・安
 - **Secrets/個人情報**：トークン・秘密鍵・顧客情報・ログの貼付がないか
 - **ロールバック可能性（例：`git revert`で戻しやすいか）**：PRが小さく、ロールバック手順が明記されているか
 
-これらは、PRテンプレート（`.github/PULL_REQUEST_TEMPLATE.md`）のチェック欄としても運用できます。
+これらは、PR テンプレート（`.github/PULL_REQUEST_TEMPLATE.md`）のチェック欄としても運用できます。
 
 ### CODEOWNERSでレビュー担当を自動で割り当てる（発展）
 
@@ -491,7 +491,7 @@ Welcome to Our Website (mainブランチの内容)
 
 Pull Requestのメトリクスを分析することで、チームの開発効率やコード品質を継続的に改善できます。レビュー時間、マージ率、コンフリクト発生率などの指標を活用しましょう。
 
-次の章では、Issue管理とプロジェクト管理について学習します。
+次の章では、Issue 管理とプロジェクト管理について学習します。
 
 **理解度確認：**
 □ ブランチの概念を理解し、適切に作成・切り替えができる  

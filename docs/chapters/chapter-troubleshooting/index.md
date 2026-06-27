@@ -266,7 +266,7 @@ git commit -m "Disable Jekyll processing"
 git push origin main
 ```
 
-**4. ベース URLの設定**
+**4. ベース URL の設定**
 ```yaml
 # _config.yml
 baseurl: "/repository-name"

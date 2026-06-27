@@ -119,7 +119,7 @@ GitHubは単なるコード保存場所ではありません。チーム開発�
 - Webブラウザ（Google Chrome、Safari、Edge など）
 - テキストエディタ（推奨：Visual Studio Code）
 
-### GitHubアカウント
+### GitHub アカウント
 学習を進めながらアカウントを作成しますので、事前準備は不要です。
 
 ### 学習時間の目安
@@ -162,7 +162,7 @@ GitHub の UI や機能は更新されます。画面やボタン名が本文と
 - 標準ルートで進める場合は、[第2章：Git基礎 - バージョン管理の仕組み]({{ '/chapters/chapter-git-basics/' | relative_url }}) に進んでください。
 - 文書運用を先に試したい場合は、[特別編：Docs-as-Code]({{ '/chapters/chapter-docs-as-code/' | relative_url }}) を先に読んでも構いません。
 - コマンドを見ながら進めたい場合は、[付録A：Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }}) を手元に開いておくと迷いにくくなります。
-- チーム開発の流れを先に見たい場合は、[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }}) と [第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }}) を参照してください。
+- チーム開発の流れを先に見たい場合は、[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }}) と [第8章：Issue 管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }}) を参照してください。
 
 ## 利用と更新情報
 

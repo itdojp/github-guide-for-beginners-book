@@ -266,7 +266,7 @@ git commit -m "Disable Jekyll processing"
 git push origin main
 ```
 
-**4. ベースURLの設定**
+**4. ベース URL の設定**
 ```yaml
 # _config.yml
 baseurl: "/repository-name"
@@ -513,7 +513,7 @@ gh api user
 gh api repos/owner/repo
 gh api repos/owner/repo/branches
 
-# curl による直接API呼び出し
+# curl による直接 API 呼び出し
 curl -H "Authorization: token $GITHUB_TOKEN" \
   https://api.github.com/repos/owner/repo
 
