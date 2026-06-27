@@ -148,10 +148,10 @@
   <g class="practical-checklist">
     <text x="400" y="530" text-anchor="middle" class="text text-md">実践チェックリスト</text>
     
-    <!-- PR作成時 -->
+    <!-- PR 作成時 -->
     <g class="pr-creation-checklist">
       <rect x="50" y="545" width="220" height="65" rx="8" class="success border" opacity="0.1"/>
-      <text x="70" y="565" class="text text-sm" style="font-weight: 600;">📝 PR作成時:</text>
+      <text x="70" y="565" class="text text-sm" style="font-weight: 600;">📝 PR 作成時:</text>
       <text x="70" y="580" class="text text-sm">目的明確・サイズ適切</text>
       <text x="70" y="595" class="text text-sm">テスト済み・説明充実</text>
     </g>

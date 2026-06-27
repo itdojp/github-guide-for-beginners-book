@@ -26,11 +26,11 @@
   
   <rect width="100%" height="100%" class="bg"/>
   
-  <title>PRレビュー状態</title>
+  <title>PR レビュー状態</title>
   <desc>Pull Requestのレビュー状態とステータス遷移</desc>
   
   <!-- タイトル -->
-  <text x="400" y="40" text-anchor="middle" class="text text-md">PRレビュー状態</text>
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR レビュー状態</text>
   
   <!-- 概要 -->
   <g class="review-states-overview">

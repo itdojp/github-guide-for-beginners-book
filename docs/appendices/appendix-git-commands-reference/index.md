@@ -19,23 +19,23 @@ order: 100
 git init
 
 # リモートリポジトリをクローン
-git clone <リポジトリURL>
+git clone <リポジトリ URL>
 
 # 特定のブランチをクローン
-git clone -b <ブランチ名> <リポジトリURL>
+git clone -b <ブランチ名> <リポジトリ URL>
 
 # 浅いクローン（履歴を制限）
-git clone --depth 1 <リポジトリURL>
+git clone --depth 1 <リポジトリ URL>
 ```
 
 ### リモートリポジトリの管理
 
 ```bash
 # リモートリポジトリを追加
-git remote add origin <リポジトリURL>
+git remote add origin <リポジトリ URL>
 
-# リモートリポジトリのURL変更
-git remote set-url origin <新しいURL>
+# リモートリポジトリの URL 変更
+git remote set-url origin <新しい URL>
 
 # リモートリポジトリ一覧を表示
 git remote -v

@@ -84,7 +84,7 @@ permalink: /
 5. **[第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})**
 6. **[第6章：GitHub Desktop の活用]({{ '/chapters/chapter-github-desktop/' | relative_url }})**
 7. **[第7章：ブランチの基本操作]({{ '/chapters/chapter-branch-operations/' | relative_url }})**
-8. **[第8章：Issue管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
+8. **[第8章：Issue 管理とプロジェクト管理]({{ '/chapters/chapter-issue-management/' | relative_url }})**
 
 ### 特別編: Docs-as-Code（文書運用編）
 
@@ -113,7 +113,7 @@ permalink: /
 
 ### 準備するもの
 
-- GitHubアカウント（無料）
+- GitHub アカウント（無料）
 - Git ソフトウェア（必須）
 - GitHub CLI（任意。コマンド操作や自動化を試したい場合に推奨）
 

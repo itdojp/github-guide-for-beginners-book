@@ -149,10 +149,10 @@
       <text x="490" y="560" text-anchor="middle" class="text text-sm">機能分離</text>
     </g>
     
-    <!-- PR作成 -->
+    <!-- PR 作成 -->
     <g class="create-PR">
       <rect x="580" y="485" width="140" height="80" rx="8" class="neutral border" opacity="0.1"/>
-      <text x="650" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 PR作成</text>
+      <text x="650" y="510" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 PR 作成</text>
       <text x="650" y="530" text-anchor="middle" class="text text-sm">Pull Request</text>
       <text x="650" y="545" text-anchor="middle" class="text text-sm">をGitHubで作成</text>
       <text x="650" y="560" text-anchor="middle" class="text text-sm">レビュー依頼</text>

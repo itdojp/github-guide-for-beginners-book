@@ -40,7 +40,7 @@
       
       <!-- 学習内容 -->
       <text x="90" y="145" class="text text-sm">✓ バージョン管理概念</text>
-      <text x="90" y="160" class="text text-sm">✓ GitHubアカウント作成</text>
+      <text x="90" y="160" class="text text-sm">✓ GitHub アカウント作成</text>
       <text x="90" y="175" class="text text-sm">✓ リポジトリ操作</text>
       <text x="90" y="190" class="text text-sm">✓ Web UI基本操作</text>
     </g>
@@ -67,7 +67,7 @@
       <!-- 学習内容 -->
       <text x="430" y="145" class="text text-sm">✓ Pull Request</text>
       <text x="430" y="160" class="text text-sm">✓ コードレビュー</text>
-      <text x="430" y="175" class="text text-sm">✓ Issue管理</text>
+      <text x="430" y="175" class="text text-sm">✓ Issue 管理</text>
       <text x="430" y="190" class="text text-sm">✓ チーム開発参加</text>
     </g>
     

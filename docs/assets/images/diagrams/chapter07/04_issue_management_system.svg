@@ -23,11 +23,11 @@
   
   <rect width="100%" height="100%" class="bg"/>
   
-  <title>Issue管理システム</title>
+  <title>Issue 管理システム</title>
   <desc>GitHubのIssue機能を活用したプロジェクト管理とコミュニケーション</desc>
   
   <!-- タイトル -->
-  <text x="400" y="40" text-anchor="middle" class="text text-md">Issue管理システム</text>
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Issue 管理システム</text>
   
   <!-- Issueシステムの概要 -->
   <g class="issue-system-overview">
@@ -130,7 +130,7 @@
     <g class="issue-review">
       <rect x="460" y="375" width="80" height="60" rx="8" class="neutral border" opacity="0.1"/>
       <text x="500" y="395" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔍 レビュー</text>
-      <text x="500" y="415" text-anchor="middle" class="text text-sm">PR作成</text>
+      <text x="500" y="415" text-anchor="middle" class="text text-sm">PR 作成</text>
       <text x="500" y="430" text-anchor="middle" class="text text-sm">コードレビュー</text>
     </g>
     
@@ -152,7 +152,7 @@
     <text x="380" y="345" text-anchor="middle" class="text text-sm error">再オープン</text>
   </g>
   
-  <!-- Issue管理の機能 -->
+  <!-- Issue 管理の機能 -->
   <g class="issue-management-features">
     <text x="400" y="505" text-anchor="middle" class="text text-md">管理機能とベストプラクティス</text>
     

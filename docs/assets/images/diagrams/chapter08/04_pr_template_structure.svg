@@ -17,15 +17,15 @@
   
   <rect width="100%" height="100%" class="bg"/>
   
-  <title>PRテンプレート構造</title>
+  <title>PR テンプレート構造</title>
   <desc>効果的なPull Requestテンプレートの設計と活用方法</desc>
   
   <!-- タイトル -->
-  <text x="400" y="40" text-anchor="middle" class="text text-md">PRテンプレート構造</text>
+  <text x="400" y="40" text-anchor="middle" class="text text-md">PR テンプレート構造</text>
   
   <!-- テンプレートサンプル -->
   <g class="template-sample">
-    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPRテンプレート</text>
+    <text x="400" y="75" text-anchor="middle" class="text text-md">効果的なPR テンプレート</text>
     
     <rect x="80" y="90" width="640" height="450" rx="8" class="bg-alt border"/>
     

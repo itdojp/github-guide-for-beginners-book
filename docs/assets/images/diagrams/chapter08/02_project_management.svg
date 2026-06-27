@@ -50,7 +50,7 @@
       
       <!-- タスクカード3 -->
       <rect x="90" y="240" width="120" height="40" rx="4" class="bg-alt border"/>
-      <text x="150" y="255" text-anchor="middle" class="text text-sm">#125 API設計</text>
+      <text x="150" y="255" text-anchor="middle" class="text text-sm">#125 API 設計</text>
       <text x="150" y="270" text-anchor="middle" class="text text-sm">documentation</text>
       
       <!-- 追加タスク表示 -->

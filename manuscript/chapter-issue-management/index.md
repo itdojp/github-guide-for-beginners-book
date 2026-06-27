@@ -1,10 +1,10 @@
 ---
-title: "第8章：Issue管理とプロジェクト管理"
+title: "第8章：Issue 管理とプロジェクト管理"
 layout: book
 order: 8
 ---
 
-# 第8章：Issue管理とプロジェクト管理
+# 第8章：Issue 管理とプロジェクト管理
 
 ## 学習目標
 この章を読み終える頃には、GitHubのIssue機能を活用して、プロジェクトのタスク管理やバグ報告を効率的に行えるようになります。また、チーム開発での課題追跡や、個人プロジェクトでの作業計画立案にIssueを活用する方法を身につけます。
@@ -66,7 +66,7 @@ order: 8
    ↓
 4. 作業実行
    ↓
-5. Pull Request作成
+5. Pull Request 作成
    ↓
 6. レビュー・マージ
    ↓
@@ -87,7 +87,7 @@ GitHubのIssue機能は、オープンソースエコシステムの中核をな
 
 **Step 1: 新しいIssueの作成**
 
-1. GitHubリポジトリの「Issues」タブをクリック
+1. GitHub リポジトリの「Issues」タブをクリック
 2. 「New issue」ボタンを選択
 3. 適切なIssueテンプレートを選択（ある場合）
 
@@ -265,9 +265,9 @@ AI支援でPull Requestを作る際に、Issueの情報不足で手戻りが発�
 
 オープンソースプロジェクトへの貢献はForkワークフローで進めます。元のプロジェクトを自分のアカウントにコピーし、変更を加えた後、Pull Requestで元のプロジェクトに変更を提案します。
 
-### Issue管理システム
+### Issue 管理システム
 
-![Issue管理システム]({{ '/assets/images/diagrams/chapter07/04_issue_management_system.svg' | relative_url }})
+![Issue 管理システム]({{ '/assets/images/diagrams/chapter07/04_issue_management_system.svg' | relative_url }})
 
 ### ラベル機能による分類管理
 
@@ -342,9 +342,9 @@ AI支援でPull Requestを作る際に、Issueの情報不足で手戻りが発�
 
 ## 8.3 プロジェクトボードによる視覚的管理
 
-### Pull Request作成プロセス
+### Pull Request 作成プロセス
 
-![Pull Request作成]({{ '/assets/images/diagrams/chapter07/06_pull_request_creation.svg' | relative_url }})
+![Pull Request 作成]({{ '/assets/images/diagrams/chapter07/06_pull_request_creation.svg' | relative_url }})
 
 オープンソースへの貢献では、Pull Requestの作成が最も重要なステップです。適切な情報と文脈を提供し、メンテナーがレビューしやすいPRを作成しましょう。
 
@@ -437,7 +437,7 @@ Done:
 設計フェーズ:
 - 要件定義書の作成
 - データベース設計
-- API設計
+- API 設計
 
 開発待ち:
 - 商品一覧ページ作成 (担当: 田中さん)

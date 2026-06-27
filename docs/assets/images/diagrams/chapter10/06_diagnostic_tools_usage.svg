@@ -65,7 +65,7 @@
       
       <text x="420" y="185" class="text text-sm" style="font-weight: 600;">確認内容:</text>
       <text x="420" y="200" class="text text-sm">• リモート設定</text>
-      <text x="420" y="215" class="text text-sm">• URL設定</text>
+      <text x="420" y="215" class="text text-sm">• URL 設定</text>
       <text x="420" y="230" class="text text-sm">• 認証方式</text>
       <text x="420" y="245" class="text text-sm">• 接続可能性</text>
     </g>

@@ -23,15 +23,15 @@
   
   <rect width="100%" height="100%" class="bg"/>
   
-  <title>Pull Request作成</title>
-  <desc>GitHub DesktopからのPull Request作成とワークフロー</desc>
+  <title>Pull Request 作成</title>
+  <desc>GitHub DesktopからのPull Request 作成とワークフロー</desc>
   
   <!-- タイトル -->
-  <text x="400" y="40" text-anchor="middle" class="text text-md">Pull Request作成</text>
+  <text x="400" y="40" text-anchor="middle" class="text text-md">Pull Request 作成</text>
   
-  <!-- PR作成の前提条件 -->
+  <!-- PR 作成の前提条件 -->
   <g class="pr-prerequisites">
-    <text x="400" y="75" text-anchor="middle" class="text text-md">Pull Request作成の前提条件</text>
+    <text x="400" y="75" text-anchor="middle" class="text text-md">Pull Request 作成の前提条件</text>
     
     <!-- ステップ1: ブランチ作成 -->
     <g class="step-1-branch">
@@ -63,7 +63,7 @@
       <text x="550" y="120" text-anchor="middle" class="text text-sm" style="font-weight: 600;">3️⃣ Push</text>
       <text x="550" y="140" text-anchor="middle" class="text text-sm">リモートに送信</text>
       <text x="550" y="155" text-anchor="middle" class="text text-sm">GitHub で表示可能</text>
-      <text x="550" y="170" text-anchor="middle" class="text text-sm">PR作成準備完了</text>
+      <text x="550" y="170" text-anchor="middle" class="text text-sm">PR 作成準備完了</text>
     </g>
   </g>
   
@@ -73,7 +73,7 @@
     
     <rect x="100" y="230" width="600" height="160" rx="8" class="bg-alt border"/>
     
-    <!-- PR作成ボタン -->
+    <!-- PR 作成ボタン -->
     <g class="create-pr-button">
       <rect x="120" y="250" width="560" height="40" rx="4" class="primary border" opacity="0.1"/>
       <text x="400" y="270" text-anchor="middle" class="text text-sm" style="font-weight: 600;">🔗 Create Pull Request</text>
@@ -107,9 +107,9 @@
     </g>
   </g>
   
-  <!-- PR作成後の画面遷移 -->
+  <!-- PR 作成後の画面遷移 -->
   <g class="post-pr-creation">
-    <text x="400" y="425" text-anchor="middle" class="text text-md">PR作成後の操作</text>
+    <text x="400" y="425" text-anchor="middle" class="text text-md">PR 作成後の操作</text>
     
     <!-- GitHub Web画面 -->
     <g class="github-web">
@@ -133,15 +133,15 @@
     <g class="desktop-tracking">
       <rect x="570" y="445" width="150" height="80" rx="8" class="warning border" opacity="0.1"/>
       <text x="645" y="470" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📊 Desktop追跡</text>
-      <text x="645" y="490" text-anchor="middle" class="text text-sm">PR作成後も</text>
+      <text x="645" y="490" text-anchor="middle" class="text text-sm">PR 作成後も</text>
       <text x="645" y="505" text-anchor="middle" class="text text-sm">Desktop で管理</text>
       <text x="645" y="520" text-anchor="middle" class="text text-sm">更新push可能</text>
     </g>
   </g>
   
-  <!-- PR作成のベストプラクティス -->
+  <!-- PR 作成のベストプラクティス -->
   <g class="pr-best-practices">
-    <text x="400" y="555" text-anchor="middle" class="text text-md">PR作成のベストプラクティス</text>
+    <text x="400" y="555" text-anchor="middle" class="text text-md">PR 作成のベストプラクティス</text>
     
     <rect x="50" y="570" width="700" height="25" rx="4" class="primary border" opacity="0.1"/>
     <text x="60" y="587" class="text text-sm" style="font-weight: 600;">📋 タイトル:</text>

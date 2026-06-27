@@ -11,5 +11,5 @@ layout: book
 
 第3章は次のURLへ移動しました。
 
-- 新しいURL：{{ '/chapters/chapter-repository-creation/' | relative_url }}
+- 新しい URL：{{ '/chapters/chapter-repository-creation/' | relative_url }}
 - [第3章：初めてのリポジトリ作成]({{ '/chapters/chapter-repository-creation/' | relative_url }})

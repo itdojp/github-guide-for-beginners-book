@@ -62,7 +62,7 @@
   <line x1="340" y1="110" x2="380" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
   <line x1="500" y1="110" x2="540" y2="110" class="primary-stroke" marker-end="url(#arrow)"/>
   
-  <!-- PR作成 -->
+  <!-- PR 作成 -->
   <g class="pr-creation">
     <rect x="280" y="180" width="240" height="80" rx="8" class="primary border" opacity="0.1"/>
     <text x="400" y="205" text-anchor="middle" class="text text-md primary" style="font-weight: 600;">プルリクエスト作成</text>
@@ -71,7 +71,7 @@
     <text x="400" y="255" text-anchor="middle" class="text text-sm">• ラベル・マイルストーン</text>
   </g>
   
-  <!-- PR作成への矢印 -->
+  <!-- PR 作成への矢印 -->
   <line x1="600" y1="140" x2="480" y2="180" class="primary-stroke" marker-end="url(#arrow)"/>
   
   <!-- レビュープロセス -->

@@ -11,5 +11,5 @@ layout: book
 
 第5章は次のURLへ移動しました。
 
-- 新しいURL：{{ '/chapters/chapter-file-management/' | relative_url }}
+- 新しい URL：{{ '/chapters/chapter-file-management/' | relative_url }}
 - [第5章：ファイルのアップロードと管理]({{ '/chapters/chapter-file-management/' | relative_url }})

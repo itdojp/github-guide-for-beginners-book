@@ -110,10 +110,10 @@
   <g class="pull-request-process">
     <text x="400" y="420" text-anchor="middle" class="text text-md">Pull Request プロセス</text>
     
-    <!-- PR作成 -->
+    <!-- PR 作成 -->
     <g class="pr-creation">
       <rect x="100" y="440" width="140" height="80" rx="4" class="primary border" opacity="0.1"/>
-      <text x="170" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 PR作成</text>
+      <text x="170" y="465" text-anchor="middle" class="text text-sm" style="font-weight: 600;">📋 PR 作成</text>
       <text x="170" y="485" text-anchor="middle" class="text text-sm">• 変更内容説明</text>
       <text x="170" y="500" text-anchor="middle" class="text text-sm">• レビュアー指定</text>
       <text x="170" y="515" text-anchor="middle" class="text text-sm">• 自動テスト実行</text>

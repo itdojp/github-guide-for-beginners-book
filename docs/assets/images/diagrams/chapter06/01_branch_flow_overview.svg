@@ -127,7 +127,7 @@
       
       <text x="570" y="405" class="text text-sm" style="font-weight: 600;">操作:</text>
       <text x="570" y="420" class="text text-sm">git push origin feature/login</text>
-      <text x="570" y="435" class="text text-sm">Pull Request作成</text>
+      <text x="570" y="435" class="text text-sm">Pull Request 作成</text>
     </g>
     
     <!-- ステップ間の矢印 -->

@@ -11,5 +11,5 @@ layout: book
 
 第4章は次のURLへ移動しました。
 
-- 新しいURL：{{ '/chapters/chapter-account-security/' | relative_url }}
+- 新しい URL：{{ '/chapters/chapter-account-security/' | relative_url }}
 - [第4章：アカウントセキュリティの基本]({{ '/chapters/chapter-account-security/' | relative_url }})

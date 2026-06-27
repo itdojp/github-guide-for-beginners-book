@@ -107,7 +107,7 @@
     
     <rect x="320" y="450" width="160" height="80" rx="4" class="primary border" opacity="0.1"/>
     <text x="400" y="475" text-anchor="middle" class="text text-sm">プロジェクト管理</text>
-    <text x="400" y="495" text-anchor="middle" class="text text-sm">• Issue管理</text>
+    <text x="400" y="495" text-anchor="middle" class="text text-sm">• Issue 管理</text>
     <text x="400" y="515" text-anchor="middle" class="text text-sm">• マイルストーン</text>
     
     <rect x="560" y="450" width="160" height="80" rx="4" class="primary border" opacity="0.1"/>

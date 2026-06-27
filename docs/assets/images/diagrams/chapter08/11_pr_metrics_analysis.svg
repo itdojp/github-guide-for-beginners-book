@@ -103,7 +103,7 @@
     <g class="time-metrics">
       <text x="100" y="395" class="text text-sm" style="font-weight: 600;">⏱️ 時間系メトリクス</text>
       
-      <text x="110" y="415" class="text text-sm">• PR作成からファーストレビューまでの時間</text>
+      <text x="110" y="415" class="text text-sm">• PR 作成からファーストレビューまでの時間</text>
       <text x="110" y="430" class="text text-sm">• レビューサイクル回数と総時間</text>
       <text x="110" y="445" class="text text-sm">• 承認からマージまでの時間</text>
       <text x="110" y="460" class="text text-sm">• PR全体のリードタイム（作成〜マージ）</text>

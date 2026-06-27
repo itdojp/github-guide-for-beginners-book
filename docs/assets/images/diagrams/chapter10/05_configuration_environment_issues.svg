@@ -41,7 +41,7 @@
       
       <text x="50" y="185" class="text text-sm" style="font-weight: 600;">症状:</text>
       <text x="50" y="200" class="text text-sm">• 認証情報間違い</text>
-      <text x="50" y="215" class="text text-sm">• URL形式エラー</text>
+      <text x="50" y="215" class="text text-sm">• URL 形式エラー</text>
       <text x="50" y="230" class="text text-sm">• エンコード問題</text>
       <text x="50" y="245" class="text text-sm">• 設定重複・競合</text>
     </g>
