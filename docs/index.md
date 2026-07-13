@@ -102,6 +102,7 @@ permalink: /
 - **[付録A：Gitコマンドリファレンス]({{ '/appendices/appendix-git-commands-reference/' | relative_url }})**
 - **[付録B：GitHubショートカット集]({{ '/appendices/appendix-github-shortcuts/' | relative_url }})**
 - **[付録C：学習リソースと参考文献]({{ '/appendices/appendix-resources/' | relative_url }})**
+- **[付録D：Git/GitHub用語集]({{ '/appendices/appendix-glossary/' | relative_url }})**
 
 ## 🛠️ 実習環境
 

@@ -33,3 +33,5 @@ appendices:
   path: /appendices/appendix-github-shortcuts/
 - title: 付録C：学習リソースと参考文献
   path: /appendices/appendix-resources/
+- title: 付録D：Git/GitHub用語集
+  path: /appendices/appendix-glossary/

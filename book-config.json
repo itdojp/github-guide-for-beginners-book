@@ -83,6 +83,10 @@
       {
         "id": "resources",
         "title": "付録C：学習リソースと参考文献"
+      },
+      {
+        "id": "glossary",
+        "title": "付録D：Git/GitHub用語集"
       }
     ]
   },
@@ -96,7 +100,7 @@
       "conceptMap": false,
       "figureIndex": false,
       "legalNotice": true,
-      "glossary": false
+      "glossary": true
     }
   },
   "shared": {
