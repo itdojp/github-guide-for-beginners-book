@@ -7,12 +7,12 @@ const path = require('path');
 const ROOT = process.cwd();
 const ROUTE = '/appendices/appendix-glossary/';
 const TITLE = '付録D：Git/GitHub用語集';
-const MANUSCRIPT_FILE = 'manuscript/appendices/appendix-glossary/index.md';
+const MANUSCRIPT_FILE = 'manuscript/appendix-glossary/index.md';
 const DOCS_FILE = 'docs/appendices/appendix-glossary/index.md';
 const errors = [];
 
 function read(file) {
-  return fs.readFileSync(path.join(ROOT, file), 'utf8');
+  return fs.readFileSync(path.join(ROOT, file), 'utf8').replace(/\r\n?/g, '\n');
 }
 
 function assert(condition, message) {
