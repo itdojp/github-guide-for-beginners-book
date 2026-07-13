@@ -71,6 +71,7 @@ CI の基準（必須）:
 | `manuscript/appendix-git-commands-reference/` | 100 | 付録A：Gitコマンドリファレンス |
 | `manuscript/appendix-github-shortcuts/` | 101 | 付録B：GitHubショートカット集 |
 | `manuscript/appendix-resources/` | 102 | 付録C：学習リソースと参考文献 |
+| `manuscript/appendix-glossary/` | 103 | 付録D：Git/GitHub用語集 |
 | `manuscript/chapter-security/` | 999 | 第10章：セキュリティ対策と安全なGitHub利用（互換/残骸。原則編集しない） |
 
 slug 改名（ディレクトリ名変更）を行う場合は、公開サイトの既存 URL 互換（旧URL誘導/リンク更新）と外部参照への影響を評価し、Issue で計画して段階的に実施します。

@@ -39,6 +39,9 @@ jobs:
       - name: Check metadata consistency
         run: node scripts/check-metadata-consistency.js
 
+      - name: Check reader-facing glossary contract
+        run: node scripts/check-glossary-contract.js
+
       - name: Install dependencies (book-formatter)
         working-directory: book-formatter
         run: npm ci
