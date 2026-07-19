@@ -121,6 +121,9 @@ jobs:
 workflow の各 job では、GitHub が一時的な `GITHUB_TOKEN` を自動発行します。通常の CI では、まず読み取り中心の権限から始め、必要な job だけに追加権限を与えます。
 
 ```yaml
+on:
+  pull_request:
+
 permissions:
   contents: read
 
@@ -131,6 +134,10 @@ jobs:
       - uses: actions/checkout@v6
       - run: npm test
 ```
+
+fork からの Pull Request を検証する基本形は、`pull_request` と `contents: read` の組み合わせです。
+public repository の fork PR では、既定で `GITHUB_TOKEN` は read-only になり、通常の repository secrets は渡りません。
+private repository では管理設定により write token や secrets を送れるため、repository settings も確認してください。
 
 Pull Request へコメントを書く、Pages へデプロイする、packages を発行するなどの操作では追加権限が必要です。その場合も、workflow 全体へ広い権限を付けるのではなく、対象 job に必要な権限だけを付与します。
 
@@ -184,8 +191,23 @@ YAML はインデント（空白）に敏感です。コピペ後に動かない
 ### Secrets とトリガー（事故防止）
 
 - **Secrets をログに出さない**: `echo` や `set -x`（シェルのデバッグ出力）で漏洩しやすくなります。
-- **fork からの Pull Request**: 原則として Secrets は渡りません（安全のため）。この制約を回避しようとして危険なトリガー（例: `pull_request_target`）を安易に使わないでください。
+- **fork からの Pull Request**: 基本は`pull_request`とread-onlyのminimum `permissions`です。public repositoryでは通常Secretsを渡しません。
+- **`pull_request_target`の境界**: base repositoryのdefault branchにあるworkflowをbase branch contextで実行し、base側の`GITHUB_TOKEN`とrepository / organization secretsへ到達できます。
+- **fork承認を安全装置にしない**: public repositoryの`pull_request_target`はfork workflowの承認設定に依存せずbase側で実行されるため、初回contributor承認で停止すると期待してはいけません。
+- **untrusted head codeを実行しない**: `pull_request_target`で`github.event.pull_request.head.sha`をcheckoutし、build、test、install script、任意commandを実行してはいけません。label付与などmetadataだけを扱う場合も、PR codeをcheckout/実行しないことを確認します。
 - **AI/外部サービスへログを貼らない**: 失敗ログにはトークン、URL、内部パス、顧客情報が混ざることがあります。共有前にマスクし、必要最小限だけ貼り付けます。
+
+公式の境界は、[Securely using `pull_request_target`](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)、[Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)、[Workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)、[Managing GitHub Actions settings](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)で確認します。
+
+### privileged writeが必要な場合の2-stage設計
+
+1. 第1段は`pull_request`で実行し、`contents: read`、Secretsなしでuntrusted PR codeを検証します。
+2. 第2段は`workflow_run`または手動承認で起動し、PR codeをcheckout/実行せず、write操作だけを行います。
+3. 前段artifactを使う場合はuntrusted dataとして扱い、schema、size、対象PR、producer run、digestを検証します。展開先はworkspaceではなく`runner.temp`配下に限定します。
+4. 後段ではartifact内のscriptやbinaryを実行せず、検証済みのmetadataだけをAPI writeへ渡します。
+
+`workflow_run`は自動的に安全になる仕組みではありません。
+後段でPR codeや未検証artifactを実行すると、低権限とprivileged処理を分けた意味が失われます。
 
 ### ログの読み方（最短）
 
@@ -217,6 +239,7 @@ YAML はインデント（空白）に敏感です。コピペ後に動かない
 1. `npm test` に加えて `npm run lint` を回す
 2. Pull Request の必須チェックに CI を設定する（ブランチ保護）
 3. Secrets を使う場合は、対象ブランチ/イベントとログ出力の扱いを見直す（最小権限）
+4. fork PRは`pull_request`で検証し、writeが必要ならPR codeを実行しない2-stageへ分離する
 
 **理解度確認：**
 □ GitHub Actionsの基本概念を理解している  

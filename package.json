@@ -6,7 +6,7 @@
   "scripts": {
     "start": "bundle exec jekyll serve --livereload --config docs/_config.yml --source docs --destination _site",
     "build": "bundle exec jekyll build --config docs/_config.yml --source docs --destination _site",
-    "test": "npm run check:metadata && npm run check:glossary && npm run lint && npm run check-links",
+    "test": "npm run check:metadata && npm run check:glossary && npm run check:actions-trust-boundary && npm run check:actions-trust-boundary:self-test && npm run lint && npm run check-links",
     "lint": "markdownlint --config .markdownlint-src.json src/**/*.md",
     "check-links": "markdown-link-check src/**/*.md",
     "docs:lint": "markdownlint 'docs/**/*.md'",
@@ -14,7 +14,9 @@
     "docs:quality-gate": "npm run docs:lint && npm run docs:check-internal-links",
     "deploy": "gh-pages -d _site",
     "check:metadata": "node scripts/check-metadata-consistency.js",
-    "check:glossary": "node scripts/check-glossary-contract.js"
+    "check:glossary": "node scripts/check-glossary-contract.js",
+    "check:actions-trust-boundary": "node scripts/check-github-actions-trust-boundary.js",
+    "check:actions-trust-boundary:self-test": "node scripts/check-github-actions-trust-boundary.js --self-test"
   },
   "keywords": [
     "book",
