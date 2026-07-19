@@ -257,7 +257,23 @@ Pull Request は「作ったら終わり」ではありません。初心者向�
 | CI | 必須チェックが成功している | Checks タブで失敗 job がないことを確認する |
 | merge 後 | main のチェックと公開先に反映された | merge 後の Actions / Pages / 動作確認を Issue に記録する |
 
-ブランチ保護や ruleset を使うと、レビュー、status checks、conversation resolution などをマージ条件として機械的に要求できます。個人学習では任意ですが、チーム開発では早めに導入すると事故を減らせます。
+ブランチ保護や ruleset を使うと、レビュー、status checks、conversation resolution などをマージ条件として機械的に要求できます。本書では、個人学習では任意、チーム開発では最低限の merge gate として早めに導入することを推奨します。
+
+### branch protection rule と rulesets の整理（2026-07-19時点）
+
+GitHub 公式仕様では、branch protection rule と rulesets は別機能です。rulesets を branch protection の単なる名称変更として扱わないでください。
+
+- **branch protection rule** は、特定の branch 名または `fnmatch` pattern を対象に設定します。ただし、同じ branch に同時適用される branch protection rule は常に 1 件だけです。優先順位は、specific branch rule が最優先、同じ specific branch を指す rule 同士では古い rule が優先、`*` などの特殊文字を含む wildcard rule 同士では作成順で古い rule が優先、です。
+- **rulesets** は branch または tag を対象にでき、複数の ruleset を同じ branch や tag に重ねて適用できます。さらに rulesets は branch protection rule とも重なって評価され、同じ種類の rule が複数定義されている場合は、より厳しい設定が有効になります。
+- **active ruleset の確認** は admin 権限なしでも可能です。read 権限があれば、リポジトリの `/rules` や branch 一覧から対象 ruleset を確認できます。Pull Request の merge box に rule が表示された場合は、merge を妨げている条件も確認できます。
+- **enforcement status** は、Free / Pro / Team 向けの一般 docs では `Active` と `Disabled` が案内されています。Enterprise Cloud 向け docs では `Evaluate` も案内されており、利用できる環境では Rule Insights で非強制の評価結果を見てから `Active` へ進めます。
+
+**GitHub Docs（2026-07-19確認）**
+- [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+- [Managing a branch protection rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+- [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
+- [Creating rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository)
+- [Managing rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository)
 
 ### 作業用ブランチの削除
 

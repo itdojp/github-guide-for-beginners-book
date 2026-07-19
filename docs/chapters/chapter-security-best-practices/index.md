@@ -213,10 +213,27 @@ git gc --prune=now --aggressive
 
 ### 開発フロー
 
-1. **ブランチ保護 / ruleset**: mainブランチへの直接プッシュを禁止し、必要に応じて ruleset で対象ブランチや tag の条件を管理する
+1. **branch protection rule / rulesets**: mainブランチへの直接プッシュを禁止し、branch protection rule と rulesets を使い分ける。branch protection rule は 1 つの branch に 1 件しか同時適用されない一方、rulesets は branch/tag を対象に複数重ねられるため、適用 model に応じて使い分ける
 2. **プルリクエストレビュー**: 必須レビュー、最新 push の再レビュー、conversation resolution を設定する
 3. **ステータスチェック**: CI/CDでのテスト、lint、セキュリティチェックを必須化する
 4. **merge 後確認**: main の Actions、Pages、リリース先を確認し、Issue に証跡を残す
+
+### branch protection rule / rulesets 運用の最小原則
+
+- bypass 権限は最小化します。ruleset では `For pull requests only` を選ぶと、直接 push を許可せず、Pull Request に変更の軌跡を残せます。organization 所有 repository では、その操作を organization の audit log でも確認できます。
+- この `For pull requests only` は ruleset の bypass 設定です。branch protection rule 側では bypass list に actor を追加できるのは organization 所有 repository の場合だけなので、両者を混同しないでください。
+- branch protection rule は特定 branch 名または `fnmatch` pattern を対象にできますが、同じ branch に同時適用される rule は 1 件だけです。specific branch rule が優先され、同じ specific branch への rule が複数ある場合は古い rule が優先されます。`*` などを含む wildcard rule 同士も古い rule が優先されます。
+- rulesets は branch または tag を対象にでき、複数の ruleset と branch protection rule が layer されます。同じ rule が複数ある場合は most restrictive が適用されます。
+- active ruleset は read 権限で確認できます。`/rules` や branch 一覧で対象 ruleset を確認し、Pull Request の merge box に rule が表示された場合は、merge を妨げている条件を確認します。
+- Free / Pro / Team 向けの一般 docs では ruleset の status として `Active` と `Disabled` が案内されています。Enterprise Cloud 向け docs では `Evaluate` も案内されており、利用できる環境では Rule Insights で非強制の評価結果を確認してから `Active` に進めます。
+- **本書の推奨**: 個人学習用 repository では branch protection や rulesets は任意とし、team operation では必須レビューと必須 status checks を含む最低限の merge gate として利用します。
+
+**GitHub Docs（2026-07-19確認）**
+- [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+- [Managing a branch protection rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+- [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
+- [Creating rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository)
+- [Managing rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository)
 
 ### チームでのセキュリティ文化
 
