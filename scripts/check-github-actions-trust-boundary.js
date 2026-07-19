@@ -48,11 +48,11 @@ function validate(content) {
     if (!content.includes(marker)) errors.push(`必須markerがありません: ${marker}`);
   }
 
-  const yamlBlocks = [...content.matchAll(/```yaml\n([\s\S]*?)\n```/g)].map((match) => match[1]);
+  const yamlBlocks = [...content.matchAll(/```(?:yaml|yml)\n([\s\S]*?)\n```/gi)].map((match) => match[1]);
   if (!yamlBlocks.some((block) => block.includes('pull_request:') && block.includes('contents: read'))) {
     errors.push('pull_request + contents: readの安全な基本例がありません');
   }
-  if (yamlBlocks.some((block) => block.includes('pull_request_target:'))) {
+  if (yamlBlocks.some((block) => /\bpull_request_target\b/.test(block.replace(/^\s*#.*$/gm, '')))) {
     errors.push('copy可能なYAML例にpull_request_targetを含めてはいけません');
   }
   if (yamlBlocks.some((block) => /permissions:\s*(?:write-all|read-all)/.test(block) || /contents:\s*write/.test(block))) {
@@ -109,6 +109,8 @@ if (process.argv.includes('--self-test')) {
   expectRejected(manuscript, 'missing pull_request', (value) => value.replace('on:\n  pull_request:', 'on:\n  push:'), 'pull_request:');
   expectRejected(manuscript, 'broad write', (value) => value.replace('contents: read', 'contents: write'), 'write権限');
   expectRejected(manuscript, 'unsafe target YAML', (value) => value.replace('pull_request:', 'pull_request_target:'), 'pull_request_target');
+  expectRejected(manuscript, 'unsafe target yml inline list', (value) => `${value}\n\n\`\`\`yml\non: [pull_request_target]\n\`\`\``, 'pull_request_target');
+  expectRejected(manuscript, 'unsafe target YAML scalar', (value) => `${value}\n\n\`\`\`yaml\non: pull_request_target\n\`\`\``, 'pull_request_target');
   expectRejected(manuscript, 'missing fork approval boundary', (value) => value.replace('`pull_request_target`はfork workflowの承認設定に依存せず', '`pull_request_target`は承認後に実行され'), '承認設定に依存せず');
   expectRejected(manuscript, 'missing head-code ban', (value) => value.replace('任意commandを実行してはいけません', '任意commandを実行できます'), '任意command');
   expectRejected(manuscript, 'missing two-stage validation', (value) => value.replace('schema、size、対象PR、producer run、digestを検証', 'artifactを利用'), 'schema、size');
