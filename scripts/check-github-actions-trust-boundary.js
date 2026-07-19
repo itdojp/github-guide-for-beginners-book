@@ -10,6 +10,15 @@ function normalize(value) {
   return value.replace(/\r\n?/g, '\n');
 }
 
+function readRequired(file) {
+  try {
+    return normalize(fs.readFileSync(file, 'utf8'));
+  } catch (error) {
+    console.error(`GitHub Actions trust-boundary contract failed: ${file}を読み込めません (${error.code ?? error.message})`);
+    process.exit(1);
+  }
+}
+
 function validate(content) {
   const errors = [];
   const required = [
@@ -46,7 +55,7 @@ function validate(content) {
   if (yamlBlocks.some((block) => block.includes('pull_request_target:'))) {
     errors.push('copy可能なYAML例にpull_request_targetを含めてはいけません');
   }
-  if (/permissions:\s*(?:write-all|read-all)/.test(content) || /contents:\s*write/.test(content)) {
+  if (yamlBlocks.some((block) => /permissions:\s*(?:write-all|read-all)/.test(block) || /contents:\s*write/.test(block))) {
     errors.push('基本例へ広いwrite権限を付与してはいけません');
   }
   return errors;
@@ -61,19 +70,28 @@ function expectRejected(content, name, mutate, expected) {
   }
 }
 
-const manuscript = normalize(fs.readFileSync(manuscriptPath, 'utf8'));
-const docs = normalize(fs.readFileSync(docsPath, 'utf8'));
+function expectAccepted(content, name, mutate) {
+  const mutated = mutate(content);
+  if (mutated === content) throw new Error(`self-test ${name}: mutation対象がありません`);
+  const errors = validate(mutated);
+  if (errors.length) {
+    throw new Error(`self-test ${name}: 安全な説明を許容できません (${errors.join('; ')})`);
+  }
+}
+
+const manuscript = readRequired(manuscriptPath);
+const docs = readRequired(docsPath);
 const errors = [
   ...validate(manuscript).map((error) => `${manuscriptPath}: ${error}`),
   ...validate(docs).map((error) => `${docsPath}: ${error}`),
 ];
 if (manuscript !== docs) errors.push(`${manuscriptPath} and ${docsPath}: mirror content differs`);
 
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+const packageJson = JSON.parse(readRequired('package.json'));
 for (const command of ['npm run check:actions-trust-boundary', 'npm run check:actions-trust-boundary:self-test']) {
   if (!packageJson.scripts?.test?.includes(command)) errors.push(`npm test must run ${command}`);
 }
-const workflow = normalize(fs.readFileSync('.github/workflows/book-qa.yml', 'utf8'));
+const workflow = readRequired('.github/workflows/book-qa.yml');
 for (const command of [
   'node scripts/check-github-actions-trust-boundary.js',
   'node scripts/check-github-actions-trust-boundary.js --self-test',
@@ -95,6 +113,7 @@ if (process.argv.includes('--self-test')) {
   expectRejected(manuscript, 'missing head-code ban', (value) => value.replace('任意commandを実行してはいけません', '任意commandを実行できます'), '任意command');
   expectRejected(manuscript, 'missing two-stage validation', (value) => value.replace('schema、size、対象PR、producer run、digestを検証', 'artifactを利用'), 'schema、size');
   expectRejected(manuscript, 'missing official source', (value) => value.replace('https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target', 'https://example.invalid'), 'securely-using');
+  expectAccepted(manuscript, 'write permission warning in prose', (value) => `${value}\n\n説明文ではcontents: writeの危険性を明示できます。`);
   console.log('GitHub Actions trust-boundary contract self-test passed.');
 } else {
   console.log('GitHub Actions trust-boundary contract passed: fork PR, privileged context, and two-stage boundaries.');
