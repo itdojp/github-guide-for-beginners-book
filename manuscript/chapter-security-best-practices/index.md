@@ -220,7 +220,7 @@ git gc --prune=now --aggressive
 
 ### branch protection rule / rulesets 運用の最小原則
 
-- bypass 権限は最小化します。ruleset では `For pull requests only` を選ぶと、直接 push を許可せず、Pull Request と audit log に変更の軌跡を残せます。
+- bypass 権限は最小化します。ruleset では `For pull requests only` を選ぶと、直接 push を許可せず、Pull Request に変更の軌跡を残せます。organization 所有 repository では、その操作を organization の audit log でも確認できます。
 - この `For pull requests only` は ruleset の bypass 設定です。branch protection rule 側では bypass list に actor を追加できるのは organization 所有 repository の場合だけなので、両者を混同しないでください。
 - branch protection rule は特定 branch 名または `fnmatch` pattern を対象にできますが、同じ branch に同時適用される rule は 1 件だけです。specific branch rule が優先され、同じ specific branch への rule が複数ある場合は古い rule が優先されます。`*` などを含む wildcard rule 同士も古い rule が優先されます。
 - rulesets は branch または tag を対象にでき、複数の ruleset と branch protection rule が layer されます。同じ rule が複数ある場合は most restrictive が適用されます。
