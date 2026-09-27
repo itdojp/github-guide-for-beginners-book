@@ -50,7 +50,7 @@
     "js-yaml": "5.3.0",
     "undici": "7.29.0",
     "xmlbuilder2": {
-      "js-yaml": "4.3.1"
+      "js-yaml": "4.3.2"
     }
   }
 }
